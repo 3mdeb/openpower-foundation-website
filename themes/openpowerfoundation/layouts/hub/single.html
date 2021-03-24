@@ -1,0 +1,64 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<main id="main">
+
+<section id="hubprovider">
+<div id="hubprovider">
+	<div class="container-fluid">
+		<div class="section-header">
+			<h3 class="section-title">{{ .Title }}</h3>
+			<span class="section-divider"></span>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				{{ if .Param "member" }}
+					Provider :
+					{{ $member := .Param "member" }}
+					{{ range where .Site.RegularPages "Section" "members" }}
+						{{ $membercompany := .File.BaseFileName }}
+						{{ if eq $member $membercompany }}
+							<a href="{{ .Permalink }}">
+							{{ if .Param "image" }}
+								{{ $imagename := .Param "image" }}
+								{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+								{{ $imageresource := resources.Get $imagelocation }}
+								{{ $image := $imageresource.Fit "100x100" }}
+								<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
+							{{ else }}
+								{{ .Title }}
+							{{ end }}
+							</a>
+							{{ if .Param "country" }}
+								({{ .Param "country" }})
+							{{ end }}
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			</div>
+			<div class="col-lg-6">
+				{{ if .Param "provides" }}
+					Provides following OPF HUB resources :
+					<ul>
+					{{ range $p := .Param "provides" }}
+						<li>{{ $p }}</li>
+					{{ end }}
+					</ul>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+	{{ if .Content }}
+	<div class="row">
+		{{ .Content }}
+	</div>
+	{{ end }}
+</div>
+</section>
+
+{{ partial "hubform.html" . }}
+
+</main>
+
+{{ partial "footer.html" . }}

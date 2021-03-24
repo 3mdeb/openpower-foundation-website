@@ -1,0 +1,51 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<main id="main">
+
+<section id="page" class="section-bg">
+	<div class="container-fluid">
+		<div class="section-header">
+			<h3 class="section-title">{{ .Title }}</h3>
+			<p class="section-description"></p>
+			<span class="section-divider"></span>
+		</div>
+		<div class="row">
+			<div class="col-lg-2">&nbsp;</div>
+			<div class="col-lg-8 content wow fadeInTop">
+				<p>{{ .Content }}</p>
+			</div>
+			<div class="col-lg-2">&nbsp;</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				{{ if .Param "discoursetopic" }}
+					{{ partial "discourse.html" . }}
+				{{ end }}
+			</div>
+		</div>
+		{{ $filename := .File.BaseFileName }}
+		{{ $datafile := index $.Site.Data.specifications $filename }}
+		{{ if $datafile.versions }}
+		<div class="row">
+			<div class="col-lg-12">
+				<section class="changelog">
+				<ol>
+				{{ range $datafile.versions }}
+					<li><div>
+						<span id="version">version {{ .number }}</span>
+						<span id="description">{{ .description }}</span>
+					</div></li>
+				{{ end }}
+				<li></li>
+				</ol>
+			</div>
+		</div>
+		{{ end }}
+	</div>
+</section>
+
+</main>
+
+{{ partial "footer.html" . }}

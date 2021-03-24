@@ -1,0 +1,7 @@
+versions:
+  - number: 0.1
+    description: "Original draft"
+  - number: 0.5
+    description: "Incorporate workgroup comments"
+  - number: 1.0
+    description: "Initial release"

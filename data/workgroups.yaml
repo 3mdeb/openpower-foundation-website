@@ -1,0 +1,6 @@
+- name: "Technical Working Group"
+  id: twg
+  color: "#0000ff"
+- name: "Special Integration Working Group"
+  id: sig
+  color: "#ff0000"

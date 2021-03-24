@@ -1,0 +1,55 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<main id="main">
+
+<section id="list" class="section-bg">
+	<div class="container-fluid">
+
+		<div class="section-header">
+			<h3 class="section-title">{{ .Title }}</h3>
+			<span class="section-divider"></span>
+			<p class="section-description"></p>
+		</div>
+
+		{{ if .Content }}
+		<div class="row">
+			<div class="col-lg-2">&nbsp;</div>
+			<div class="col-lg-8 text-lg-center content wow fadeInBottom">
+				{{ .Content }}
+			</div>
+			<div class="col-lg-2">&nbsp;</div>
+		</div>
+		{{ end }}
+
+		<div class="row">
+			<div class="col-lg-2">&nbsp;</div>
+			<div class="col-lg-8 text-lg-center content wow fadeInBottom">
+				<ul>
+				{{ if .Param "navbar" }}
+					{{ $navbar := .Param "navbar" }}
+					{{ range .Site.Menus.navbar }}
+						{{ if .HasChildren }}
+							{{ range .Children }}
+								{{ if eq .Parent $navbar }}
+									<li><a href="{{ .URL }}">{{ .Name }}</a></li>
+								{{ end }}
+							{{ end }}
+						{{ end }}
+					{{ end }}
+				{{ end }}
+				{{ range .Data.Pages }}
+					<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+				{{ end }}
+				</ul>
+			</div>
+			<div class="col-lg-2">&nbsp;</div>
+		</div>
+	</div>
+</section>
+
+</main>
+
+{{ partial "footer.html" . }}
+

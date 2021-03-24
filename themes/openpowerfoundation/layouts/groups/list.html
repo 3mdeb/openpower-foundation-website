@@ -1,0 +1,46 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<main id="main">
+
+<section id="more-features" class="section-bg">
+	<div class="container-fluid">
+		<div class="section-header">
+			<h3 class="section-title">{{ .Title }}</h3>
+			<span class="section-divider"></span>
+
+		</div>
+		{{ if .Content }}
+		<div class="row">
+			<div class="col-lg-2">&nbsp;</div>
+			<div class="col-lg-8">
+				<p class="section-description">{{ .Content }}</p>
+			</div>
+			<div class="col-lg-2">&nbsp;</div>
+		</div>
+		{{ end }}
+		<div class="row">
+		{{ range (.Data.Pages.ByParam "wgtype").Reverse }}
+			{{ $color := "transparent" }}
+			{{ $data := index $.Site.Data }}
+			{{ $wgtype := .Param "wgtype" }}
+			{{ range $data.workgroups }}
+				{{ if eq $wgtype .id }}
+					{{ $color = .color }}
+				{{ end }}
+			{{ end }}
+			<div class="col-lg-4">
+				<div class="box wow fadeInBottom" style="border: 2px solid {{ $color }};">
+					<h4 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+					<p class="description">{{ .Summary }}</p>
+				</div>
+			</div>
+		{{ end }}
+		</div>
+	</div>
+</section>
+
+</main>
+
+{{ partial "footer.html" . }}

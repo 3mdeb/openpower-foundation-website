@@ -1,0 +1,24 @@
+### config.toml
+title = "OpenPOWER Foundation"
+baseURL = "https://openpower.foundation/"
+theme = "openpowerfoundation"
+languageCode = "en-us"
+dataDir = "data"
+assetDir = "assets"
+PaginatePath = "blog"
+sectionPagesMenu = "main"
+buildDrafts = false
+pygmentsUseClasses = true
+enableGitInfo = true
+enableRobotsTXT = true
+
+[outputs]
+	home = [ "HTML", "Calendar", "JSON" , "RSS" ]
+	specifications = [ "HTML", "JSON" ]
+	schedule = [ "HTML", "Calendar" , "RSS" ]
+
+[outputFormats]
+[outputFormats.RSS]
+	mediatype = "application/rss"
+	baseName = "feed"
+	suffix = "xml"

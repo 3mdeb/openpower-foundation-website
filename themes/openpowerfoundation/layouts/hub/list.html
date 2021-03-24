@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<main id="main">
+
+<section id="hubproviders">
+<div id="hubproviders">
+	<div class="container-fluid">
+		<div class="section-header">
+			<h3 class="section-title">{{ .Title }}</h3>
+			<span class="section-divider"></span>
+			<span class="section-description">{{ .Content }}</span>
+		</div>
+	</div>
+	<div id="hubprovider" class="row">
+		{{ range .Data.Pages }}
+			<div class="col-lg-3 ">
+				<a href="{{ .Permalink }}">{{ .Title }}</a>
+			</div>
+		{{ end }}
+	</div>
+</div>
+
+{{ partial "hubform.html" . }}
+
+</section>
+
+</main>
+
+{{ partial "footer.html" . }}

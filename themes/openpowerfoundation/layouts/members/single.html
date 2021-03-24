@@ -1,0 +1,78 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<main id="main">
+
+<section id="membersingle">
+<div id="membersingle" class="container-fluid">
+	<div class="section-header">
+		<div class="row">
+			<div class="col-lg-6">
+			{{ if .Param "image" }}
+				{{ $imagename := .Param "image" }}
+				{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+				{{ $imageresource := resources.Get $imagelocation }}
+				{{ $image := $imageresource.Fit "500x500" }}
+				<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
+			{{ else }}
+				<h3 class="section-title">{{ .Title }}</h3>
+			{{ end }}
+			</div>
+			<div class="col-lg-4">
+			{{ if .Param "level" }}
+				<div>Member Level :
+					{{ $level := .Param "level" }}
+					{{ $data := index $.Site.Data }}
+					{{ range $data.memberlevels }}
+						{{ $key := .identifier }}
+						{{ if eq $level $key }}
+							{{ .name }}
+						{{ end }}
+					{{ end }}
+				</div>
+			{{ end }}
+			{{ if .Param "country" }}
+				<div>Registered Country : {{ .Param "country" }}</div>
+			{{ end }}
+			{{ if .Param "joined" }}
+				<div>Joined foundation in : {{ .Param "joined" }}</div>
+			{{ end }}
+			{{ if .Param "link" }}
+				<div><a href="{{ .Param "link" }}">Visit Website</a>&nbsp;<i class="external link alternate icon"></i></div>
+			{{ end }}
+			Workgroup participation :
+			<ul>
+			{{ $membercode := .File.BaseFileName }}
+			{{ range where .Site.RegularPages "Section" "groups" }}
+				{{ $wgname := .Title }}
+				{{ $wgurl := .Permalink }}
+				{{ if .Param "members" }}
+					{{ range $member := .Param "members" }}
+						{{ if eq $member $membercode }}
+							<li><a href="{{ $wgurl }}">{{ $wgname }}</a></li>
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			{{ end }}
+			</ul>
+			</div>
+			<div class="col-lg-2">&nbsp;</div>
+			<span class="section-divider"></span>
+		</div>
+	</div>
+	<div class="row">
+	{{ if .Content }}
+		<div class="col-lg-2">&nbsp;</div>
+		<div class="col-lg-8">
+			{{ .Content }}
+		</div>
+		<div class="col-lg-2">&nbsp;</div>
+	{{ end }}
+	</div>
+</div>
+</section>
+
+</main>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,133 @@
+[[navbar]]
+	name = "About"
+	identifier = "about"
+	url = "/about/"
+	weight = -2000
+[[navbar]]
+	parent = "about"
+	name = "Board of Directors"
+	identifier = "bod"
+	url = "/boardofdirectors/"
+	weight = -2000
+[[navbar]]
+	parent = "about"
+	name = "Steering Committee"
+	identifier = "steeringcommittee"
+	url = "/steeringcommittee"
+	weight = -1900
+
+[[navbar]]
+	name = "Members"
+	identifier = "members"
+	url = "/members/"
+	weight = -1900
+
+[[navbar]]
+	name = "HUB"
+	identifier = "hub"
+	url = "/hub/"
+	weight = -1800
+
+[[navbar]]
+	name = "Community"
+	identifier = "community"
+	url = "/community/"
+	weight = -1700
+[[navbar]]
+	parent = "community"
+	name = "Git"
+	identifier = "git"
+	url = "https://git.openpower.foundation/"
+	post = "external link alternate icon"
+	weight = -2000
+[[navbar]]
+	parent = "community"
+	name = "Chat"
+	identifier = "chat"
+	url = "https://chat.openpower.foundation/"
+	post = "external link alternate icon"
+	weight = -1900
+[[navbar]]
+	parent = "community"
+	name = "Discuss"
+	identifier = "discuss"
+	url = "https://discuss.openpower.foundation/"
+	post = "external link alternate icon"
+	weight = -1800
+[[navbar]]
+	parent = "community"
+	name = "Planet"
+	identifier = "planet"
+	url = "https://planet.openpower.foundation"
+	post = "external link alternate icon"
+	weight = -1700
+[[navbar]]
+	parent = "community"
+	name = "GitHub"
+	identifier = "github"
+	url = "https://github.com/open-power/"
+	post = "external link alternate icon"
+	weight = -1600
+[[navbar]]
+	parent = "community"
+	name = "GitLab"
+	identifier = "gitlab"
+	url = "https://github.com/open-power/"
+	post = "external link alternate icon"
+	weight = -1500
+[[navbar]]
+	parent = "community"
+	name = "Slack"
+	identifier = "slack"
+	url = "https://openpwoerfoundation.slack.com/"
+	post = "external link alternate icon"
+	weight = -1400
+[[navbar]]
+	parent = "community"
+	name = "Causeway"
+	identifier = "causeway"
+	url = "https://members.openpowerfoundation.org"
+	post = "external link alternate icon"
+	weight = -1300
+
+[[navbar]]
+	name = "Events"
+	identifier = "events"
+	url = "/events/"
+	weight = -1600
+
+[[navbar]]
+	name = "Groups"
+	identifier = "groups"
+	url = "/groups/"
+	weight = -1600
+
+[[navbar]]
+	name = "Resources"
+	identifier = "resources"
+	url = "/resources/"
+	weight = -1600
+[[navbar]]
+	parent = "resources"
+	name = "Technical Specifications"
+	identifier = "technicalspecifications"
+	url = "/specifications/"
+	weight = -2900
+[[navbar]]
+	parent = "resources"
+	name = "Reference Designs"
+	identifier = "referencedesigns"
+	url = "/resources/referencedesigns/"
+	weight = -2800
+[[navbar]]
+	parent = "resources"
+	name = "OpenPOWER Ready"
+	identifier = "ready"
+	url = "/resources/ready/"
+	weight = -2700
+[[navbar]]
+	parent = "resources"
+	name = "OpenPOWER Use Cases"
+	identifier = "usecases"
+	url = "/resources/usecases/"
+	weight = -2600

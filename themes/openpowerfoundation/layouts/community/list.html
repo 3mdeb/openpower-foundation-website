@@ -1,0 +1,48 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<main id="main">
+
+<section id="more-features" class="section-bg">
+	<div class="container-fluid">
+		<div class="section-header">
+			<h3 class="section-title">{{ .Title }}</h3>
+			<span class="section-divider"></span>
+			<p class="section-description"></p>
+		</div>
+		{{ if .Content }}
+		<div class="row">
+			<div class="col-lg-2">&nbsp;</div>
+			<div class="col-lg-8 text-lg-center content wow fadeInBottom">
+				{{ .Content }}
+			</div>
+			<div class="col-lg-2">&nbsp;</div>
+		</div>
+		{{ end }}
+		<div class="row">
+			{{ range .Site.Menus.navbar  }}
+				{{ if .HasChildren }}
+					{{ range .Children }}
+						{{ if eq .Parent "community" }}
+							<div class="col-lg-4">
+								<div class="box wow fadeInLeft">
+									{{ if .Pre }}
+										<div class="icon"><i class="{{ .Pre }}"></i></div>
+									{{ end }}
+									<h4 class="title"><a href="{{ .URL }}">{{ .Name }}</a></h4>
+									<p class="description"><a href="{{ .URL }}">{{ .URL }}</a>{{ if .Post }}<i class="{{ .Post }}"></i>{{ end }}</p>
+								</div>
+							</div>
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			{{ end }}
+		</div>
+	</div>
+</section>
+
+</main>
+
+{{ partial "footer.html" . }}
+
