@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>{{ .Title }} - OpenPOWER Foundation</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="OpenPOWER,openpower,Open POWER,POWER,ppc64,ppc64le,ppc,OpenPOWER Foundation" name="keywords">
+	<meta content="" name="description">
+	<meta property='og:title' content='OpenPOWER Foundation'>
+	<meta property='og:description' content=''>
+	<meta property='og:url' content='https://openpower.foundation'>
+	<meta property='og:site_name' content='OpenPOWER Foundation'>
+	<meta property='og:type' content='article'>
+	<meta property='og:image' content=''>
+	<meta property='article:section' content=''>
+	<link href="{{ "img/favicon.png" | relURL }}" rel="icon">
+	<link href="{{ "img/apple-touch-icon.png" | relURL }}" rel="apple-touch-icon">
+	<link href="{{ "lib/bootstrap/css/bootstrap.min.css" | relURL }}" rel="stylesheet" defer>
+	<link href="{{ "lib/animate/animate.min.css" | relURL }}" rel="stylesheet" defer>
+	<link href="{{ "lib/semantic-ui/semantic.min.css" | relURL }}" rel="stylesheet" defer>
+	<link href="{{ "lib/ionicons/css/ionicons.min.css" | relURL }}" rel="stylesheet" defer>
+	<link href="{{ "lib/magnific-popup/magnific-popup.css" | relURL }}" rel="stylesheet" defer>
+	<link href="{{ "lib/slick/slick.css" | relURL }}" rel="stylesheet" defer>
+	<link href="{{ "lib/slick/slick-theme.css" | relURL }}" rel="stylesheet" defer>
+	{{ $stylecss := resources.Get "css/style.css" }}
+	{{ $style := $stylecss | resources.Minify }}
+	<link href="{{ $style.RelPermalink }}" rel="stylesheet">
+	{{ $syntaxcss := resources.Get "css/syntax.css" }}
+	{{ $syntax := $syntaxcss | resources.Minify }}
+	<link href="{{ $syntax.RelPermalink }}" rel="stylesheet">
+	{{ $timelineoptions := (dict "targetPath" "timeline.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+	{{ $timeline := resources.Get "css/timeline.scss" | resources.ToCSS $timelineoptions | resources.Fingerprint | resources.Minify }}
+	<link href="{{ $timeline.RelPermalink }}" rel="stylesheet">
+	{{ $changelogoptions := (dict "targetPath" "changelog.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+	{{ $changelog := resources.Get "css/changelog.scss" | resources.ToCSS $changelogoptions | resources.Fingerprint | resources.Minify }}
+	<link href="{{ $changelog.RelPermalink }}" rel="stylesheet">
+	<link href="{{ "css/font-awesome.min.css" | relURL }}" rel="stylesheet" defer>
+	<link href="{{ "css/googlefonts_montserrat.css" | relURL }}" rel="stylesheet" defer>
+</head>
+
+<body>
+
+<div id="preloader">
+	<div class="preloader">
+		<div class="sk-wave">
+			<div class="sk-rect sk-rect1"></div>
+			<div class="sk-rect sk-rect2"></div>
+			<div class="sk-rect sk-rect3"></div>
+			<div class="sk-rect sk-rect4"></div>
+			<div class="sk-rect sk-rect5"></div>
+		</div>
+	</div>
+</div>
