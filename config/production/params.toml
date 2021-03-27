@@ -1,6 +1,6 @@
 #!parms.toml
 [analytics.piwik]
-	URI = "https://stats.vantosh.com"
+	URI = "stats.vantosh.com"
 	ID = "69"
 [forms.contact]
 	URI = "https://webscripts.vantosh.com/forms/contact/opfm"
