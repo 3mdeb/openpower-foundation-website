@@ -3,7 +3,7 @@
 DiscourseEmbed = {
 	discourseUrl: 'https://discuss.openpower.foundation/',
 	discourseEmbedUrl: "{{ .Permalink | absURL }}",
-	topicId: 21,
+	topicId: {{ .Param "discoursetopic" }},
 };
 (function() {
 	var d = document.createElement('script');
