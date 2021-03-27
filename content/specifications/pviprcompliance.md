@@ -1,6 +1,7 @@
 ---
 title: "PVIPR Compliance Specification"
-discoursetopic: "/pvipr-compliance-specification-feedback/"
+tags:
+  - pvipr
 date: 2021-03-22
 draft: false
 ---
