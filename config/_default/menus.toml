@@ -72,7 +72,7 @@
 	parent = "community"
 	name = "GitLab"
 	identifier = "gitlab"
-	url = "https://github.com/open-power/"
+	url = "https://gitlab.com/open-power/"
 	post = "external link alternate icon"
 	weight = -1500
 [[navbar]]
@@ -123,7 +123,7 @@
 	parent = "resources"
 	name = "OpenPOWER Ready"
 	identifier = "ready"
-	url = "/resources/ready/"
+	url = "/ready/"
 	weight = -2700
 [[navbar]]
 	parent = "resources"
