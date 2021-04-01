@@ -1,0 +1,50 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+{{ $filename := .File.BaseFileName }}
+{{ $datafile := index $.Site.Data.specifications $filename }}
+
+<main id="main">
+
+<section id="page" class="section-bg">
+	<div class="container-fluid">
+		<div class="section-header">
+			<h3 class="section-title">{{ .Title }}</h3>
+			<p class="section-description"></p>
+			<span class="section-divider"></span>
+		</div>
+		<div class="row">
+			<div class="col-lg-2">&nbsp;</div>
+			<div class="col-lg-4">
+				<ul>
+				{{ if .Param "vendor" }}
+					<li>Vendor : {{ .Param "vendor" }}</li>
+				{{ end }}
+				{{ if .Param "criteria" }}
+					<li>Criteria Version : {{ .Param "criteria" }}</li>
+				{{ end }}
+				</ul>
+			</div>
+			<div class="col-lg-4">
+				<ul id="tags">
+				{{ range .Params.tags }}
+					<li>{{ . }}</li>
+				{{ end }}
+				</ul>
+			</div>
+			<div class="col-lg-2">&nbsp;</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2">&nbsp;</div>
+			<div class="col-lg-8 content wow fadeInTop">
+				<p>{{ .Content }}</p>
+			</div>
+			<div class="col-lg-2">&nbsp;</div>
+		</div>
+	</div>
+</section>
+
+</main>
+
+{{ partial "footer.html" . }}
