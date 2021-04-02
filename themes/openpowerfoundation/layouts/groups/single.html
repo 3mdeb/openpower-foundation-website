@@ -40,13 +40,21 @@
 					{{ end }}
 				{{ end }}
 				{{ if .Param "participation" }}
-					<li>Participation : {{ .Param "participation" }}</li>
+					<li>
+						Participation : {{ .Param "participation" }}
+						{{ if eq (.Param "participation") "Public" }}
+							<i class="fa fa-universal-access" aria-hidden="true"></i>
+						{{ end }}
+					</li>
 				{{ end }}
 				{{ if .Param "git" }}
-					<li>Git : <a href="{{ .Param "git" }}">{{ .Param "git" }}</a></li>
+					<li>Git <i class="git icon"></i> : <a href="{{ .Param "git" }}">{{ .Param "git" }}</a></li>
 				{{ end }}
 				{{ if .Param "discussion" }}
-					<li>Discussion : <a href="{{ .Param "discussion" }}">{{ .Param "discussion" }}</a></li>
+					<li>Discussion <i class="bullhorn icon" aria-hidden="true"></i> : <a href="{{ .Param "discussion" }}">{{ .Param "discussion" }}</a></li>
+				{{ end }}
+				{{ if .Param "chat" }}
+					<li>Chat <i class="comments icon" aria-hidden="true"></i> : <a href="{{ .Param "chat" }}">{{ .Param "chat" }}</a></li>
 				{{ end }}
 				</ul>
 			</div>
