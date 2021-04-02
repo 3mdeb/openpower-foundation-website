@@ -12,6 +12,7 @@ members:
 participation: "Public"
 git: https://git.openpower.foundation/librebmc/librebmc/
 discussion: https://discuss.openpower.foundation/c/sig/librebmc/
+chat: https://chat.openpower.foundation/opf/channels/librebmc
 date: 2021-03-15
 draft: false
 ---
