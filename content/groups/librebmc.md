@@ -45,4 +45,3 @@ The scope of the workgroup will require the use of Linux, OpenBMC, open source t
 Any modifications of these are outside the scope of the workgroup and will be handled through their respective bodies.  
 
 
-"I am toshywoshy on freenode speaking with glguy registering librebmc a250993a"  
