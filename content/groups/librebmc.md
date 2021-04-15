@@ -43,3 +43,6 @@ Any changes to system reference designs or specifications to use the adapter are
 
 The scope of the workgroup will require the use of Linux, OpenBMC, open source tools, interfaces, and components.
 Any modifications of these are outside the scope of the workgroup and will be handled through their respective bodies.  
+
+
+"I am toshywoshy on freenode speaking with glguy registering librebmc a250993a"  
