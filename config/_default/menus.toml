@@ -29,7 +29,7 @@
 	weight = -1800
 
 [[navbar]]
-	name = "Community"
+	name = "Links"
 	identifier = "community"
 	url = "/community/"
 	weight = -1700
@@ -97,13 +97,13 @@
 	weight = -1600
 
 [[navbar]]
-	name = "Groups"
+	name = "Working Groups"
 	identifier = "groups"
 	url = "/groups/"
 	weight = -1600
 
 [[navbar]]
-	name = "Resources"
+	name = "Technical"
 	identifier = "resources"
 	url = "/resources/"
 	weight = -1600
@@ -115,7 +115,7 @@
 	weight = -2900
 [[navbar]]
 	parent = "resources"
-	name = "Reference Designs"
+	name = "SIG Designs"
 	identifier = "referencedesigns"
 	url = "/resources/referencedesigns/"
 	weight = -2800
@@ -127,7 +127,7 @@
 	weight = -2700
 [[navbar]]
 	parent = "resources"
-	name = "OpenPOWER Use Cases"
+	name = "OpenPOWER Cases Designs"
 	identifier = "usecases"
 	url = "/resources/usecases/"
 	weight = -2600
