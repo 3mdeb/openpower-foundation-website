@@ -3,14 +3,53 @@
 <section id="intro">
 <div class="container">
 	<div class="row">
-		<div class="col-lg-4">
+		<div class="col-lg-3" id="intro-column">
+			<h1>OPF Intro</h1>
+			The goal of the OpenPOWER Foundation is to create an open ecosystem,
+			using the POWER Architecture to share expertise, investment,
+			and server-class intellectual property to serve the evolving needs of customers and industry.
 		</div>
-		<div class="col-lg-4">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-3" id="intro-column">
+			<h1>OPF Planet Feed</h1>
+			<div id="feed-planet-content"></div>
 		</div>
-		<div class="col-lg-4">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-3" id="intro-column">
+			<h1>OPF Blog Feed</h1>
+			<div id="feed-blog-content"></div>
 		</div>
 	</div>
 </div>
 </section>
 
 </main>
+
+<script>
+window.onload = function() {
+	var blogfeed = "https://openpowerfoundation.org/category/blogs/feed/";
+	var planetfeed = "https://planet.openpower.foundation/feed/";
+	$.ajax(planetfeed, {
+		accepts:{ xml:"application/rss+xml" },
+		dataType: "xml",
+		success:function(data) {
+			html = "";
+			$(data).find("item").each(function () {
+				html += "<h2><a href='"+$(this).find("link").text()+"'>"+$(this).find("title").text()+"</a></h2>";
+			});
+			document.getElementById("feed-planet-content").innerHTML=html;
+		}
+	});
+	$.ajax(blogfeed, {
+		accepts:{ xml:"application/rss+xml" },
+		dataType: "xml",
+		success:function(data) {
+			html = "";
+			$(data).find("item").each(function () {
+				html += "<h2><a href='"+$(this).find("link").text()+"'>"+$(this).find("title").text()+"</a></h2>";
+			});
+			document.getElementById("feed-blog-content").innerHTML=html;
+		}
+	});
+};
+</script>
