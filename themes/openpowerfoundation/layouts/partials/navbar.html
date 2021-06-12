@@ -1,5 +1,4 @@
 <header id="header">
-<div class="container">
 	<div id="logo" class="pull-left">
 		{{ $imageresource := resources.Get "img/openpower-logo-white.png" }}
 		{{ $imagefile := $imageresource.Resize "350x60" }}
@@ -54,8 +53,8 @@
 			{{ end }}
 		{{ end }}
 		{{ end }}
-		<li><a href="/contact/">Contact</a></li>
+		<li><a href="/contact/"><i class="envelope icon"></i>&nbsp;Contact</a></li>
+		<li><a href="https://portal.openpower.foundation/"><i class="sign-in icon"></i>&nbsp;Member Login</a></li>
 	</ul>
 	</nav>
-</div>
 </header>
