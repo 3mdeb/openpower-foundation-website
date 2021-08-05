@@ -23,6 +23,12 @@
 	weight = -1900
 
 [[navbar]]
+	name = "Join"
+	identifier = "join"
+	url = "/join/"
+	weight = -1850
+
+[[navbar]]
 	name = "Working Groups"
 	identifier = "groups"
 	url = "/groups/"
