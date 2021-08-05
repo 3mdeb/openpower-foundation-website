@@ -3,51 +3,49 @@
 {{ partial "navbar.html" . }}
 
 <main id="main">
-
 <section id="page" class="section-bg">
-	<div class="container-fluid">
-		<div class="section-header">
-			<h3 class="section-title">{{ .Title }}</h3>
-			<span class="section-divider"></span>
-			<p class="section-description"></p>
-		</div>
-		<div class="row">
-		{{ if .Param "image" }}
-			<div class="col-lg-6 text-right content wow fadeInLeft">
-				<p>
-				{{ $imagefilename := .Param "image.file" }}
-				{{ $imagesize := .Param "image.size" }}
-				{{ $imagelocation := printf "%s/%s" "img" $imagefilename }}
-				{{ $imageresource := resources.Get $imagelocation }}
-				{{ if $imageresource }}
-					{{ $imagefile := $imageresource }}
-					{{ if $imagesize }}
-						{{ $imagefile = $imageresource.Resize $imagesize }}
-					{{ else }}
-						{{ $imagefile = $imageresource.Resize "750x750" }}
-					{{ end }}
-					<figure>
-						<img src="{{ $imagefile.RelPermalink }}">
-					</figure>
-				{{ end }}
-				</p>
-			</div>
-			<div class="col-lg-6 content wow fadeInRight">
-		{{ else }}
-			<div class="col-lg-2">&nbsp;</div>
-			<div class="col-lg-8 content wow fadeInTop">
-		{{ end }}
-				<p>{{ .Content }}</p>
-		{{ if .Param "image" }}
-			</div>
-		{{ else }}
-			</div>
-			<div class="col-lg-2">&nbsp;</div>
-		{{ end }}
-		</div>
+<div class="container-fluid">
+	<div class="section-header">
+		<h3 class="section-title">{{ .Title }}</h3>
+		<span class="section-divider"></span>
+		<p class="section-description"></p>
 	</div>
+	<div class="row">
+	{{ if .Param "image" }}
+		<div class="col-lg-6 text-right content wow fadeInLeft">
+			<p>
+			{{ $imagefilename := .Param "image.file" }}
+			{{ $imagesize := .Param "image.size" }}
+			{{ $imagelocation := printf "%s/%s" "img" $imagefilename }}
+			{{ $imageresource := resources.Get $imagelocation }}
+			{{ if $imageresource }}
+				{{ $imagefile := $imageresource }}
+				{{ if $imagesize }}
+					{{ $imagefile = $imageresource.Resize $imagesize }}
+				{{ else }}
+					{{ $imagefile = $imageresource.Resize "750x750" }}
+				{{ end }}
+				<figure>
+					<img src="{{ $imagefile.RelPermalink }}">
+				</figure>
+			{{ end }}
+			</p>
+		</div>
+		<div class="col-lg-6 content wow fadeInRight">
+	{{ else }}
+		<div class="col-lg-2">&nbsp;</div>
+		<div class="col-lg-8 content wow fadeInTop">
+	{{ end }}
+			<p>{{ .Content }}</p>
+	{{ if .Param "image" }}
+		</div>
+	{{ else }}
+		</div>
+		<div class="col-lg-2">&nbsp;</div>
+	{{ end }}
+	</div>
+</div>
 </section>
-
 </main>
 
 {{ partial "footer.html" . }}

@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top {
 	position: fixed;
 	display: none;
-	background: #ffffff;
+	background: #007aad;
 	color: #fff;
 	padding: 2px 20px 8px 20px;
 	font-size: 16px;
@@ -591,7 +591,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #list {
-	font-size: 32px;
+	font-size: 18px;
+}
+
+#list h1, h2, h3 {
+	font-size: 24px;
+	text-decoration: underline;
 }
 #list ul {
 	list-style: none;
@@ -606,6 +611,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #list ul li a:hover {
 	background: #333333;
+}
+#list table, tb, td {
+	border: 1px solid #000000;
 }
 
 #about {
@@ -656,6 +664,57 @@ body.mobile-nav-active #mobile-nav-toggle {
 	padding: 0;
 }
 #about .content ul li {
+	padding-bottom: 10px;
+}
+
+#page {
+	padding: 60px 0;
+}
+#page .page-img {
+	height: 510px;
+	overflow: hidden;
+}
+#page .page-img img {
+	margin-left: -15px;
+	max-width: 100%;
+}
+@media (max-width: 768px) {
+	#page .page-img {
+		height: auto;
+	}
+	#page .page-img img {
+		margin-left: 0;
+		padding-bottom: 30px;
+	}
+}
+#page .content .h2 {
+	color: #333;
+	font-weight: 300;
+	font-size: 24px;
+}
+#page .content h3 {
+	color: #777;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 26px;
+	font-style: italic;
+}
+#page .content p {
+	line-height: 26px;
+}
+#page .content p:last-child {
+	margin-bottom: 0;
+}
+#page .content i {
+	font-size: 20px;
+	padding-right: 4px;
+	color: #1dc8cd;
+}
+#page .content ul {
+	list-style: none;
+	padding: 0;
+}
+#page .content ul li {
 	padding-bottom: 10px;
 }
 
@@ -771,8 +830,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #call-to-action {
-	background: linear-gradient(rgba(29, 200, 205, 0.65), rgba(29, 205, 89, 0.2)), url(../img/call-to-action-bg.jpg) fixed center center;
-	background-size: cover;
+	/*background: linear-gradient(rgba(29, 200, 205, 0.65), rgba(29, 205, 89, 0.2)), url(../img/call-to-action-bg.jpg) fixed center center;*/
+	background-image: url(../img/call-to-action-bg.jpg);
+	background-repeat: repeat-x;
 	padding: 40px 0;
 }
 #call-to-action .cta-title {
@@ -781,6 +841,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	font-weight: 700;
 }
 #call-to-action .cta-text {
+	font-size: 24px;
 	color: #ffffff;
 }
 @media (min-width: 769px) {
@@ -801,22 +862,25 @@ body.mobile-nav-active #mobile-nav-toggle {
 	transition: background 0.5s;
 	margin: 10px;
 	border: 2px solid #ffffff;
-	color: #ffffff;
+	color: #000000;
+	background: #ffffff;
 }
 #call-to-action .cta-btn:hover {
-	background: #ff8800;
-	border: 2px solid #ff8800;
+	color: #ffffff;
+	background: #007aad;
+	border: 2px solid #007aad;
 }
 
 #more-features {
 	padding: 60px 0 60px 0;
 }
 #more-features .box {
-	padding: 40px;
-	margin-bottom: 30px;
+	padding: 20px 20px 20px 20px;
+	margin-bottom: 20px;
 	box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
 	background: #fff;
 	transition: 0.4s;
+	border-radius: 25px;
 }
 #more-features .icon {
 	float: left;
@@ -837,7 +901,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 */
 #more-features h4 {
-	margin-left: 100px;
+	margin-left: 10px;
 	font-weight: 700;
 	margin-bottom: 15px;
 	font-size: 18px;
@@ -847,7 +911,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #more-features p {
 	font-size: 14px;
-	margin-left: 100px;
+	margin-left: 30px;
 	margin-bottom: 0;
 	line-height: 24px;
 }

@@ -51,5 +51,8 @@
 
 </main>
 
-{{ partial "footer.html" . }}
+{{ if .Param "calltoaction" }}
+	{{ partial "calltoaction.html" . }}
+{{ end }}
 
+{{ partial "footer.html" . }}
