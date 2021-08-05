@@ -1,7 +1,9 @@
 ---
 title: "Machine Learning AI Work Group"
 wgtype: sig
-chair: lionelclavien
+chair:
+  - lionelclavien
+  - kipwarner
 members:
   - innoboost
   - google

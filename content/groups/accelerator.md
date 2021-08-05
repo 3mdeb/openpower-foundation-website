@@ -1,7 +1,8 @@
 ---
 title: "Accelerator Workgroup"
 wgtype: sig
-chair: curtwollbrink
+chair:
+  - curtwollbrink
 members:
   - ibm
   - vantosh

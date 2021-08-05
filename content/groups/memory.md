@@ -1,7 +1,9 @@
 ---
 title: "Memory Workgroup"
 wgtype: twg
-chair: pierreluccantin
+chair:
+  - pierreluccantin
+  - curtwollbrink
 members:
   - ibm
   - google

@@ -1,7 +1,8 @@
 ---
 title: "Instruction Set Architecture Workgroup"
 wgtype: twg
-chair: paulmackerras
+chair:
+  - paulmackerras
 members:
   - ibm
   - yadro

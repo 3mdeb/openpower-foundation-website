@@ -1,7 +1,8 @@
 ---
 title: "System Software TWG"
 wgtype: twg
-chair: michalzygowski
+chair:
+  - michalzygowski
 members:
   - ibm
   - vantosh

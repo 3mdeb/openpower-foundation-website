@@ -1,7 +1,9 @@
 ---
 title: "LibreBMC SIG"
 wgtype: sig
-chair: paullecocq
+chair:
+  - toddrosendahl
+  - karolgugala
 members:
   - ibm
   - google

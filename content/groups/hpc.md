@@ -1,7 +1,8 @@
 ---
 title: "High-Performance-Computing Workgroup"
 wgtype: sig
-chair: allancantle
+chair:
+  - allancantle
 members:
   - allancantle
   - ibm

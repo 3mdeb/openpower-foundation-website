@@ -1,7 +1,8 @@
 ---
 title: "Compliance Workgroup"
 wgtype: twg
-chair: sandywoodward
+chair:
+  - sandywoodward
 members:
   - ibm
   - yadro

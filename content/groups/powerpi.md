@@ -1,7 +1,8 @@
 ---
 title: "PowerPi Workgroup"
 wgtype: sig
-chair: yehowshuaimmanuel
+chair:
+  - alexeystepanov
 members:
   - ibm
   - yadro

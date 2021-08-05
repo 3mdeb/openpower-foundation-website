@@ -20,17 +20,21 @@
 					<li>Workgroup Details :
 					<ul>
 					{{ if .Param "chair" }}
-						{{ $chairfile := printf "%s/%s" "persons" (.Param "chair") }}
-						{{ with $.Site.GetPage $chairfile }}
-							<li>Chair : <a href="{{ .Permalink }}">{{ .Title }}</a>
+						<li>Chair :<ul>
+						{{ range (.Param "chair") }}
+							{{ $chairfile := printf "%s/%s" "persons" . }}
+							{{ with $.Site.GetPage $chairfile }}
+							<li><a href="{{ .Permalink }}">{{ .Title }}</a>
 							{{ if .Param "member" }}
 								{{ $memberfile := printf "%s/%s" "members" (.Param "member") }}
 								{{ with $.Site.GetPage $memberfile }}
 									(<a href="{{ .Permalink }}">{{ .Title }}</a>)
 								{{ end }}
 							{{ end }}
+							{{ end }}
 							</li>
 						{{ end }}
+						</ul></li>
 					{{ end }}
 					{{ if .Param "wgtype" }}
 						{{ $data := index $.Site.Data }}
