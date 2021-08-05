@@ -1,6 +1,6 @@
 ---
 title: 3MDEB
-#image: 3MDEB
+image: 3mdeb.png
 country: Poland
 link: "https://3mdeb.com/"
 level: silver
