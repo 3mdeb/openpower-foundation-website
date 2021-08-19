@@ -67,48 +67,51 @@
 	<div class="row">
 	{{ range where .Site.RegularPages "Section" "groups" }}
 		{{ $wgname := .Title }}
-		{{ $chairfile := printf "%s/%s" "persons" (.Param "chair") }}
-		{{ with $.Site.GetPage $chairfile }}
-		<div class="col-lg-4" id="person">
-			<div id="person-header">
-				<div class="row">
-					<div class="col-lg-8"><h1>{{ .Title }}</h1> ({{ $wgname }})</div>
-					<div class="col-lg-4" id="member">
-						{{ $member := .Param "member" }}
-						{{ range where .Site.RegularPages "Section" "members" }}
-							{{ $membercompany := .File.BaseFileName }}
-							{{ if eq $member $membercompany }}
-								<a href="{{ .Permalink }}">
-								{{ if .Param "image" }}
-									{{ $imagename := .Param "image" }}
-									{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
-									{{ $imageresource := resources.Get $imagelocation }}
-									{{ $image := $imageresource.Fit "100x100" }}
-									<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
-								{{ else }}
-									{{ .Title }}
+		{{ $chairs := .Param "chair" }}
+		{{ range $chairs }}
+			{{ $chairfile := printf "%s/%s" "persons" . }}
+			{{ with $.Site.GetPage $chairfile }}
+			<div class="col-lg-4" id="person">
+				<div id="person-header">
+					<div class="row">
+						<div class="col-lg-8"><h1>{{ .Title }}</h1> ({{ $wgname }})</div>
+						<div class="col-lg-4" id="member">
+							{{ $member := .Param "member" }}
+							{{ range where .Site.RegularPages "Section" "members" }}
+								{{ $membercompany := .File.BaseFileName }}
+								{{ if eq $member $membercompany }}
+									<a href="{{ .Permalink }}">
+									{{ if .Param "image" }}
+										{{ $imagename := .Param "image" }}
+										{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+										{{ $imageresource := resources.Get $imagelocation }}
+										{{ $image := $imageresource.Fit "100x100" }}
+										<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
+									{{ else }}
+										{{ .Title }}
+									{{ end }}
+									</a>
 								{{ end }}
-								</a>
 							{{ end }}
-						{{ end }}
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4">
-				{{ if .Param "image" }}
-					{{ $imagename := .Param "image" }}
-					{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
-					{{ $imageresource := resources.Get $imagelocation }}
-					{{ $image := $imageresource.Fit "200x400" }}
-					<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
-				{{ else }}
-					&nbsp;
-				{{ end }}
+				<div class="row">
+					<div class="col-lg-4">
+					{{ if .Param "image" }}
+						{{ $imagename := .Param "image" }}
+						{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
+						{{ $imageresource := resources.Get $imagelocation }}
+						{{ $image := $imageresource.Fit "100x400" }}
+						<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
+					{{ else }}
+						&nbsp;
+					{{ end }}
+					</div>
+					<div class="col-lg-8">{{ .Content }}</div>
 				</div>
-				<div class="col-lg-8">{{ .Content }}</div>
 			</div>
-		</div>
+			{{ end }}
 		{{ end }}
 	{{ end }}
 	</div>
