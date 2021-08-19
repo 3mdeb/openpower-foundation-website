@@ -2,7 +2,7 @@
 title: "LibreBMC SIG"
 wgtype: sig
 chair:
-  - toddrosendahl
+  - toddrosedahl
   - karolgugala
 members:
   - ibm

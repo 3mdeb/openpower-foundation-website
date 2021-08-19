@@ -1,5 +1,5 @@
 ---
-title: "Todd Rosendahl"
+title: "Todd Rosedahl"
 #image:
 member: ibm
 date: 2021-08-05
