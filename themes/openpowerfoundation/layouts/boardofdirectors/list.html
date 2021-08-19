@@ -51,7 +51,7 @@
 						{{ $imagename := .Param "image" }}
 						{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
 						{{ $imageresource := resources.Get $imagelocation }}
-						{{ $image := $imageresource.Fit "200x400" }}
+						{{ $image := $imageresource.Fit "100x400" }}
 						<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
 					{{ else }}
 						&nbsp;

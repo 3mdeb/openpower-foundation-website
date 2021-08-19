@@ -1,5 +1,5 @@
 ---
-title: "Hugh Blemming"
+title: "Hugh Blemings"
 image: "hughblemings.jpg"
 member: individual
 date: 2021-03-13
