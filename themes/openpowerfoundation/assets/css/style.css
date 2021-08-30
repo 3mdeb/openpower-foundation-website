@@ -711,8 +711,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 	color: #1dc8cd;
 }
 #page .content ul {
-	list-style: none;
-	padding: 0;
+	/*list-style: none;*/
+	/*padding: 0;*/
 }
 #page .content ul li {
 	padding-bottom: 10px;
