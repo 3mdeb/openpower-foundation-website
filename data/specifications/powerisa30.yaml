@@ -1,0 +1,9 @@
+versions:
+  - number: "3.0b"
+    date: "2017-03-29"
+    download: "https://ibm.ent.box.com/s/1hzcwkwf8rbju5h9iyf44wm94amnlcrv"
+    description: "Initial release."
+  - number: "3.0c"
+    date: "2020-05-01"
+    download: "https://files.openpower.foundation/s/XXFoRATEzSFtdG8"
+    description: "Incorporate errata."
