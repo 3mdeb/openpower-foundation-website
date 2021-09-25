@@ -13,10 +13,18 @@
 	<div class="row">
 	{{ if .Param "image" }}
 		<div class="col-lg-6 text-right content wow fadeInLeft">
+	{{ else }}
+		<div class="col-lg-2">&nbsp;</div>
+		<div class="col-lg-8 content wow fadeInTop">
+	{{ end }}
+			<p>{{ .Content }}</p>
+		</div>
+	{{ if .Param "image" }}
+		<div class="col-lg-6 content wow fadeInRight">
 			<p>
 			{{ $imagefilename := .Param "image.file" }}
 			{{ $imagesize := .Param "image.size" }}
-			{{ $imagelocation := printf "%s/%s" "img" $imagefilename }}
+			{{ $imagelocation := printf "%s/%s" "images" $imagefilename }}
 			{{ $imageresource := resources.Get $imagelocation }}
 			{{ if $imageresource }}
 				{{ $imagefile := $imageresource }}
@@ -31,17 +39,9 @@
 			{{ end }}
 			</p>
 		</div>
-		<div class="col-lg-6 content wow fadeInRight">
 	{{ else }}
 		<div class="col-lg-2">&nbsp;</div>
-		<div class="col-lg-8 content wow fadeInTop">
-	{{ end }}
-			<p>{{ .Content }}</p>
-	{{ if .Param "image" }}
 		</div>
-	{{ else }}
-		</div>
-		<div class="col-lg-2">&nbsp;</div>
 	{{ end }}
 	</div>
 </div>
