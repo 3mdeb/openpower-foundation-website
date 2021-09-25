@@ -1093,9 +1093,20 @@ body.mobile-nav-active #mobile-nav-toggle {
 	margin-bottom: 50px;
 }
 
+#hubproviders {
+	padding: 25px 25px 25px 25px;
+}
 #hubprovider {
 	text-align: center;
-	padding: 35px 35px 25px 25px;
+	padding: 35px 25px 35px 25px;
+	border: 2px solid #007aad;
+	border-radius: 5px;
+}
+#hubprovider:hover {
+	background-color: #007aad;
+}
+#hubprovider:hover a {
+	color: #ffffff;
 }
 
 #team {
