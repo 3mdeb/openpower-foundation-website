@@ -13,9 +13,9 @@
 			<span class="section-description">{{ .Content }}</span>
 		</div>
 	</div>
-	<div id="hubprovider" class="row">
+	<div id="hubproviders" class="row">
 		{{ range .Data.Pages }}
-			<div class="col-lg-3 ">
+			<div id="hubprovider" class="col-lg-3 ">
 				<a href="{{ .Permalink }}">{{ .Title }}</a>
 			</div>
 		{{ end }}
