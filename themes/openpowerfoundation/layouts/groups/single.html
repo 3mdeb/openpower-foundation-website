@@ -64,24 +64,22 @@
 					<li>Workgroup Resources :
 					<ul>
 					{{ if .Param "discussion" }}
-						<li>Discussion <i class="bullhorn icon" aria-hidden="true"></i> : <a href="{{ .Param "discussion" }}">{{ .Param "discussion" }}</a></li>
+						<li><a href="{{ .Param "discussion" }}"><i class="bullhorn icon" aria-hidden="true"></i>Discussion</a></li>
 					{{ end }}
 					{{ if .Param "calendar" }}
-						<li>Webcal <i class="calendar alternative icon" aria-hidden="true"></i> :<ul>
-							<li><a href="{{ .Param "calendar.web" }}">{{ .Param "calendar.web" }}</a></li>
-							<li><a href="{{ .Param "calendar.ics" }}">{{ .Param "calendar.ics" }}</a></li>
+						<li>Calendar <i class="calendar alternative icon" aria-hidden="true"></i> :<ul>
+							<li><a href="{{ .Param "calendar.web" }}">WebCal</a></li>
+							<li><a href="{{ .Param "calendar.ics" }}">ICS</a></li>
 						</ul></li>
 					{{ end }}
 					{{ if .Param "git" }}
-						<li>Git <i class="git icon"></i> :<ul>
-							<li><a href="{{ .Param "git" }}">{{ .Param "git" }}</a></li>
-						</ul></li>
+						<li><a href="{{ .Param "git" }}"><i class="fa fa-git-square"></i> Git SCM</a></li>
 					{{ end }}
 					{{ if .Param "chat" }}
-						<li>Chat <i class="comments icon" aria-hidden="true"></i><ul>
-							<li><a href="{{ .Param "chat.mattermost" }}">{{ .Param "chat.mattermost" }}</a></li>
+						<li><i class="comments icon" aria-hidden="true"></i> Chat<ul>
+							<li><a href="{{ .Param "chat.mattermost" }}">OPF Chat</a></li>
 							{{ if .Param "chat.slack" }}
-							<li><a href="{{ .Param "chat.slack" }}">{{ .Param "chat.slack" }}</a></li>
+							<li><a href="{{ .Param "chat.slack" }}">OPF Slack</a></li>
 							{{ end }}
 							{{ if .Param "chat.irc" }}
 							<li>{{ .Param "chat.irc" }}</li>
@@ -89,10 +87,10 @@
 						</ul></li>
 					{{ end }}
 					{{ if .Param "files" }}
-						<li>Files <i class="folder open icon"></i> : <a href="{{ .Param "files" }}">{{ .Param "files" }}</a></li>
+						<li><a href="{{ .Param "files" }}"><i class="folder open icon"></i> Files</a></li>
 					{{ end }}
 					{{ if .Param "kanban" }}
-						<li>Kanban <i class="tasks icon"></i> : <a href="{{ .Param "kanban" }}">{{ .Param "kanban" }}</a></li>
+						<li><a href="{{ .Param "kanban" }}"><i class="tasks icon"></i> Kanban</a></li>
 					{{ end }}
 					</ul>
 				{{ if .Param "members" }}
