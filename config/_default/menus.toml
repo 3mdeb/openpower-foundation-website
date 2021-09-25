@@ -15,6 +15,18 @@
 	identifier = "steeringcommittee"
 	url = "/steeringcommittee"
 	weight = -800
+[[navbar]]
+	parent = "about"
+	name = "Governance"
+	identifier = "governance"
+	url = "/about/governance/"
+	weight = -700
+[[navbar]]
+	parent = "about"
+	name = "Mission Statement"
+	identifier = "missionstatement"
+	url = "/about/missionstatement/"
+	weight = -600
 
 [[navbar]]
 	name = "Members"
