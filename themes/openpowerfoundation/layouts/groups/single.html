@@ -66,8 +66,11 @@
 					{{ if .Param "discussion" }}
 						<li><a href="{{ .Param "discussion" }}"><i class="bullhorn icon" aria-hidden="true"></i>Discussion</a></li>
 					{{ end }}
+					{{ if .Param "meetingminutes" }}
+						<li><a href="{{ .Param "meetingminutes"}}"><i class="pencil alternative icon"></i>Meeting Minutes</a></li>
+					{{ end }}
 					{{ if .Param "calendar" }}
-						<li>Calendar <i class="calendar alternative icon" aria-hidden="true"></i> :<ul>
+						<li><i class="calendar alternative icon" aria-hidden="true"></i> Calendar :<ul>
 							<li><a href="{{ .Param "calendar.web" }}">WebCal</a></li>
 							<li><a href="{{ .Param "calendar.ics" }}">ICS</a></li>
 						</ul></li>

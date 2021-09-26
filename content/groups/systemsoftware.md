@@ -12,6 +12,7 @@ members:
 participation: "Members"
 git: https://git.openpower.foundation/systemsoftware
 discussion: https://discuss.openpower.foundation/c/twg/syssoftware/19
+meetingminutes: https://meetingminutes.openpower.foundation/systemsoftware/
 calendar:
   web: https://discuss.openpower.foundation/c/twg/syssoftware/19/l/calendar
   ics: webcal://discuss.openpower.foundation/c/twg/syssoftware/l/calendar.ics

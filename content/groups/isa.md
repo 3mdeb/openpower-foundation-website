@@ -11,6 +11,7 @@ members:
 participation: "Members"
 git: https://git.openpower.foundation/isa/
 discussion: https://discuss.openpower.foundation/c/twg/isa
+meetingminutes: https://meetingminutes.openpower.foundation/isa/
 calendar:
   web: https://discuss.openpower.foundation/c/twg/isa/18/l/calendar
   ics: webcal://discuss.openpower.foundation/c/twg/isa/l/calendar.ics
