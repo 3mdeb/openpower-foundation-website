@@ -1,5 +1,7 @@
 {{ $eventcode := .Get "event" }}
 
+<div id="schedule">
+
 <script src="https://cfp.openpower.foundation/{{ $eventcode }}/schedule/widget/v2.en.js" type="text/javascript" async></script>
 
 <pretalx-schedule event-url="https://cfp.openpower.foundation/{{ $eventcode}}/" locale="en" format="grid" style="--pretalx-clr-primary: #3aa57c">
@@ -12,3 +14,7 @@
 	</div>
 </div>
 </noscript>
+
+<a href="https://cfp.openpower.foundation/{{ $eventcode}}/schedule/">External Direct Schedule Link <i class="external link alternate icon"></i></a>
+
+</div>
