@@ -2,6 +2,10 @@
 title: "OpenPOWER Summit Virtual 2021"
 eventdate: 2021-10-28
 eventlocation: "Virtual"
+prereg:
+  organizer: summit
+  event: 2021
+pretalx: summit2021
 date: 2021-05-30
 draft: false
 ---
@@ -17,4 +21,3 @@ We are looking for presentations about OpenPOWER, more can be found on the follo
 
 We will be opening registration soon, please keep an eye on this page for updates.  
 
-{{< prereg organizer="summit" event="2021"  >}}
