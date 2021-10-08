@@ -1,6 +1,8 @@
 {{ $eventorganizer := .Get "organizer" }}
 {{ $eventcode := .Get "event" }}
 
+<div id="registration">
+
 <link rel="stylesheet" type="text/css" href="https://registration.openpower.foundation/{{ $eventorganizer }}/{{ $eventcode }}/widget/v1.css">
 
 <div class="pretix-widget-compat" event="https://registration.openpower.foundation/{{ $eventorganizer }}/{{ $eventcode }}/"></div>
@@ -13,3 +15,6 @@
 	</div>
 </noscript>
 
+<a href="https://registration.openpower.foundation/{{ $eventorganizer }}/{{ $eventcode }}/">External Direct Registration Link <i class="external link alternate icon"></i></a>
+
+</div>
