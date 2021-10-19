@@ -1,7 +1,108 @@
 {{ partial "header.html" . }}
 
 {{ partial "navbar.html" . }}
-
-{{ partial "intro.html" . }}
+        <section class="promo__section d-flex flex-column justify-content-center"
+          style="background-image:url(./img/promo-2.jpg)">
+          <div class="promo__container container text-center">
+            <h1>OpenPOWER Foundation</h1>
+            <p>Create the Future with POWER</p>
+            <p><a class="btn btn-light" href="/">Join us</a></p>
+          </div>
+        </section>
+        <main class="main">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 mb-5"><img class="img-fluid" src="./img/thumb-4.jpg" width="600" height="420" alt="">
+              </div>
+              <div class="col-md-6 mb-5">
+                <h2>OpenPOWER</h2>
+                <p><b>A Technical Workgroup (TWG)</b> is a workgroup that provides technical specifications and will help define
+                  next-generation of the specifications, definitions, and the compliance of these specifications with primary
+                  output being specification documents.</p>
+                <p><b>A Special Integration Group (SIG)</b> is a workgroup that provides an implementation of technical
+                  specifications with the goal to produce reference designs. A SIG will normally provide a reference design, a
+                  finished product, or help maintain project for direct usage.</p>
+              </div>
+            </div>
+            <div class="row flex-md-row-reverse">
+              <div class="col-md-6 mb-5"><img class="img-fluid" src="./img/thumb-5.jpg" width="600" height="420" alt="">
+              </div>
+              <div class="col-md-6 mb-5">
+                <h2>OpenPOWER</h2>
+                <h3>Industry Proven</h3>
+                <p>By open sourcing and developing on the POWER ISA - one of the most sophisticated processor architectures
+                  available - the OpenPOWER Foundation is democratizing access and extending the reach of the RISC-based
+                  architecture.</p>
+                <h3>Open for All</h3>
+                <p>With more than 350 members collaborating regularly, the entire semiconductor industry - from global
+                  organizations with deep expertise to individual creators with a new lens - can innovate with choice and build
+                  and develop across the full Hardware and Software stack.</p>
+                <h3>Complete Equation</h3>
+                <p>Open development of this scale enables unprecedented customization across applications, operating systems and
+                  firmware - driving hundreds of innovations across artificial intelligence, supercomputing, hyperscale and
+                  more.</p>
+              </div>
+            </div>
+          </div>
+        </main>
+        <section class="teaser__section pt-0">
+          <div class="container">
+            <h2 class="teaser__title text-center">What are you building?</h2>
+            <div class="row">
+              <article class="post__article col-md-4">
+                <div class="post__thumb"><img class="img-fluid" src="./img/thumb-1.jpg" width="390" height="390" alt="">
+                </div><a class="post__title" href="/">Libre BMC</a>
+              </article>
+              <article class="post__article col-md-4">
+                <div class="post__thumb"><img class="img-fluid" src="./img/thumb-2.jpg" width="390" height="390" alt="">
+                </div><a class="post__title" href="/">Libre BMC</a>
+              </article>
+              <article class="post__article col-md-4">
+                <div class="post__thumb"><img class="img-fluid" src="./img/thumb-3.jpg" width="390" height="390" alt="">
+                </div><a class="post__title" href="/">Libre BMC</a>
+              </article>
+            </div>
+            <p class="text-center"><a class="btn btn-outline-primary">Libre BMC</a></p>
+          </div>
+        </section>
+        <section class="teaser__section _dark">
+          <div class="container text-center">
+            <p class="h2 mb-4">With its open ecosystem approach, active participation from its global membership base and
+              powerful foundation of the POWER ISA, the OpenPOWER Foundation is the premiere organization to facilitate truly
+              effective collaboration and drive meaningful, accessible innovation across the open hardware industry.</p>
+            <p><a class="btn btn-light" href="/">Libre BMC</a></p>
+          </div>
+        </section>
+        <section class="teaser__section">
+          <div class="container">
+            <h2 class="teaser__title text-center">Supporters of OpenPOWER</h2>
+            <div class="row justify-content-center">
+              <div class="col-md-2"><img class="img-fluid" src="./img/180x102.png" width="180" height="102" alt=""></div>
+              <div class="col-md-2"><img class="img-fluid" src="./img/180x102.png" width="180" height="102" alt=""></div>
+              <div class="col-md-2"><img class="img-fluid" src="./img/180x102.png" width="180" height="102" alt=""></div>
+              <div class="col-md-2"><img class="img-fluid" src="./img/180x102.png" width="180" height="102" alt=""></div>
+            </div>
+          </div>
+        </section>
+        <section class="teaser__section _navy">
+          <div class="container text-center">
+            <h2 class="teaser__title">Subscribe to the OpenPOWER newsletter.</h2>
+            <p>Sign up with your email address to receive news and updates.</p>
+            <form class="teaser__form row justify-content-center" action="/" method="post">
+              <div class="col-md-2">
+                <input class="form-control" name="" type="text" value="">
+              </div>
+              <div class="col-md-2">
+                <input class="form-control" name="" type="text" value="">
+              </div>
+              <div class="col-md-2">
+                <input class="form-control" name="" type="text" value="">
+              </div>
+              <div class="col-md-2">
+                <input class="btn btn-outline-primary" type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
+        </section>
 
 {{ partial "footer.html" . }}

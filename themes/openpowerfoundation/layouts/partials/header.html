@@ -17,12 +17,11 @@
 	<link href="{{ "img/apple-touch-icon.png" | relURL }}" rel="apple-touch-icon">
 	<link href="{{ "lib/bootstrap/css/bootstrap.min.css" | relURL }}" rel="stylesheet" defer>
 	<link href="{{ "lib/animate/animate.min.css" | relURL }}" rel="stylesheet" defer>
-	<link href="{{ "lib/semantic-ui/semantic.min.css" | relURL }}" rel="stylesheet" defer>
 	<link href="{{ "lib/ionicons/css/ionicons.min.css" | relURL }}" rel="stylesheet" defer>
 	<link href="{{ "lib/magnific-popup/magnific-popup.css" | relURL }}" rel="stylesheet" defer>
 	<link href="{{ "lib/slick/slick.css" | relURL }}" rel="stylesheet" defer>
 	<link href="{{ "lib/slick/slick-theme.css" | relURL }}" rel="stylesheet" defer>
-	{{ $stylecss := resources.Get "css/style.css" }}
+	{{ $stylecss := resources.Get "css/main.css" }}
 	{{ $style := $stylecss | resources.Minify }}
 	<link href="{{ $style.RelPermalink }}" rel="stylesheet">
 	{{ $syntaxcss := resources.Get "css/syntax.css" }}

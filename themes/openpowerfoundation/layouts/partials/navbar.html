@@ -1,4 +1,37 @@
-<header id="header">
+
+<header class="header">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+					{{ $imageresource := resources.Get "img/logo.png" }}
+					{{ $imagefile := $imageresource.Resize "350x60" }}
+			<div class="header__logo-col col"><a class="header__logo" href="/"><img src="{{ $imagefile.RelPermalink }}" width="297"
+						height="49" alt="OpenPOWER"></a></div>
+			<div class="header__menu-col col">
+				<nav class="header__menu-nav">
+					<ul class="header__menu d-flex justify-content-center list-unstyled">
+						<li class="header__menu-item"><a href="/about">About</a></li>
+						<li class="header__menu-item _active"><a href="/groups">WorkGroups</a></li>
+						<li class="header__menu-item"><a href="/">Events</a></li>
+						<li class="header__menu-item"><a href="/">Join</a></li>
+						<li class="header__menu-item"><a href="/">Members</a></li>
+						<li class="header__menu-item"><a href="/">Blog</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header__contact-col col d-flex align-items-center">
+				<div class="social__list"><a class="social__item _tw" href="/"><span
+							class="visually-hidden">Twitter</span></a><a class="social__item _fb" href="/"><span
+							class="visually-hidden">Facebook</span></a><a class="social__item _in" href="/"><span
+							class="visually-hidden">LinkedIn</span></a><a class="social__item _yt" href="/"><span
+							class="visually-hidden">Youtube</span></a>
+				</div>
+				<div class="header__contact-btn"><a class="d-block btn-outline-primary btn-sm btn" href="/">Join</a></div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- <header id="header">
 	<div id="logo" class="pull-left">
 		{{ $imageresource := resources.Get "img/openpower-logo-white.png" }}
 		{{ $imagefile := $imageresource.Resize "350x60" }}
@@ -57,4 +90,4 @@
 		<li><a href="https://portal.openpower.foundation/"><i class="sign-in icon"></i>&nbsp;Member Login</a></li>
 	</ul>
 	</nav>
-</header>
+</header> -->
