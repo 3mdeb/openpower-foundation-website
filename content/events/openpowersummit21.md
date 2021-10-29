@@ -1,23 +1,13 @@
 ---
-title: "OpenPOWER Summit Virtual 2021"
-eventdate: 2021-10-28
-eventlocation: "Virtual"
-prereg:
-  organizer: summit
-  event: 2021
-pretalx: summit2021
-date: 2021-05-30
+title: "OpenPOWER Summit EU 2019"
+eventdate: 2019-10-31
+eventplace: "Lyon, France"
+eventcalendar: Google Calendar ICS
+eventtime: 10:00am 6:00pm
+image: thumb-7.jpg
+link: '#'
+date: 2021-10-27
 draft: false
 ---
 
-The __OpenPOWER Summit 2021__ is going to be _virtual_ again, and will be held on __28th October 2021__.  
-
-The event will bring open hardware and software developers, OpenPOWER Member companies,
-researchers and academics across the ecosystem to share learnings, highlight innovation and
-discuss the future of OpenPOWER in an online setting. Architects, developers, executives, and end users are all welcome.  
-
-We are looking for presentations about OpenPOWER, more can be found on the following website.  
-[https://cfp.openpower.foundation/summit2021/cfp](https://cfp.openpower.foundation/summit2021/cfp){{< externallink >}}  
-
-We will be opening registration soon, please keep an eye on this page for updates.  
-
+First- It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.

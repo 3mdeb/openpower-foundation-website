@@ -1,0 +1,27 @@
+.promo__section {
+  position: relative;
+  min-height: 820px;
+  color: #fff;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .promo__section::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: rgba(24, 38, 54, 0.4); }
+
+.promo__container {
+  position: relative; }
+
+.promo__title._large {
+  font-size: calc(1.525rem + 3.3vw); }
+  @media (min-width: 1200px) {
+    .promo__title._large {
+      font-size: 4rem; } }
+
+
+      

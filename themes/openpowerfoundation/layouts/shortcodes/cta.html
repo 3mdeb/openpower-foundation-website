@@ -1,0 +1,5 @@
+{{ $url := .Get "url" }}
+{{ $text := .Get "text" }}
+{{ $classes := .Get "classes" }}
+
+  <a class="btn {{ $classes }}" href="{{ $url }}">{{ $text }}</a>

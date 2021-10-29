@@ -1,0 +1,101 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<main id="main" class="main">
+    <div id="joinus">
+      <div class="container">
+        <section id="intro">
+        <h1 class="section-header mb-5 text-center">{{ .Title }}</h1>
+        <h2>{{ .Param "intro.subtitle" }}</h2>
+                <p>{{ .Param "intro.p-2" }}</p>
+                <p><b>{{ .Param "intro.p-3" }}</b></p>
+                <p><a class="btn-outline-primary btn" href="{{ .Param "join.cta.url" }}">{{ .Param "join.cta.title" }}</a></p>
+    </section>
+
+    <section id="teaser">
+    <div class="teaser__info">
+        <h2>{{ .Param "join.teaser.title" }}</h2>
+        <ul>
+                        
+            {{ range .Param "join.options" }}
+                <li>{{ .option }}</li>  
+            {{ end }}
+     </ul>
+    </div>
+  </section>
+
+  <section id="membership-levels">
+    <h2>{{ .Param "membership-levels.title" }}</h2>
+    <p>{{ .Param "membership-levels.subtitle" }}</p>
+
+    <ul>
+        {{ range .Param "membership-levels.options" }}
+          <li>{{ .option }}</li>  
+        {{ end }}
+    </ul>
+    <p class="membership-levels-text">{{ .Param "membership-levels.text" }}</p>
+    <ul>
+        {{ range .Param "membership-levels.features" }}
+           <li>{{ .feature }}</li>  
+        {{ end }}
+    </ul>
+    <figure class="figure d-flex justify-content-center">
+        {{ if .Param "membership-levels.image-table" }}
+        {{ $imagename := .Param "membership-levels.image-table.image" }}
+        {{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
+        {{ $imageresource := resources.Get $imagelocation }}
+        {{ $image := $imageresource }}
+        <img src="{{  $image.RelPermalink }}" alt="{{ .Param "membership-levels.image-table.alt" }}" title="{{ .Param "membership-levels.image-table.alt" }}">
+    {{ else }}
+        {{ .Title }}
+    {{ end }}
+    </figure>
+    </section>
+
+    <section id="membership-benefits">
+      <div class="teaser__info">
+        <h2 class="text-center mb-5">{{ .Param "membership-benefits.title" }}</h2>
+
+        <figure class="figure d-flex justify-content-center">
+            {{ if .Param "membership-benefits.image-table" }}
+            {{ $imagename := .Param "membership-benefits.image-table.image" }}
+            {{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
+            {{ $imageresource := resources.Get $imagelocation }}
+            {{ $image := $imageresource }}
+            <img src="{{  $image.RelPermalink }}" alt="{{ .Param "membership-benefits.image-table.alt" }}" title="{{ .Param "membership-benefits.image-table.alt" }}">
+            {{ else }}
+            {{ .Title }}
+        {{ end }}
+        </figure>
+      </div>
+    </section>
+
+    <section id="become-member">
+            <h2 class="text-center mb-5">{{ .Param "become-member.title" }}</h2>
+            <div class="row">
+                {{ range .Param "become-member.options" }}
+                        <article class="post__article col-md-6">
+                            <div class="post__thumb">
+                                    {{ $imagename := .image }}
+                                    {{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
+                                    {{ $imageresource := resources.Get $imagelocation }}
+                                    {{ $image := $imageresource.Fit "600x390" }}
+                                    <img src="{{  $image.RelPermalink }}" alt="{{ .title }}" title="{{ .title }}">
+                            </div>
+                            <div class="h2">{{ .title }}</div>
+                            <p>{{ .text }}</p>
+                            <p><a class="btn-outline-primary btn-sm btn" href="{{ .cta_url }}">{{ .cta_text }}</a></p>
+                        </article>
+                  {{ end }}
+            </div>
+         </section>
+        
+         <!--         
+         {{ .Content }}
+         -->
+
+        </div>
+     </div>
+</main>
+
+{{ partial "footer.html" . }}

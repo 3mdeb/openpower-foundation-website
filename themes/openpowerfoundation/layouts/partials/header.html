@@ -27,6 +27,18 @@
 	{{ $syntaxcss := resources.Get "css/syntax.css" }}
 	{{ $syntax := $syntaxcss | resources.Minify }}
 	<link href="{{ $syntax.RelPermalink }}" rel="stylesheet">
+	{{ $headeroptions := (dict "targetPath" "header.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+	{{ $header := resources.Get "css/header.scss" | resources.ToCSS $headeroptions | resources.Fingerprint |
+	resources.Minify }}
+	<link href="{{ $header.RelPermalink }}" rel="stylesheet">
+	{{ $promooptions := (dict "targetPath" "promo.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+	{{ $promo := resources.Get "css/promo.scss" | resources.ToCSS $promooptions | resources.Fingerprint |
+	resources.Minify }}
+	<link href="{{ $promo.RelPermalink }}" rel="stylesheet">
+	{{ $homeoptions := (dict "targetPath" "home.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+	{{ $home := resources.Get "css/home.scss" | resources.ToCSS $homeoptions | resources.Fingerprint |
+	resources.Minify }}
+	<link href="{{ $home.RelPermalink }}" rel="stylesheet">
 	{{ $timelineoptions := (dict "targetPath" "timeline.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 	{{ $timeline := resources.Get "css/timeline.scss" | resources.ToCSS $timelineoptions | resources.Fingerprint | resources.Minify }}
 	<link href="{{ $timeline.RelPermalink }}" rel="stylesheet">
