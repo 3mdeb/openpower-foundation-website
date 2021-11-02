@@ -1,5 +1,5 @@
 ---
-name: "Red Hat"
+title: "Red Hat"
 image: "redhat.png"
 level: gold
 country: "United States of America"

@@ -1,7 +1,7 @@
 ---
 title: "James Huang"
 member: inspurpowersystems
-image: "jameshuang.jpg"
+image: "jameshuang-200.jpg"
 date: 2021-03-03
 draft: false
 ---

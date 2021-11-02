@@ -1,6 +1,6 @@
 ---
 title: "Hugh Blemings"
-image: "hughblemings.jpg"
+image: "hughblemings-200.jpg"
 member: individual
 date: 2021-03-13
 draft: false

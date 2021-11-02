@@ -1,6 +1,6 @@
 ---
 title: "Mendy Furmanek"
-image: "mendyfermanuk.jpg"
+image: "mendyfurmanek-200.jpg"
 member: ibm
 date: 2021-03-03
 draft: false

@@ -42,6 +42,9 @@
 	{{ $timelineoptions := (dict "targetPath" "timeline.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 	{{ $timeline := resources.Get "css/timeline.scss" | resources.ToCSS $timelineoptions | resources.Fingerprint | resources.Minify }}
 	<link href="{{ $timeline.RelPermalink }}" rel="stylesheet">
+	{{ $timelineoptions := (dict "targetPath" "pages.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+	{{ $timeline := resources.Get "css/pages.scss" | resources.ToCSS $timelineoptions | resources.Fingerprint | resources.Minify }}
+	<link href="{{ $timeline.RelPermalink }}" rel="stylesheet">
 	{{ $changelogoptions := (dict "targetPath" "changelog.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 	{{ $changelog := resources.Get "css/changelog.scss" | resources.ToCSS $changelogoptions | resources.Fingerprint | resources.Minify }}
 	<link href="{{ $changelog.RelPermalink }}" rel="stylesheet">

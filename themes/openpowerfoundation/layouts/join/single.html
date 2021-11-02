@@ -5,17 +5,20 @@
     <div id="joinus">
       <div class="container">
         <section id="intro">
-        <h1 class="section-header mb-5 text-center">{{ .Title }}</h1>
-        <h2>{{ .Param "intro.subtitle" }}</h2>
+          <div class="row">
+            <h1 class="section-header my-3 my-md-5 text-center">{{ .Title }}</h1>
+          
+        <h2 class="mt-0 pt-0">{{ .Param "intro.subtitle" }}</h2>
                 <p>{{ .Param "intro.p-2" }}</p>
                 <p><b>{{ .Param "intro.p-3" }}</b></p>
-                <p><a class="btn-outline-primary btn" href="{{ .Param "join.cta.url" }}">{{ .Param "join.cta.title" }}</a></p>
-    </section>
+                <p class="pb-0 mb-0"><a class="btn-outline-primary btn" href="{{ .Param "join.cta.url" }}">{{ .Param "join.cta.title" }}</a></p>
+                </div>
+   </section>
 
     <section id="teaser">
     <div class="teaser__info">
         <h2>{{ .Param "join.teaser.title" }}</h2>
-        <ul>
+        <ul class="mb-0 pb-0">
                         
             {{ range .Param "join.options" }}
                 <li>{{ .option }}</li>  
@@ -28,18 +31,18 @@
     <h2>{{ .Param "membership-levels.title" }}</h2>
     <p>{{ .Param "membership-levels.subtitle" }}</p>
 
-    <ul>
+    <ul class="mb-0 pb-0">
         {{ range .Param "membership-levels.options" }}
           <li>{{ .option }}</li>  
         {{ end }}
     </ul>
     <p class="membership-levels-text">{{ .Param "membership-levels.text" }}</p>
-    <ul>
+    <ul class="mb-0 pb-0">
         {{ range .Param "membership-levels.features" }}
            <li>{{ .feature }}</li>  
         {{ end }}
     </ul>
-    <figure class="figure d-flex justify-content-center">
+    <figure class="figure d-flex justify-content-center mt-5">
         {{ if .Param "membership-levels.image-table" }}
         {{ $imagename := .Param "membership-levels.image-table.image" }}
         {{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
@@ -54,7 +57,7 @@
 
     <section id="membership-benefits">
       <div class="teaser__info">
-        <h2 class="text-center mb-5">{{ .Param "membership-benefits.title" }}</h2>
+        <h2 class="text-center mb-5 pb-2">{{ .Param "membership-benefits.title" }}</h2>
 
         <figure class="figure d-flex justify-content-center">
             {{ if .Param "membership-benefits.image-table" }}
@@ -71,7 +74,7 @@
     </section>
 
     <section id="become-member">
-            <h2 class="text-center mb-5">{{ .Param "become-member.title" }}</h2>
+            <h2 class="text-center mb-5 pb-3">{{ .Param "become-member.title" }}</h2>
             <div class="row">
                 {{ range .Param "become-member.options" }}
                         <article class="post__article col-md-6">

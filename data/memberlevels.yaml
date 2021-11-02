@@ -1,24 +1,24 @@
-- name: Platinum
+- name: Platinum Members
   identifier: platinum
   size: 300x300
   col: 6
-- name: Gold
+- name: Gold Members
   identifier: gold
   size: 200x200
   col: 4
-- name: Silver
+- name: Silver Members
   identifier: silver
   size: 150x150
   col: 3
-- name: Academic
+- name: Academic Members
   identifier: academic
   size: 100x100
-  col: 2
-- name: Associate
+  col: 2 
+- name: Associate Members
   identifier: associate
   size: 100x100
   col: 2
-- name: Individual
+- name: Individual Members
   identifier: individual
   size: 1x1
   col: 1

@@ -27,8 +27,7 @@ article-2:
   p-2:
     With more than 350 members collaborating regularly, the entire semiconductor industry - from global
     organizations with deep expertise to individual creators with a new lens - can innovate with choice and build
-    and develop across the full Hardware and Software stack.</p>
-    <h3>Complete Equation
+    and develop across the full Hardware and Software stack.
   lead-3: Complete Equation
   p-3:
     Open development of this scale enables unprecedented customization across applications, operating systems and

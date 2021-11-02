@@ -1,6 +1,6 @@
 ---
 title: "Sameer Shende"
-image: "sameershende.jpg"
+image: "sameershende-200.jpg"
 member: universityoforegon
 date: 2021-03-03
 draft: false

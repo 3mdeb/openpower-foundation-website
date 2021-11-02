@@ -2,21 +2,21 @@
 
 {{ partial "navbar.html" . }}
 
-<main id="main">
+<main id="main" class="main">
 
-<section id="members">
-<div class="container-fluid">
-	<div class="section-header">
-		<h3 class="section-title">{{ .Title }}</h3>
-		<span class="section-divider"></span>
-		<span class="section-description">{{ .Content }}</span>
-	</div>
-	<div class="row" id="level">
+    <div id="members">
+		<div class="container">
+			<section id="intro">
+				<div class="row">
+				<h1 class="section-header my-3 my-md-5 pb-2 pb-md-3 text-center">{{ .Title }}</h1>
+			</section>
+	<div class="row">
 	{{ $i := 0 }}
 	{{ $data := index $.Site.Data }}
 	{{ range $data.memberlevels }}
-		<div class="col-lg-12 text-lg-center">
-			<h2>{{ .name }}</h2>
+		<div class="col-lg-12">
+			<div class="membership-level pt-5 pb-5">
+			<h2 class="pb-5">{{ .name }}</h2>
 			{{ $key := .identifier }}
 			{{ $imageheight := .image.height }}
 			{{ $imagewidth := .image.width }}
@@ -26,7 +26,7 @@
 			{{ range $.Site.Pages }}
 				{{ $level := .Param "level" }}
 				{{ if eq $level $key }}
-					<div class="col-lg-{{ $col }}">
+					<div class="col-lg-4 pt-5 pb-5">
 						<div class="box">
 							<a href="{{ .Permalink }}">
 							{{ if .Param "image" }}
@@ -40,14 +40,16 @@
 							{{ end }}
 							</a>
 						</div>
+						<a class="text-black" href="{{ .Permalink }}">
+							<h3>{{ .Param "title" }}</h3>
+						</a>
 					</div>
+					
 				{{ end }}
 			{{ end }}
-		<span class="section-divider"></span>
-	{{ end }}
-	</div>
-</div>
-</section>
+
+	{{ end }}</div>
+
 
 </main>
 

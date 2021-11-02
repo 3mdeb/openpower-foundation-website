@@ -1,0 +1,31 @@
+
+// Board of Directors
+
+#boardofdirectors {
+    article {
+        h3 {
+           text-transform: uppercase; 
+        }
+    } 
+}
+
+// Members
+
+#members {
+
+    .membership-level {     
+        border-top: 1px solid#1b1c1f;
+     
+        .box {
+          min-height: 110px;  
+        a {
+            text-decoration: none;
+            color:black;
+        } 
+
+        img {
+            max-width: 210px;
+        }
+     } 
+    } 
+}

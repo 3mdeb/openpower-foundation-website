@@ -1,13 +1,16 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 
-<main class="main">
+<main id="main" class="main" >
+	<div id="events" >
 		<div class="container">
-			<h1 class="mb-5 text-center">{{ .Title }}</h1>
+			<div class="row">
+				<h1 class="section-header my-3 my-md-5 pb-2 text-center">{{ .Title }}</h1>
 	{{ range .Pages.ByDate.Reverse }}
 	{{ $eventdate := .Param "eventdate" }}
+	    
 			<article class="post__article row">
-				<div class="col-md-6">
+				<div class="col-md-6 pt-3">
 					{{ if .Param "image" }}
 					{{ $imagename := .Param "image" }}
 					{{ $imagelocation := (printf "%s/%s" "images/events/" $imagename) }}
@@ -15,7 +18,7 @@
 					{{ $image := $imageresource }}
 					<img class="img-fluid"  src="{{  $image.RelPermalink }}" alt="{{ .Param "title" }}" title="{{ .Param "title" }}">
 				{{ else }}
-					{{ .Title }}
+					{{ .Param "title" }}
 				{{ end }}
 				</div>
 				<div class="col-md-6">
@@ -30,6 +33,7 @@
 				</div>
 			</article>
 	{{ end }}
+   </div>
    </div>
 </main> 
 

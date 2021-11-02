@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<main id="main" class="main" >
+	<div id="governance" >
+		<div class="container">
+			<div class="row"> 
+				<div class="col-md-6 pr-3 pl-0">
+					<h1 class="h2 section-header my-3 my-md-5 pb-2">{{ .Title }}</h1>
+					<div class="content">
+							{{ .Content }}
+					</div>   
+				</div>
+				<div class="col-md-6 pt-5 pl-3 pr-0">
+				{{ if .Param "image" }}
+					<figure class="figure d-flex pt-3">      
+					{{ $imagename := .Param "image" }}
+					{{ $imagelocation := (printf "%s/%s" "images/governance/" $imagename) }}
+					{{ $imageresource := resources.Get $imagelocation }}
+					{{ if $imageresource }}
+							{{ $image := $imageresource.Fit "600x600" }}
+							<img src="{{  $image.RelPermalink }}" alt="{{ .Param "membership-benefits.image-table.alt" }}" title="{{ .Param "membership-benefits.image-table.alt" }}">
+					{{ end }}
+					</figure>
+				{{ else }}
+					{{ .Title }}
+				{{ end }}
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+{{ partial "footer.html" . }}
