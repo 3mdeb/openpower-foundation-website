@@ -1,7 +1,9 @@
 ---
 title: Governance
 date: 2021-09-25
-image: governance.jpg
+image: 
+  name: governance.jpg
+  alt: Governance
 type: governance
 layout: single
 draft: false

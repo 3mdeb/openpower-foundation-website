@@ -30,25 +30,28 @@ jQuery(document).ready(function($) {
 
   // Mobile Navigation
   if ($('#nav-menu-container').length) {
-    var $mobile_nav = $('#nav-menu-container').clone().prop({
-      id: 'mobile-nav'
+    var $mobile_nav = $('#nav-menu-container').clone().attr({
+      id: 'mobile-nav',
+      style:'display:none'
     });
     $mobile_nav.find('> ul').attr({
       'class': '',
       'id': ''
     });
     $('body').append($mobile_nav);
-    $('body').prepend('<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>');
-    $('body').append('<div id="mobile-body-overly"></div>');
-    $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
+    $('.navigation .header__contact-col').append('<button class="ml-3" type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>');
+    $('body').prepend('<div id="mobile-body-overly"></div>');
+    $('<i class="fa fa-chevron-down"></i>').insertAfter('#mobile-nav .menu-has-children > a');
 
     $(document).on('click', '.menu-has-children i', function(e) {
       $(this).next().toggleClass('menu-item-active');
       $(this).nextAll('ul').eq(0).slideToggle();
       $(this).toggleClass("fa-chevron-up fa-chevron-down");
+      $(this).prev('a').toggleClass("expandable-active");
     });
 
     $(document).on('click', '#mobile-nav-toggle', function(e) {
+      $('#mobile-nav').slideToggle(600);
       $('body').toggleClass('mobile-nav-active');
       $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
       $('#mobile-body-overly').toggle();

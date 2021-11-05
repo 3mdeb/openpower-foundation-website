@@ -1,3 +1,15 @@
+main { 
+    &.home {
+  @media screen and (max-width: $lg) {
+    padding-top:50px;
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: $lg) and (max-width: $xl) {
+    padding-top:70px;
+  }
+ }
+}
 
 .post__article {
   position: relative; 
@@ -5,8 +17,6 @@
       margin-bottom: 3.75rem; 
     }
 }
-
-
 .post__title {
   display: block;
   margin-top: 1em;
@@ -23,13 +33,21 @@
     content: ''; 
   }
 }
-
 .teaser {
   &__section {
     padding: 5.625rem 0; 
     &._dark {
       color: #fff;
       background-color: #1b1c1f; 
+
+      @media screen and (max-width: $lg) {
+        padding: 3.5rem 0; 
+      }
+    
+      @media screen and (min-width: $lg) and (max-width: $xl) {
+        padding: 4.4rem 0; 
+      }
+
       a {
         color: black;
       }
@@ -40,9 +58,26 @@
   }
   &__title {
     margin-bottom: 1em; 
+
+    @media screen and (max-width: $lg) {
+      margin-top: 0.6em;
+    }
+  
+    @media screen and (min-width: $lg) and (max-width: $xl) {
+      margin-top: 0.8em;
+    }
+    
   }
   &__form {
     margin-top: 4.1em;
+
+    @media screen and (max-width: $lg) {
+      margin-top: 2em;
+    }
+  
+    @media screen and (min-width: $lg) and (max-width: $xl) {
+      margin-top: 3em;
+    }
   }
   &__info {
     margin: 3.75rem 0;
@@ -51,4 +86,4 @@
     border-style: solid none;
     border-color: #1b1c1f;
   }
-}
+ }

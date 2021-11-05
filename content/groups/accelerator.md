@@ -1,6 +1,7 @@
 ---
-title: "Accelerator Workgroup"
+title: 'Accelerator Workgroup'
 wgtype: sig
+image: thumb-5.jpg
 chair:
   - curtwollbrink
 members:

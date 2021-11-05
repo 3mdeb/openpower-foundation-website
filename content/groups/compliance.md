@@ -1,6 +1,7 @@
 ---
-title: "Compliance Workgroup"
+title: 'Compliance Workgroup'
 wgtype: twg
+image: thumb-2.jpg
 chair:
   - sandywoodward
 members:

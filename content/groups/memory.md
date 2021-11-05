@@ -1,6 +1,7 @@
 ---
-title: "Memory Workgroup"
+title: 'Memory Workgroup'
 wgtype: twg
+image: thumb-1.jpg
 chair:
   - pierreluccantin
   - curtwollbrink

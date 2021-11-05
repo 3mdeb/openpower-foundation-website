@@ -27,31 +27,22 @@
 	{{ $syntaxcss := resources.Get "css/syntax.css" }}
 	{{ $syntax := $syntaxcss | resources.Minify }}
 	<link href="{{ $syntax.RelPermalink }}" rel="stylesheet">
-	{{ $headeroptions := (dict "targetPath" "header.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-	{{ $header := resources.Get "css/header.scss" | resources.ToCSS $headeroptions | resources.Fingerprint |
-	resources.Minify }}
-	<link href="{{ $header.RelPermalink }}" rel="stylesheet">
-	{{ $promooptions := (dict "targetPath" "promo.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-	{{ $promo := resources.Get "css/promo.scss" | resources.ToCSS $promooptions | resources.Fingerprint |
-	resources.Minify }}
-	<link href="{{ $promo.RelPermalink }}" rel="stylesheet">
-	{{ $homeoptions := (dict "targetPath" "home.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-	{{ $home := resources.Get "css/home.scss" | resources.ToCSS $homeoptions | resources.Fingerprint |
-	resources.Minify }}
-	<link href="{{ $home.RelPermalink }}" rel="stylesheet">
-	{{ $timelineoptions := (dict "targetPath" "timeline.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-	{{ $timeline := resources.Get "css/timeline.scss" | resources.ToCSS $timelineoptions | resources.Fingerprint | resources.Minify }}
-	<link href="{{ $timeline.RelPermalink }}" rel="stylesheet">
-	{{ $timelineoptions := (dict "targetPath" "pages.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-	{{ $timeline := resources.Get "css/pages.scss" | resources.ToCSS $timelineoptions | resources.Fingerprint | resources.Minify }}
-	<link href="{{ $timeline.RelPermalink }}" rel="stylesheet">
-	{{ $changelogoptions := (dict "targetPath" "changelog.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-	{{ $changelog := resources.Get "css/changelog.scss" | resources.ToCSS $changelogoptions | resources.Fingerprint | resources.Minify }}
-	<link href="{{ $changelog.RelPermalink }}" rel="stylesheet">
+	{{ $variables := resources.Get "css/variables.scss"}}
+    {{ $variables = $variables | resources.ExecuteAsTemplate "variables.scss" . }}
+	{{ $header := resources.Get "css/header.scss" | resources.Minify }}
+	{{ $promo := resources.Get "css/promo.scss" | resources.Minify }}
+	{{ $home := resources.Get "css/home.scss" | resources.Minify }}
+	{{ $groups := resources.Get "css/groups.scss" | resources.Minify }}
+	{{ $timeline := resources.Get "css/timeline.scss" | resources.Minify }}
+	{{ $pages := resources.Get "css/pages.scss" | resources.Minify }}
+	{{ $footer := resources.Get "css/footer.scss" | resources.Minify }}
+    {{ $changelog := resources.Get "css/changelog.scss" |  resources.Minify }}
+    {{ $scss := slice $variables $header $promo $home $groups $timeline $pages $footer $changelog | resources.Concat "css/custom.scss" }}
+    {{ $css := $scss | toCSS (dict "targetPath" "css/custom.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 	<link href="{{ "css/font-awesome.min.css" | relURL }}" rel="stylesheet" defer>
 	<link href="{{ "css/googlefonts_montserrat.css" | relURL }}" rel="stylesheet" defer>
 </head>
-
 <body>
 
 <div id="preloader">

@@ -1,8 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 
-<main id="main" class="main" >
-	<div id="events" >
+<main id="main" class="main events" >
 		<div class="container">
 			<div class="row">
 				<h1 class="section-header my-3 my-md-5 pb-2 text-center">{{ .Title }}</h1>
@@ -10,7 +9,7 @@
 	{{ $eventdate := .Param "eventdate" }}
 	    
 			<article class="post__article row">
-				<div class="col-md-6 pt-3">
+				<div class="col-md-6 pt-3 mb-3 mb-lg-0">
 					{{ if .Param "image" }}
 					{{ $imagename := .Param "image" }}
 					{{ $imagelocation := (printf "%s/%s" "images/events/" $imagename) }}
@@ -33,7 +32,6 @@
 				</div>
 			</article>
 	{{ end }}
-   </div>
    </div>
 </main> 
 

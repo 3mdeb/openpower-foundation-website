@@ -2,23 +2,25 @@
 
 {{ partial "navbar.html" . }}
 
-{{ partial "home-promo" . }}
+{{ partial "home-promo.html" . }}
 
-<main class="main">
+  <main id="main" class="main home" >
   <div class="container">
     <div class="row">
-      <div class="col-md-6 mb-5"><img class="img-fluid" src="./img/thumb-4.jpg" width="600" height="420" alt="">
+      <div class="col-md-6 mb-4 mb-lg-5">
+        <img class="img-fluid" src="./img/thumb-4.jpg" width="600" height="420" alt="">
       </div>
-      <div class="col-md-6 mb-5">
+      <div class="col-md-6 mb-3 mb-lg-5">
         <h2>{{ .Param "article-1.header" }}</h2>
         <p><b>{{ .Param "article-1.lead-1" }}</b> {{ .Param "article-1.p-1" }}</p>
         <p><b>{{ .Param "article-1.lead-2" }}</b> {{ .Param "article-1.p-2" }}</p>
       </div>
     </div>
     <div class="row flex-md-row-reverse">
-      <div class="col-md-6 mb-5"><img class="img-fluid" src="./img/thumb-5.jpg" width="600" height="420" alt="">
+      <div class="col-md-6 mb-4 mb-lg-5">
+        <img class="img-fluid" src="./img/thumb-5.jpg" width="600" height="420" alt="">
       </div>
-      <div class="col-md-6 mb-5">
+      <div class="col-md-6 mb-0">
         <h2>{{ .Param "article-2.header" }}</h2>
         <h3>{{ .Param "article-2.lead-1" }}</h3>
         <p>{{ .Param "article-2.p-1" }}</p>
@@ -30,10 +32,25 @@
     </div>
   </div>
 </main>
-<section class="teaser__section pt-0">
+<section class="teaser__section pt-0 pb-3 pb-lg-5">
   <div class="container">
-    <h2 class="teaser__title text-center">{{ .Param "sections.section-1.title" }}</h2>
+    <h2 class="teaser__title text-lg-center">{{ .Param "sections.section-1.title" }}</h2>
     <div class="row">
+
+          <!-- {{ range (.Data.Pages.ByParam "wgtype").Reverse }}
+            {{ $imagename := .Param "image" }}
+            {{ $imagelocation := (printf "%s/%s" "images/" $imagename) }}
+            {{ $imageresource := resources.Get $imagelocation }}
+            <article class="post__article col-md-4">
+              {{ if $imageresource }}
+              <div class="post__thumb">
+                {{ $image := $imageresource.Fit "390x390" }}
+                <img class="img-fluid" src="{{  $image.RelPermalink }}" width="390" height="390" alt="">
+                {{ end }}
+              </div><a class="post__title" href="{{ .Permalink }}">{{ .Title }}</a>
+            </article>
+          
+          {{ end }} -->
       <article class="post__article col-md-4">
         <div class="post__thumb"><img class="img-fluid" src="./img/thumb-1.jpg" width="390" height="390" alt="">
         </div><a class="post__title" href="/">{{ .Param "sections.section-1.article-1.text" }}</a>
@@ -47,16 +64,18 @@
         </div><a class="post__title" href="/">{{ .Param "sections.section-1.article-3.text" }}</a>
       </article>
     </div>
-    <p class="text-center"><a class="btn btn-outline-primary">Libre BMC</a></p>
+    <p class="text-center mt-3 mt-lg-0">
+      <a class="btn btn-outline-primary">Libre BMC</a>
+    </p>
   </div>
 </section>
 <section class="teaser__section _dark">
   <div class="container text-center">
     <p class="h2 mb-4">{{ .Param "sections.section-dark.p-1" }}</p>
-    <p><a class="btn btn-light" href="/">{{ .Param "sections.section-dark.cta" }}</a></p>
+    <p class="mt-3 mt-lg-0"><a class="btn btn-light" href="/">{{ .Param "sections.section-dark.cta" }}</a></p>
   </div>
 </section>
-<section class="teaser__section">
+<section class="teaser__section py-4 py-lg-5 my-lg-5">
   <div class="container">
     <h2 class="teaser__title text-center">{{ .Param "sections.section-supporters.title" }}</h2>
     <div class="row justify-content-center">
@@ -66,27 +85,29 @@
         {{ $imagelocation := (printf "%s/%s" "images/" $imagename) }}
         {{ $imageresource := resources.Get $imagelocation }}
         {{ $image := $imageresource.Fit "180x102" }}
-        <div class="col-md-2"><img class="img-fluid" src="{{  $image.RelPermalink }}" width="180" height="102" alt="{{ .title }}"></div>
+        <div class="col-md-2 pb-3 pb-lg-0">
+          <img class="img-fluid" src="{{  $image.RelPermalink }}" width="180" height="102" alt="{{ .title }}">
+        </div>
       {{ end }}
     </div>
   </div>
 </section>
-<section class="teaser__section _navy">
-  <div class="container text-center">
+<section class="teaser__section _navy  py-4 py-lg-5 my-lg-5">
+  <div class="container text-center pb-4 pb-lg-0">
     <h2 class="teaser__title">{{ .Param "sections.section-subscribe.title" }}</h2>
     <p>{{ .Param "sections.section-subscribe.p-1" }}</p>
     <form class="teaser__form row justify-content-center" action="/" method="post">
-      <div class="col-md-2">
+      <div class="col-md-2 pb-3 pb-lg-0">
+        <input class="form-control" name="" type="text" value="">
+      </div>
+      <div class="col-md-2 pb-3 pb-lg-0">
+        <input class="form-control" name="" type="text" value="">
+      </div>
+      <div class="col-md-2 pb-3 pb-lg-0">
         <input class="form-control" name="" type="text" value="">
       </div>
       <div class="col-md-2">
-        <input class="form-control" name="" type="text" value="">
-      </div>
-      <div class="col-md-2">
-        <input class="form-control" name="" type="text" value="">
-      </div>
-      <div class="col-md-2">
-        <input class="btn btn-outline-primary" type="submit" value="Submit">
+        <input class="btn btn-outline-primary mt-4 mt-md-0" type="submit" value="Submit">
       </div>
     </form>
   </div>

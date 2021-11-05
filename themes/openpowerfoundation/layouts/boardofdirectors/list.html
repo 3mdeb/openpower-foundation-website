@@ -1,14 +1,13 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 
- <main id="main" class="main">
-	  <div id="boardofdirectors">
+ <main id="main" class="main boardofdirectors">
 		<div class="container">
 			<div class="row">
 		 	<h1 class="section-header my-3 my-md-5 pb-2 pb-md-3 text-center">{{ .Title }}</h1>
 		{{ range .Data.Pages.ByWeight }}
-			<article class="post__article row">
-				<div class="col-md-2 mb-4 mb-md-0 pt-md-3">
+			<article class="post__article row mb-4 mb-lg-0">
+				<div class="col-md-2 mb-4 mb-md-0 pt-md-3 pl-4 pl-lg-0">
 					{{ $personfile := .File.BaseFileName }}
 					{{ range where .Site.RegularPages "Section" "persons" }}
 						{{ $person := .File.BaseFileName }}
@@ -41,7 +40,5 @@
 			{{ end }}
    </div>
   </div>
-  </div>
-
 </main>
 {{ partial "footer.html" . }}

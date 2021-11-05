@@ -1,0 +1,28 @@
+
+main { 
+  &.groups {
+    @media screen and (max-width: $lg) {
+      padding-top:50px;
+      padding-bottom: 40px;
+    }
+
+    @media screen and (min-width: $lg) and (max-width: $xl) {
+      padding-top:70px;
+      padding-bottom: 40px;
+    }
+
+    @media screen and (min-width: $xl) {
+      padding-bottom: 50px;
+    }
+
+  }
+}
+
+.promo__section {
+  align-items: center;
+  &.groups {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 ---
-title: "Machine Learning AI Work Group"
+title: 'Machine Learning AI Work Group'
 wgtype: sig
+image: thumb-2.jpg
 chair:
   - lionelclavien
   - kipwarner

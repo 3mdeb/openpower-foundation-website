@@ -1,8 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 
-<main id="main" class="main">
-    <div id="joinus">
+<main id="main" class="main join">
       <div class="container">
         <section id="intro">
           <div class="row">
@@ -48,7 +47,7 @@
         {{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
         {{ $imageresource := resources.Get $imagelocation }}
         {{ $image := $imageresource }}
-        <img src="{{  $image.RelPermalink }}" alt="{{ .Param "membership-levels.image-table.alt" }}" title="{{ .Param "membership-levels.image-table.alt" }}">
+        <img class="img-fluid" src="{{  $image.RelPermalink }}" alt="{{ .Param "membership-levels.image-table.alt" }}" title="{{ .Param "membership-levels.image-table.alt" }}">
     {{ else }}
         {{ .Title }}
     {{ end }}
@@ -65,7 +64,7 @@
             {{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
             {{ $imageresource := resources.Get $imagelocation }}
             {{ $image := $imageresource }}
-            <img src="{{  $image.RelPermalink }}" alt="{{ .Param "membership-benefits.image-table.alt" }}" title="{{ .Param "membership-benefits.image-table.alt" }}">
+            <img class="img-fluid"  src="{{  $image.RelPermalink }}" alt="{{ .Param "membership-benefits.image-table.alt" }}" title="{{ .Param "membership-benefits.image-table.alt" }}">
             {{ else }}
             {{ .Title }}
         {{ end }}
@@ -83,7 +82,7 @@
                                     {{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
                                     {{ $imageresource := resources.Get $imagelocation }}
                                     {{ $image := $imageresource.Fit "600x390" }}
-                                    <img src="{{  $image.RelPermalink }}" alt="{{ .title }}" title="{{ .title }}">
+                                    <img class="img-fluid"  src="{{  $image.RelPermalink }}" alt="{{ .title }}" title="{{ .title }}">
                             </div>
                             <div class="h2">{{ .title }}</div>
                             <p>{{ .text }}</p>
@@ -92,12 +91,6 @@
                   {{ end }}
             </div>
          </section>
-        
-         <!--         
-         {{ .Content }}
-         -->
-
-        </div>
      </div>
 </main>
 

@@ -1,6 +1,7 @@
 ---
-title: "System Software TWG"
+title: 'System Software TWG'
 wgtype: twg
+image: thumb-3.jpg
 chair:
   - michalzygowski
 members:
@@ -9,7 +10,7 @@ members:
   - yadro
   - 3mdeb
   - stevenmunroe
-participation: "Members"
+participation: 'Members'
 git: https://git.openpower.foundation/systemsoftware
 discussion: https://discuss.openpower.foundation/c/twg/syssoftware/19
 meetingminutes: https://meetingminutes.openpower.foundation/systemsoftware/

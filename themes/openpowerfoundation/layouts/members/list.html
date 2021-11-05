@@ -2,9 +2,7 @@
 
 {{ partial "navbar.html" . }}
 
-<main id="main" class="main">
-
-    <div id="members">
+<main id="main" class="main members">
 		<div class="container">
 			<section id="intro">
 				<div class="row">
@@ -15,8 +13,8 @@
 	{{ $data := index $.Site.Data }}
 	{{ range $data.memberlevels }}
 		<div class="col-lg-12">
-			<div class="membership-level pt-5 pb-5">
-			<h2 class="pb-5">{{ .name }}</h2>
+			<div class="membership-level pt-5 pb-0 pb-lg-5">
+			<h2 class="pb-2 pb-lg-5">{{ .name }}</h2>
 			{{ $key := .identifier }}
 			{{ $imageheight := .image.height }}
 			{{ $imagewidth := .image.width }}
@@ -26,7 +24,7 @@
 			{{ range $.Site.Pages }}
 				{{ $level := .Param "level" }}
 				{{ if eq $level $key }}
-					<div class="col-lg-4 pt-5 pb-5">
+					<div class="col-lg-4 pt-5 pb-0 pb-lg-5">
 						<div class="box">
 							<a href="{{ .Permalink }}">
 							{{ if .Param "image" }}
@@ -48,8 +46,7 @@
 				{{ end }}
 			{{ end }}
 
-	{{ end }}</div>
-
+	{{ end }}
 
 </main>
 

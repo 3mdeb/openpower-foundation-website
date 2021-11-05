@@ -1,5 +1,5 @@
 ---
-title: 'Membership'
+title: 'Home'
 date: 2021-07-17
 type: home
 layout: single

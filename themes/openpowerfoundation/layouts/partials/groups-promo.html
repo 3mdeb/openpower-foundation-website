@@ -1,0 +1,12 @@
+<section class="promo__section groups d-flex"
+  style="background-image:url(../img/promo-1.jpg)">
+  <div class="promo__container container">
+    <div class="d-flex justify-content-start">
+      <div class="promo-wrapper p-3 p-lg-0">
+        <h1>{{ .Param "promo-h1" }}</h1>
+        <p>{{ .Param "promo-p1" | safeHTML }}</p>
+        <p>{{ .Param "promo-p2" | safeHTML }}</p>
+      </div>
+    </div>
+  </div>
+</section>

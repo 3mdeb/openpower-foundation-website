@@ -1,6 +1,7 @@
 ---
-title: "PowerPi Workgroup"
+title: 'PowerPi Workgroup'
 wgtype: sig
+image: thumb-1.jpg
 chair:
   - alexeystepanov
 members:

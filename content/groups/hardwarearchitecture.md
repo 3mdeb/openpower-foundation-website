@@ -1,13 +1,14 @@
 ---
-title: "Hardware Architecture TWG"
+title: 'Hardware Architecture TWG'
 wgtype: twg
+image: thumb-6.jpg
 chair:
   - derekwilliams
 members:
-participation: "Members"
+participation: 'Members'
 #git: https://git.openpower.foundation/librebmc/
 #discussion: https://discuss.openpower.foundation/c/sig/librebmc/
-#calendar: 
+#calendar:
 #  web: https://discuss.openpower.foundation/c/sig/librebmc/11/l/calendar
 #  ics: webcal://discuss.openpower.foundation/c/sig/librebmc/l/calendar.ics
 #chat:
@@ -22,5 +23,4 @@ draft: false
 
 This workgroup provides a forum for workgroup (WG) members to propose, discuss, and
 approve modifications to the OpenPOWER System Hardware Architecture Specifications.
-The scope of modifications will be focused on the needs of the OpenPOWER ecosystem.  
-
+The scope of modifications will be focused on the needs of the OpenPOWER ecosystem.
