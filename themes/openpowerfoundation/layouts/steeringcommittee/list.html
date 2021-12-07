@@ -7,7 +7,7 @@
 <section id="boardofdirectors">
 <div class="container-fluid">
 	<div class="section-header">
-		<h3 class="section-title">{{ .Title }}</h3>
+		<h1 class="section-title text-center">{{ .Title }}</h1>
 		<span class="section-divider"></span>
 		<p class="section-description">{{ .Content }}</p>
 	</div>
@@ -17,7 +17,7 @@
 			<div id="person-header">
 				<div class="row">
 					<div class="col-lg-8">
-						<h1>{{ .Title }}</h1>
+						<h2>{{ .Title }}</h2>
 						({{ .Param "position" }})
 					</div>
 					{{ $personfile := .File.BaseFileName }}
@@ -74,7 +74,7 @@
 			<div class="col-lg-4" id="person">
 				<div id="person-header">
 					<div class="row">
-						<div class="col-lg-8"><h1>{{ .Title }}</h1> ({{ $wgname }})</div>
+						<div class="col-lg-8"><h2>{{ .Title }}</h2> ({{ $wgname }})</div>
 						<div class="col-lg-4" id="member">
 							{{ $member := .Param "member" }}
 							{{ range where .Site.RegularPages "Section" "members" }}

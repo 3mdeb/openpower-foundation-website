@@ -18,9 +18,9 @@ body {
 
 .header {
   padding: 10px 0;
-      @media screen and (max-width: $lg) {
-        padding-top:17px;
-      }
+  @media screen and (max-width: $lg) {
+    padding-top:17px;
+  }
   border-bottom: 1px solid #1b1c1f;
   position: fixed;
   width: 100vw;
@@ -29,10 +29,8 @@ body {
   z-index: 100; 
   &__logo {
     text-decoration: none; 
-
       &-col {
       flex-grow: 0; 
-  
     }
   }
   &__menu {
@@ -43,8 +41,7 @@ body {
       text-align: center;
       &.join {
         display: none;
-       }
-
+      }
       &.menu-has-children {
         position: relative;
         ul {
@@ -81,7 +78,7 @@ body {
           transition: width .2s ease-out; 
         }
         &:hover {
-          color: #1595b1; 
+          color: #2566f4; 
         }
       }
     }
@@ -89,12 +86,12 @@ body {
   &__contact-col {
     flex-grow: 0; 
   }
-  &__contact-btn {
-    min-width: 120px;
-    margin-left: 2em;
+  &__contact-btn,
+  &__login-btn {
+    min-width: 80px;
+    margin-left: 1.5em;
     white-space: nowrap;  
   }
-
 }
 
 
@@ -195,6 +192,9 @@ body {
                    border-bottom: 1px solid #e8e8e8;
                    border-right: 1px solid #e8e8e8;
                    border-left: 1px solid #e8e8e8;;
+                    @media screen and (min-width: $lg) {
+                        margin-top:1em;
+                    }  
                  //  -webkit-box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.4); 
              //       box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.4); 
 
@@ -273,26 +273,24 @@ body {
         }
  }
 
- .join-us-button {
+.join-us-button,
+.login-button {
   &.desktop-view {
     @media screen and (max-width: $lg) {
       display: none;
     }     
     a {
-    @media screen and (min-width:$lg) and (max-width: $xxl) {
-      max-width:80px;
-      height: auto;
-      padding:0.375rem 0;
-   }
+      @media screen and (min-width:$lg) and (max-width: $xxl) {
+        max-width:80px;
+        height: auto;
+        padding:0.375rem 0;
+      }
+    }
   }
-
-  }
-     &.mobile-view {
-       margin:auto;
-       width: 97px; 
-       min-width: 97px; 
-       
-    } 
-
+  &.mobile-view {
+    margin:auto;
+    width: 97px; 
+    min-width: 97px; 
+  } 
 }
 

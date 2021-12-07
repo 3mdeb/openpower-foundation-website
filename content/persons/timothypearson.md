@@ -1,7 +1,7 @@
 ---
 title: "Timothy Pearson"
 image: "timothypearson-200.jpg"
-member: "raptorcomputingsystems"
+member: "Raptor Computing Systems"
 date: 2021-03-03
 draft: false
 ---

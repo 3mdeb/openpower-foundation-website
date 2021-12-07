@@ -1,3 +1,11 @@
+// Links disabled 
+
+.disabled {  
+color: black;
+  display: inline-block;
+  pointer-events: none;
+  text-decoration: none;
+}
 
 // Board of Directors
 
@@ -5,6 +13,9 @@
     article {
         h3 {
            text-transform: uppercase; 
+           a {
+             color: black;
+           }
         }
     } 
 }
@@ -20,22 +31,22 @@
 // Members
 
 .members {
-
-    .membership-level {     
-        border-top: 1px solid#1b1c1f;
-     
-        .box {
-          min-height: 110px;  
-        a {
-            text-decoration: none;
-            color:black;
-        } 
-
-        img {
-            max-width: 210px;
-        }
-     } 
+  .membership-level {     
+    border-top: 1px solid#1b1c1f;
+    .box {
+      min-height: 110px;  
+      text-align: center;
+      display: flex;
+      a {
+        text-decoration: none;
+        color:black;
+        align-self: center;
+      } 
+      img {
+        max-width: 210px;
+      }
     } 
+  } 
 }
 
 // Events
@@ -45,4 +56,122 @@
         margin-bottom: 1.75rem;
     }
 }
+
+// Join
+
+.join {
+
+    .membership-data {
+
+      table {
+        margin:auto;
+        width:100%;
+
+         tr {
+
+            td {
+                padding: 10px;  
+              }
+
+
+            &:nth-child(odd) {
+               background-color: $white;
+            }
+
+            &:nth-child(even) {
+               background-color: $lightgrey;
+            }
+            
+          th {
+            padding: 10px;  
+            background-color: #dfecf5; 
+
+          &:nth-of-type(1) {
+              width: 20%;
+          }
+          &:nth-of-type(2) {
+            width: 15%;
+          }
+
+          &:nth-of-type(3) {
+            width: 25%;
+          }
+
+          &:nth-of-type(4) {
+            width: 35%;
+          }
+        
+        }
+       }
+      }
+
+    }
+
+    .benefits-data {
+
+      table {
+        margin:auto;
+        width:100%;
+
+      tr {
+
+         td {
+             padding:10px; 
+             position: relative; 
+
+             span {
+               position: absolute;
+                width: 225px;
+                display: block;
+                top: 10px;
+                left: 10px;
+              }
+            }
+
+         &:nth-child(odd) {
+            background-color: $white;
+         }
+
+         &:nth-child(even) {
+            background-color: $lightgrey;
+         }
+         
+       th {
+         padding:10px;  
+         background-color: #dfecf5; 
+
+       &:nth-of-type(1) {
+           width: 60%;
+       }
+       &:nth-of-type(2) {
+         width: 8%;
+       }
+
+       &:nth-of-type(3) {
+         width: 8%;
+       }
+
+       &:nth-of-type(4) {
+         width: 8%;
+       }
+       
+       &:nth-of-type(5) {
+        width: 8%;
+      }
+      
+      &:nth-of-type(6) {
+        width: 8%;
+      }
+     
+     }
+      
+   }
+
+ 
+ }
+ }
+
+
+}
+
 

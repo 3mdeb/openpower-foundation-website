@@ -22,3 +22,6 @@ enableRobotsTXT = true
 	mediatype = "application/rss"
 	baseName = "feed"
 	suffix = "xml"
+	
+[markup.goldmark.renderer]
+unsafe = true

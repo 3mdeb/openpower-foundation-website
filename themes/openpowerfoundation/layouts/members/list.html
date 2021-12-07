@@ -26,23 +26,19 @@
 				{{ if eq $level $key }}
 					<div class="col-lg-4 pt-5 pb-0 pb-lg-5">
 						<div class="box">
-							<a href="{{ .Permalink }}">
+							<a target="_blank" href="{{ .Param "link" }}">
 							{{ if .Param "image" }}
 								{{ $imagename := .Param "image" }}
 								{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
 								{{ $imageresource := resources.Get $imagelocation }}
 								{{ $image := $imageresource.Fit $imagesize }}
 								<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
-							{{ else }}
-								{{ .Title }}
-							{{ end }}
 							</a>
+							{{ else }}
+								<h3><a target="_blank" class="text-black" href="{{ .Param " link" }}">{{ .Param "title" }}</a></h3>
+							{{ end }}
 						</div>
-						<a class="text-black" href="{{ .Permalink }}">
-							<h3>{{ .Param "title" }}</h3>
-						</a>
 					</div>
-					
 				{{ end }}
 			{{ end }}
 

@@ -10,7 +10,9 @@
         <h2 class="mt-0 pt-0">{{ .Param "intro.subtitle" }}</h2>
                 <p>{{ .Param "intro.p-2" }}</p>
                 <p><b>{{ .Param "intro.p-3" }}</b></p>
-                <p class="pb-0 mb-0"><a class="btn-outline-primary btn" href="{{ .Param "join.cta.url" }}">{{ .Param "join.cta.title" }}</a></p>
+                <p class="pb-0 mb-0">
+                    <a class="btn-outline-primary btn" href="{{ .Param "join.cta.url" }}">{{ .Param "join.cta.title" }}</a>
+                  </p>
                 </div>
    </section>
 
@@ -41,34 +43,21 @@
            <li>{{ .feature }}</li>  
         {{ end }}
     </ul>
-    <figure class="figure d-flex justify-content-center mt-5">
-        {{ if .Param "membership-levels.image-table" }}
-        {{ $imagename := .Param "membership-levels.image-table.image" }}
-        {{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
-        {{ $imageresource := resources.Get $imagelocation }}
-        {{ $image := $imageresource }}
-        <img class="img-fluid" src="{{  $image.RelPermalink }}" alt="{{ .Param "membership-levels.image-table.alt" }}" title="{{ .Param "membership-levels.image-table.alt" }}">
-    {{ else }}
-        {{ .Title }}
-    {{ end }}
-    </figure>
+    <div class="membership-data mt-5">
+      {{ .Content }}
+    </div>
     </section>
 
     <section id="membership-benefits">
       <div class="teaser__info">
         <h2 class="text-center mb-5 pb-2">{{ .Param "membership-benefits.title" }}</h2>
-
-        <figure class="figure d-flex justify-content-center">
-            {{ if .Param "membership-benefits.image-table" }}
-            {{ $imagename := .Param "membership-benefits.image-table.image" }}
-            {{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
-            {{ $imageresource := resources.Get $imagelocation }}
-            {{ $image := $imageresource }}
-            <img class="img-fluid"  src="{{  $image.RelPermalink }}" alt="{{ .Param "membership-benefits.image-table.alt" }}" title="{{ .Param "membership-benefits.image-table.alt" }}">
-            {{ else }}
-            {{ .Title }}
-        {{ end }}
-        </figure>
+        <div class="benefits-data">
+        {{ range where .Site.Pages "Section" "join" }}
+           {{if eq .Title "Membership Benefits"}}
+             {{ .Content }}
+          {{ end}}
+        {{ end}}
+        </div>
       </div>
     </section>
 

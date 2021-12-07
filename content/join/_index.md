@@ -60,3 +60,11 @@ become-member:
 draft: false
 ---
 
+
+| Membership Level     | Annual Fee | Technical Steering Committee    | Board of Directors                                               |
+|----------------------|------------|---------------------------------|------------------------------------------------------------------|
+| Platinum             | $100k      | 1 voting participant per member | 1 voting participant per member                                  |
+| Gold                 | $60k       | If a WG lead                    | 1 elected voting participant per three gold member level         |
+| Silver               | $20k       | If a WG lead                    | 1 elected voting participant for all silver members              |
+| Associate / Academic | $0         | If a WG lead                    | 1 elected non-voting observer for all associate/acedemic members |
+

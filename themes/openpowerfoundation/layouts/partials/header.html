@@ -33,13 +33,14 @@
 	{{ $promo := resources.Get "css/promo.scss" | resources.Minify }}
 	{{ $home := resources.Get "css/home.scss" | resources.Minify }}
 	{{ $groups := resources.Get "css/groups.scss" | resources.Minify }}
+	{{ $bod := resources.Get "css/bod.scss" | resources.Minify }}
 	{{ $timeline := resources.Get "css/timeline.scss" | resources.Minify }}
 	{{ $pages := resources.Get "css/pages.scss" | resources.Minify }}
 	{{ $footer := resources.Get "css/footer.scss" | resources.Minify }}
-    {{ $changelog := resources.Get "css/changelog.scss" |  resources.Minify }}
-    {{ $scss := slice $variables $header $promo $home $groups $timeline $pages $footer $changelog | resources.Concat "css/custom.scss" }}
-    {{ $css := $scss | toCSS (dict "targetPath" "css/custom.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+	{{ $changelog := resources.Get "css/changelog.scss" |  resources.Minify }}
+	{{ $scss := slice $variables $header $promo $home $groups $bod $timeline $pages $footer $changelog | resources.Concat "css/custom.scss" }}
+	{{ $css := $scss | toCSS (dict "targetPath" "css/custom.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+	<link rel="stylesheet" href="{{ $css.RelPermalink }}">
 	<link href="{{ "css/font-awesome.min.css" | relURL }}" rel="stylesheet" defer>
 	<link href="{{ "css/googlefonts_montserrat.css" | relURL }}" rel="stylesheet" defer>
 </head>

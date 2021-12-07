@@ -1,7 +1,7 @@
 ---
 title: "James Kulina"
 image: "jameskulina-200.jpg"
-member: "openpowerfoundation"
+member: "OpenPOWER Foundation"
 date: 2021-03-03
 draft: false
 ---
