@@ -29,16 +29,10 @@
 	weight = -600
 
 [[navbar]]
-	name = "Members"
-	identifier = "members"
-	url = "/members/"
+	name = "Events"
+	identifier = "events"
+	url = "/events/"
 	weight = -1900
-
-[[navbar]]
-	name = "Join"
-	identifier = "join"
-	url = "/join/"
-	weight = -1850
 
 [[navbar]]
 	name = "Working Groups"
@@ -47,16 +41,23 @@
 	weight = -1800
 
 [[navbar]]
+	name = "Members"
+	identifier = "members"
+	url = "/members/"
+	weight = -1700
+
+[[navbar]]
+	name = "Join"
+	identifier = "join"
+	url = "/join/"
+	weight = -1850
+
+
+[[navbar]]
 	name = "HUB"
 	identifier = "hub"
 	url = "/hub/"
 	weight = -1700
-
-[[navbar]]
-	name = "Events"
-	identifier = "events"
-	url = "/events/"
-	weight = -1600
 
 [[navbar]]
 	name = "Technical"
