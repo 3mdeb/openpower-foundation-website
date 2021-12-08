@@ -1,11 +1,13 @@
 <header class="header">
 	<div class="container navigation">
 		<div class="row d-lg-flex flex-lg-nowrap">
-					{{ $imageresource := resources.Get "img/logo.png" }}
-					{{ $imagefile := $imageresource.Resize "350x60" }}
-			<div class="header__logo-col col d-flex justify-content-center align-items-center"><a class="header__logo" href="/">
-				<img src="{{ $imagefile.RelPermalink }}" width="297"
-						height="49" alt="OpenPOWER"></a></div>
+			{{ $imageresource := resources.Get "img/logo.png" }}
+			{{ $imagefile := $imageresource.Resize "350x60" }}
+			<div class="header__logo-col col d-flex justify-content-center align-items-center">
+				<a class="header__logo" href="{{ "/" | relURL }}">
+					<img src="{{ $imagefile.RelPermalink }}" width="297" height="49" alt="OpenPOWER">
+				</a>
+			</div>
 			<div class="header__menu-col col">
 				<nav class="navbar navbar-expand-lg header__menu-nav" id="nav-menu-container">
 					<ul class="nav-menu header__menu d-lg-flex justify-content-center list-unstyled">
