@@ -2,31 +2,25 @@
 {{ partial "navbar.html" . }}
 
 <main id="main" class="main join">
-      <div class="container">
-        <section id="intro">
-          <div class="row">
-            <h1 class="section-header my-3 my-md-5 text-center">{{ .Title }}</h1>
-          
-        <h2 class="mt-0 pt-0">{{ .Param "intro.subtitle" }}</h2>
-                <p>{{ .Param "intro.p-2" }}</p>
-                <p><b>{{ .Param "intro.p-3" }}</b></p>
-                <p class="pb-0 mb-0">
-                    <a class="btn-outline-primary btn" href="{{ .Param "join.cta.url" }}">{{ .Param "join.cta.title" }}</a>
-                  </p>
-                </div>
-   </section>
-
-    <section id="teaser">
-    <div class="teaser__info">
-        <h2>{{ .Param "join.teaser.title" }}</h2>
-        <ul class="mb-0 pb-0">
-                        
-            {{ range .Param "join.options" }}
-                <li>{{ .option }}</li>  
-            {{ end }}
-     </ul>
-    </div>
-  </section>
+	<div class="container">
+	<section id="intro">
+		<div class="row">
+			<h1 class="section-header my-3 my-md-5 text-center">{{ .Title }}</h1>
+			<h2 class="mt-0 pt-0">{{ .Param "intro.subtitle" }}</h2>
+			<p>{{ .Param "intro.p-2" }}</p>
+			<p><b>{{ .Param "intro.p-3" }}</b></p>
+		</div>
+	</section>
+	<section id="teaser">
+		<div class="teaser__info">
+			<h2>{{ .Param "intro.teaser.title" }}</h2>
+			<ul class="mb-0 pb-0">
+			{{ range .Param "intro.options" }}
+				<li>{{ .option }}</li>  
+			{{ end }}
+			</ul>
+		</div>
+	</section>
 
   <section id="membership-levels">
     <h2>{{ .Param "membership-levels.title" }}</h2>
