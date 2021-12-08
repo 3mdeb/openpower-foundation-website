@@ -16,8 +16,12 @@ join:
   teaser:
      title: Why Join? 
   options:
-    - option: Option 1
-    - option: Option 2
+    - option: Accelerate technical development of your own POWER based products
+    - option: Contribute technical resource, best practices, and code to help guide and influence OpenPOWER deliverables
+    - option: Increase visibility as OpenPOWER amplifies member success across the industry
+    - option: Build a partner network as an active member within the OpenPOWER community
+    - option: Showcase your OpenPOWER products, services, training, and resources on OpenPOWER Ready
+
 
 membership-levels:
   title: Membership Levels
@@ -46,14 +50,14 @@ become-member:
    - 
      title: Individual membership
      text: Individual membership
-     cta_url: '#'
+     cta_url: 'https://enrollment.lfx.linuxfoundation.org/?individual&project=openpowerfoundation'
      cta_text: Join
      image: thumb-7.jpg
 
    - 
      title: Corporate membership
      text: Corporate membership
-     cta_url: '##'
+     cta_url: 'https://enrollment.lfx.linuxfoundation.org/?project=openpowerfoundation'
      cta_text: Join
      image: thumb-7-1.jpg
  
