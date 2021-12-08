@@ -6,19 +6,26 @@
 
 <section id="hubproviders">
 <div id="hubproviders">
-	<div class="container-fluid">
-		<div class="section-header">
-			<h3 class="section-title">{{ .Title }}</h3>
+	<div class="container">
+		<div class="section-header mb-4">
+			<h1 class="section-title text-center mb-4">{{ .Title }}</h1>
 			<span class="section-divider"></span>
-			<span class="section-description">{{ .Content }}</span>
+			<div class="row">
+				<div class="col-8 offset-2">
+					<span class="section-description">{{ .Content }}</span>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div id="hubproviders" class="row">
-		{{ range .Data.Pages }}
-			<div id="hubprovider" class="col-lg-3 ">
-				<a href="{{ .Permalink }}">{{ .Title }}</a>
+	<div class="container">
+		<div id="hubproviders" class="row">
+			<div class="col-2"></div>
+			{{ range .Data.Pages }}
+			<div id="hubprovider" class="col-lg-2 text-center">
+				<a class="btn btn-outline-primary" href="{{ .Permalink }}">{{ .Title }}</a>
 			</div>
-		{{ end }}
+			{{ end }}
+		</div>
 	</div>
 </div>
 

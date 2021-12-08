@@ -8,11 +8,11 @@
 <div id="hubprovider">
 	<div class="container-fluid">
 		<div class="section-header">
-			<h3 class="section-title">{{ .Title }}</h3>
+			<h2 class="section-title text-center mb-4">{{ .Title }}</h2>
 			<span class="section-divider"></span>
 		</div>
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-lg-4 offset-lg-2">
 				{{ if .Param "member" }}
 					Provider :
 					{{ $member := .Param "member" }}
@@ -37,7 +37,7 @@
 					{{ end }}
 				{{ end }}
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-4">
 				{{ if .Param "provides" }}
 					Provides following OPF HUB resources :
 					<ul>

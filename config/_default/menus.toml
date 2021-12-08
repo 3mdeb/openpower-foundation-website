@@ -1,7 +1,6 @@
 [[navbar]]
 	name = "About"
 	identifier = "about"
-	url = "/about/"
 	weight = -2000
 [[navbar]]
 	parent = "about"
@@ -62,7 +61,6 @@
 [[navbar]]
 	name = "Technical"
 	identifier = "resources"
-	url = "/resources/"
 	weight = -1500
 [[navbar]]
 	parent = "resources"
@@ -72,19 +70,7 @@
 	weight = -900
 [[navbar]]
 	parent = "resources"
-	name = "SIG Designs"
-	identifier = "referencedesigns"
-	url = "/resources/referencedesigns/"
-	weight = -800
-[[navbar]]
-	parent = "resources"
 	name = "OpenPOWER Ready"
 	identifier = "ready"
 	url = "/ready/"
 	weight = -700
-[[navbar]]
-	parent = "resources"
-	name = "OpenPOWER Cases Designs"
-	identifier = "usecases"
-	url = "/resources/usecases/"
-	weight = -600

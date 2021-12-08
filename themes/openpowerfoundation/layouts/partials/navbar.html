@@ -16,11 +16,11 @@
 								{{ range $.Site.Pages }}
 								{{ $group := .Param "wgtype" }}
 								{{ if eq $group "twg" }}
-								<li class="header__menu-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-								{{ end }}
-								{{ if eq $group "sig" }}
-								<li class="header__menu-item"> <a href="{{ .Permalink }}">{{ .Title }}</a></li>
-								{{ end }}
+									<li class="header__menu-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+									{{ end }}
+									{{ if eq $group "sig" }}
+										<li class="header__menu-item"> <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+									{{ end }}
 								{{ end }}
 							</ul>
 							{{ else }}
@@ -69,10 +69,8 @@
 							<div class="header__contact-btn join-us-button mobile-view py-4">
 								<a class="d-inline-block btn-outline-primary btn-sm btn" href="/join">Join</a>
 							</div>
-						
 						</div>
 					</ul>
-					
 				</nav>
 			</div>
 			<div class="header__contact-col col d-flex flex-nowrap  justify-content-center align-items-center">

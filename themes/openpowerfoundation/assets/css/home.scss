@@ -1,29 +1,28 @@
+.home.promo__section {
+  min-height: 820px;
+}
 main { 
     &.home {
-  @media screen and (max-width: $lg) {
-    padding-top:50px;
-    padding-bottom: 0;
-  }
+    @media screen and (max-width: $lg) {
+      padding-top:50px;
+      padding-bottom: 0;
+    }
 
-  @media screen and (min-width: $lg) and (max-width: $xl) {
-    padding-top:70px;
+    @media screen and (min-width: $lg) and (max-width: $xl) {
+      padding-top:70px;
+    }
   }
- }
 }
 
 .post__article {
   position: relative; 
-    &:not(:last-child) {
-      margin-bottom: 3.75rem; 
-    }
+  &:not(:last-child) {
+    margin-bottom: 3.75rem; 
+  }
 }
 .post__title {
   display: block;
   margin-top: 1em;
-  color: black;
-  &:hover{
-    color: black;
-  }
   &::before {
     position: absolute;
     left: 0;
@@ -46,10 +45,6 @@ main {
     
       @media screen and (min-width: $lg) and (max-width: $xl) {
         padding: 4.4rem 0; 
-      }
-
-      a {
-        color: black;
       }
     }
     &._navy {

@@ -1,7 +1,7 @@
 .promo {
   &__section {
     position: relative;
-    min-height: 820px;
+    padding-top: 150px;
     @media screen and (max-width: $lg) {
       min-height:460px;
     }
@@ -26,6 +26,7 @@
   }
   &__container {
     position: relative; 
+    margin-bottom: 70px;
     @media screen and (max-width: $lg) {
       padding-top:17.5vw;
     }

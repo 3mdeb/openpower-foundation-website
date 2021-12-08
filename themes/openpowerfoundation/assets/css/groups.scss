@@ -14,7 +14,24 @@ main {
     @media screen and (min-width: $xl) {
       padding-bottom: 50px;
     }
-
+    .post__thumb {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 35px;
+      top: 33px;
+    }
+    .post__title {
+      display: block;
+      margin-top: 1em;
+      padding-left: 70px;
+      padding-right: 30px;
+      white-space: normal;
+      font-size: 18px;
+      min-height: 75px;
+      text-align: left;
+      line-height: 1.2;
+    }
   }
 }
 
@@ -23,6 +40,40 @@ main {
   &.groups {
     h1 {
       font-size: 2rem;
+    }
+  }
+}
+
+#workgroupsingle {
+  .details {
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    > ul {
+      list-style-type: none;
+      padding-left: 0;
+      > li {
+        margin-bottom: 6px;
+        background-color: #f7f7f7;
+        padding: 10px 6px;
+        > ul {
+          background-color: white;
+          padding: 10px 6px;
+          > li {
+            padding: 5px;
+            > ul {;
+              display: flex;
+              flex-wrap: wrap;
+              border-left: 2px solid #f7f7f7;
+              > li {
+                flex: 1 0 50%;
+                padding: 5px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -5,134 +5,133 @@
 <main id="main">
 
 <section id="workgroupsingle">
-<div id="workgroupsingle" class="container-fluid">
-	<div class="section-header">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h3 class="section-title">{{ .Title }}</h3>
-				<span class="section-divider"></span>
+	<div id="workgroupsingle" class="container-fluid">
+		<div class="section-header">
+			<div class="row">
+				<div class="col-lg-12 text-center mb-lg-4">
+					<h1 class="section-title">{{ .Title }}</h1>
+					<span class="section-divider"></span>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-2">&nbsp;</div>
-			<div class="col-lg-4">
-				<ul>
-					<li>Workgroup Details :
+			<div class="row">
+				<div class="col-lg-5 offset-lg-2 pr-4">
+					{{ if .Content }}
+					{{ .Content }}
+					{{ else }}
+					&nbsp;
+					{{ end }}
+				</div>
+				<div class="col-lg-3 details">
 					<ul>
-					{{ if .Param "chair" }}
-						<li>Chair :<ul>
-						{{ range (.Param "chair") }}
-							{{ $chairfile := printf "%s/%s" "persons" . }}
-							{{ with $.Site.GetPage $chairfile }}
-							<li><a href="{{ .Permalink }}">{{ .Title }}</a>
-							{{ if .Param "member" }}
-								{{ $memberfile := printf "%s/%s" "members" (.Param "member") }}
-								{{ with $.Site.GetPage $memberfile }}
-									(<a href="{{ .Permalink }}">{{ .Title }}</a>)
+						<li>Workgroup Details :
+						<ul>
+						{{ if .Param "chair" }}
+							<li>Chair :<ul>
+							{{ range (.Param "chair") }}
+								{{ $chairfile := printf "%s/%s" "persons" . }}
+								{{ with $.Site.GetPage $chairfile }}
+								<li><a href="{{ .Permalink }}">{{ .Title }}</a>
+								{{ if .Param "member" }}
+									{{ $memberfile := printf "%s/%s" "members" (.Param "member") }}
+									{{ with $.Site.GetPage $memberfile }}
+										(<a href="{{ .Permalink }}">{{ .Title }}</a>)
+									{{ end }}
+								{{ end }}
+								{{ end }}
+								</li>
+							{{ end }}
+							</ul></li>
+						{{ end }}
+						{{ if .Param "wgtype" }}
+							{{ $data := index $.Site.Data }}
+							{{ $wgtype := .Param "wgtype" }}
+							{{ range $data.workgroups }}
+								{{ if eq $wgtype .id }}
+									<li>Type : {{ .name }}</li>
 								{{ end }}
 							{{ end }}
-							{{ end }}
+						{{ end }}
+						{{ if .Param "participation" }}
+							<li>
+								Participation : {{ .Param "participation" }}
+								{{ if eq (.Param "participation") "Public" }}
+									<i class="fa fa-universal-access" aria-hidden="true"></i>
+								{{ end }}
+								{{ if eq (.Param "participation") "Members" }}
+									<i class="users icon" aria-hidden="true"></i>
+								{{ end }}
+								{{ if eq (.Param "participation") "Limited" }}
+									<i class="fas fa-user-lock" aria-hidden="true"></i>
+								{{ end }}
 							</li>
 						{{ end }}
-						</ul></li>
-					{{ end }}
-					{{ if .Param "wgtype" }}
-						{{ $data := index $.Site.Data }}
-						{{ $wgtype := .Param "wgtype" }}
-						{{ range $data.workgroups }}
-							{{ if eq $wgtype .id }}
-								<li>Type : {{ .name }}</li>
+						</ul>
+						</li>
+						<li>Workgroup Resources :
+						<ul>
+						{{ if .Param "discussion" }}
+							<li><a href="{{ .Param "discussion" }}"><i class="bullhorn icon" aria-hidden="true"></i>Discussion</a></li>
+						{{ end }}
+						{{ if .Param "meetingminutes" }}
+							<li><a href="{{ .Param "meetingminutes"}}"><i class="pencil alternative icon"></i>Meeting Minutes</a></li>
+						{{ end }}
+						{{ if .Param "calendar" }}
+							<li><i class="calendar alternative icon" aria-hidden="true"></i> Calendar :<ul>
+								<li><a href="{{ .Param "calendar.web" }}">WebCal</a></li>
+								<li><a href="{{ .Param "calendar.ics" }}">ICS</a></li>
+							</ul></li>
+						{{ end }}
+						{{ if .Param "git" }}
+							<li><a href="{{ .Param "git" }}"><i class="fa fa-git-square"></i> Git SCM</a></li>
+						{{ end }}
+						{{ if .Param "chat" }}
+							<li><i class="comments icon" aria-hidden="true"></i> Chat<ul>
+								<li><a href="{{ .Param "chat.mattermost" }}">OPF Chat</a></li>
+								{{ if .Param "chat.slack" }}
+								<li><a href="{{ .Param "chat.slack" }}">OPF Slack</a></li>
+								{{ end }}
+								{{ if .Param "chat.irc" }}
+								<li>{{ .Param "chat.irc" }}</li>
+								{{ end }}
+							</ul></li>
+						{{ end }}
+						{{ if .Param "files" }}
+							<li><a href="{{ .Param "files" }}"><i class="folder open icon"></i> Files</a></li>
+						{{ end }}
+						{{ if .Param "kanban" }}
+							<li><a href="{{ .Param "kanban" }}"><i class="tasks icon"></i> Kanban</a></li>
+						{{ end }}
+						</ul>
+					{{ if .Param "members" }}
+						<li>Active Voting Work Group Members :
+						<ul>
+						{{ range $member := .Param "members" }}
+							{{ $memberfile := printf "%s/%s" "members" $member }}
+							{{ with $.Site.GetPage $memberfile }}
+								<li>
+								<a href="{{ .Permalink }}">
+								{{ if .Param "image" }}
+									{{ $imagename := .Param "image" }}
+									{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+									{{ $imageresource := resources.Get $imagelocation }}
+									{{ $image := $imageresource.Fit "75x75" }}
+									<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
+								{{ else }}
+									{{ .Title }}
+								{{ end }}
+								</a>
+								</li>
 							{{ end }}
 						{{ end }}
-					{{ end }}
-					{{ if .Param "participation" }}
-						<li>
-							Participation : {{ .Param "participation" }}
-							{{ if eq (.Param "participation") "Public" }}
-								<i class="fa fa-universal-access" aria-hidden="true"></i>
-							{{ end }}
-							{{ if eq (.Param "participation") "Members" }}
-								<i class="users icon" aria-hidden="true"></i>
-							{{ end }}
-							{{ if eq (.Param "participation") "Limited" }}
-								<i class="fas fa-user-lock" aria-hidden="true"></i>
-							{{ end }}
+						</ul>
 						</li>
 					{{ end }}
 					</ul>
-					</li>
-					<li>Workgroup Resources :
-					<ul>
-					{{ if .Param "discussion" }}
-						<li><a href="{{ .Param "discussion" }}"><i class="bullhorn icon" aria-hidden="true"></i>Discussion</a></li>
-					{{ end }}
-					{{ if .Param "meetingminutes" }}
-						<li><a href="{{ .Param "meetingminutes"}}"><i class="pencil alternative icon"></i>Meeting Minutes</a></li>
-					{{ end }}
-					{{ if .Param "calendar" }}
-						<li><i class="calendar alternative icon" aria-hidden="true"></i> Calendar :<ul>
-							<li><a href="{{ .Param "calendar.web" }}">WebCal</a></li>
-							<li><a href="{{ .Param "calendar.ics" }}">ICS</a></li>
-						</ul></li>
-					{{ end }}
-					{{ if .Param "git" }}
-						<li><a href="{{ .Param "git" }}"><i class="fa fa-git-square"></i> Git SCM</a></li>
-					{{ end }}
-					{{ if .Param "chat" }}
-						<li><i class="comments icon" aria-hidden="true"></i> Chat<ul>
-							<li><a href="{{ .Param "chat.mattermost" }}">OPF Chat</a></li>
-							{{ if .Param "chat.slack" }}
-							<li><a href="{{ .Param "chat.slack" }}">OPF Slack</a></li>
-							{{ end }}
-							{{ if .Param "chat.irc" }}
-							<li>{{ .Param "chat.irc" }}</li>
-							{{ end }}
-						</ul></li>
-					{{ end }}
-					{{ if .Param "files" }}
-						<li><a href="{{ .Param "files" }}"><i class="folder open icon"></i> Files</a></li>
-					{{ end }}
-					{{ if .Param "kanban" }}
-						<li><a href="{{ .Param "kanban" }}"><i class="tasks icon"></i> Kanban</a></li>
-					{{ end }}
-					</ul>
-				{{ if .Param "members" }}
-					<li>Active Voting Work Group Members :
-					<ul>
-					{{ range $member := .Param "members" }}
-						{{ $memberfile := printf "%s/%s" "members" $member }}
-						{{ with $.Site.GetPage $memberfile }}
-							<li>
-							<a href="{{ .Permalink }}">
-							{{ if .Param "image" }}
-								{{ $imagename := .Param "image" }}
-								{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
-								{{ $imageresource := resources.Get $imagelocation }}
-								{{ $image := $imageresource.Fit "75x75" }}
-								<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
-							{{ else }}
-								{{ .Title }}
-							{{ end }}
-							</a>
-							</li>
-						{{ end }}
-					{{ end }}
-					</ul>
-					</li>
-				{{ end }}
-				</ul>
+				</div>
+				<div class="col-lg-2">&nbsp;</div>
 			</div>
-			<div class="col-lg-4">
-			{{ if .Content }}
-				{{ .Content }}
-			{{ else }}
-				&nbsp;
-			{{ end }}
-			</div>
-			<div class="col-lg-2">&nbsp;</div>
 		</div>
 	</div>
-</div>
 </section>
 
 </main>

@@ -6,7 +6,7 @@
 			<div class="row">
 		 	<h1 class="section-header my-3 my-md-5 pb-2 pb-md-3 text-center">{{ .Title }}</h1>
 		{{ range .Data.Pages.ByWeight }}
-			<article class="post__article row mb-4 mb-lg-0 pt-4">
+			<article class="post__article col-10 offset-1 row mb-4 pt-4">
 				<div class="col-md-2 mb-4 mb-md-0 pt-md-3 pl-4 pl-lg-0">
 					{{ $personfile := .File.BaseFileName }}
 					{{ range where .Site.Pages "Section" "persons" }}
