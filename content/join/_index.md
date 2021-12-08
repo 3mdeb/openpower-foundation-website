@@ -7,16 +7,16 @@ layout: single
 intro: 
   subtitle: Welcome to the era of Open Computing!
   intro:
-    p-2: The OpenPOWER Foundation is a non-profit organization supporting the free and open RISC instruction set architecture and extensions. We enable open community collaboration, technology advancements in the OpenPOWER ecosystem, and visibility of OpenPOWER successes.
-    p-3: Join us and see how open technical collaboration along with the support of many OpenPOWER programs can help drive your business forward.
+    - The OpenPOWER Foundation is a non-profit organization supporting the free and open RISC instruction set architecture and extensions. We enable open community collaboration, technology advancements in the OpenPOWER ecosystem, and visibility of OpenPOWER successes.
+    - Join us and see how open technical collaboration along with the support of many OpenPOWER programs can help drive your business forward.
   teaser:
      title: Why Join?
   options:
-    - option: Accelerate technical development of your own POWER based products
-    - option: Contribute technical resource, best practices, and code to help guide and influence OpenPOWER deliverables
-    - option: Increase visibility as OpenPOWER amplifies member success across the industry
-    - option: Build a partner network as an active member within the OpenPOWER community
-    - option: Showcase your OpenPOWER products, services, training, and resources on OpenPOWER Ready
+    - Accelerate technical development of your own POWER based products
+    - Contribute technical resource, best practices, and code to help guide and influence OpenPOWER deliverables
+    - Increase visibility as OpenPOWER amplifies member success across the industry
+    - Build a partner network as an active member within the OpenPOWER community
+    - Showcase your OpenPOWER products, services, training, and resources on OpenPOWER Ready
 
 
 membership-levels:
