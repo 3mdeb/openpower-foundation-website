@@ -78,20 +78,20 @@
   <div class="container">
     <h2 class="teaser__title text-center">{{ .Param "sections.section-supporters.title" }}</h2>
     <div class="row justify-content-center">
+	{{ range where .Site.RegularPages "Section" "members" }}
 		{{ $level := .Param "level" }}
 		{{ if eq $level "platinum" }}
 			{{ if .Param "image" }}
-
-	        {{ $imagename := .Param "image" }}
-	        {{ $imagelocation := (printf "%s/%s" "images/" $imagename) }}
-	        {{ $imageresource := resources.Get $imagelocation }}
-	        {{ $image := $imageresource.Fit "180x102" }}
-	        <div class="col-md-2 pb-3 pb-lg-0">
-	          <img class="img-fluid" src="{{  $image.RelPermalink }}" width="180" height="102" alt="{{ .Title }}">
-	        </div>
+				{{ $imagename := .Param "image" }}
+				{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+				{{ $imageresource := resources.Get $imagelocation }}
+				{{ $image := $imageresource.Resize "185x102" }}
+				<div class="col-md-2 pb-3 pb-lg-0">
+					<img class="img-fluid" src="{{  $image.RelPermalink }}" width="180" height="102" alt="{{ .Title }}">
+				</div>
 			{{ end }}
-      {{ end }}
-
+		{{ end }}
+	{{ end }}
 
     </div>
   </div>
