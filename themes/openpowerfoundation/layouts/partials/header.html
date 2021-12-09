@@ -41,7 +41,7 @@
 	{{ $scss := slice $variables $header $promo $home $groups $bod $timeline $pages $footer $changelog | resources.Concat "css/custom.scss" }}
 	{{ $css := $scss | toCSS (dict "targetPath" "css/custom.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 	<link rel="stylesheet" href="{{ $css.RelPermalink }}">
-	<link href="{{ "css/font-awesome.min.css" | relURL }}" rel="stylesheet" defer>
+	<link href="{{ "lib/font-awesome/css/all.min.css" | relURL }}" rel="stylesheet" defer>
 	<link href="{{ "css/googlefonts_montserrat.css" | relURL }}" rel="stylesheet" defer>
 </head>
 <body>
