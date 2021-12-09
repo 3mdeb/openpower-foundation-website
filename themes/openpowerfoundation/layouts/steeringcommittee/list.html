@@ -38,7 +38,7 @@
 									{{ $imagename := .Param "image" }}
 									{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
 									{{ $imageresource := resources.Get $imagelocation }}
-									{{ $image := $imageresource.Fit "100x100" }}
+									{{ $image := $imageresource.Fit "100x100 webp" }}
 									<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
 								{{ else }}
 									{{ .Title }}
@@ -90,7 +90,7 @@
 									{{ $imagename := .Param "image" }}
 									{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
 									{{ $imageresource := resources.Get $imagelocation }}
-									{{ $image := $imageresource.Fit "100x100" }}
+									{{ $image := $imageresource.Fit "100x100 webp" }}
 									<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
 									{{ else }}
 									{{ .Title }}
@@ -107,7 +107,7 @@
 							{{ $imagename := .Param "image" }}
 							{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
 							{{ $imageresource := resources.Get $imagelocation }}
-							{{ $image := $imageresource.Fit "100x400" }}
+							{{ $image := $imageresource.Fit "100x400 webp" }}
 							<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
 							{{ else }}
 							&nbsp;

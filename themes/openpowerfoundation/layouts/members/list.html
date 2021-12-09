@@ -18,7 +18,7 @@
 			{{ $key := .identifier }}
 			{{ $imageheight := .image.height }}
 			{{ $imagewidth := .image.width }}
-			{{ $imagesize := .size }}
+			{{ $imagesize := printf "%s webp" .size  }}
 			{{ $col := .col }}
 			<div class="row d-flex justify-content-center">
 			{{ range $.Site.Pages }}
