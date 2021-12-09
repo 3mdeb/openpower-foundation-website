@@ -3,47 +3,51 @@
 {{ partial "navbar.html" . }}
 
 <main id="main" class="main members">
-		<div class="container">
-			<section id="intro">
-				<div class="row">
-				<h1 class="section-header my-3 my-md-5 pb-2 pb-md-3 text-center">{{ .Title }}</h1>
-			</section>
+<div class="container">
+	<section id="intro">
+	<div class="row">
+		<h1 class="section-header my-3 my-md-5 pb-2 pb-md-3 text-center">{{ .Title }}</h1>
+	</div>
+	</section>
 	<div class="row">
 	{{ $i := 0 }}
 	{{ $data := index $.Site.Data }}
 	{{ range $data.memberlevels }}
 		<div class="col-lg-12">
 			<div class="membership-level pt-5 pb-0 pb-lg-3">
-			<h2 class="pb-2 pb-lg-5 text-center">{{ .name }}</h2>
-			{{ $key := .identifier }}
-			{{ $imageheight := .image.height }}
-			{{ $imagewidth := .image.width }}
-			{{ $imagesize := printf "%s webp" .size  }}
-			{{ $col := .col }}
-			<div class="row d-flex justify-content-center">
-			{{ range $.Site.Pages }}
-				{{ $level := .Param "level" }}
-				{{ if eq $level $key }}
-					<div class="col-lg-4 pt-5 pb-0 pb-lg-3">
-						<div class="box">
-							<a target="_blank" href="{{ .Param "link" }}">
-							{{ if .Param "image" }}
-								{{ $imagename := .Param "image" }}
-								{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
-								{{ $imageresource := resources.Get $imagelocation }}
-								{{ $image := $imageresource.Fit $imagesize }}
-								<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
-							</a>
-							{{ else }}
-								<h3><a target="_blank" class="text-black" href="{{ .Param " link" }}">{{ .Param "title" }}</a></h3>
-							{{ end }}
+				<h2 class="pb-2 pb-lg-5 text-center">{{ .name }}</h2>
+				{{ $key := .identifier }}
+				{{ $imageheight := .image.height }}
+				{{ $imagewidth := .image.width }}
+				{{ $imagesize := printf "%s webp" .size  }}
+				{{ $col := .col }}
+				<div class="row d-flex justify-content-center">
+				{{ range $.Site.Pages }}
+					{{ $level := .Param "level" }}
+					{{ if eq $level $key }}
+						<div class="col-lg-4 pt-5 pb-0 pb-lg-3">
+							<div class="box">
+								<a href="{{ .Permalink }}">
+								{{ if .Param "image" }}
+									{{ $imagename := .Param "image" }}
+									{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+									{{ $imageresource := resources.Get $imagelocation }}
+									{{ $image := $imageresource.Fit $imagesize }}
+									<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
+								</a>
+								{{ else }}
+									<h3><a target="_blank" class="text-black" href="{{ .Param " link" }}">{{ .Param "title" }}</a></h3>
+								{{ end }}
+							</div>
 						</div>
-					</div>
+					{{ end }}
 				{{ end }}
-			{{ end }}
-
-	{{ end }}
-
+				</div>
+			</div>
+		</div>
+		{{ end }}
+	</div>
+</div>
 </main>
 
 {{ partial "footer.html" . }}
