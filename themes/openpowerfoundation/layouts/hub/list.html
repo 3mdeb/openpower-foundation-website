@@ -22,7 +22,25 @@
 			<div class="col-2"></div>
 			{{ range .Data.Pages }}
 			<div id="hubprovider" class="col-lg-2 text-center">
-				<a class="btn btn-outline-primary" href="{{ .Permalink }}">{{ .Title }}</a>
+			<a class="btn btn-outline-primary" href="{{ .Permalink }}">
+			{{ if .Param "member" }}
+				{{ $member := .Param "member" }}
+				{{ range where .Site.RegularPages "Section" "members" }}
+					{{ $membercompany := .File.BaseFileName }}
+					{{ if eq $member $membercompany }}
+						{{ if .Param "image" }}
+							{{ $imagename := .Param "image" }}
+							{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+							{{ $imageresource := resources.Get $imagelocation }}
+							{{ $image := $imageresource.Fit "100x100" }}
+							<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			{{ end }}
+			<br>
+			{{ .Title }}
+			</a>
 			</div>
 			{{ end }}
 		</div>
