@@ -27,6 +27,9 @@
 	{{ $syntaxcss := resources.Get "css/syntax.css" }}
 	{{ $syntax := $syntaxcss | resources.Minify }}
 	<link href="{{ $syntax.RelPermalink }}" rel="stylesheet">
+	{{ $changelogcss := resources.Get "css/changelog.css" }}
+	{{ $changelogsh := $changelogcss | resources.Minify }}
+	<link href="{{ $changelogsh.RelPermalink }}" rel="stylesheet">
 	{{ $variables := resources.Get "css/variables.scss"}}
     {{ $variables = $variables | resources.ExecuteAsTemplate "variables.scss" . }}
 	{{ $header := resources.Get "css/header.scss" | resources.Minify }}

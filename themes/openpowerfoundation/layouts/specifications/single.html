@@ -6,66 +6,47 @@
 {{ $datafile := index $.Site.Data.specifications $filename }}
 
 <main id="main" class="specifications-single">
-
 <section id="page" class="section-bg">
-	<div class="container-fluid">
-		<div class="section-header">
-			<h2 class="section-title text-center">{{ .Title }}</h2>
-			<p class="section-description"></p>
-		</div>
-		<div class="row">
-			<div class="col-lg-2">&nbsp;</div>
-			<div class="col-lg-4">
-			{{ if $datafile.versions }}
-				{{ range last 1 $datafile.versions }}
-					<i class="fas fa-file-pdf mr-2"></i><a href="{{ .download }}">Download version {{.number }}</a>
-				{{ end }}
-			{{ end }}
-			</div>
-			<div class="col-lg-4">
-			{{ if $datafile.versions }}
-				{{ range last 1 $datafile.versions }}
-					Latest version {{ .number }}
-				{{ end }}
-			{{ end }}
-			</div>
-			<div class="col-lg-2">&nbsp;</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-2">&nbsp;</div>
-			<div class="col-lg-8 content wow fadeInTop">
-				<p>{{ .Content }}</p>
-			</div>
-			<div class="col-lg-2">&nbsp;</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				{{ if .Param "discoursetopic" }}
-					{{ partial "discourse.html" . }}
-				{{ end }}
-			</div>
-		</div>
-		{{ if $datafile.versions }}
-		<div class="row">
-			<div class="col-lg-12">
-				<section class="changelog">
-				<ol>
-				{{ range $datafile.versions }}
-					<li><div>
-						<span id="version">version {{ .number }}</span>
-						<span id="date">{{ .date }}</span>
-						<span id="description">{{ .description }}</span>
-						<span id="download"><a href="{{ .download }}">download</a></span>
-					</div></li>
-				{{ end }}
-				<li></li>
-				</ol>
-			</div>
-		</div>
-		{{ end }}
+<div class="row">
+	<div class="section-header my-3 my-md5 pb-2 pb-md3 text-center">
+		<h1 class="section-title text-center">{{ .Title }}</h1>
+		<p class="section-description"></p>
 	</div>
+<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8">
+	{{ if $datafile.versions }}
+		{{ range last 1 $datafile.versions }}
+			<i class="fas fa-file-pdf mr-2"></i><a href="{{ .download }}">Download version {{.number }}</a>
+		{{ end }}
+	{{ end }}
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-6 content wow fadeInTop">
+		<p>{{ .Content }}</p>
+	</div>
+	<div class="col-lg-3">
+	{{ if $datafile.versions }}
+		<ul class="timeline">
+		{{ range sort $datafile.versions "number" "desc" }}
+			<li>
+			<div class="direction-r">
+				<div class="flag-wrapper">
+					<span class="flag">version {{ .number }}</span>
+					<span class="time-wrapper"><span class="time">{{ .date }}</span></span>
+				</div>
+				<div class="desc">{{ .description }}</div>
+				<div class="desc"><a href="{{ .download }}">download</a></div>
+			</div>
+			</li>
+		{{ end }}
+		</ul>
+	{{ end }}
+	</div>
+</div>
 </section>
-
 </main>
 
 {{ partial "footer.html" . }}
