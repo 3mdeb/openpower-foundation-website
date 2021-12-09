@@ -35,7 +35,7 @@
 <section class="teaser__section pt-0 pb-3 pb-lg-5">
   <div class="container">
     <h2 class="teaser__title text-lg-center">{{ .Param "sections.section-1.title" }}</h2>
-    <div class="row">
+    <div class="row text-center">
 
           <!-- {{ range (.Data.Pages.ByParam "wgtype").Reverse }}
             {{ $imagename := .Param "image" }}
@@ -65,30 +65,34 @@
       </article>
     </div>
     <p class="text-center mt-3 mt-lg-0">
-      <a class="btn btn-outline-primary">Libre BMC</a>
+      <a class="btn btn-outline-primary" href="{{ "/groups/" | relURL }}">Working Groups</a>
     </p>
   </div>
 </section>
 <section class="teaser__section _dark">
   <div class="container text-center">
     <p class="h2 mb-4">{{ .Param "sections.section-dark.p-1" }}</p>
-    <p class="mt-3 mt-lg-0"><a class="btn btn-light btn-outline-primary" href="/">{{ .Param "sections.section-dark.cta" }}</a></p>
   </div>
 </section>
 <section class="teaser__section py-4 py-lg-5 my-lg-5">
   <div class="container">
     <h2 class="teaser__title text-center">{{ .Param "sections.section-supporters.title" }}</h2>
     <div class="row justify-content-center">
-      {{ range .Param "sections.section-supporters.logos" }}
+		{{ $level := .Param "level" }}
+		{{ if eq $level "platinum" }}
+			{{ if .Param "image" }}
 
-        {{ $imagename := .image }}
-        {{ $imagelocation := (printf "%s/%s" "images/" $imagename) }}
-        {{ $imageresource := resources.Get $imagelocation }}
-        {{ $image := $imageresource.Fit "180x102" }}
-        <div class="col-md-2 pb-3 pb-lg-0">
-          <img class="img-fluid" src="{{  $image.RelPermalink }}" width="180" height="102" alt="{{ .title }}">
-        </div>
+	        {{ $imagename := .Param "image" }}
+	        {{ $imagelocation := (printf "%s/%s" "images/" $imagename) }}
+	        {{ $imageresource := resources.Get $imagelocation }}
+	        {{ $image := $imageresource.Fit "180x102" }}
+	        <div class="col-md-2 pb-3 pb-lg-0">
+	          <img class="img-fluid" src="{{  $image.RelPermalink }}" width="180" height="102" alt="{{ .Title }}">
+	        </div>
+			{{ end }}
       {{ end }}
+
+
     </div>
   </div>
 </section>
@@ -98,13 +102,13 @@
     <p>{{ .Param "sections.section-subscribe.p-1" }}</p>
     <form class="teaser__form row justify-content-center" action="/" method="post">
       <div class="col-md-2 pb-3 pb-lg-0">
-        <input class="form-control" name="" type="text" value="">
+        <input class="form-control" name="" type="text" placeholder="First Name" value="">
       </div>
       <div class="col-md-2 pb-3 pb-lg-0">
-        <input class="form-control" name="" type="text" value="">
+        <input class="form-control" name="" type="text" placeholder="Last Name" value="">
       </div>
       <div class="col-md-2 pb-3 pb-lg-0">
-        <input class="form-control" name="" type="text" value="">
+        <input class="form-control" name="" type="text" placeholder="Email" value="">
       </div>
       <div class="col-md-2">
         <input class="btn btn-outline-primary mt-4 mt-md-0" type="submit" value="Submit">
