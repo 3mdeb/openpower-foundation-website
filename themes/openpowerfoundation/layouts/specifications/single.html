@@ -5,12 +5,12 @@
 {{ $filename := .File.BaseFileName }}
 {{ $datafile := index $.Site.Data.specifications $filename }}
 
-<main id="main">
+<main id="main" class="specifications-single">
 
 <section id="page" class="section-bg">
 	<div class="container-fluid">
 		<div class="section-header">
-			<h3 class="section-title">{{ .Title }}</h3>
+			<h2 class="section-title text-center">{{ .Title }}</h2>
 			<p class="section-description"></p>
 		</div>
 		<div class="row">
@@ -18,7 +18,7 @@
 			<div class="col-lg-4">
 			{{ if $datafile.versions }}
 				{{ range last 1 $datafile.versions }}
-					<a href="{{ .download }}">Download version {{.number }}</a>
+					<i class="fas fa-file-pdf mr-2"></i><a href="{{ .download }}">Download version {{.number }}</a>
 				{{ end }}
 			{{ end }}
 			</div>
