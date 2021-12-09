@@ -85,8 +85,8 @@
 				{{ $imagename := .Param "image" }}
 				{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
 				{{ $imageresource := resources.Get $imagelocation }}
-				{{ $image := $imageresource.Resize "185x102" }}
-				<div class="col-md-2 pb-3 pb-lg-0">
+				{{ $image := $imageresource.Fit "185x102 Center webp" }}
+				<div class="col-md-2 pb-3 pb-lg-0 text-valign-center">
 					<img class="img-fluid" src="{{  $image.RelPermalink }}" width="180" height="102" alt="{{ .Title }}">
 				</div>
 			{{ end }}
