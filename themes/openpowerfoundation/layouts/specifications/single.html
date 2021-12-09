@@ -17,7 +17,7 @@
 	<div class="col-lg-8">
 	{{ if $datafile.versions }}
 		{{ range last 1 $datafile.versions }}
-			<i class="fas fa-file-pdf mr-2"></i><a href="{{ .download }}">Download version {{.number }}</a>
+			<a href="{{ .download }}"><i class="far fa-file-pdf mr-2"></i>&nbsp;Download version {{.number }}</a>
 		{{ end }}
 	{{ end }}
 	</div>
@@ -29,13 +29,13 @@
 	</div>
 	<div class="col-lg-3">
 	{{ if $datafile.versions }}
-		<ul class="timeline">
+		<ul class="changelogtimeline">
 		{{ range sort $datafile.versions "number" "desc" }}
 			<li>
 			<div class="direction-r">
-				<div class="flag-wrapper">
-					<span class="flag">version {{ .number }}</span>
-					<span class="time-wrapper"><span class="time">{{ .date }}</span></span>
+				<div class="changeflag-wrapper">
+					<span class="changeflag">version {{ .number }}</span>
+					<span class="changetime-wrapper"><span class="changetime">{{ .date }}</span></span>
 				</div>
 				<div class="desc">{{ .description }}</div>
 				<div class="desc"><a href="{{ .download }}">download</a></div>

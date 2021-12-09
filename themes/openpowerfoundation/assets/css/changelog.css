@@ -1,4 +1,4 @@
-.timeline {
+.changelogtimeline {
   position: relative;
   width: 660px;
   margin: 0 auto;
@@ -7,7 +7,7 @@
   list-style-type: none;
 }
 
-.timeline:before {
+.changelogtimeline:before {
   position: absolute;
   left: 50%;
   top: 0;
@@ -26,11 +26,11 @@
   z-index: 5;
 }
 
-.timeline li {
+.changelogtimeline li {
   padding: 1em 0;
 }
 
-.timeline li:after {
+.changelogtimeline li:after {
   content: "";
   display: block;
   height: 0;
@@ -51,13 +51,13 @@
   float: right;
 }
 
-.flag-wrapper {
+.changeflag-wrapper {
   position: relative;
   display: inline-block;
   text-align: center;
 }
 
-.flag {
+.changeflag {
   position: relative;
   display: inline;
   background: rgb(248,248,248);
@@ -67,20 +67,20 @@
   text-align: left;
 }
 
-.direction-l .flag {
+.direction-l .changeflag {
   -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
   -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
   box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
 }
 
-.direction-r .flag {
+.direction-r .changeflag {
   -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
   -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
   box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
 }
 
-.direction-l .flag:before,
-.direction-r .flag:before {
+.direction-l .changeflag:before,
+.direction-r .changeflag:before {
   position: absolute;
   top: 50%;
   right: -40px;
@@ -95,11 +95,11 @@
   z-index: 10;
 }
 
-.direction-r .flag:before {
+.direction-r .changeflag:before {
   left: -40px;
 }
 
-.direction-l .flag:after {
+.direction-l .changeflag:after {
   content: "";
   position: absolute;
   left: 100%;
@@ -113,7 +113,7 @@
   pointer-events: none;
 }
 
-.direction-r .flag:after {
+.direction-r .changeflag:after {
   content: "";
   position: absolute;
   right: 100%;
@@ -127,7 +127,7 @@
   pointer-events: none;
 }
 
-.time-wrapper {
+.changetime-wrapper {
   display: inline;
   line-height: 1em;
   font-size: 0.66666em;
@@ -135,15 +135,15 @@
   vertical-align: middle;
 }
 
-.direction-l .time-wrapper {
+.direction-l .changetime-wrapper {
   float: left;
 }
 
-.direction-r .time-wrapper {
+.direction-r .changetime-wrapper {
   float: right;
 }
 
-.time {
+.changetime {
   display: inline-block;
   padding: 4px 6px;
   background: rgb(248,248,248);
@@ -160,16 +160,14 @@
   margin: 1em 0 0 0.75em;
 }
 
-/* ================ Timeline Media Queries ================ */
-
 @media screen and (max-width: 660px) {
 
-.timeline {
+.changelogtimeline {
  	width: 100%;
 	padding: 4em 0 1em 0;
 }
 
-.timeline li {
+.changelogtimeline li {
 	padding: 2em 0;
 }
 
@@ -181,17 +179,17 @@
 	text-align: center;
 }
 
-.flag-wrapper {
+.changeflag-wrapper {
 	text-align: center;
 }
 
-.flag {
+.changeflag {
 	background: rgb(255,255,255);
 	z-index: 15;
 }
 
-.direction-l .flag:before,
-.direction-r .flag:before {
+.direction-l .changeflag:before,
+.direction-r .changeflag:before {
   position: absolute;
   top: -30px;
 	left: 50%;
@@ -206,8 +204,8 @@
 	z-index: 10;
 }
 
-.direction-l .flag:after,
-.direction-r .flag:after {
+.direction-l .changeflag:after,
+.direction-r .changeflag:after {
 	content: "";
 	position: absolute;
 	left: 50%;
