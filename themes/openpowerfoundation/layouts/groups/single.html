@@ -70,22 +70,22 @@
 						<li>Workgroup Resources :
 						<ul>
 						{{ if .Param "discussion" }}
-							<li><a href="{{ .Param "discussion" }}"><i class="bullhorn icon" aria-hidden="true"></i>Discussion</a></li>
+							<li><a href="{{ .Param "discussion" }}"><i class="fas fa-bullhorn"></i> Discussion</a></li>
 						{{ end }}
 						{{ if .Param "meetingminutes" }}
-							<li><a href="{{ .Param "meetingminutes"}}"><i class="pencil alternative icon"></i>Meeting Minutes</a></li>
+							<li><a href="{{ .Param "meetingminutes"}}"><i class="fas fa-pencil-alt"></i> Meeting Minutes</a></li>
 						{{ end }}
 						{{ if .Param "calendar" }}
-							<li><i class="calendar alternative icon" aria-hidden="true"></i> Calendar :<ul>
+							<li><i class="fas fa-calendar-alt"></i> Calendar :<ul>
 								<li><a href="{{ .Param "calendar.web" }}">WebCal</a></li>
 								<li><a href="{{ .Param "calendar.ics" }}">ICS</a></li>
 							</ul></li>
 						{{ end }}
 						{{ if .Param "git" }}
-							<li><a href="{{ .Param "git" }}"><i class="fa fa-git-square"></i> Git SCM</a></li>
+							<li><a href="{{ .Param "git" }}"><i class="fab fa-git-square"></i> Git SCM</a></li>
 						{{ end }}
 						{{ if .Param "chat" }}
-							<li><i class="comments icon" aria-hidden="true"></i> Chat<ul>
+							<li><i class="fas fa-comments"></i> Chat<ul>
 								<li><a href="{{ .Param "chat.mattermost" }}">OPF Chat</a></li>
 								{{ if .Param "chat.slack" }}
 								<li><a href="{{ .Param "chat.slack" }}">OPF Slack</a></li>
@@ -96,15 +96,15 @@
 							</ul></li>
 						{{ end }}
 						{{ if .Param "files" }}
-							<li><a href="{{ .Param "files" }}"><i class="folder open icon"></i> Files</a></li>
+							<li><a href="{{ .Param "files" }}"><i class="fas fa-folder-open"></i> Files</a></li>
 						{{ end }}
 						{{ if .Param "kanban" }}
-							<li><a href="{{ .Param "kanban" }}"><i class="tasks icon"></i> Kanban</a></li>
+							<li><a href="{{ .Param "kanban" }}"><i class="fas fa-tasks"></i> Kanban</a></li>
 						{{ end }}
 						</ul>
 					{{ if .Param "members" }}
 						<li>Active Voting Work Group Members :
-						<ul>
+						<ul><li><ul>
 						{{ range $member := .Param "members" }}
 							{{ $memberfile := printf "%s/%s" "members" $member }}
 							{{ with $.Site.GetPage $memberfile }}
@@ -123,7 +123,7 @@
 								</li>
 							{{ end }}
 						{{ end }}
-						</ul>
+						</ul></li></ul>
 						</li>
 					{{ end }}
 					</ul>
