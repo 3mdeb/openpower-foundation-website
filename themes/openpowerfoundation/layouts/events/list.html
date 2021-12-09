@@ -1,60 +1,36 @@
 {{ partial "header.html" . }}
+
 {{ partial "navbar.html" . }}
 
-<main id="main" class="main events" >
-		<div class="container">
-			<div class="row">
-				<h1 class="section-header my-3 my-md-5 pb-2 text-center">{{ .Title }}</h1>
-				{{ $.Scratch.Set "pre" true }}
-				{{ $.Scratch.Set "post" true }}
-				{{ range .Pages.ByDate.Reverse }}
-				{{ $eventdate := .Param "eventdate" }}
-				{{ $t := (time $eventdate)}}
-				{{ if and ($t.After now) ( $.Scratch.Get "pre")}}
-				<h2>Upcoming Events</h2>
-					{{ $.Scratch.Set "pre" false }}
-				{{ end }}
-				{{ if and ($t.Before now) ($.Scratch.Get "post")}}
-				<h2>Past Events</h2>
-				{{ $.Scratch.Set "post" false }}
-				{{ end }}
-			<article class="post__article row">
-				<div class="col-md-6 pt-3 mb-3 mb-lg-0">
-					{{ if .Param "image" }}
-					{{ $imagename := .Param "image" }}
-					{{ $imagelocation := (printf "%s/%s" "images/events/" $imagename) }}
-					{{ $imageresource := resources.Get $imagelocation }}
-					{{ $image := $imageresource }}
-					<img class="img-fluid"  src="{{  $image.RelPermalink }}" alt="{{ .Param "title" }}" title="{{ .Param "title" }}">
-				{{ else }}
-					{{ .Param "title" }}
-				{{ end }}
+<main id="main">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h1 class="section-title">{{ .Title }}</h1>
+			<p>{{ .Content }}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<section class="timeline">
+			<div class="container" style="text-align: left!important">
+			{{ range .Pages.ByDate.Reverse }}
+				<div class="timeline-item">
+					<div class="timeline-img"></div>
+					<div class="timeline-content js--fadeInLeft">
+						<h2><a href="{{ .Permalink }}"><span class="post-title">{{ .Title }}</span></a></h2>
+						{{ $eventdate := .Param "eventdate" }}
+						<div class="date">{{ dateFormat "2 January 2006" $eventdate }}</div>
+						<p>{{ .Summary }}</p>
+					</div>
 				</div>
-				<div class="col-md-6">
-					<h2>{{ .Param "title" }}</h2>
-					<p><b>
-						{{ dateFormat "January 2, 2006" $eventdate }}</b><br>
-						<b>{{ .Param "eventtime" }}</b><br>
-						<b>{{ .Param "eventcalendar" }}</b>
-					</p>
-					<p>{{ .Content }}</p>
-					<p>
-						{{ if and ($t.After now) }}
-							<a class="btn-outline-primary btn-sm btn" href="{{ .Param "link" }}">Registration</a>
-						{{ else }}
-							<a class="btn-outline-primary btn-sm btn" href="{{ .Param " link" }}">Access event content</a>
-						{{ end }}
-					</p>
-				</div>
-			</article>
-	{{ end }}
-   </div>
-</main> 
-
-<script>
-var today = new Date();
-var date = today.getFullYear()+'-'+today.getMonth()+'-'+today.getDate();
-</script>
-
+			{{ end }}
+			</div>
+			</section>
+		</div>
+	</div>
+</div>
+</section>
+</main>
 
 {{ partial "footer.html" . }}
