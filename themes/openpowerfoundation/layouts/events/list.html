@@ -14,7 +14,7 @@
 		<div class="col-md-12">
 			<section class="timeline">
 			<div class="container" style="text-align: left!important">
-			{{ range .Pages.ByDate.Reverse }}
+			{{ range (.Pages.ByParam "eventdate").Reverse  }}
 				<div class="timeline-item">
 					<div class="timeline-img"></div>
 					<div class="timeline-content js--fadeInLeft">
