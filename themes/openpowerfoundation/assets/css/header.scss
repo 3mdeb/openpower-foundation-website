@@ -270,7 +270,7 @@ body {
   &.desktop-view {
     @media screen and (max-width: $lg) {
       display: none;
-    }     
+    }
     a {
       @media screen and (min-width:$lg) and (max-width: $xxl) {
         max-width:80px;
