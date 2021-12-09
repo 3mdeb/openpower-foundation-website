@@ -10,11 +10,7 @@ promo-cta: Join us
 
 article-1:
   header: Open Innovation
-  
   p-1: The OpenPOWER Foundation is the catalyst for technical collaboration today - fostering complete collaboration, accelerating innovation and driving resiliency across the industry. By combining a 20-year history of hardware and software expertise with a completely open ecosystem, The OpenPOWER Foundation is the only organization equipped with deep institutional knowledge and a straight forward approach to innovation.
-  
-  
-
 article-2:
   header: The POWER Play
   lead-1: Industry Proven
@@ -50,7 +46,6 @@ sections:
       url: /
   section-dark:
     p-1: With its open ecosystem approach, active participation from its global membership base and powerful foundation of the POWER ISA, the OpenPOWER Foundation is the premiere organization to facilitate truly effective collaboration and drive meaningful, accessible innovation across the open hardware industry.
-    cta: Libre BMC
   section-supporters:
     title: Supporters of OpenPOWER
     logos:
