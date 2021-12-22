@@ -9,15 +9,16 @@
 <section id="page" class="section-bg">
 <div class="row">
 	<div class="section-header my-3 my-md5 pb-2 pb-md3 text-center">
-		<h1 class="section-title text-center">{{ .Title }}</h1>
+		<h2 class="section-title text-center">{{ .Title }}</h2>
 		<p class="section-description"></p>
 	</div>
 <div class="row">
 	<div class="col-lg-2"></div>
-	<div class="col-lg-8">
+	<div class="col-lg-6">
 	{{ if $datafile.versions }}
 		{{ range last 1 $datafile.versions }}
 			<a href="{{ .download }}"><i class="far fa-file-pdf mr-2"></i>&nbsp;Download version {{.number }}</a>
+			<span class="changetime-wrapper"><span class="changetime">{{ .date }}</span></span>
 		{{ end }}
 	{{ end }}
 	</div>

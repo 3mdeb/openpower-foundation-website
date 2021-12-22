@@ -89,8 +89,10 @@ body {
   &__contact-btn,
   &__login-btn {
     min-width: 80px;
-    margin-left: 1.5em;
     white-space: nowrap;  
+  }
+  &__login-btn {
+    margin-left: 1.5em;
   }
 }
 
@@ -180,7 +182,7 @@ body {
 
 .header__menu-item {
   @media screen and (min-width: $lg) {
-    font-size: 83%;
+    // font-size: 83%;
   }  
 
   &.menu-has-children {
@@ -244,9 +246,6 @@ body {
 }
 
 .social__list {
-  align-items: center;
-  justify-content: center;
-
         &.desktop-view {
           @media screen and (max-width: $lg) {
             display: none;

@@ -9,7 +9,7 @@
 	<div class="section-header">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h3 class="section-title">{{ .Title }}</h3>
+				<h2 class="section-title text-center">{{ .Title }}</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -34,11 +34,11 @@
 					<form action="{{ .RelPermalink }}" onkeyup="executeInlineSearch()">
 						<input id="search-query" placeholder="Search..." name="s" autocomplete="off" search autofocus/>
 					</form>
-					<div id="search-results"><h3 class="search-results-title">Matching pages</h3></div>
+					<div id="search-results"><h3 class="search-results-title mb-4">Matching pages</h3></div>
 				</div>
 				<script id="search-result-template" type="text/x-js-template">
 					<div class="search-results-summary" id="summary-${key}">
-						<h4><a class="search-item" href="${link}">${title}</a></h4>
+						<h4><a class="search-item mb-4" href="${link}">${title}</a></h4>
 						<p>${snippet}  ... <a class="search-item-more" href="${link}">[more]</a></p>
 						${ isset tags }<p>${tags}</p>${ end }
 						${ isset categories }<p>Categories: ${categories}</p>${ end }
@@ -51,11 +51,11 @@
 			<span class="section-divider"></span>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row pb-4">
 	{{ range .Data.Pages }}
 		<div class="col-lg-2">&nbsp;</div>
 		<div class="col-lg-8">
-			<a href="{{ .Permalink }}">{{ .Title }}</a>
+			<a class="mb-4" href="{{ .Permalink }}">{{ .Title }}</a>
 		</div>
 		<div class="col-lg-2">&nbsp;</div>
 	{{ end }}
