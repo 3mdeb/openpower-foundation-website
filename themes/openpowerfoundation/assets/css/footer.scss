@@ -11,4 +11,10 @@
 
     color: #fff;
     background-color: #02123e; 
+    a {
+      color: white;
+      &:hover {
+        color: #2566f4;
+      }
+    }
 }
