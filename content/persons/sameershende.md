@@ -1,7 +1,7 @@
 ---
 title: "Sameer Shende"
 image: "sameershende-200.jpg"
-member: University of Oregon
+member: universityoforegon
 date: 2021-03-03
 draft: false
 ---

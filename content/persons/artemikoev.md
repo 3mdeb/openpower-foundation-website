@@ -1,7 +1,7 @@
 ---
 title: "Artem Ikoev"
-member: "yadro"
 image: "artemikoev-200.jpg"
+member: yadro
 date: 2021-03-03
 draft: false
 ---

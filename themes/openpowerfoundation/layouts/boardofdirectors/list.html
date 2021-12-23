@@ -1,59 +1,39 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
-
- <main id="main" class="main boardofdirectors">
-		<div class="container">
-			<div class="row">
-			<h1 class="section-header my-3 my-md-5 pb-2 pb-md-3 text-center">{{ .Title }}</h1>
-			{{ range .Data.Pages.ByWeight }}
+<main id="main" class="main boardofdirectors">
+<div class="container">
+	<div class="row">
+		<h1 class="section-header my-3 my-md-5 pb-2 pb-md-3 text-center">{{ .Title }}</h1>
+		{{ range .Data.Pages.ByWeight }}
+			{{ $personfilename := .File.BaseFileName }}
+			{{ $personfile := printf "%s/%s" "persons" $personfilename }}
 			<article class="post__article col-10 offset-1 row mb-4 pt-4">
 				<div class="col-md-2 mb-4 mb-md-0 pt-md-3 pl-4 pl-lg-0">
-				{{ $personfile := .File.BaseFileName }}
-				{{ range where .Site.Pages "Section" "persons" }}
-					{{ $person := .File.BaseFileName }}
-					{{ if eq $personfile $person }}
-						{{ if .Param "image" }}
-							{{ $imagename := .Param "image" }}
-							{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
-							{{ $imageresource := resources.Get $imagelocation }}
-							{{ $image := $imageresource.Fit "390x390 webp" }}
-							<img class="img-fluid"  src="{{ $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
-						{{ else }}
-							{{ .Title }}
-						{{ end }}
+				{{ with $.Site.GetPage $personfile }}
+					{{ if .Param "image" }}
+						{{ $imagename := .Param "image" }}
+						{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
+						{{ $imageresource := resources.Get $imagelocation }}
+						{{ $image := $imageresource.Fit "390x390 webp" }}
+						<img class="img-fluid"  src="{{ $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
+					{{ else }}
+						{{ .Title }}
 					{{ end }}
 				{{ end }}
 				</div>
 				<div class="col-md-10 pl-4 mb-4 mb-lg-6 person">
 					<h2>{{ .Title }}, {{ .Param "position" }}</h2>
-					{{ $personfile := .File.BaseFileName }}
-					{{ $persontitle := .Title }}
-					{{ range where .Site.RegularPages "Section" "persons" }}
-						{{ $person := .File.BaseFileName }}
-						{{ $company_member := .Param "member" }}
-						{{ $company_member := upper $company_member }}
-						{{ if eq $personfile $person }}
-					<h3>
-						{{ if eq $persontitle "Hugh Blemings" }}
-							<a class="disabled" href="{{ .Param "link" }}">Individual</a>
-						{{ else if eq $persontitle "James Kulina"}}
-							<a href="https://openpowerfoundation.org" target="_blank">OpenPOWER Foundation</a>
-						{{ else }}
-							{{ range where .Site.Pages "Section" "members" }}
-							{{ $company_title := upper .Title }}
-							{{ if eq $company_member $company_title }}
-								<a href="{{ .Param "link" }}" target="_blank">{{ $company_member }}</a>
-							{{ end }}
+					{{ with $.Site.GetPage $personfile }}
+						{{ $memberfile := printf "%s/%s" "members" (.Param "member") }}
+						{{ with $.Site.GetPage $memberfile }}
+							<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 						{{ end }}
+						<p>{{ .Content }}</p>
 					{{ end }}
-					</h3>
-					<p>{{ .Content }}</p>
 				</div>
 			</article>
-			{{ end }}
-			{{ end }}
 		{{ end }}
-		</div>
-  </div>
+	</div>
+</div>
 </main>
 {{ partial "footer.html" . }}
