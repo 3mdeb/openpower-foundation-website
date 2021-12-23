@@ -1,34 +1,27 @@
 {{ partial "header.html" . }}
-
 {{ partial "navbar.html" . }}
-
 <main id="main">
-
 <section id="steeringcomittee">
 <div class="container-fluid">
 	<div class="section-header col-lg-8 offset-lg-2">
 		<h1 class="section-title text-center">{{ .Title }}</h1>
-		<span class="section-divider"></span>
 		<p class="section-description">{{ .Content }}</p>
 	</div>
 	<div class="row">
 	{{ range .Data.Pages.ByWeight }}
-	<article class="post__article bg col-10 offset-1 row mb-4 mb-lg-0 pt-4">
+		<article class="post__article bg col-10 offset-1 row mb-4 mb-lg-0 pt-4">
 		<div id="person">
 			<div class="row">
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
+				<div class="col-lg-4"></div>
+				<div class="col-lg-6">
 					<h2>{{ .Title }}</h2>
-					({{ .Param "position" }})
+					<h3>{{ .Param "position" }}</h3>
 				</div>
-			</div>
-			<div id="person-header">
-				<div class="row">
-					{{ $personfile := .File.BaseFileName }}
-					{{ range where .Site.RegularPages "Section" "persons" }}
+				<div class="col-lg-2 personmember">
+				{{ $personfile := .File.BaseFileName }}
+				{{ range where .Site.RegularPages "Section" "persons" }}
 					{{ $person := .File.BaseFileName }}
 					{{ if eq $personfile $person }}
-					<div class="col-lg-2" id="member">
 						{{ $member := .Param "member" }}
 						{{ range where .Site.RegularPages "Section" "members" }}
 							{{ $membercompany := .File.BaseFileName }}
@@ -36,9 +29,9 @@
 								<a href="{{ .Permalink }}">
 								{{ if .Param "image" }}
 									{{ $imagename := .Param "image" }}
-									{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+									{{ $imagelocation := (printf "%s/%s" "/images/members/" $imagename) }}
 									{{ $imageresource := resources.Get $imagelocation }}
-									{{ $image := $imageresource.Fit "100x100 webp" }}
+									{{ $image := $imageresource.Fit "150x150 webp" }}
 									<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
 								{{ else }}
 									{{ .Title }}
@@ -46,16 +39,15 @@
 								</a>
 							{{ end }}
 						{{ end }}
-					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-2">
+				<div class="col-lg-4">
 					{{ if .Param "image" }}
 						{{ $imagename := .Param "image" }}
 						{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
 						{{ $imageresource := resources.Get $imagelocation }}
-						{{ $image := $imageresource.Fit "200x400" }}
+						{{ $image := $imageresource.Fit "200x400 webp" }}
 						<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
 					{{ else }}
 						&nbsp;
@@ -77,48 +69,48 @@
 			{{ $chairfile := printf "%s/%s" "persons" . }}
 			{{ with $.Site.GetPage $chairfile }}
 			<article class="post__article col-10 offset-1 row mb-4 pt-4 pb-4">
-				<div id="person">
-					<div id="person-header">
-						<div class="row">
-							<div class="col-12" id="member">
-								{{ $member := .Param "member" }}
-								{{ range where .Site.RegularPages "Section" "members" }}
-								{{ $membercompany := .File.BaseFileName }}
-								{{ if eq $member $membercompany }}
-								<a href="{{ .Permalink }}">
-									{{ if .Param "image" }}
-									{{ $imagename := .Param "image" }}
-									{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
-									{{ $imageresource := resources.Get $imagelocation }}
-									{{ $image := $imageresource.Fit "100x100 webp" }}
-									<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
-									{{ else }}
-									{{ .Title }}
-									{{ end }}
-								</a>
-								{{ end }}
-								{{ end }}
-							</div>
-						</div>
+			<div id="person">
+				<div class="row">
+					<div class="col-lg-4"></div>
+					<div class="col-lg-6">
+						<h2>{{ .Title }}</h2>
+						<h3>{{ $wgname }}</h3>
 					</div>
-					<div class="row">
-						<div class="col-lg-2">
+					<div class="col-2 personmember">
+					{{ $member := .Param "member" }}
+					{{ range where .Site.RegularPages "Section" "members" }}
+						{{ $membercompany := .File.BaseFileName }}
+						{{ if eq $member $membercompany }}
+							<a href="{{ .Permalink }}">
 							{{ if .Param "image" }}
-							{{ $imagename := .Param "image" }}
-							{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
-							{{ $imageresource := resources.Get $imagelocation }}
-							{{ $image := $imageresource.Fit "100x400 webp" }}
-							<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
+								{{ $imagename := .Param "image" }}
+								{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+								{{ $imageresource := resources.Get $imagelocation }}
+								{{ $image := $imageresource.Fit "150x150 webp" }}
+								<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
 							{{ else }}
-							&nbsp;
+								{{ .Title }}
 							{{ end }}
-						</div>
-						<div class="col-lg-8">
-							<h2>{{ .Title }}</h2> ({{ $wgname }})
-							{{ .Content }}
-						</div>
+							</a>
+						{{ end }}
+					{{ end }}
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-lg-4">
+					{{ if .Param "image" }}
+						{{ $imagename := .Param "image" }}
+						{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
+						{{ $imageresource := resources.Get $imagelocation }}
+						{{ $image := $imageresource.Fit "200x400 webp" }}
+						<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
+					{{ else }}
+						&nbsp;
+					{{ end }}
+					</div>
+					<div class="col-lg-8">{{ .Content }}</div>
+				</div>
+			</div>
 			</article>
 			{{ end }}
 		{{ end }}
@@ -126,7 +118,5 @@
 	</div>
 </div>
 </section>
-
 </main>
-
 {{ partial "footer.html" . }}
