@@ -1,5 +1,5 @@
 ---
-title: 'Compliance Workgroup'
+title: 'Compliance TWG'
 wgtype: twg
 image: thumb-2.jpg
 chair:

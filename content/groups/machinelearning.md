@@ -1,5 +1,5 @@
 ---
-title: 'Machine Learning AI Work Group'
+title: 'Machine Learning & AI SIG'
 wgtype: sig
 image: thumb-2.jpg
 chair:

@@ -1,6 +1,6 @@
 ---
-title: 'Accelerator Workgroup'
-wgtype: sig
+title: 'Accelerator TWG'
+wgtype: twg
 image: thumb-5.jpg
 chair:
   - curtwollbrink

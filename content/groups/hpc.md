@@ -1,5 +1,5 @@
 ---
-title: 'High-Performance-Computing Workgroup'
+title: 'High-Performance-Computing SIG'
 wgtype: sig
 image: thumb-3.jpg
 chair:
@@ -9,6 +9,7 @@ members:
   - ibm
   - innoboost
   - yadro
+  - vantosh
 date: 2021-03-15
 draft: false
 ---
