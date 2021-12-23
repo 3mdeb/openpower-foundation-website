@@ -1,84 +1,90 @@
 <header class="header">
-	<div class="container navigation">
-		<div class="row d-lg-flex flex-lg-nowrap">
-			{{ $imageresource := resources.Get "img/logo.png" }}
-			{{ $imagefile := $imageresource.Resize "350x60" }}
-			<div class="header__logo-col col d-flex justify-content-center align-items-center">
-				<a class="header__logo" href="{{ "/" | relURL }}">
-					<img src="{{ $imagefile.RelPermalink }}" width="297" height="49" alt="OpenPOWER">
-				</a>
-			</div>
-			<div class="header__menu-col col">
-				<nav class="navbar navbar-expand-lg header__menu-nav" id="nav-menu-container">
-					<ul class="nav-menu header__menu d-lg-flex justify-content-center list-unstyled">
-						{{ range .Site.Menus.navbar }}
-						{{ if eq .Identifier "groups" }}
+<div class="container navigation">
+	<div class="row d-lg-flex flex-lg-nowrap">
+		{{ $imageresource := resources.Get "img/logo.png" }}
+		{{ $imagefile := $imageresource.Resize "350x60 webp" }}
+		<div class="header__logo-col col d-flex justify-content-center align-items-center">
+			<a class="header__logo" href="{{ "/" | relURL }}">
+				<img src="{{ $imagefile.RelPermalink }}" width="297" height="49" alt="OpenPOWER">
+			</a>
+		</div>
+		<div class="header__menu-col col">
+			<nav class="navbar navbar-expand-lg header__menu-nav" id="nav-menu-container">
+			<ul class="nav-menu header__menu d-lg-flex justify-content-center list-unstyled">
+				{{ range .Site.Menus.navbar }}
+					{{ if eq .Identifier "groups" }}
 						<li class="header__menu-item menu-has-children"><a href="{{ .URL }}">{{ .Name }}</a>
-							<ul class="list-unstyled">
-								{{ range $.Site.Pages }}
-								{{ $group := .Param "wgtype" }}
-								{{ if eq $group "twg" }}
-									<li class="header__menu-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-									{{ end }}
-									{{ if eq $group "sig" }}
-										<li class="header__menu-item"> <a href="{{ .Permalink }}">{{ .Title }}</a></li>
-									{{ end }}
-								{{ end }}
-							</ul>
-							{{ else }}
-							{{ if .HasChildren }}
-						<li class="header__menu-item menu-has-children">
-					        <a href="{{ .URL }}">{{ .Name }}</a>
-							<ul class="">
+						<ul class="list-unstyled">
+						{{ range $.Site.Pages }}
+							{{ $group := .Param "wgtype" }}
+							{{ if eq $group "twg" }}
+								<li class="header__menu-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+							{{ end }}
+							{{ if eq $group "sig" }}
+								<li class="header__menu-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+							{{ end }}
+						{{ end }}
+						</ul>
+						</li>
+					{{ else }}
+						{{ if .HasChildren }}
+							<li class="header__menu-item menu-has-children">
+								<a href="{{ .URL }}">{{ .Name }}</a>
+								<ul class="">
 								{{ range .Children }}
-								{{ if .HasChildren }}
-								<li class="header__menu-item menu-has-children">
-									    <a href="{{ .URL }}">{{ .Name }}</a>
-												<ul class="">
-													{{ range .Children }}
-													<li class="header__menu-item"><a href="{{ .URL }}">{{ .Name }}</a></li>
-													{{ end }}
-												</ul>
-								</li>
-								{{ else }}
-								<li class="header__menu-item">
-									<a href="{{ .URL }}">
-										{{ if .Pre }}
-										<i class={{ .Pre }}></i>&nbsp;&nbsp;
-										{{ end }}
-										{{ .Name }}
-										{{ if .Post }}
-										&nbsp;&nbsp;<i class="{{ .Post }}"></i>
-										{{ end }}
-									</a>
-								</li>
+									{{ if .HasChildren }}
+										<li class="header__menu-item menu-has-children">
+											<a href="{{ .URL }}">{{ .Name }}</a>
+											<ul class="">
+											{{ range .Children }}
+												<li class="header__menu-item"><a href="{{ .URL }}">{{ .Name }}</a></li>
+											{{ end }}
+											</ul>
+											</a>
+										</li>
+									{{ else }}
+										<li class="header__menu-item">
+											<a href="{{ .URL }}">
+											{{ if .Pre }}
+												<i class={{ .Pre }}></i>&nbsp;&nbsp;
+											{{ end }}
+											{{ .Name }}
+											{{ if .Post }}
+												&nbsp;&nbsp;<i class="{{ .Post }}"></i>
+											{{ end }}
+											</a>
+										</li>
+									{{ end }}
 								{{ end }}
-								{{ end }}
-							</ul>
-							{{ else }}
-						<li class="header__menu-item {{lower .Name }}" ><a href="{{ .URL }}">{{ .Name }}</a></li>
+								</ul>
+								</a>
+							</li>
+						{{ else }}
+							<li class="header__menu-item {{lower .Name }}" ><a href="{{ .URL }}">{{ .Name }}</a></li>
 						{{ end }}
-						{{ end }}
-						{{ end }}
-						<li class="header__menu-item"><a href="{{ "/contact/" | relURL }}"><i class="fas fa-envelope-open-text"></i>&nbsp;Contact</a></li>
-					    <div class="mobile-view-social-join pt-3">
-							<div class="header__contact-btn join-us-button mobile-view py-4">
-								<a class="d-inline-block btn-outline-primary btn-sm btn" href="/join">Join</a>
-							</div>
-						</div>
-					</ul>
-				</nav>
+					{{ end }}
+				{{ end }}
+				<li class="header__menu-item"><a href="{{ "/contact/" | relURL }}"><i class="fas fa-envelope-open-text"></i>&nbsp;Contact</a></li>
+			</ul>
+			<div class="mobile-view-social-join pt-3">
+				<div class="header__contact-btn join-us-button mobile-view py-4">
+					<a class="d-inline-block btn-outline-primary btn-sm btn" href="{{ "/join/" | relURL }}">Join</a>
+				</div>
+				<div class="header__login-btn login-button mobile-view py-4">
+					<a class="d-block" href="https://portal.openpower.foundation/">	Login&nbsp;<i class="fas fa-sign-in-alt"></i></a>
+				</div>
 			</div>
-			<div class="header__contact-col col d-flex flex-nowrap  justify-content-center align-items-center">
-				<div class="header__contact-btn join-us-button desktop-view">
-					<a class="d-block btn-outline-primary btn-sm btn" href="{{ "/join/" | relURL }}">Join</a>
-				</div>
-				<div class="header__login-btn login-button desktop-view">
-					<a class="d-block btn-outline-primary btn-sm btn" href="https://portal.openpower.foundation/">
-						Login&nbsp;<i class="fas fa-sign-in-alt"></i>
-					</a>
-				</div>
+			</nav>
+		</div>
+		<div class="header__contact-col col d-flex flex-nowrap  justify-content-center align-items-center">
+			<div class="header__contact-btn join-us-button desktop-view">
+				<a class="d-block btn-outline-primary btn-sm btn" href="{{ "/join/" | relURL }}">Join</a>
+			</div>
+			<div class="header__login-btn login-button desktop-view">
+				<a class="d-block" href="https://portal.openpower.foundation/">	Login&nbsp;<i class="fas fa-sign-in-alt"></i>
+				</a>
 			</div>
 		</div>
 	</div>
+</div>
 </header>
