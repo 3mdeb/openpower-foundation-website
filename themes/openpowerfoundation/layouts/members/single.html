@@ -1,13 +1,11 @@
 {{ partial "header.html" . }}
-
 {{ partial "navbar.html" . }}
-
 <main id="main">
-
 <section id="membersingle">
 <div id="membersingle" class="container-fluid">
 	<div class="section-header">
 		<div class="row">
+			<div class="col-lg-2">&nbsp;</div>
 			<div class="col-lg-6">
 			{{ if .Param "image" }}
 				{{ $imagename := .Param "image" }}
@@ -39,7 +37,7 @@
 				<div>Joined foundation in : {{ .Param "joined" }}</div>
 			{{ end }}
 			{{ if .Param "link" }}
-				<div><a href="{{ .Param "link" }}">Visit Website</a>&nbsp;<i class="external link alternate icon"></i></div>
+				<div><a href="{{ .Param "link" }}">Visit Website&nbsp;<i class="fas fa-external-link-alt"></i></a></div>
 			{{ end }}
 			Workgroup participation :
 			<ul>
@@ -57,22 +55,16 @@
 			{{ end }}
 			</ul>
 			</div>
-			<div class="col-lg-2">&nbsp;</div>
-			<span class="section-divider"></span>
 		</div>
 	</div>
 	<div class="row">
 	{{ if .Content }}
 		<div class="col-lg-2">&nbsp;</div>
-		<div class="col-lg-8">
-			{{ .Content }}
-		</div>
+		<div class="col-lg-8">{{ .Content }}</div>
 		<div class="col-lg-2">&nbsp;</div>
 	{{ end }}
 	</div>
 </div>
 </section>
-
 </main>
-
 {{ partial "footer.html" . }}
