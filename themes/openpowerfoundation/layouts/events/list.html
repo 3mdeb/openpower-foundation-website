@@ -1,7 +1,5 @@
 {{ partial "header.html" . }}
-
 {{ partial "navbar.html" . }}
-
 <main id="main">
 <div class="container">
 	<div class="row">
@@ -20,8 +18,31 @@
 					<div class="timeline-content js--fadeInLeft">
 						<h2><a href="{{ .Permalink }}"><span class="post-title">{{ .Title }}</span></a></h2>
 						{{ $eventdate := .Param "eventdate" }}
-						<div class="date">{{ dateFormat "2 January 2006" $eventdate }}</div>
-						<p>{{ .Summary }}</p>
+						<div class="date">
+							{{ dateFormat "2 January 2006" $eventdate }} - {{ .Param "eventplace" }}
+						</div>
+						<p class="text-center">
+							{{ if .Param "callforpresentation" }}
+								<a class="btn-outline-danger btn-sm btn" href="{{ .Param "callforpresentation" }}">
+									Call-for-Presentation&nbsp;<i class="fas fa-external-link-alt"></i>
+								</a>
+							{{ end }}
+							{{ if .Param "register" }}
+								<a class="btn-outline-primary btn-sm btn" href="{{ .Param "register" }}">
+									Register&nbsp;<i class="fas fa-external-link-alt"></i>
+								</a>
+							{{ end }}
+							{{ if .Param "schedule" }}
+								<a class="btn-outline-primary btn-sm btn" href="{{ .Param "schedule" }}">
+									Schedule&nbsp;<i class="fas fa-external-link-alt"></i>
+								</a>
+							{{ end }}
+							{{ if .Param "recordings" }}
+								<a class="btn-outline-primary btn-sm btn" href="{{ .Param "recordings" }}">
+									Recordings&nbsp;<i class="fas fa-external-link-alt"></i>
+								</a>
+							{{ end }}
+						</p>
 					</div>
 				</div>
 			{{ end }}
@@ -32,5 +53,4 @@
 </div>
 </section>
 </main>
-
 {{ partial "footer.html" . }}
