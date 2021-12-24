@@ -32,12 +32,16 @@
           <li>{{ .option }}</li>  
         {{ end }}
     </ul>
+
+	<p>&nbsp;</p>
+
     <p class="membership-levels-text">{{ .Param "membership-levels.text" }}</p>
     <ul class="mb-0 pb-0">
         {{ range .Param "membership-levels.features" }}
-           <li>{{ .feature }}</li>  
+           <li>{{ .feature }}</li>
         {{ end }}
     </ul>
+
     <div class="membership-data mt-5">
       {{ .Content }}
     </div>
