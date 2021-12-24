@@ -4,28 +4,28 @@
 	weight = -2000
 [[navbar]]
 	parent = "about"
-	name = "Board of Directors"
-	identifier = "bod"
-	url = "/boardofdirectors/"
-	weight = -900
-[[navbar]]
-	parent = "about"
-	name = "Steering Committee"
-	identifier = "steeringcommittee"
-	url = "/steeringcommittee"
-	weight = -800
+	name = "Mission Statement"
+	identifier = "missionstatement"
+	url = "/about/missionstatement/"
+	weight = -1000
 [[navbar]]
 	parent = "about"
 	name = "Governance"
 	identifier = "governance"
 	url = "/about/governance/"
-	weight = -700
+	weight = -900
 [[navbar]]
 	parent = "about"
-	name = "Mission Statement"
-	identifier = "missionstatement"
-	url = "/about/missionstatement/"
-	weight = -600
+	name = "Board of Directors"
+	identifier = "bod"
+	url = "/boardofdirectors/"
+	weight = -800
+[[navbar]]
+	parent = "about"
+	name = "Steering Committee"
+	identifier = "steeringcommittee"
+	url = "/steeringcommittee"
+	weight = -700
 
 [[navbar]]
 	name = "Events"
@@ -46,17 +46,10 @@
 	weight = -1700
 
 [[navbar]]
-	name = "Join"
-	identifier = "join"
-	url = "/join/"
-	weight = -1850
-
-
-[[navbar]]
 	name = "HUB"
 	identifier = "hub"
 	url = "/hub/"
-	weight = -1700
+	weight = -1600
 
 [[navbar]]
 	name = "Technical"
