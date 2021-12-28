@@ -1,7 +1,6 @@
 {{ partial "header.html" . }}
-
 {{ partial "navbar.html" . }}
-
+{{ $i := 0 }}
 <main id="main" class="main members">
 <div class="container">
 	<section id="intro">
@@ -10,7 +9,6 @@
 	</div>
 	</section>
 	<div class="row">
-	{{ $i := 0 }}
 	{{ $data := index $.Site.Data }}
 	{{ range $data.memberlevels }}
 		<div class="col-lg-12">
@@ -22,10 +20,10 @@
 				{{ $imagesize := printf "%s webp" .size  }}
 				{{ $col := .col }}
 				<div class="row d-flex justify-content-center">
-				{{ range $.Site.Pages }}
+				{{ range $.Site.Pages.ByTitle }}
 					{{ $level := .Param "level" }}
 					{{ if eq $level $key }}
-						<div class="col-lg-4 pt-5 pb-0 pb-lg-3">
+						<div class="col-lg-{{ $col }} pt-5 pb-0 pb-lg-3">
 							<div class="box">
 								<a href="{{ .Permalink }}">
 								{{ if .Param "image" }}
@@ -36,8 +34,9 @@
 									<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
 								</a>
 								{{ else }}
-									<h3><a target="_blank" class="text-black" href="{{ .Param " link" }}">{{ .Param "title" }}</a></h3>
+									<h3><a class="text-black" href="{{ .Permalink  }}">{{ .Title }}</a></h3>
 								{{ end }}
+								{{ $i = add $i 1 }}
 							</div>
 						</div>
 					{{ end }}
@@ -49,5 +48,4 @@
 	</div>
 </div>
 </main>
-
 {{ partial "footer.html" . }}

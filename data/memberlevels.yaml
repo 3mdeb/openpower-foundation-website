@@ -1,24 +1,24 @@
 - name: Platinum Members
   identifier: platinum
-  size: 300x300
+  size: 800x800
   col: 6
 - name: Gold Members
   identifier: gold
-  size: 200x200
+  size: 600x600
   col: 4
 - name: Silver Members
   identifier: silver
-  size: 150x150
+  size: 400x400
   col: 3
 - name: Academic Members
   identifier: academic
-  size: 100x100
-  col: 2 
+  size: 200x200
+  col: 3
 - name: Associate Members
   identifier: associate
-  size: 100x100
-  col: 2
+  size: 200x200
+  col: 3
 - name: Individual Members
   identifier: individual
   size: 1x1
-  col: 1
+  col: 3
