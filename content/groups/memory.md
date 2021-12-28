@@ -9,7 +9,7 @@ members:
   - ibm
   - google
   - vantosh
-  - universityoforegan
+  - universityoforegon
 date: 2021-03-15
 draft: false
 ---
