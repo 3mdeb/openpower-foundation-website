@@ -8,11 +8,14 @@
 # generated files by hugo
 /public/
 /resources/_gen/
+.hugo_build.lock
 
 # executable may be added to repository
 hugo.exe
 hugo.darwin
 hugo.linux
+hugo
+hugo-extended
 
 ## Vim
 # https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
