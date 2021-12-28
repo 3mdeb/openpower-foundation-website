@@ -1,6 +1,6 @@
 ---
-title: "TVARIT"
-#image: TVARIT GmbH
+title: TVARIT
+image: tvarit.png
 country: Germany
 link: "https://www.tvarit.com/"
 level: silver

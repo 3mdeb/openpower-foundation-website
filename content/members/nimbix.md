@@ -1,6 +1,6 @@
 ---
 title: Nimbix
-#image: Nimbix, Inc.
+image: nimbix.jpg
 country: USA
 link: "https://www.nimbix.net/"
 level: silver

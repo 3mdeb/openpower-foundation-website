@@ -1,6 +1,6 @@
 ---
 title: ThinkParQ
-#image: ThinkParQ
+image: thinkparq.jpg
 country: Germany
 link: https://thinkparq.com/
 level: silver

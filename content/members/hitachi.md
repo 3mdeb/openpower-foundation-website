@@ -1,6 +1,6 @@
 ---
-title: "Hitachi"
-image: "hitachi.png"
+title: Hitachi
+image: hitachi.png
 #link: 
 level: gold
 joined: 2014
