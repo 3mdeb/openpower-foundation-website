@@ -21,6 +21,6 @@ date: 2021-09-25
 draft: false
 ---
 
-This workgroup provides a forum for workgroup (WG) members to propose, discuss, and
+This Technical Working Group provides a forum for working group members to propose, discuss, and
 approve modifications to the OpenPOWER System Hardware Architecture Specifications.
 The scope of modifications will be focused on the needs of the OpenPOWER ecosystem.
