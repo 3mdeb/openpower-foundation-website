@@ -1,6 +1,7 @@
 ---
 title: "OpenPOWER Summit EU 2023"
-eventdate: 2023-10-31
+eventdates:
+  from: 2023-10-31
 eventplace: "Lyon, France"
 eventcalendar: Google Calendar ICS
 eventtime: 10:00am 6:00pm

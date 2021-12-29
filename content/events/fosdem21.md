@@ -1,6 +1,7 @@
 ---
 title: "FOSDEM 2021 OpenPOWER DevRoom"
-eventdate: 2021-02-06
+eventdates:
+  from: 2021-02-06
 eventplace: "Virtual Online"
 schedule: https://archive.fosdem.org/2021/schedule/track/openpower/
 recordings: https://video.fosdem.org/2021/D.power/

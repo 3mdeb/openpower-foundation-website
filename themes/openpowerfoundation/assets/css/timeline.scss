@@ -4,7 +4,8 @@ $light-primary: #000000;
 $text: #ffffff;
 $primary-text: #212121;
 $secondary-text: #757575;
-$accent: #aaaaaa;
+$accent: #666666;
+$background: #dddddd;
 
 .timeline {
 	position: relative;
@@ -35,10 +36,10 @@ $accent: #aaaaaa;
 				border-style: solid;
 				width: 0;
 				height: 0;
-				top: 30px;
-				left: -15px;
-				border-width: 10px 15px 10px 0;
-				border-color: transparent #f5f5f5 transparent transparent;
+				top: 0px;
+				left: -40px;
+				border-width: 25px 40px 25px 0;
+				border-color: transparent $accent transparent transparent;
 			}
 		}
 	}
@@ -51,10 +52,11 @@ $accent: #aaaaaa;
 
 .timeline-content {
 	position: relative;
+	text-align: center;
 	width: 45%;
 	padding: 60px 30px 10px 30px;
 	border-radius: 4px;
-	background: #f5f5f5;
+	background: $background;
 	box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
 	&::after {
 		content: '';
@@ -62,10 +64,10 @@ $accent: #aaaaaa;
 		border-style: solid;
 		width: 0;
 		height: 0;
-		top: 20px;
-		right: -15px;
-		border-width: 10px 0 10px 15px;
-		border-color: transparent transparent transparent #f5f5f5;
+		top: 0px;
+		right: -40px;
+		border-width: 25px 0 25px 40px;
+		border-color: transparent transparent transparent $accent;
 	}
 }
 
@@ -75,14 +77,14 @@ $accent: #aaaaaa;
 }
 
 .timeline-img {
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	background: $primary;
 	border-radius: 50%;
 	position: absolute;
 	left: 50%;
-	margin-top: 25px;
-	margin-left: -15px;
+	margin-top: 10px;
+	margin-left: -20px;
 }
 
 .timeline-card {
@@ -154,7 +156,7 @@ blockquote {
 					top: 30px;
 					left: -15px;
 					border-width: 10px 15px 10px 0;
-					border-color: transparent #f5f5f5 transparent transparent;
+					border-color: transparent $background transparent transparent;
 				}
 			}
 		}
