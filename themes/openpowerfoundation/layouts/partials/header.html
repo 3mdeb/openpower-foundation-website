@@ -36,12 +36,13 @@
 	{{ $promo := resources.Get "css/promo.scss" }}
 	{{ $home := resources.Get "css/home.scss" }}
 	{{ $groups := resources.Get "css/groups.scss" }}
+	{{ $ready := resources.Get "css/ready.scss" }}
 	{{ $bod := resources.Get "css/bod.scss"  }}
 	{{ $timeline := resources.Get "css/timeline.scss" }}
 	{{ $pages := resources.Get "css/pages.scss" }}
 	{{ $footer := resources.Get "css/footer.scss" }}
 	{{ $changelog := resources.Get "css/changelog.scss" }}
-	{{ $scss := slice $variables $header $promo $home $groups $bod $timeline $pages $footer $changelog | resources.Concat "css/custom.scss" }}
+	{{ $scss := slice $variables $header $promo $home $groups $ready $bod $timeline $pages $footer $changelog | resources.Concat "css/custom.scss" }}
 	{{ $css := $scss | toCSS (dict "targetPath" "css/custom.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 	{{ $minicss := $css | resources.Minify }}
 	<link rel="stylesheet" href="{{ $minicss.RelPermalink }}">
