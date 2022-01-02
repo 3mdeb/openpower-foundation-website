@@ -5,16 +5,19 @@ theme = "openpowerfoundation"
 languageCode = "en-us"
 dataDir = "data"
 assetDir = "assets"
-PaginatePath = "blog"
+PaginatePath = ""
 sectionPagesMenu = "main"
 buildDrafts = false
 pygmentsUseClasses = true
 enableGitInfo = true
 enableRobotsTXT = true
+disableHugoGeneratorInject = false
+enableEmoji = true
 
 [outputs]
-	home = [ "HTML", "Calendar", "JSON" , "RSS" ]
+	home = [ "HTML", "JSON" , "RSS" ]
 	specifications = [ "HTML", "JSON" ]
+	ready = [ "HTML", "JSON" ]
 	schedule = [ "HTML", "Calendar" , "RSS" ]
 
 [outputFormats]
@@ -22,6 +25,48 @@ enableRobotsTXT = true
 	mediatype = "application/rss"
 	baseName = "feed"
 	suffix = "xml"
-	
+[outputFormats.JSON]
+	mediaType = "application/json"
+	baseName = "index"
+	isPlainText = true
+	notAlternative = true
+
+[markup]
+[markup.goldmark]
 [markup.goldmark.renderer]
-unsafe = true
+	hardWraps = true
+	unsafe = true
+	xHTML = true
+[markup.highlight]
+	codeFences = true
+	lineNos = true
+	lineNumbersInTable = true
+	noClasses = false
+[markup.tableOfContents]
+	endLevel = 4
+	ordered = false
+	startLevel = 2
+
+[imaging]
+	resampleFilter = "MitchellNetravali"
+	quality = 100
+	anchor = "smart"
+	bgColor = "#ffffff"
+[imaging.exif]
+	includeFields = ""
+	excludeFields = ".*"
+	disableDate = false
+	disableLatLong = false
+
+[sitemap]
+	changefreq = "weekly"
+	filename = "sitemap.xml"
+	priority = 0.5
+
+[taxonomies]
+	tag = "tags"
+
+[minify]
+[minify.tdewolff]
+[minify.tdewolff.html]
+	keepWhitespace = false
