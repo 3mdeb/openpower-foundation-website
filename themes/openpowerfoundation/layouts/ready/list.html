@@ -1,11 +1,8 @@
 {{ partial "header.html" . }}
-
 {{ partial "navbar.html" . }}
-
-<main id="main">
-
-<section id="specifications">
-<div id="specifications" class="container-fluid">
+<main id="main" class="main ready">
+<section id="ready">
+<div id="ready" class="container-fluid">
 	<div class="section-header">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -23,9 +20,9 @@
 		<div class="row">
 			<div class="col-lg-2">&nbsp;</div>
 			<div class="col-lg-8 text-center">
-				<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+				<script src="{{ "/lib/search//jquery-3.3.1.min.js" | relURL }}"></script>
+				<script src="{{ "/lib/search/fuse-3.2.0.min.js" | relURL }}"></script>
+				<script src="{{ "/lib/search/jquery.mark-8.11.1.min.js" | relURL }}"></script>
 				<script>var jsonfile = "{{ .RelPermalink }}/index.json"</script>
 				{{ $searchjavascript := resources.Get "js/search.js" }}
 				{{ $searchjs := $searchjavascript | resources.Minify }}
@@ -51,18 +48,30 @@
 			<span class="section-divider"></span>
 		</div>
 	</div>
-	<div class="row pb-4">
-	{{ range .Data.Pages }}
-		<div class="col-lg-2">&nbsp;</div>
-		<div class="col-lg-8">
-			<a class="mb-4" href="{{ .Permalink }}">{{ .Title }}</a>
-		</div>
-		<div class="col-lg-2">&nbsp;</div>
+	<div class="row">
+	{{ range (.Paginate .Data.Pages.ByTitle 30).Pages }}
+		{{ $imagename := .Param "image" }}
+		{{ $imagelocation := (printf "%s/%s" "images/ready/" $imagename) }}
+		{{ $imageresource := resources.Get $imagelocation }}
+		<article class="post__article col-md-4">
+			{{ if $imageresource }}
+			<div class="post__thumb">
+				{{ $image := $imageresource.Resize "50x50 webp" }}
+				<img class="img-fluid" src="{{  $image.RelPermalink }}" width="50" height="50" alt="{{ .Title }}">
+			</div>
+			{{ end }}
+			<a class="post__title btn btn-outline-primary" href="{{ .Permalink }}">{{ .Title }}</a>
+		</article>
 	{{ end }}
+	</div>
+	<div class="row">
+		<div class="col-lg-4">&nbsp;</div>
+		<div class="col-lg-4 text-center">
+			{{ template "_internal/pagination.html" . }}
+		</div>
+		<div class="col-lg-4">&nbsp;</div>
 	</div>
 </div>
 </section>
-
 </main>
-
 {{ partial "footer.html" . }}

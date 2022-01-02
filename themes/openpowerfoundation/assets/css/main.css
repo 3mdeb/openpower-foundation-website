@@ -4970,4 +4970,8 @@ textarea.form-control-lg {
   .social__item._yt {
     background-image: url(../img/yt.svg); }
 
-    
+.ready-footer {
+	color: #666666;
+	font-size: 8px;
+	line-height: 6px;
+}

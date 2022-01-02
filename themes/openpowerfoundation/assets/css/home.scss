@@ -17,7 +17,7 @@ main {
 .post__article {
   position: relative; 
   &:not(:last-child) {
-    margin-bottom: 3.75rem; 
+    margin-bottom: 0.75rem;
   }
 }
 .post__title {
