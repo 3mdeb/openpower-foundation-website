@@ -1,0 +1,9 @@
+versions:
+  - number: "2.07"
+    date: "2013-05-03"
+    download: ""
+    description: "Initial release."
+  - number: "2.07b"
+    date: "2017-03-29"
+    download: "https://ibm.ent.box.com/s/1hzcwkwf8rbju5h9iyf44wm94amnlcrv"
+    description: "Update specification."
