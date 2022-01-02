@@ -1,10 +1,7 @@
 {{ partial "header.html" . }}
-
 {{ partial "navbar.html" . }}
-
 {{ $filename := .File.BaseFileName }}
 {{ $datafile := index $.Site.Data.specifications $filename }}
-
 <main id="main" class="specifications-single">
 <section id="page" class="section-bg">
 <div class="row">
@@ -13,7 +10,7 @@
 		<p class="section-description"></p>
 	</div>
 <div class="row">
-	<div class="col-lg-2"></div>
+	<div class="col-lg-3"></div>
 	<div class="col-lg-6">
 	{{ if $datafile.versions }}
 		{{ range last 1 $datafile.versions }}
@@ -21,17 +18,32 @@
 			<span class="changetime-wrapper"><span class="changetime">{{ .date }}</span></span>
 		{{ end }}
 	{{ end }}
+	{{ if .Param "group" }}
+		{{ $group := printf "%s/%s" "groups" (.Param "group") }}
+		{{ with $.Site.GetPage $group }}
+			Owned by : {{ .Title }}
+		{{ end }}
+	{{ end }}
 	</div>
+	<div class="col-lg-3"></div>
 </div>
+{{ if .Param "publicreview" }}
 <div class="row">
-	<div class="col-lg-2"></div>
+	<div class="col-lg-3"></div>
+	<div class="col-lg-6">
+	</div>
+	<div class="col-lg-3"></div>
+</div>
+{{ end }}
+<div class="row">
+	<div class="col-lg-3"></div>
 	<div class="col-lg-6 content wow fadeInTop">
 		<p>{{ .Content }}</p>
 	</div>
 	<div class="col-lg-3">
 	{{ if $datafile.versions }}
 		<ul class="changelogtimeline">
-		{{ range sort $datafile.versions "number" "desc" }}
+		{{ range sort $datafile.versions "date" "desc" }}
 			<li>
 			<div class="direction-r">
 				<div class="changeflag-wrapper">
@@ -39,7 +51,9 @@
 					<span class="changetime-wrapper"><span class="changetime">{{ .date }}</span></span>
 				</div>
 				<div class="desc">{{ .description }}</div>
-				<div class="desc"><a href="{{ .download }}">download</a></div>
+				{{ if .download }}
+					<div class="desc"><a href="{{ .download }}">download</a></div>
+				{{ end }}
 			</div>
 			</li>
 		{{ end }}
@@ -47,6 +61,17 @@
 	{{ end }}
 	</div>
 </div>
+{{ if .Params.tags }}
+<div class="row">
+	<div class="col-lg-3"></div>
+	<div class="col-lg-6 text-center">
+	{{ range .Params.tags }}
+		{{ . }}
+	{{ end }}
+	</div>
+	<div class="col-lg-3"></div>
+</div>
+{{ end }}
 </section>
 </main>
 

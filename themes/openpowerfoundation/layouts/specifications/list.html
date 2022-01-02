@@ -1,9 +1,6 @@
 {{ partial "header.html" . }}
-
 {{ partial "navbar.html" . }}
-
 <main id="main">
-
 <section id="specifications">
 <div id="specifications" class="container-fluid">
 	<div class="section-header">
@@ -18,9 +15,9 @@
 		<div class="row">
 			<div class="col-lg-2">&nbsp;</div>
 			<div class="col-lg-8 text-center">
-				<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+				<script src="{{ "/lib/search//jquery-3.3.1.min.js" | relURL }}"></script>
+				<script src="{{ "/lib/search/fuse-3.2.0.min.js" | relURL }}"></script>
+				<script src="{{ "/lib/search/jquery.mark-8.11.1.min.js" | relURL }}"></script>
 				<script>var jsonfile = "{{ .RelPermalink }}/index.json"</script>
 				{{ $searchjavascript := resources.Get "js/search.js" }}
 				{{ $searchjs := $searchjavascript | resources.Minify }}
@@ -47,7 +44,7 @@
 		</div>
 	</div>
 	<div class="row pb-4 text-center">
-	{{ range .Data.Pages }}
+	{{ range .Data.Pages.ByTitle }}
 		<div class="col-lg-2">&nbsp;</div>
 		<div class="col-lg-8">
 			<a class="mb-4" href="{{ .Permalink }}">{{ .Title }}</a>
@@ -57,7 +54,5 @@
 	</div>
 </div>
 </section>
-
 </main>
-
 {{ partial "footer.html" . }}
