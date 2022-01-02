@@ -1,15 +1,17 @@
 ---
-title: "PowerEL 7"
-vendor: "VanTosh"
-link: "https://www.powerel.org/?opf"
+title: PowerEL 7
 criteria: 2.0
+vendor: VanTosh
+link: https://www.powerel.org/?opf
 tags:
   - software
-  - operating system
+  - operatingsystem
   - applications
   - compilers
-  - open source
+  - opensource
   - free
+  - linux
+  - linuxdistribution
 date: 2020-01-13
 draft: false
 ---
