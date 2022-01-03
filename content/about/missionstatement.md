@@ -1,9 +1,7 @@
 ---
-title: "Mission Statement"
+title: Mission Statement
+image: missionstatement.jpg
 date: 2021-03-06
-image:
-  file: missionstatement.jpg
-  size: 350x350
 draft: false
 ---
 
