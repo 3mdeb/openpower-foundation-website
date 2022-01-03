@@ -1,85 +1,59 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
-
 <main id="main" class="main join">
-	<div class="container">
+<div class="container">
 	<section id="intro">
-		<div class="row">
-			<h1 class="section-header my-3 my-md-5 text-center">{{ .Title }}</h1>
-			<h2 class="mt-0 pt-0">{{ .Param "intro.subtitle" }}</h2>
-			{{ range .Param "intro.intro" }}
-				<p>{{ . }}</p>
-			{{ end }}
-		</div>
+	<div class="row">
+		<h1 class="section-header my-3 my-md-5 text-center">{{ .Title }}</h1>
+		{{ with $.Site.GetPage "join/welcome" }}
+			<h2 class="mt-0 pt-0">{{ .Title }}</h2>
+			<div class="mb-0 pb-0 mt-5">{{ .Content }}</div>
+		{{ end }}
+	</div>
 	</section>
 	<section id="teaser">
-		<div class="teaser__info">
-			<h2>{{ .Param "intro.teaser.title" }}</h2>
-			<ul class="mb-0 pb-0">
-			{{ range .Param "intro.options" }}
-				<li>{{ . }}</li>
-			{{ end }}
-			</ul>
+	<div class="teaser__info">
+		{{ with $.Site.GetPage "join/why" }}
+			<h2 class="mt-0 pt-0">{{ .Title }}</h2>
+			<div class="mb-0 pb-0 mt-5">{{ .Content }}</div>
+		{{ end }}
+	</div>
+	</section>
+	<section id="membership-levels">
+		{{ with $.Site.GetPage "join/levels" }}
+			<h2 class="mt-0 pt-0">{{ .Title }}</h2>
+			<div class="membership-data mt-5">{{ .Content }}</div>
+		{{ end }}
+	</section>
+	<section id="membership-benefits">
+	<div class="teaser__info">
+		{{ with $.Site.GetPage "join/benefits" }}
+			<h2 class="mt-0 pt-0">{{ .Title }}</h2>
+			<div class="benefits-data mt-5">{{ .Content }}</div>
+		{{ end}}
+	</div>
+	</section>
+	<section id="become-member">
+		<h2 class="text-center mb-5 pb-3">{{ .Param "become-member.title" }}</h2>
+		<div class="row">
+		{{ range .Param "become-member.options" }}
+			<article class="post__article col-md-6 text-center">
+				<div class="h2">{{ .title }}</div>
+				<div class="post__thumb">
+					{{ $imagename := .image }}
+					{{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
+					{{ $imageresource := resources.Get $imagelocation }}
+					{{ $image := $imageresource.Fit "600x390" }}
+					<img class="img-fluid"  src="{{  $image.RelPermalink }}" alt="{{ .title }}" title="{{ .title }}">
+				</div>
+				<p>{{ .text }}</p>
+				<p><a class="btn-outline-primary btn-sm btn" href="{{ .cta_url }}">
+						{{ .cta_text }}&nbsp;<i class="fas fa-external-link-alt"></i>
+				</a></p>
+			</article>
+		{{ end }}
 		</div>
 	</section>
-
-  <section id="membership-levels">
-    <h2>{{ .Param "membership-levels.title" }}</h2>
-    <p>{{ .Param "membership-levels.subtitle" }}</p>
-
-    <ul class="mb-0 pb-0">
-        {{ range .Param "membership-levels.options" }}
-          <li>{{ .option }}</li>  
-        {{ end }}
-    </ul>
-
-	<p>&nbsp;</p>
-
-    <p class="membership-levels-text">{{ .Param "membership-levels.text" }}</p>
-    <ul class="mb-0 pb-0">
-        {{ range .Param "membership-levels.features" }}
-           <li>{{ .feature }}</li>
-        {{ end }}
-    </ul>
-
-    <div class="membership-data mt-5">
-      {{ .Content }}
-    </div>
-    </section>
-
-    <section id="membership-benefits">
-      <div class="teaser__info">
-        <h2 class="text-center mb-5 pb-2">{{ .Param "membership-benefits.title" }}</h2>
-        <div class="benefits-data">
-        {{ range where .Site.Pages "Section" "join" }}
-           {{if eq .Title "Membership Benefits"}}
-             {{ .Content }}
-          {{ end}}
-        {{ end}}
-        </div>
-      </div>
-    </section>
-
-    <section id="become-member">
-            <h2 class="text-center mb-5 pb-3">{{ .Param "become-member.title" }}</h2>
-            <div class="row">
-                {{ range .Param "become-member.options" }}
-                        <article class="post__article col-md-6">
-                            <div class="post__thumb">
-                                    {{ $imagename := .image }}
-                                    {{ $imagelocation := (printf "%s/%s" "images/join/" $imagename) }}
-                                    {{ $imageresource := resources.Get $imagelocation }}
-                                    {{ $image := $imageresource.Fit "600x390" }}
-                                    <img class="img-fluid"  src="{{  $image.RelPermalink }}" alt="{{ .title }}" title="{{ .title }}">
-                            </div>
-                            <div class="h2">{{ .title }}</div>
-                            <p>{{ .text }}</p>
-                            <p><a class="btn-outline-primary btn-sm btn" href="{{ .cta_url }}">{{ .cta_text }}&nbsp;<i class="fas fa-external-link-alt"></i></a></p>
-                        </article>
-                  {{ end }}
-            </div>
-         </section>
-     </div>
+</div>
 </main>
-
 {{ partial "footer.html" . }}

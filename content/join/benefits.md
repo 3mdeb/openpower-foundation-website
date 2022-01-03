@@ -1,30 +1,26 @@
 ---
 title: 'Membership Benefits'
 date: 2021-07-17
-type: join
 draft: false
 ---
 
-
-| OpenPOWER Foundation Membership Matrix                     | Associate | ISV | Silver  | Gold | Platinum |
-|------------------------------------------------------------|-----------|-----|---------|------|----------|
-| Working Group Participation                                | x         | x   | x       | x    | x        |
-| Marketing Committee Participation                          | x         | x   | x       | x    | x        |
-| Access to Specifications Approved by the Board             | x         | x   | x       | x    | x        |
-| Access to Draft Specifications in development              | x         | x   | x       | x    | x        |
-| Petition TSC to create a new workgroup or project          | x         | x   | x       | x    | x        |
-| Exhibit opportunities as OPF-hosted and exhibiting events  | x         | x   | x       | x    | x        |
-| Participate in OpenPOWER Ambassador Program                | x         | x   | x       | x    | x        |
-| Speaker Opportunities at OPF-hosted events                 | x         |     | 1+      | 2+   | 2+       |
-| Keynote Opportunities at OPF-hosted events                 |           |     |         |      | x        |
-| Registration/exibit at OPF events                          |           |     | 5%      | 10%  | 20%      |
-| Member logo featured on the website                        | x         | x   | x       | x    | x        |
-| Member logo featured on the website homepage               |           |     |         | x    | x        |
-| Member logo featured on event signage                      |           |     |         | x    | x        |
-| Member profile featured on website spotlight               |           |     |         | x    | x        |
-| Member name inclusion in Press Releases                    |           |     |         | 1x/yr| 2x/yr    |
-| Final Approval of New Projects                             | <span>Board membership required</span>      |
-| Final Approval and Voting of IP and Specifications         | <span>Board membership required</span>      |
-| Manage the Future Direction of the Organization            | <span>Board membership required</span>      |
-
-
+| OpenPOWER Foundation Membership Matrix                     | Associate | ISV     | Silver  | Gold    | Platinum |
+|------------------------------------------------------------|-----------|---------|---------|---------|----------|
+| Working Group Participation                                | {{<v>}}   | {{<v>}} | {{<v>}} | {{<v>}} | {{<v>}}  |
+| Marketing Committee Participation                          | {{<v>}}   | {{<v>}} | {{<v>}} | {{<v>}} | {{<v>}}  |
+| Access to Specifications Approved by the Board             | {{<v>}}   | {{<v>}} | {{<v>}} | {{<v>}} | {{<v>}}  |
+| Access to Draft Specifications in development              | {{<v>}}   | {{<v>}} | {{<v>}} | {{<v>}} | {{<v>}}  |
+| Petition TSC to create a new workgroup or project          | {{<v>}}   | {{<v>}} | {{<v>}} | {{<v>}} | {{<v>}}  |
+| Exhibit opportunities as OPF-hosted and exhibiting events  | {{<v>}}   | {{<v>}} | {{<v>}} | {{<v>}} | {{<v>}}  |
+| Participate in OpenPOWER Ambassador Program                | {{<v>}}   | {{<v>}} | {{<v>}} | {{<v>}} | {{<v>}}  |
+| Speaker Opportunities at OPF-hosted events                 | {{<v>}}   | {{<x>}} | 1+      | 2+      | 2+       |
+| Keynote Opportunities at OPF-hosted events                 | {{<x>}}   | {{<x>}} | {{<x>}} | {{<x>}} | {{<v>}}  |
+| Registration/exibit at OPF events                          | {{<x>}}   | {{<x>}} | 5%      | 10%     | 20%      |
+| Member logo featured on the website                        | {{<v>}}   | {{<v>}} | {{<v>}} | {{<v>}} | {{<v>}}  |
+| Member logo featured on the website homepage               | {{<x>}}   | {{<x>}} | {{<x>}} | {{<v>}} | {{<v>}}  |
+| Member logo featured on event signage                      | {{<x>}}   | {{<x>}} | {{<x>}} | {{<v>}} | {{<v>}}  |
+| Member profile featured on website spotlight               | {{<x>}}   | {{<x>}} | {{<x>}} | {{<v>}} | {{<v>}}  |
+| Member name inclusion in Press Releases                    | {{<x>}}   | {{<x>}} | {{<x>}} | 1/year  | 2/year   |
+| Final Approval of New Projects                             | <span>Board membership required</span>             |
+| Final Approval and Voting of IP and Specifications         | <span>Board membership required</span>             |
+| Manage the Future Direction of the Organization            | <span>Board membership required</span>             |
