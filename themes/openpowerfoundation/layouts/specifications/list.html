@@ -26,12 +26,11 @@
 					<form action="{{ .RelPermalink }}" onkeyup="executeInlineSearch()">
 						<input id="search-query" placeholder="Search..." name="s" autocomplete="off" search autofocus/>
 					</form>
-					<div id="search-results"><h3 class="search-results-title">Matching pages</h3></div>
+					<div id="search-results"><h3 class="search-results-title">Matching items</h3></div>
 				</div>
 				<script id="search-result-template" type="text/x-js-template">
 					<div class="search-results-summary" id="summary-${key}">
 						<h4><a class="search-item" href="${link}">${title}</a></h4>
-						<p>${snippet}  ... <a class="search-item-more" href="${link}">[more]</a></p>
 						${ isset tags }<p>${tags}</p>${ end }
 						${ isset categories }<p>Categories: ${categories}</p>${ end }
 					</div>
