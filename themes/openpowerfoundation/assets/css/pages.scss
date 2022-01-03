@@ -60,112 +60,87 @@ color: black;
 }
 
 // Join
-
 .join {
-
-  .membership-data {
-
-    table {
-    margin:auto;
-    width:100%;
-
-    tr {
-
-      td {
-        padding: 10px;  
-      }
-
-
-      &:nth-child(odd) {
-        background-color: $white;
-      }
-
-      &:nth-child(even) {
-        background-color: $lightgrey;
-      }
-
-      th {
-        padding: 10px;  
-        background-color: #dfecf5; 
-
-        &:nth-of-type(1) {
-          width: 20%;
-        }
-        &:nth-of-type(2) {
-          width: 15%;
-        }
-
-        &:nth-of-type(3) {
-          width: 25%;
-        }
-
-        &:nth-of-type(4) {
-          width: 35%;
-        }
-      }
-    }
-  }
-}
-
-.benefits-data {
-
-  table {
-    margin:auto;
-    width:100%;
-
-    tr {
-
-      td {
-        padding:10px; 
-        position: relative; 
-
-        span {
-          position: absolute;
-          width: 225px;
-          display: block;
-          top: 10px;
-          left: 10px;
-        }
-      }
-
-      &:nth-child(odd) {
-        background-color: $white;
-      }
-
-      &:nth-child(even) {
-        background-color: $lightgrey;
-      }
-         
-       th {
-          padding:10px;  
-          background-color: #dfecf5; 
-
-          &:nth-of-type(1) {
-              width: 60%;
-          }
-          &:nth-of-type(2) {
-            width: 8%;
-          }
-
-          &:nth-of-type(3) {
-            width: 8%;
-          }
-
-          &:nth-of-type(4) {
-            width: 8%;
-          }
-       
-          &:nth-of-type(5) {
-            width: 8%;
-          }
-      
-          &:nth-of-type(6) {
-            width: 8%;
-          }
-        } 
-      }
-    }
-  }
+	.membership-data {
+		table {
+			margin:auto;
+			width:100%;
+			tr {
+				td {
+					padding: 10px;
+				}
+				&:nth-child(odd) {
+					background-color: $white;
+				}
+				&:nth-child(even) {
+					background-color: $lightgrey;
+				}
+				th {
+					padding: 10px;
+					background-color: #dfecf5;
+					&:nth-of-type(1) {
+						width: 15%;
+					}
+					&:nth-of-type(2) {
+					width: 20%;
+					}
+					&:nth-of-type(3) {
+						width: 5%;
+					}
+					&:nth-of-type(4) {
+						width: 35%;
+					}
+				}
+			}
+		}
+	}
+	.benefits-data {
+		table {
+			margin:auto;
+			width:100%;
+			tr {
+				td {
+					padding: 10px;
+					position: relative;
+					span {
+						position: absolute;
+						width: 225px;
+						display: block;
+						top: 10px;
+						left: 10px;
+					}
+				}
+				&:nth-child(odd) {
+					background-color: $white;
+				}
+				&:nth-child(even) {
+					background-color: $lightgrey;
+				}
+				th {
+					padding:10px;
+					background-color: #dfecf5;
+					&:nth-of-type(1) {
+						width: 60%;
+					}
+					&:nth-of-type(2) {
+						width: 8%;
+					}
+					&:nth-of-type(3) {
+						width: 8%;
+					}
+					&:nth-of-type(4) {
+						width: 8%;
+					}
+					&:nth-of-type(5) {
+						width: 8%;
+					}
+					&:nth-of-type(6) {
+						width: 8%;
+					}
+				}
+			}
+		}
+	}
 }
 
 // Board of Directors

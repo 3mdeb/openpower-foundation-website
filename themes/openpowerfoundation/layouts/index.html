@@ -1,83 +1,69 @@
 {{ partial "header.html" . }}
-
 {{ partial "navbar.html" . }}
-
-{{ partial "home-promo.html" . }}
-
-  <main id="main" class="main home" >
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 mb-4 mb-lg-5">
-        <img class="img-fluid" src="./img/thumb-4.jpg" width="600" height="420" alt="">
-      </div>
-      <div class="col-md-6 mb-3 mb-lg-5">
-        <h2>{{ .Param "article-1.header" }}</h2>
-        <p><b>{{ .Param "article-1.lead-1" }}</b> {{ .Param "article-1.p-1" }}</p>
-        <p><b>{{ .Param "article-1.lead-2" }}</b> {{ .Param "article-1.p-2" }}</p>
-      </div>
-    </div>
-    <div class="row flex-md-row-reverse">
-      <div class="col-md-6 mb-4 mb-lg-5">
-        <img class="img-fluid" src="./img/thumb-5.jpg" width="600" height="420" alt="">
-      </div>
-      <div class="col-md-6 mb-0">
-        <h2>{{ .Param "article-2.header" }}</h2>
-        <h3>{{ .Param "article-2.lead-1" }}</h3>
-        <p>{{ .Param "article-2.p-1" }}</p>
-        <h3>{{ .Param "article-2.lead-2" }}</h3>
-        <p>{{ .Param "article-2.p-2" }}</p>
-        <h3>{{ .Param "article-2.lead-3" }}</h3>
-        <p>{{ .Param "article-2.p-3" }}</p>
-      </div>
-    </div>
-  </div>
+{{ $promobackgroundimagename := .Param "promo.image" }}
+{{ $promobackgroundimagelocation := (printf "%s/%s" "images/home/" $promobackgroundimagename) }}
+{{ $promobackgroundimageresource := resources.Get $promobackgroundimagelocation }}
+{{ $promobackgroundimage := $promobackgroundimageresource.Resize "3840x2160 webp" }}
+<section class="home promo__section d-flex flex-column justify-content-center" style="background-image:url({{ $promobackgroundimage.RelPermalink }})" >
+<div class="promo__container container text-center">
+	<h1>{{ .Param "promo.header" }}</h1>
+	{{ range .Param "promo.p" }}
+		<p>{{ . }}</p>
+	{{ end }}
+	<p><a class="btn btn-light btn-outline-primary" href="{{ "/join/" | relURL }}">{{ .Param "promo.calltoaction" }}</a></p>
+</div>
+</section>
+<main id="main" class="main home" >
+<div class="container">
+{{ range .Params.articles }}
+	<div class="row {{ if .reverse }}flex-md-row-reverse{{ end }}">
+		<div class="col-md-6 mb-4 mb-lg-5">
+			{{ $articleimagename := .image }}
+			{{ $articleimagelocation := (printf "%s/%s" "images/home/" $articleimagename) }}
+			{{ $articleimageresource := resources.Get $articleimagelocation }}
+			{{ $articleimage := $articleimageresource.Resize "600x400 webp" }}
+			<img class="img-fluid" src="{{ $articleimage.RelPermalink }}" width="600" height="400" alt="{{ .header }}">
+		</div>
+		<div class="col-md-6 mb-3 mb-lg-5">
+			<h2>{{ .header }}</h2>
+			{{ range .lead }}
+				<p><b>{{ .title }}</b><br>{{ .p }}</p>
+			{{ end }}
+		</div>
+	</div>
+{{ end }}
+</div>
 </main>
 <section class="teaser__section pt-0 pb-3 pb-lg-5">
-  <div class="container">
-    <h2 class="teaser__title text-lg-center">{{ .Param "sections.section-1.title" }}</h2>
-    <div class="row text-center">
-
-          <!-- {{ range (.Data.Pages.ByParam "wgtype").Reverse }}
-            {{ $imagename := .Param "image" }}
-            {{ $imagelocation := (printf "%s/%s" "images/" $imagename) }}
-            {{ $imageresource := resources.Get $imagelocation }}
-            <article class="post__article col-md-4">
-              {{ if $imageresource }}
-              <div class="post__thumb">
-                {{ $image := $imageresource.Fit "390x390" }}
-                <img class="img-fluid" src="{{  $image.RelPermalink }}" width="390" height="390" alt="">
-                {{ end }}
-              </div><a class="post__title" href="{{ .Permalink }}">{{ .Title }}</a>
-            </article>
-          
-          {{ end }} -->
-      <article class="post__article col-md-4">
-        <div class="post__thumb"><img class="img-fluid" src="./img/thumb-1.jpg" width="390" height="390" alt="">
-        </div><a class="post__title" href="/">{{ .Param "sections.section-1.article-1.text" }}</a>
-      </article>
-      <article class="post__article col-md-4">
-        <div class="post__thumb"><img class="img-fluid" src="./img/thumb-2.jpg" width="390" height="390" alt="">
-        </div><a class="post__title" href="/">{{ .Param "sections.section-1.article-2.text" }}</a>
-      </article>
-      <article class="post__article col-md-4">
-        <div class="post__thumb"><img class="img-fluid" src="./img/thumb-3.jpg" width="390" height="390" alt="">
-        </div><a class="post__title" href="/">{{ .Param "sections.section-1.article-3.text" }}</a>
-      </article>
-    </div>
-    <p class="text-center mt-3 mt-lg-0">
-      <a class="btn btn-outline-primary" href="{{ "/groups/" | relURL }}">Working Groups</a>
-    </p>
-  </div>
+<div class="container">
+	<h2 class="teaser__title text-lg-center">{{ .Param "sections.title" }}</h2>
+	<div class="row text-center">
+	{{ range .Param "sections.section" }}
+		<article class="post__article col-md-4">
+			<div class="post__thumb">
+				{{ $sectionimagename := .image }}
+				{{ $sectionimagelocation := (printf "%s/%s" "images/home/" $sectionimagename) }}
+				{{ $sectionimageresource := resources.Get $sectionimagelocation }}
+				{{ $sectionimage := $sectionimageresource.Resize "390x390 webp" }}
+				<img class="img-fluid" src="{{ $sectionimage.RelPermalink }}" width="390" height="390" alt="{{ .title }}">
+			</div>
+			<a class="post__title" href="{{ .link }}">{{ .title }}</a>
+		</article>
+	{{ end }}
+	<p class="text-center mt-3 mt-lg-0"><a class="btn btn-outline-primary" href="{{ "/groups/" | relURL }}">Working Groups</a></p>
+</div>
 </section>
 <section class="teaser__section _dark">
-  <div class="container text-center">
-    <p class="h2 mb-4">{{ .Param "sections.section-dark.p-1" }}</p>
-  </div>
+<div class="container text-center">
+{{ range .Param "dark" }}
+	<p class="h2 mb-4">{{ . }}</p>
+{{ end }}
+</div>
 </section>
 <section class="teaser__section py-4 py-lg-5 my-lg-5">
-  <div class="container">
-    <h2 class="teaser__title text-center">{{ .Param "sections.section-supporters.title" }}</h2>
-    <div class="row justify-content-center">
+<div class="container">
+	<h2 class="teaser__title text-center">{{ .Param "sections.section-supporters.title" }}</h2>
+	<div class="row justify-content-center">
 	{{ range where .Site.RegularPages "Section" "members" }}
 		{{ $level := .Param "level" }}
 		{{ if eq $level "platinum" }}
@@ -92,29 +78,15 @@
 			{{ end }}
 		{{ end }}
 	{{ end }}
-
-    </div>
-  </div>
+	</div>
+</div>
 </section>
 <section class="teaser__section _navy  py-4 py-lg-5 my-lg-5">
-  <div class="container text-center pb-4 pb-lg-0">
-    <h2 class="teaser__title">{{ .Param "sections.section-subscribe.title" }}</h2>
-    <p>{{ .Param "sections.section-subscribe.p-1" }}</p>
-    <form class="teaser__form row justify-content-center" action="/" method="post">
-      <div class="col-md-2 pb-3 pb-lg-0">
-        <input class="form-control" name="" type="text" placeholder="First Name" value="">
-      </div>
-      <div class="col-md-2 pb-3 pb-lg-0">
-        <input class="form-control" name="" type="text" placeholder="Last Name" value="">
-      </div>
-      <div class="col-md-2 pb-3 pb-lg-0">
-        <input class="form-control" name="" type="text" placeholder="Email" value="">
-      </div>
-      <div class="col-md-2">
-        <input class="btn btn-outline-primary mt-4 mt-md-0" type="submit" value="Submit">
-      </div>
-    </form>
-  </div>
+<div class="container text-center pb-4 pb-lg-0">
+	<h2 class="teaser__title">{{ .Param "subscribe.title" }}</h2>
+	{{ range .Param "subscribe.p" }}
+		<p>{{ . }}</p>
+	{{ end }}
+</div>
 </section>
-
 {{ partial "footer.html" . }}

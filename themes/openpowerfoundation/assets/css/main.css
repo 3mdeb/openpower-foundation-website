@@ -4941,24 +4941,30 @@ textarea.form-control-lg {
     display: none !important; } }
 
 #main:not(.groups) {
-  padding-top: 140px;
+	padding-top: 100px;
 }
 .main {
-  padding: 3.75rem 0; 
-  padding-top: 100px; }
+	padding: 3.75rem 0;
+	padding-top: 10px;
+}
 
 .social__list {
-  display: flex; }
-
+	display: flex;
+}
 .social__item {
-  display: block;
-  width: 28px;
-  height: 28px;
-  border-radius: 0.25rem;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 50% auto;
-  background-color: #fff; }
+	display: block;
+	width: 32px;
+	height: 32px;
+	border-radius: 0.25rem;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 50% auto;
+	background-color: #fff;
+}
+.social__item i {
+	padding-left: 5px;
+	color: #2566f4;
+}
   .social__item:not(:last-child) {
     margin-right: .5em; }
   .social__item._tw {
