@@ -1,5 +1,9 @@
 ---
 title: 'Members'
-date: 2021-03-03
+outputs:
+  - html
+  - json
+  - rss
+date: 2022-01-03
 draft: false
 ---

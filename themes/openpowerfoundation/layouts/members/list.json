@@ -1,0 +1,25 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- $.Scratch.Add "groups" slice -}}
+{{- range .Data.Pages -}}
+	{{- $membercode := .File.BaseFileName -}}
+	{{- range where .Site.RegularPages "Section" "groups" -}}
+		{{- $wgname := .Title | plainify -}}
+		{{- if .Param "members" -}}
+			{{- range $member := .Param "members" -}}
+				{{- if eq $member $membercode -}}
+					{{- $.Scratch.Add "groups" $wgname -}}
+				{{- end -}}
+			{{- end -}}
+		{{- end -}}
+	{{- end -}}
+	{{- $.Scratch.Add "index" (dict
+		"title" .Title
+		"permalink" .Permalink
+		"contents" .Plain
+		"level" .Params.level
+		"joined" .Params.joined
+		"country" .Params.country
+		"groups" ($.Scratch.Get "groups")
+	) }}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
