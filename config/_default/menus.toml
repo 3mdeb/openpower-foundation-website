@@ -1,3 +1,5 @@
+### navbar
+
 [[navbar]]
 	name = "About"
 	identifier = "about"
@@ -67,3 +69,25 @@
 	identifier = "ready"
 	url = "/ready/"
 	weight = -700
+
+### social
+[[social]]
+	name = "Twitter"
+	pre = "fab fa-twitter"
+	url = "https://twitter.com/OpenPOWERorg"
+	weight = -2000
+[[social]]
+	name = "Facebook"
+	pre = "fab fa-facebook"
+	url = "https://www.facebook.com/openpower"
+	weight = -1900
+[[social]]
+	name = "LinkedIN"
+	pre = "fab fa-linkedin-in"
+	url = "https://www.linkedin.com/company/openpower-foundation/?viewAsMember=true"
+	weight = -1800
+[[social]]
+	name = "YouTube"
+	pre = "fab fa-youtube"
+	url = "https://www.youtube.com/channel/UCNVcHm09eXVbvUzZkQs0_Sg"
+	weight = -1700
