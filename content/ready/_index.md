@@ -3,8 +3,8 @@ title: "OpenPOWER Ready"
 date: 2021-03-30
 outputs:
   - html
-  - rss
   - json
+  - rss
 draft: false
 ---
 
