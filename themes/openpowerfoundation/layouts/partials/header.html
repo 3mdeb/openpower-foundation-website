@@ -48,6 +48,9 @@
 	<link rel="stylesheet" href="{{ $minicss.RelPermalink }}">
 	<link href="{{ "lib/font-awesome/css/all.min.css" | relURL }}" rel="stylesheet" defer>
 	<link href="{{ "css/googlefonts_montserrat.css" | relURL }}" rel="stylesheet" defer>
+	{{ range .AlternativeOutputFormats -}}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end -}}
 </head>
 <body>
 
