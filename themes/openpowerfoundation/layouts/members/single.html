@@ -11,7 +11,7 @@
 				{{ $imagename := .Param "image" }}
 				{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
 				{{ $imageresource := resources.Get $imagelocation }}
-				{{ $image := $imageresource.Fit "500x500" }}
+				{{ $image := $imageresource.Fit "500x500 webp" }}
 				<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
 			{{ else }}
 				<h3 class="section-title">{{ .Title }}</h3>
