@@ -1,0 +1,15 @@
+{{ $src := .Get "src" }}
+{{ $imagesrc := (printf "images/%s" $src) }}
+{{ $width := .Get "width" }}
+{{ $height := .Get "height" }}
+{{ $imageresource := resources.Get $imagesrc }}
+{{ if eq $width "" }}
+	{{ $width = "500" }}
+{{ end }}
+{{ if eq $height "" }}
+	{{ $height = "500" }}
+{{ end }}
+{{ $imageprocessing := (printf "%sx%s %s" $width $height "webp") }}
+{{ $image := $imageresource.Fit $imageprocessing }}
+<img src="{{ $image.RelPermalink }}">
+
