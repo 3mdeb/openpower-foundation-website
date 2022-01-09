@@ -1,0 +1,17 @@
+versions:
+  - number: "2.6"
+    date: 2018-01-15
+    description: conversion from framemaker
+  - number: "2.7"
+    date: 2018-04-09
+    description: minor editing for first draft
+  - number: "2.8"
+    date: 2018-07-02
+    description: more editing
+  - number: "2.9"
+    date: 2018-07-26
+    description: public review draft
+  - number: "3.0"
+    date: 2019-01-18
+    description: workgroup note
+    download: https://files.openpower.foundation/s/DwnMymtj9BRQQ2y

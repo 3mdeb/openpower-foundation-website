@@ -1,0 +1,17 @@
+versions:
+  - number: 0.1
+    date: 2015-09-01
+    description: creation based on IBM FSI spec contib
+  - number: 0.2
+    date: 2015-09-02
+    description: comment correction as per review
+  - number: 0.3
+    date: 2016-05-05
+    description: public review draft
+  - number: 0.4
+    date: 2016-08-16
+    description: correction chapter 1 added definition & chapter 4 typo
+  - number: 1.0.0
+    date: 2016-12-12
+    description: workgroup specification
+    download: 

@@ -1,0 +1,14 @@
+versions:
+  - number: "0.1"
+    date: 2017-07-26
+    description: initial draft from Steve Munroe
+  - number: "0.2"
+    date: 2017-09-14
+    description: Miscellaneous correction for spelling, grammar and punctuation
+  - number: "0.3"
+    date: 2017-10-30
+    description: Updates to describe issues associated with larger vector sizes and proposed solutions
+  - number: "1.0"
+    date: 2018-03-14
+    description: Minor updates for Published version
+    download: https://files.openpower.foundation/s/7FSEcPrjPH3xmp3

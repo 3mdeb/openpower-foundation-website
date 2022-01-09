@@ -1,0 +1,27 @@
+versions:
+  - number: 0.40
+    date: 2017-10-05
+  - number: 0.41
+    date: 2020-05-21
+  - number: 0.42
+    date: 2020-06-04
+  - number: 0.43
+    date: 2020-07-30
+  - number: 0.50
+    date: 2020-08-30
+  - number: 0.51
+    date: 2020-08-30
+  - number: 0.52
+    date: 2020-09-10
+  - number: 0.53
+    date: 2020-09-10
+  - number: 0.90
+    date: 2020-10-08
+  - number: 0.91
+    date: 2020-10-11
+  - number: 0.92
+    date: 2021-02-01
+  - number: 0.93
+    date: 2021-04-08
+  - number: 1.93
+    date: 2021-04-26

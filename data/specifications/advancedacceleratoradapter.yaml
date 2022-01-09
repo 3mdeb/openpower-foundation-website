@@ -1,0 +1,32 @@
+versions:
+  - number: 0.1
+    date: 2017-03-13
+    description: Creation of electo-mechanical consolidated specification
+  - number: 0.2
+    date: 2017-04-27
+    description: Review updates from Dan Dreps & Jeff Brown
+  - number: 0.3
+    date: 2017-06-27
+    description:  Added part on cable extender version
+  - number: 0.4
+    date: 2017-07-20
+    description: Updates from workgroup review
+  - number: 0.5
+    date: 2017-08-01
+    description: Updates from workgroup review
+  - number: 0.6
+    date: 2017-08-02
+    description: Updates to table 5.1 about ILD, ILDB, and "moving average smoothing"
+  - number: 0.7
+    date: 2017-08-08
+    description: Added section on Conformance, additional minor edits, removed Section 6.2 Mezzanine Net Model
+  - number: 0.8
+    date: 2017-08-17
+    description: public review draft
+  - number: 0.9
+    date: 2017-10-19
+    description: Modified mezzanine card section 2.1,2., and 2.3 to reflect a reference design and connector PN
+  - number: 1.0
+    date: 2017-11-08
+    description: workgroup specification
+    download: https://files.openpower.foundation/s/xSQPe6ypoakKQdq

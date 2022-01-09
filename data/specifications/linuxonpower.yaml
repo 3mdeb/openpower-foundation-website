@@ -1,0 +1,29 @@
+versions:
+  - number: "1.1"
+    date: 2016-03-24
+    download: https://files.openpower.foundation/s/LmdoZDGkJqp679y
+  - number: "2.1"
+    date: 2016-05-04
+    description: conversion from IBM document
+  - number: "2.2"
+    date: 2016-10-11
+    description: include latest PAPR ACR 2.8
+  - number: "2.3"
+    date: 2018-07-30
+    description: preparation for wg review
+  - number: "2.4"
+    date: 2019-01-08
+    description: update from wg review
+  - number: "2.5"
+    date: 2020-04-06
+    description: include latest PARP ACR 2.9
+  - number: "2.6"
+    date: 2020-04-20
+    description: update formatting
+  - number: "2.7"
+    date: 2020-06-11
+    description: public review
+  - number: "2.9"
+    date: 2020-08-12
+    description: workgroup note
+    download: https://files.openpower.foundation/s/ZmtZyCGiJ2oJHim

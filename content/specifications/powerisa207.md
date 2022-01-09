@@ -2,7 +2,7 @@
 title: "POWER Instruction Set Architecture 2.07"
 publicreview: false
 date: 2022-01-01
-draft: false
+draft: true
 ---
 
 The Power Instruction Set Architecture (ISA) Version 2.07B is a specification that describes the architecture used

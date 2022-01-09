@@ -1,10 +1,28 @@
 ---
-title: "POWER Instruction Set Architecture 3.1"
+title: "Instruction Set Architecture"
+group: isa
+publicreview: false
+aliases:
+  - "powerisa/"
+  - "power31/"
+  - "powerisa31/"
+  - "power30/"
+  - "powerisa30/"
+  - "power207/"
+  - "powerisa207/"
+tags:
+  - instructionsetarchitecture
+  - isa
+  - powerisa
+  - cores
+  - power8
+  - power9
+  - power10
 date: 2021-08-30
-draft: true
+draft: false
 ---
 
-The Power Instruction Set Architecture (ISA) Version 3.1 is a specification that describes the architecture used for the IBM POWER10 processor.  
+The Power Instruction Set Architecture (ISA) Version is a specification that describes the architecture used for the IBM POWER processor.  
 It defines the instructions the processors execute.  
 It is comprised of three books and a set of appendices.  
 - Book I
