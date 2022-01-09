@@ -55,20 +55,32 @@
 
 [[navbar]]
 	name = "Technical"
-	identifier = "resources"
+	identifier = "technical"
 	weight = -1500
 [[navbar]]
-	parent = "resources"
-	name = "Technical Specifications"
-	identifier = "technicalspecifications"
+	parent = "technical"
+	name = "Specifications"
+	identifier = "specifications"
 	url = "/specifications/"
 	weight = -900
 [[navbar]]
-	parent = "resources"
+	parent = "technical"
 	name = "OpenPOWER Ready"
 	identifier = "ready"
 	url = "/ready/"
+	weight = -800
+[[navbar]]
+	parent = "technical"
+	name = "Compliance"
+	identifier = "compliance"
+	url = "/Compliance/"
 	weight = -700
+[[navbar]]
+	parent = "technical"
+	name = "Resources"
+	identifier = "resources"
+	url = "/resources/"
+	weight= -600
 
 ### social
 [[social]]
