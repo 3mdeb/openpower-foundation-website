@@ -1,5 +1,5 @@
 ---
-title: "Contact"
+title: "Contact the OpenPOWER Foundation"
 date: 2021-08-30
 draft: false
 ---
