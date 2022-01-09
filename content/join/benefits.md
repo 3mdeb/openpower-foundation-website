@@ -4,6 +4,9 @@ date: 2021-07-17
 draft: false
 ---
 
+Anyone may participate in OpenPOWER.
+Membership levels are designed for those who are investing in growing and enhancing the OpenPOWER community and its proliferation within the industry.  
+
 | OpenPOWER Foundation Membership Matrix                     | Associate | ISV     | Silver  | Gold    | Platinum |
 |------------------------------------------------------------|-----------|---------|---------|---------|----------|
 | Working Group Participation                                | {{<v>}}   | {{<v>}} | {{<v>}} | {{<v>}} | {{<v>}}  |
