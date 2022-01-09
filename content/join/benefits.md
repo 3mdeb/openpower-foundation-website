@@ -24,3 +24,8 @@ draft: false
 | Final Approval of New Projects                             | <span>Board membership required</span>             |
 | Final Approval and Voting of IP and Specifications         | <span>Board membership required</span>             |
 | Manage the Future Direction of the Organization            | <span>Board membership required</span>             |
+
+<span style="font-size: 10px;">
+The information in this chart is subject to change by OpenPOWER Foundation without notice.
+The Bylaws of OpenPOWER Foundation set forth the terms of membership and shall take precedence over any other information regarding membership.  
+</span>
