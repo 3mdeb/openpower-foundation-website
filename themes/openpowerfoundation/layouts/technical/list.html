@@ -1,0 +1,76 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+{{ $publicreview := slice }}
+{{ range where .Site.RegularPages "Section" "specifications" }}
+	{{ if .Param "publicreview" }}
+		{{ $reviewenddate := .Date.AddDate 0 0 30 }}
+		{{ if lt now $reviewenddate }}
+			{{ $publicreview = $publicreview | append (printf "%s/%s" "specifications" .File.BaseFileName) }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+{{ range where .Site.RegularPages "Section" "compliance" }}
+	{{ if .Param "publicreview" }}
+		{{ $reviewenddate := .Date.AddDate 0 0 30 }}
+		{{ if lt now $reviewenddate }}
+			{{ $publicreview = $publicreview | append (printf "%s/%s" "compliance" .File.BaseFileName) }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+{{ $promobackgroundimagename := .Param "image" }}
+{{ $promobackgroundimagelocation := (printf "%s/%s" "images/technical/" $promobackgroundimagename) }}
+{{ $promobackgroundimageresource := resources.Get $promobackgroundimagelocation }}
+{{ $promobackgroundimage := $promobackgroundimageresource.Resize "1440x820 webp" }}
+<section class="promo__section technical d-flex" style="background-image:url({{ $promobackgroundimage.RelPermalink }})">
+<div class="promo__container container">
+	<div class="col-lg-12 text-center">
+		<h1>{{ .Title }}</h1>
+	</div>
+</div>
+</section>
+<main id="main" class="main technical">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">&nbsp;</div>
+		<div class="col-lg-6">{{ .Content }}</div>
+		<div class="col-lg-3">&nbsp;</div>
+	</div>
+	<div class="row">
+	{{ range .Data.Pages }}
+		{{ $imagename := .Param "image" }}
+		{{ $imagelocation := (printf "%s/%s" "images/groups/" $imagename) }}
+		{{ $imageresource := resources.Get $imagelocation }}
+		<article class="post__article col-md-6">
+			{{ if $imageresource }}
+			<div class="post__thumb">
+				{{ $image := $imageresource.Fit "390x390 webp" }}
+				<img class="img-fluid" src="{{  $image.RelPermalink }}" width="390" height="390" alt="">
+			</div>
+			{{ end }}
+			<a class="post__title btn btn-outline-primary" href="{{ .Param "link" | relURL}}">{{ .Title }}</a>
+		</article>
+	{{ end }}
+	</div>
+	{{ if ne (len $publicreview) 0 }}
+		<div class="row">
+			<div class="col-lg-3">&nbsp;</div>
+			<div class="col-lg-6 text-center"><h3>Technical Documents in Public Review</h3></div>
+			<div class="col-lg-3">&nbsp;</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3">&nbsp;</div>
+			<div class="col-lg-6 text-center">
+				<ul>
+				{{ range $prp := $publicreview }}
+					{{ with $.Site.GetPage $prp }}
+						<li><a href="{{ .Permalink }}">{{ .Title }}</a>
+					{{ end }}
+				{{ end }}
+				</ul>
+			</div>
+			<div class="col-lg-3">&nbsp;</div>
+		</div>
+	{{ end }}
+</div>
+</main>
+{{ partial "footer.html" . }}
