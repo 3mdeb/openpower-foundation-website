@@ -1,0 +1,20 @@
+versions:
+  - number: 3.0.1
+    date: 2020-02-14
+    description: initial draft
+  - number: 3.0.2
+    date: 2020-02-17
+    description: fixed typos and changed formatting
+  - number: 3.0.3
+    date: 2020-03-06
+    description: updated Abstract, defined acronyms on first use, and other minor changes
+  - number: 3.0.4
+    date: 2020-03-17
+    description: added glossary to define the acronyms
+  - number: 3.0.5
+    date: 2020-03-25
+    description: Workgroup Approved Public Review Draft
+  - number: 3.1.0
+    date: 2020-06-23
+    description: Workgroup Approved Specification
+    download: https://files.openpower.foundation/s/c5qsTMB58beysqo

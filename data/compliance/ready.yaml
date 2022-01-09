@@ -1,0 +1,66 @@
+versions:
+  - number: "0.1"
+    date: 2015-10-03
+    description: Initial draft based on input from OPIO and DEVPLAT Workgroup
+  - number: "0.2"
+    date: 2015-12-08
+    description:  Added more details on intent and process
+  - number: "0.3"
+    date: 2016-01-15
+    description: Added SW, CAPI, IO chapter
+  - number: "0.4"
+    date: 2016-01-20
+    description: Added OpenPOWER Ready Graphics
+  - number: "0.5"
+    date: 2016-01-27
+    description: Many changes from review of 0.0.5 by WGs and BOD
+  - number: "0.6"
+    date: 2016-02-02
+    description: Many changes from review of 0.0.6
+  - number: "0.7"
+    date: 2016-03-03
+    description: Change title to 2016
+  - number: "0.8"
+    date: 2016-03-04
+    description: Add trademark symbols
+  - number: "0.9"
+    date: 2016-03-05
+    description: Updated system OS criteria
+  - number: "0.10"
+    date: 2016-03-06
+    description: Updated intro to encourage broad participation.
+  - number: "0.11"
+    date: 2016-03-22
+    description: Added link to TMLA text
+  - number: "0.12"
+    date: 2016-03-23
+    description: Added links to request document templates and modified section 1.6 Scope
+  - number: "1.0"
+    date: 2016-03-15
+    description: Approval version - Cleaned URLs
+    download: https://files.openpower.foundation/s/zqHSbSMY5wCBWFQ
+  - number: "1.1"
+    date: 2017-06-06
+    description: Updated Intro to reflect changes to submission process via web automation
+  - number: "1.2"
+    date: 2017-08-17
+    description: Updating sections to include Power 9 criteria
+  - number: "1.3"
+    date: 2017-11-10
+    description: Added Section for CAPI SNAP
+  - number: "1.4"
+    date: 2017-11-11
+    description: Added Section for OPEN CAPI
+  - number: "1.5"
+    date: 2017-11-12
+    description: Added PCIe G4 compatibility statement
+  - number: "1.6"
+    date: 2017-11-13
+    description: Replaced most of OPR Trusted Boot and Secure Boot section
+  - number: "1.9"
+    date: 2018-01-13
+    description: public review draft
+  - number: "2.0"
+    date: 2018-04-19
+    description: workgroup specification
+    download: https://files.openpower.foundation/s/d5MjKE4kc39Xxcf

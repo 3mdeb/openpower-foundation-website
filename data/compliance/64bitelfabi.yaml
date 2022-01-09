@@ -1,0 +1,11 @@
+versions:
+  - number: 2.0.71
+    date: 2017-01-10
+  - number: 2.0.72
+    date: 2017-01-27
+  - number: 2.0.90
+    date: 2017-01-30
+  - number: 2.1.0
+    date: 2017-06-27
+  - number: 2.1.5
+    date: 2021-03-28

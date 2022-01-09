@@ -1,0 +1,14 @@
+versions:
+  - number: "0.3"
+    date: 2016-11-26
+    description: template draft ported from MS doc
+  - number: "0.4"
+    date: 2016-08-30
+    description: converted skeletonversion from .doc to docbook format
+  - number: "0.5"
+    date: 2017-10-24
+    description: public review draft
+  - number: "1.0"
+    date: 2018-01-30
+    description: work group specification
+    download: https://files.openpower.foundation/s/GcfrazYq6TSN3kN

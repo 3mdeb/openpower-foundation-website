@@ -1,0 +1,23 @@
+versions:
+  - number: "0.2"
+    date: 2018-04-25
+    description: Initial content draft
+  - number: "0.3"
+    date: 2018-05-23
+    description: Updates discussed at 4/26/2018 Compliance Work Group meeting
+  - number: "0.4"
+    date: 2018-06-22
+    description: Updates to fill in missing content
+  - number: "0.5"
+    date: 2018-08-22
+    description: Updates identified at the June 28, 2018 Compliance Work Group meeting
+  - number: "0.9"
+    date: 2018-09-19
+    description: public review draft
+  - number: "0.91"
+    date: 2019-01-03
+    description: workgroup specification
+  - number: "1.0"
+    date: 2019-01-04
+    description: update abstract and intro to  be consistent
+    download: https://files.openpower.foundation/s/8oykwyapQcYfDdK

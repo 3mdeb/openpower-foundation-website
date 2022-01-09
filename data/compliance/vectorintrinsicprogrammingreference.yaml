@@ -1,0 +1,14 @@
+versions:
+  - number: "0.1"
+    date: 2020-09-27
+    description: original draft
+  - number: "0.2"
+    date: 2020-09-29
+    description: incorporate workgroup comments
+  - number: "0.3"
+    date: 2020-10-26
+    description: workgroup approved public review draft
+  - number: "1.0"
+    date: 2021-03-28
+    description: workgroup approved specification
+    download: https://files.openpower.foundation/s/9qzp2KxAsxcgcL3
