@@ -35,7 +35,7 @@ enableEmoji = true
 [markup]
 [markup.goldmark]
 [markup.goldmark.renderer]
-	hardWraps = true
+	hardWraps = false
 	unsafe = true
 	xHTML = true
 [markup.highlight]
