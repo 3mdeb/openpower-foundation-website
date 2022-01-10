@@ -42,14 +42,19 @@
 			<span class="section-divider"></span>
 		</div>
 	</div>
-	<div class="row pb-4 text-center">
-	{{ range .Data.Pages.ByTitle }}
-		<div class="col-lg-2">&nbsp;</div>
-		<div class="col-lg-8">
-			<a class="mb-4" href="{{ .Permalink }}">{{ .Title }}</a>
-		</div>
-		<div class="col-lg-2">&nbsp;</div>
+	<div class="row text-center">
+	{{ range (.Paginate .Data.Pages.ByTitle 30).Pages }}
+		<article class="post__article col-md-12">
+			<a class="post__title btn btn-outline-primary" href="{{ .Permalink }}">{{ .Title }}</a>
+		</article>
 	{{ end }}
+	</div>
+	<div class="row">
+		<div class="col-lg-4">&nbsp;</div>
+		<div class="col-lg-4 text-center">
+			{{ template "_internal/pagination.html" . }}
+		</div>
+		<div class="col-lg-4">&nbsp;</div>
 	</div>
 </div>
 </section>
