@@ -1,6 +1,14 @@
 ---
-
-
+title: Linux on POWER Architecture Reference
+group: systemsoftware
+tags:
+  - software
+  - linux
+  - operatingsystem
+  - distribution
+  - architecture
+date: 2020-07-02
+draft: false
 ---
 
 The purpose of this document is to detail a stable platform architecture to be used by platforms defined by the POWER ISA Specification.  
