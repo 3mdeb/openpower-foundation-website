@@ -5,7 +5,7 @@ promo:
   p:
     - Create the Future with POWER
   calltoaction: Join us
-  image: promobg.jpg
+  image: promobg.png
 articles:
   - header: Open Innovation
     image: openinnovation.jpg
