@@ -1,0 +1,76 @@
+<script>
+var formname = "form.passportForm";
+var submiturl = "{{ .Site.Params.forms.passport.URI }}";
+{{ if .Site.Params.forms.passport.goal }}
+var goal = "{{ .Site.Params.forms.passport.goal }}";
+{{ end }}
+</script>
+<section id="passport">
+<div class="container"><div class="row wow fadeInUp">
+	<div class="col-lg-8 offset-lg-2 col-md-12 mt-5 mb-5"><div class="form">
+		<div id="sendmessage" style="display:none">Your request has been sent. Thank you!</div>
+		<div id="errormessage" style="display:none">Error</div>
+		<form role="form" name="passportForm" class="passportForm" id="passportForm" action="" method="post">
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				<input type="text" name="uid" class="form-control" id="uid" placeholder="Your Unique OPF Passport User ID" data-rule="minlen:2" data-msg="Please enter at least 2 characters" />
+				<div class="validation"></div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				<input type="email" class="form-control" name="email" id="email" placeholder="Your Email Address linked to your OPF Passport" data-rule="email" data-msg="Please enter a valid email address" />
+				<div class="validation"></div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-6">
+				<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Your First Name" data-rule="minlen:4" data-msg="Please enter your First Name" />
+				<div class="validation"></div>
+			</div>
+			<div class="form-group col-lg-6">
+				<input type="text" class="form-control" name="lastname" id="lastname" placeholder="Your Last Name" data-rule="minlen:4" data-msg="Please enter your Last NameL" />
+				<div class="validation"></div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				<input type="text" name="displayname" class="form-control" id="displayname" placeholder="Your Display Name used by OPF Passport" data-rule="minlen:4" data-msg="Please enter your Display Name" />
+				<div class="validation"></div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				<select name="member" id="member">
+				{{ range sort (where .Site.RegularPages "Section" "members") }}
+					<option value="{{ .Title }}">{{ .Title }}</option>
+				{{ end }}
+				</select>
+			</div>
+		</div>
+		<div class="form-row">
+			{{ range where .Site.RegularPages "Section" "groups" }}
+				<div class="form-group col-lg-6">
+					<input type="checkbox" class="mr-2" id="workgroups" name="workgroups" value="{{ .Title }}" onChange="updateWorkingGroups()">{{ .Title }}<br>
+				</div>
+			{{ end }}
+			<input type=hidden id="workinggroups" name="workinggroups" value="">
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12 text-center">
+				<button class="btn btn-outline-primary" type="submit" title="Send Message">Request your passport</button>
+			</div>
+		</div>
+		</form></div>
+	</div></div>
+</div>
+</section>
+<script>
+function updateWorkingGroups() {
+	var workinggroups = [];
+	$('input[id="workgroups"]:checked').each(function() {
+		workinggroups.push(this.value);
+	});
+	document.getElementById("workinggroups").value = workinggroups;
+};
+</script>
