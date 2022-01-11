@@ -1,70 +1,76 @@
 {{ $hubdata := index $.Site.Data.hub }}
 <script>
-	var huburl = "{{ .Site.Params.forms.hub.URI }}";
+var formname = "form.hubRequestForm";
+var submiturl = "{{ .Site.Params.forms.hub.URI }}";
+{{ if .Site.Params.forms.hub.goal }}
+var goal = "{{ .Site.Params.forms.hub.goal }}";
+{{ end }}
 </script>
 <section id="hub">
-<div class="container">
-	<div class="row wow fadeInUp">
-		<div class="col-lg-8 offset-lg-2 col-md-12 mt-5 mb-5">
-			<div class="form">
-				<div id="sendmessage" style="display:none">Your request has been sent. Thank you!</div>
-				<div id="errormessage" style="display:none">Error</div>
-				<form role="form" name="hubRequestForm" class="hubRequestForm" id="hubRequestForm" action="" method="post">
-					<div class="form-row">
-						<div class="form-group col-lg-6">
-							<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" />
-							<div class="validation"></div>
-						</div>
-						<div class="form-group col-lg-6">
-							<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email address" />
-							<div class="validation"></div>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="form-group col-lg-6">
-							<input type="text" class="form-control" name="companyname" id="companyname" placeholder="Your Company Name" data-rule="minlen:4" data-msg="Please enter your Company Name" />
-							<div class="validation"></div>
-						</div>
-						<div class="form-group col-lg-6">
-							<input type="text" class="form-control" name="companyurl" id="companyurl" placeholder="Your Company URL" data-rule="minlen:8" data-msg="Please enter your Company URL" />
-							<div class="validation"></div>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="form-group col-lg-6">
-							<input type="text" class="form-control" name="projectname" id="projectname" placeholder="Project Name" data-rule="minlen:4" data-msg="Please enter the project name" />
-							<div class="validation"></div>
-						</div>
-						<div class="form-group col-lg-6">
-							<input type="text" class="form-control" name="projecturl" id="projecturl" placeholder="Project URL" data-rule="minlen:8" data-msg="Please enter the project URL" />
-							<div class="validation"></div>
-						</div>
-					</div>
-					<div>
-						<h3>What OpenPOWER resources do you require?</h3>
-					</div>
-					<div class="form-row">
-						<div class="form-group col-lg-6">
-							{{ range $hubdata.accesstype }}
-								<input type="checkbox" class="mr-2" id="{{ .name }}" name="{{ .name }}" value="{{ .name }}">{{ .name }}<br>
-							{{ end }}
-						</div>
-						<div class="form-group col-lg-6">
-							{{ range $hubdata.additions }}
-								<input type="checkbox" class="mr-2" id="{{ .name }}" name="{{ .name }}" value="{{ .name }}">{{ .name }}<br>
-							{{ end }}
-						</div>
-					</div>
-					<div class="form-group">
-						<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write a short explanation about getting access. (Why, How, Whatfor, how long)" placeholder="Please write a short explanation about getting access. (Why, How, Whatfor, how long)"></textarea>
-						<div class="validation"></div>
-					</div>
-					<div class="text-center">
-						<button class="btn btn-outline-primary" type="submit" title="Send Message">Request your resource</button>
-					</div>
-				</form>
+<div class="container">	<div class="row wow fadeInUp">
+	<div class="col-lg-8 offset-lg-2 col-md-12 mt-5 mb-5"><div class="form">
+		<div id="sendmessage" style="display:none">Your request has been sent. Thank you!</div>
+		<div id="errormessage" style="display:none">Error</div>
+		<form role="form" name="hubRequestForm" class="hubRequestForm" id="hubRequestForm" action="" method="post">
+			<div class="form-row">
+				<div class="form-group col-lg-6">
+					<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" />
+					<div class="validation"></div>
+				</div>
+				<div class="form-group col-lg-6">
+					<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email address" />
+					<div class="validation"></div>
+				</div>
 			</div>
-		</div>
-	</div>
-</div>
+			<div class="form-row">
+				<div class="form-group col-lg-6">
+					<input type="text" class="form-control" name="companyname" id="companyname" placeholder="Your Company/Project Name" data-rule="minlen:4" data-msg="Please enter your Company Name" />
+					<div class="validation"></div>
+				</div>
+				<div class="form-group col-lg-6">
+					<input type="text" class="form-control" name="companyurl" id="companyurl" placeholder="Your Company/Project URL" data-rule="minlen:8" data-msg="Please enter your Company URL" />
+					<div class="validation"></div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-lg-6">
+					<input type="text" class="form-control" name="projectname" id="projectname" placeholder="Project/Product Name" data-rule="minlen:4" data-msg="Please enter the project name" />
+					<div class="validation"></div>
+				</div>
+				<div class="form-group col-lg-6">
+					<input type="text" class="form-control" name="projecturl" id="projecturl" placeholder="Project/Product SCM URL" data-rule="minlen:8" data-msg="Please enter the project URL" />
+					<div class="validation"></div>
+				</div>
+			</div>
+			<div><h3>What OpenPOWER resources do you require?</h3></div>
+			<div class="form-row">
+				<div class="form-group col-lg-6">
+				{{ range $hubdata.accesstype }}
+					<input type="checkbox" class="mr-2" id="access" name="access" value="{{ .name }}" onChange="updateTypeOfAccess()">{{ .name }}<br>
+				{{ end }}
+				</div>
+				<div class="form-group col-lg-6">
+					{{ range $hubdata.additions }}
+						<input type="checkbox" class="mr-2" id="access" name="access" value="{{ .name }}" onChange="updateTypeOfAccess()">{{ .name }}<br>
+					{{ end }}
+				</div>
+				<input type="hidden" id="typeofaccess" class="typeofaccess" value="">
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write a short explanation about getting access. (Why, How, Whatfor, how long)" placeholder="Please write a short explanation about getting access. (Why, How, Whatfor, how long)"></textarea>
+				<div class="validation"></div>
+			</div>
+			<div class="text-center"><button class="btn btn-outline-primary" type="submit" title="Send Message">Request your resource</button></div>
+		</form>
+	</div></div>
+</div></div>
 </section>
+<script>
+function updateTypeOfAccess() {
+	var typeofaccess = [];
+	$('input[id="access"]:checked').each(function() {
+		typeofaccess.push(this.value);
+	});
+	document.getElementById("typeofaccess").value = typeofaccess;
+};
+</script>

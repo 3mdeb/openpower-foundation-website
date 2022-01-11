@@ -55,12 +55,9 @@
 {{ $jqueryformjavascript := resources.Get "js/jquery.form.js" }}
 {{ $jqueryformjs := $jqueryformjavascript | resources.Minify }}
 <script src="{{ $jqueryformjs.RelPermalink }}"></script>
-{{ $contactjavascript := resources.Get "js/contactform.js" }}
-{{ $contactjs := $contactjavascript | resources.Minify }}
-<script src="{{ $contactjs.RelPermalink }}"></script>
-{{ $hubrequestjavascript := resources.Get "js/hubrequestform.js" }}
-{{ $hubrequestjs := $hubrequestjavascript | resources.Minify }}
-<script src="{{ $hubrequestjs.RelPermalink }}"></script>
+{{ $formjavascript := resources.Get "js/form.js" }}
+{{ $formjs := $formjavascript | resources.Minify }}
+<script src="{{ $formjs.RelPermalink }}"></script>
 {{ $changelogjavascript := resources.Get "js/changelog.js" }}
 {{ $changelogjs := $changelogjavascript | resources.Minify }}
 <script src="{{ $changelogjs.RelPermalink }}"></script>
