@@ -1,6 +1,21 @@
 ---
 title: "Contact the OpenPOWER Foundation"
 date: 2021-08-30
+contacts:
+  - name: General
+    queue: general
+  - name: Membership
+    queue: members
+  - name: Events / Activities
+    queue: events
+  - name: Marketing
+    queue: marketing
+  - name: Press / PR
+    queue: press
+  - name: Board of Directors
+    queue: boardofdirectors
+  - name: Steering Committee
+    queue: steeringcommittee
 draft: false
 ---
 
