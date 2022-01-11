@@ -1,14 +1,14 @@
 versions:
-  - number: 2.0.7
+  - number: "2.0.7"
     date: 2015-04-23
     description: Creation based on IBM IODA2 Specification
-  - number: 2.0.8
+  - number: "2.0.8"
     date: 2015-08-21
     description:  Clean-up of typo/conversion errors
-  - number: 2.0.9
+  - number: "2.0.9"
     date: 2015-10-01
     description: Clean-up of typo/conversion errors
-  - number: 2.1.0
+  - number: "2.1.0"
     date: 2016-01-13
     description: Clean-up legal wording and added foundation info appendix
     download: https://files.openpower.foundation/s/BcARpp9gFMXwqrL

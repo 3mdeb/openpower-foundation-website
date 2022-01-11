@@ -1,25 +1,25 @@
 versions:
-  - number: 0.30
+  - number: "0.30"
     date: 2016-03-10
     description: conversion to OPF docbook
-  - number: 0.90
+  - number: "0.90"
     date: 2016-05-04
     description: public review draft
-  - number: 0.91
+  - number: "0.91"
     date: 2016-08-04
     description: add privileged mode app and supporting afu
-  - number: 1.0
+  - number: "1.0"
     date: 2016-10-07
     description: workgroup specification
     download:
-  - number: 1.1
+  - number: "1.1"
     date: 2017-08-22
     description: initial update for capi2
-  - number: 1.2
+  - number: "1.2"
     date: 2017-09-25
-  - number: 1.9
+  - number: "1.9"
     date: 2017-10-25
-  - number: 2.0
+  - number: "2.0"
     date: 2018-01-30
     description: work group specification
     download:
