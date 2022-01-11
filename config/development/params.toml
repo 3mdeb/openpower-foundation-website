@@ -1,5 +1,7 @@
 #!parms.toml
 [forms.contact]
-	URI = "https://webscripts.vantosh.com/forms/contact/vantoshcom"
+	URI = "http://localhost:8080/forms/contactus/test/opf"
 [forms.hub]
 	URI = "http://localhost:8080/forms/hub/test/opf"
+[forms.passport]
+	URI = "http://localhost:8080/forms/passport/test/opf"
