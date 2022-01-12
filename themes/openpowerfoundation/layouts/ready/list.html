@@ -53,7 +53,7 @@
 		{{ $imagename := .Param "image" }}
 		{{ $imagelocation := (printf "%s/%s" "images/ready/" $imagename) }}
 		{{ $imageresource := resources.Get $imagelocation }}
-		<article class="post__article col-md-4">
+		<article class="post__article col-md-6">
 			{{ if $imageresource }}
 			<div class="post__thumb">
 				{{ $image := $imageresource.Resize "50x50 webp" }}
