@@ -61,6 +61,9 @@
 {{ $changelogjavascript := resources.Get "js/changelog.js" }}
 {{ $changelogjs := $changelogjavascript | resources.Minify }}
 <script src="{{ $changelogjs.RelPermalink }}"></script>
+{{ $selectjavascript := resources.Get "js/select.js" }}
+{{ $selectjs := $selectjavascript | resources.Minify }}
+<script src="{{ $selectjs.RelPermalink }}"></script>
 {{ if .Site.Params.analytics.piwik }}
 	{{ partial "_analytics/piwik.html" . }}
 {{ end }}

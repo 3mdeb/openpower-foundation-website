@@ -41,11 +41,12 @@ var goal = "{{ .Site.Params.forms.passport.goal }}";
 		</div>
 		<div class="form-row">
 			<div class="form-group col-lg-12">
-				<select name="member" id="member">
-				{{ range sort (where .Site.RegularPages "Section" "members") }}
-					<option value="{{ .Title }}">{{ .Title }}</option>
+				<input name="member" id="member" class="member-value" placeholder="Member Entiry Affiliation" value="">
+				<ul class="member-list">
+				{{ range sort (where .Site.RegularPages "Section" "members") "Title" }}
+					<li>{{ .Title }}</li>
 				{{ end }}
-				</select>
+				</ul>
 			</div>
 		</div>
 		<div class="form-row">

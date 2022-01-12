@@ -42,7 +42,8 @@
 	{{ $pages := resources.Get "css/pages.scss" }}
 	{{ $footer := resources.Get "css/footer.scss" }}
 	{{ $changelog := resources.Get "css/changelog.scss" }}
-	{{ $scss := slice $variables $header $promo $home $groups $ready $bod $timeline $pages $footer $changelog | resources.Concat "css/custom.scss" }}
+	{{ $forms := resources.Get "css/forms.scss" }}
+	{{ $scss := slice $variables $header $promo $home $groups $ready $bod $timeline $pages $footer $changelog $forms | resources.Concat "css/custom.scss" }}
 	{{ $css := $scss | toCSS (dict "targetPath" "css/custom.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 	{{ $minicss := $css | resources.Minify }}
 	<link rel="stylesheet" href="{{ $minicss.RelPermalink }}">
