@@ -44,7 +44,7 @@
 	</div>
 	<div class="row text-center">
 	{{ range (.Paginate .Data.Pages.ByTitle 30).Pages }}
-		<article class="post__article col-md-12">
+		<article class="post__article col-md-6">
 			<a class="post__title btn btn-outline-primary" href="{{ .Permalink }}">{{ .Title }}</a>
 		</article>
 	{{ end }}
