@@ -1,5 +1,5 @@
 ---
-title: 64-bit ELF v2 ABI Compliance TH/TS Specification for OpenPOWER Architecture
+title: 64-bit ELF ABI Compliance TH/TS Specification for OpenPOWER
 group: compliance
 publicreview: false
 tags:
