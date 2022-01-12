@@ -1,5 +1,5 @@
 ---
-title: Advanced Accelerator Adapter 25Gbps I/O Compliance Test Harness and Test Suite Specification
+title: Advanced Accelerator Adapter 25Gbps I/O Compliance Specification
 group: accelerator
 publicreview: false
 tags:
