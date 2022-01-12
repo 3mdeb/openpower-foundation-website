@@ -50,20 +50,13 @@
 <script src="https://registration.openpower.foundation/widget/v1.en.js" type="text/javascript" async></script>
 <script src="{{ "js/preload.js" | absURL }}"></script>
 {{ $mainjavascript := resources.Get "js/main.js" }}
-{{ $mainjs := $mainjavascript | resources.Minify }}
-<script src="{{ $mainjs.RelPermalink }}"></script>
 {{ $jqueryformjavascript := resources.Get "js/jquery.form.js" }}
-{{ $jqueryformjs := $jqueryformjavascript | resources.Minify }}
-<script src="{{ $jqueryformjs.RelPermalink }}"></script>
 {{ $formjavascript := resources.Get "js/form.js" }}
-{{ $formjs := $formjavascript | resources.Minify }}
-<script src="{{ $formjs.RelPermalink }}"></script>
 {{ $changelogjavascript := resources.Get "js/changelog.js" }}
-{{ $changelogjs := $changelogjavascript | resources.Minify }}
-<script src="{{ $changelogjs.RelPermalink }}"></script>
 {{ $selectjavascript := resources.Get "js/select.js" }}
-{{ $selectjs := $selectjavascript | resources.Minify }}
-<script src="{{ $selectjs.RelPermalink }}"></script>
+{{ $javascripts := slice $mainjavascript $jqueryformjavascript $formjavascript $changelogjavascript $selectjavascript | resources.Concat "js/scripts.js" }}
+{{ $javascript := $javascripts | resources.Minify }}
+<script src="{{ $javascript.RelPermalink }}"></script>
 {{ if .Site.Params.analytics.piwik }}
 	{{ partial "_analytics/piwik.html" . }}
 {{ end }}
