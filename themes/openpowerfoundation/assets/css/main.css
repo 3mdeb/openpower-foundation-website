@@ -5001,3 +5001,13 @@ textarea.form-control-lg {
 	margin-bottom: 15px;
 }
 
+.contactee select {
+	background-color: #2566f4;
+	color: white;
+	padding: 12px;
+	width: 100%;
+	border: none;
+	font-size: 20px;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);   -webkit-appearance: button;   appearance: button;   outline: none;
+}
+

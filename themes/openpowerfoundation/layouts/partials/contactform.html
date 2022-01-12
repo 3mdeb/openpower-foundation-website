@@ -25,12 +25,11 @@ var goal = "{{ .Site.Params.forms.contact.goal }}";
 			</div>
 			<div class="form-row">
 				<div class="form-group col-lg-12">
-					<select name="contact" id="contact">
+					<div class="contactee"><select name="contact" id="contact">
 					{{ range .Param "contacts" }}
-						{{ . }}
 						<option value="{{ .queue }}">{{ .name }}</option>
 					{{ end }}
-					</select>
+					</select></div>
 				</div>
 			</div>
 			<div class="form-row">
