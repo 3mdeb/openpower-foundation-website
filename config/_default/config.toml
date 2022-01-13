@@ -15,11 +15,7 @@ disableHugoGeneratorInject = false
 enableEmoji = true
 
 [outputs]
-	home = [ "HTML", "JSON" , "RSS" ]
-	members = [ "HTML", "JSON", "RSS" ]
-	specifications = [ "HTML", "JSON" ]
-	ready = [ "HTML", "JSON" ]
-	schedule = [ "HTML", "Calendar" , "RSS" ]
+	home = [ "HTML" , "JSON" , "RSS" ]
 
 [outputFormats]
 [outputFormats.RSS]

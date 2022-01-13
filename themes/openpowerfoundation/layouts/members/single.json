@@ -1,0 +1,8 @@
+{
+"title": "{{ .Title }}",
+"permalink": "{{ .Permalink }}",
+"level": "{{ .Params.level }}",
+"joined": "{{ .Params.joined }}",
+"link": "{{ .Params.link }}",
+"content": "{{ .PlainWords }}"
+}
