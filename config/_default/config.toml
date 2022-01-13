@@ -16,6 +16,7 @@ enableEmoji = true
 
 [outputs]
 	home = [ "HTML" , "JSON" , "RSS" ]
+	page = [ "HTML" , "JSON" ]
 
 [outputFormats]
 [outputFormats.RSS]
