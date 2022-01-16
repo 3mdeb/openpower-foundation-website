@@ -25,7 +25,7 @@ debug:
 
 .PHONY: serve
 serve:
-	$(HUGO) server --environment=development --noHTTPCache --disableFastRender --watch
+	$(HUGO) server --environment=development --port 1314 --noHTTPCache --disableFastRender --watch
 
 .PHONY: servedraft
 servedraft:
