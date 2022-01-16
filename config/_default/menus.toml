@@ -89,6 +89,30 @@
 	url = "/resources/"
 	weight= -600
 
+### governance
+[[governance]]
+	name = "Privacy Policy"
+	url = "/privacypolicy/"
+	weight = -2000
+[[governance]]
+	name = "Certificate of Incorperation"
+	url = "https://files.openpower.foundation/s/xAkXWTxTxRqTeaM"
+	pre = "far fa-file-pdf"
+	#post = "fas fa-external-link-alt"
+	weight = -1900
+[[governance]]
+	name = "Bylaws"
+	url = "https://files.openpower.foundation/s/yYcB2C2z2pnwpcm"
+	pre = "far fa-file-pdf"
+	#post = "fas fa-external-link-alt"
+	weight = -1800
+[[governance]]
+	name = "IP Rights Policy"
+	url = "https://files.openpower.foundation/s/eMq2rPmnbKofrDC"
+	pre = "far fa-file-pdf"
+	#post = "fas fa-external-link-alt"
+	weight = -1700
+
 ### social
 [[social]]
 	name = "Twitter"

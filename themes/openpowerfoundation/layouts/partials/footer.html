@@ -17,10 +17,15 @@
 			<div class="footer__info">
 				<h3 class="footer__info-title">Governance</h3>
 				<div class="footer__addr">
-					<a href="{{ "/privacypolicy/" | relURL }}">Privacy Policy</a><br>
-					<a href="">Certificate of Incorporation</a><br>
-					<a href="">Bylaws</a><br>
-					<a href="">IP Rights Policy</a>
+					<ul>
+					{{ range .Site.Menus.governance }}
+						<li><a href="{{ .URL | absURL }}">
+							{{ if .Pre }}<i class="{{ .Pre }}"></i>&nbsp;{{ end }}
+							{{ .Name }}
+							{{ if .Post }}&nbsp;<i class="{{ .Post }}"></i>{{ end }}
+						</a></li>
+					{{ end }}
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -34,6 +39,16 @@
 				</a>
 			{{ end }}
 			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<span class="copyright-footer">
+				Copyright © {{ now.Format "2006" }} OpenPOWER Foundation.
+				All rights reserved.
+				The OpenPOWER Foundation has registered trademarks and uses trademarks.
+				For a list of trademarks of the OpenPOWER Foundation, please see our Trademark and Logo Usage Guidelines.
+			</span>
 		</div>
 	</div>
 </div>

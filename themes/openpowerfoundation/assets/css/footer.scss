@@ -1,20 +1,22 @@
 .footer {
-    padding: 3.75rem 0 7.5rem;
-
-    @media screen and (max-width: $lg) {
-        padding: 2.35rem 0 2.5rem;
-     }
-
-     @media screen and (min-width:$lg) and (max-width: $xl) {
-        padding: 3.75rem 0 4.5rem;
-   }
-
-    color: #fff;
-    background-color: #02123e; 
-    a {
-      color: white;
-      &:hover {
-        color: #2566f4;
-      }
-    }
+	padding: 3.75rem 0 7.5rem;
+	@media screen and (max-width: $lg) {
+		padding: 2.35rem 0 2.5rem;
+	}
+	@media screen and (min-width:$lg) and (max-width: $xl) {
+		padding: 3.75rem 0 4.5rem;
+	}
+	color: #fff;
+	background-color: #02123e;
+	a {
+		color: white;
+		&:hover {
+			color: #2566f4;
+		}
+	}
+	.copyright-footer {
+		margin-top: 30px;
+		font-size: 10px;
+	}
+	
 }
