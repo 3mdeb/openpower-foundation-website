@@ -55,22 +55,30 @@ This means some of your personal data (primarily your member profile and the dat
 We collect several types of information from and about our Members, Website users, and email subscribers, including :
 
 - Personal data we collect directly from you :
-	- Information required signing up for and administering membership, e.g. title, name, contact details, company name, job title, newsletter settings and time zone.
-	- Information provided to us if you contact us or make an enquiry, such as records and copies of your correspondence (including e-mail addresses) if you contact us electronically, including through the “Contact Us” page of our Website.
-	- Information we receive from you when you sign up to OpenPOWER conferences and events including financial and transaction data (e.g. bank account and payment card details)
+	- Information required signing up for and administering membership,
+	  e.g. title, name, contact details, company name, job title, newsletter settings and time zone.
+	- Information provided to us if you contact us or make an enquiry, such as records and copies of
+	  your correspondence (including e-mail addresses) if you contact us electronically, including through the _Contact Us_ page of our Website.
+	- Information we receive from you when you sign up to OpenPOWER conferences and events including financial and
+	  transaction data (e.g. bank account and payment card details)
 	- Information about your internet connection, the equipment you use to access our Website and usage details.
-	- Information you provide us when you connect or engage with us via social media platforms, including [LinkedIn, Twitter, Facebook or YouTube] (“Social Media Platforms”).
-	- Annonymized information that is about you but individually does not identify you, such as OpenPOWER events you have registered for and OpenPOWER Work Groups you participate in.
+	- Information you provide us when you connect or engage with us via social media platforms,
+	  including [LinkedIn, Twitter, Facebook or YouTube] (_Social Media Platforms_).
+	- Annonymized information that is about you but individually does not identify you,
+	  such as OpenPOWER events you have registered for and OpenPOWER Work Groups you participate in.
 - Information received from other sources :
-	- Technical information regarding your visits to the Website including, but not limited to, traffic data, location data, weblogs and other communication data.
+	- Technical information regarding your visits to the Website including,
+	  but not limited to, traffic data, location data, weblogs and other communication data.
 	- Publically available details, such as contact details on your personal website or Social Media Platforms.
-	- Information that you or another representative provides in connection with a Membership application, Membership agreement, or Membership profile or status, which shall include your contact information and marketing preferences.
-	- Any relevant personal data that you may have submitted to our affiliate partners (including VTM and ISTO) (“Affiliate Partners”) or other service providers in the course of them providing the Services on our behalf.
+	- Information that you or another representative provides in connection with a Membership application, Membership agreement,
+	  or Membership profile or status, which shall include your contact information and marketing preferences.
+	- Any relevant personal data that you may have submitted to our affiliate partners (including VanTosh) (_Affiliate Partners_)
+	  or other service providers in the course of them providing the Services on our behalf.
 
 You may also provide information to be published or displayed (hereinafter, "posted") on areas of the Website,
-our affiliate websites (including VTM Causeway platform, ISTO and other partner Platforms) ("Affiliate Partners") and
+our affiliate websites (including VanTosh and other partner Platforms) (_Affiliate Partners_) and
 Social Media Platforms that are visible to other Website users, Members, or other participants in Working Groups that you participate in
-(collectively, "User Contributions").
+(collectively, _User Contributions_).
 Your User Contributions are posted on and transmitted to others at your own risk.
 Although we limit access to certain pages, please be aware that no security measures are perfect or impenetrable.
 Additionally, although our Members are bound by confidentiality provisions, we cannot control the actions of our Members,
