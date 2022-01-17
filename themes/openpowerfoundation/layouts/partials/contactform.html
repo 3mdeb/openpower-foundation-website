@@ -45,6 +45,12 @@ var goal = "{{ .Site.Params.forms.contact.goal }}";
 				</div>
 			</div>
 			<div class="form-row">
+				<div class="form-group col-lg-12">
+					By submitting this form, I acknowledge that my information is subject
+					to the <a href="{{ "/policy/privacy" | relURL }}">OpenPOWER Foundation's Privacy Policy</a>.
+				</div>
+			</div>
+			<div class="form-row">
 				<div class="form-group col-lg-12 text-center">
 					<input type="hidden" name="url" value="{{ $.Page.Permalink | absURL }}" />
 					<button class="btn btn-outline-primary mb-4 mt-4" type="submit" title="Send Message">Send Message</button>
