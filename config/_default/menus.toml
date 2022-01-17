@@ -89,11 +89,25 @@
 	url = "/resources/"
 	weight= -600
 
-### governance
-[[governance]]
-	name = "Privacy Policy"
-	url = "/privacypolicy/"
+### policy
+[[policy]]
+	name = "Coockie Policy"
+	url = "/policy/cookie/"
 	weight = -2000
+[[policy]]
+	name = "Privacy Policy"
+	url = "/policy/privacy/"
+	weight = -1900
+[[policy]]
+	name = "Logo Policy"
+	url = "/policy/logo/"
+	weight = -1800
+[[policy]]
+	name = "Trademark Policy"
+	url = "/policy/trademark/"
+	weight = -1700
+
+### governance
 [[governance]]
 	name = "Certificate of Incorperation"
 	url = "https://files.openpower.foundation/s/xAkXWTxTxRqTeaM"
@@ -112,6 +126,11 @@
 	pre = "far fa-file-pdf"
 	#post = "fas fa-external-link-alt"
 	weight = -1700
+[[governance]]
+	name = "Anti Trust Guidelines"
+	url = "https://files.openpower.foundation/s/k5Hny649q3XHSqk"
+	pre = "far fa-file-pdf"
+	weight = -1600
 
 ### social
 [[social]]
