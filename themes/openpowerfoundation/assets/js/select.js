@@ -44,7 +44,7 @@ inputField.addEventListener('focus', function () {
 	});
 });
 inputField.addEventListener('blur', function () {
-	inputField.placeholder = 'Select state';
+	inputField.placeholder = 'Select Member Entity';
 	dropdown.classList.remove('open');
 });
 document.addEventListener('click', function (evt) {
