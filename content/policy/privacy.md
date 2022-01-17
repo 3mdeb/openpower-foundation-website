@@ -63,7 +63,7 @@ We collect several types of information from and about our Members, Website user
 	  transaction data (e.g. bank account and payment card details)
 	- Information about your internet connection, the equipment you use to access our Website and usage details.
 	- Information you provide us when you connect or engage with us via social media platforms,
-	  including [LinkedIn, Twitter, Facebook or YouTube] (_Social Media Platforms_).
+	  including but not limited to [LinkedIn, Twitter, Facebook or YouTube] (_Social Media Platforms_).
 	- Annonymized information that is about you but individually does not identify you,
 	  such as OpenPOWER events you have registered for and OpenPOWER Work Groups you participate in.
 - Information received from other sources :
