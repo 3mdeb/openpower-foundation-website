@@ -5011,3 +5011,6 @@ textarea.form-control-lg {
 	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);   -webkit-appearance: button;   appearance: button;   outline: none;
 }
 
+.fa-file-pdf {
+	color: #ff0000;
+}
