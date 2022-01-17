@@ -91,7 +91,7 @@
 
 ### policy
 [[policy]]
-	name = "Coockie Policy"
+	name = "Cookie Policy"
 	url = "/policy/cookie/"
 	weight = -2000
 [[policy]]
@@ -99,13 +99,17 @@
 	url = "/policy/privacy/"
 	weight = -1900
 [[policy]]
+	name = "Terms of Use"
+	url = "/policy/termsofuse/"
+	weight = -1800
+[[policy]]
 	name = "Logo Policy"
 	url = "/policy/logo/"
-	weight = -1800
+	weight = -1700
 [[policy]]
 	name = "Trademark Policy"
 	url = "/policy/trademark/"
-	weight = -1700
+	weight = -1600
 
 ### governance
 [[governance]]
