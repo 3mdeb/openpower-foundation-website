@@ -14,8 +14,14 @@ enableRobotsTXT = true
 disableHugoGeneratorInject = false
 enableEmoji = true
 
+[build]
+	noJSConfigInAssets = false
+#	useResourceCacheWhen = 'always'
+	writeStats = true
+
 [outputs]
 	home = [ "HTML" , "JSON" , "RSS" ]
+	section = [ "HTML", "JSON", "RSS" ]
 	page = [ "HTML" , "JSON" ]
 
 [outputFormats]
@@ -31,6 +37,20 @@ enableEmoji = true
 
 [markup]
 [markup.goldmark]
+[markup.goldmark.extensions]
+	definitionList = true
+	footnote = true
+	linkify = true
+	strikethrough = true
+	table = true
+	taskList = true
+	typographer = true
+[markup.goldmark.parser]
+	autoHeadingID = true
+	autoHeadingIDType = 'github'
+[markup.goldmark.parser.attribute]
+	block = false
+	title = true
 [markup.goldmark.renderer]
 	hardWraps = false
 	unsafe = true
@@ -63,8 +83,58 @@ enableEmoji = true
 
 [taxonomies]
 	tag = "tags"
+	category = 'categories'
+	series = 'series'
 
 [minify]
+	disableCSS = false
+	disableHTML = false
+	disableJS = false
+	disableJSON = false
+	disableSVG = false
+	disableXML = false
+	minifyOutput = false
 [minify.tdewolff]
 [minify.tdewolff.html]
+	keepComments = false
+	keepConditionalComments = false
+	keepDefaultAttrVals = true
+	keepDocumentTags = true
+	keepEndTags = true
+	keepQuotes = false
 	keepWhitespace = false
+[minify.tdewolff.css]
+	keepWhitespace = false
+	keepCSS2 = true
+	precision = 0
+[minify.tdewolff.js]
+	keepVarNames = false
+	precision = 0
+[minify.tdewolff.json]
+	keepNumbers = false
+	precision = 0
+[minify.tdewolff.svg]
+	precision = 0
+[minify.tdewolff.xml]
+	keepWhitespace = false
+
+[caches]
+[caches.assets]
+	dir = ':resourceDir/_gen'
+	maxAge = "5m"
+[caches.getcsv]
+	dir = ':cacheDir/:project'
+	maxAge = "5m"
+[caches.getjson]
+	 dir = ':cacheDir/:project'
+	maxAge = "5m"
+	ttl = 300
+[caches.getresource]
+	dir = ':cacheDir/:project'
+	maxAge = "5m"
+[caches.images]
+	dir = ':resourceDir/_gen'
+	maxAge ="5m"
+[caches.modules]
+	dir = ':cacheDir/modules'
+	maxAge = "5m"
