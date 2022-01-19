@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<main class="main">
+<section id="person">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h1 class="h1 section-header my-3 my-md-5 pb-2">{{ .Title }}</h1>
+		</div>
+	</div>
+	{{ if .Param "image" }}
+	<div class="row">
+		<div class="col-md-2">&nbsp;</div>
+		<div class="col-md-8 text-center">
+		{{ $imagename := .Param "image" }}
+		{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
+		{{ $imageresource := resources.Get $imagelocation }}
+		{{ if $imageresource }}
+			<figure class="person">
+				{{ $image := $imageresource.Fit "600x600 webp" }}
+				<img class="person img-fluid" src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
+			</figure>
+		{{ end }}
+		</div>
+		<div class="col-md-2">&nbsp;</div>
+	</div>
+	{{ end }}
+	<div class="row">
+		<div class="col-md-2">&nbsp;</div>
+		<div class="col-md-8 text-left">{{ .Content }}</div>
+		<div class="col-md-2">&nbsp;</div>
+	</div>
+</div>
+</main>
+{{ partial "footer.html" . }}
