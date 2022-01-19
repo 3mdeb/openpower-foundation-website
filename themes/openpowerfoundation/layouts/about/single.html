@@ -14,7 +14,7 @@
 				{{ $imageresource := resources.Get $imagelocation }}
 				{{ if $imageresource }}
 					<figure class="figure d-flex pt-0 pt-lg-3">
-					{{ $image := $imageresource.Fit "600x600" }}
+					{{ $image := $imageresource.Fit "600x600 webp" }}
 					<img class="img-fluid" src="{{  $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
 					</figure>
 				{{ end }}
