@@ -4068,7 +4068,7 @@ textarea.form-control-lg {
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important; }
   .my-md-5 {
-    margin-top: 3rem !important;
+    margin-top: 4rem !important;
     margin-bottom: 3rem !important; }
   .my-md-auto {
     margin-top: auto !important;
@@ -5013,4 +5013,9 @@ textarea.form-control-lg {
 
 .fa-file-pdf {
 	color: #ff0000;
+}
+
+.person img {
+	float: center;
+	border-radius: 40%;
 }
