@@ -3,6 +3,8 @@ title: Home
 promo:
   header: OpenPOWER Foundation
   p:
+    - Open Developer Community for the POWER Architecture
+    - <i>“The Most Open and High-Performance Processor Architecture and Ecosystem in the Industry”</i>
     - Create the Future with POWER
   calltoaction: Join us
   image: promobg.png
