@@ -4941,7 +4941,7 @@ textarea.form-control-lg {
     display: none !important; } }
 
 #main:not(.groups) {
-	padding-top: 100px;
+	padding-top: 9rem;
 }
 .main {
 	padding: 3.75rem 0;
