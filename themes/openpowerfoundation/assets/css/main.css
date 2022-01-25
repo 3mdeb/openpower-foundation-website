@@ -4949,7 +4949,19 @@ textarea.form-control-lg {
 }
 
 .social__list {
+}
+.social__list ul {
+}
+.social__list ul > li {
+}
+.social__list ul > li > ul {
 	display: flex;
+	list-style: none;
+	padding: 0;
+}
+.social__list ul > li > ul > li {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 .social__item {
 	display: block;
@@ -4962,19 +4974,9 @@ textarea.form-control-lg {
 	background-color: #fff;
 }
 .social__item i {
-	padding-left: 5px;
+	padding-left: 25%;
 	color: #2566f4;
 }
-  .social__item:not(:last-child) {
-    margin-right: .5em; }
-  .social__item._tw {
-    background-image: url(../img/tw.svg); }
-  .social__item._fb {
-    background-image: url(../img/fb.svg); }
-  .social__item._in {
-    background-image: url(../img/in.svg); }
-  .social__item._yt {
-    background-image: url(../img/yt.svg); }
 
 .ready-footer {
 	color: #666666;

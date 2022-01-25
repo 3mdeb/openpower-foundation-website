@@ -46,14 +46,40 @@
 			</div>
 		</div>
 		<div class="col-md-3">
-			<p>Stay in touch, follow us:</p>
-			<div class="social__list pb-4 pb-lg-0">
-			{{ range .Site.Menus.social }}
-				<a target="_blank" class="social__item" href="{{ .URL }}">
-					<i class="{{ .Pre }}"></i>
-					<span class="visually-hidden">{{ .Name }}</span>
-				</a>
-			{{ end }}
+			<h3 class="footer_info-title">Stay in touch, follow us</h3>
+			<div class="social__list">
+				<ul>
+					<li>Social Links<ul>
+					{{ range .Site.Menus.social }}
+						<li>
+							<a target="_blank" class="social__item" href="{{ .URL }}">
+								<i class="{{ .Pre }}"></i>
+								<span class="visually-hidden">{{ .Name }}</span>
+							</a>
+						</li>
+					{{ end }}
+					</ul></li>
+					<li>Discussion Links<ul>
+					{{ range .Site.Menus.discuss }}
+						<li>
+							<a target="_blank" class="social__item" href="{{ .URL }}">
+								<i class="{{ .Pre }}"></i>
+								<span class="visually-hidden">{{ .Name }}</span>
+							</a>
+						</li>
+					{{ end }}
+					</ul></li>
+					<li>Code Links<ul>
+					{{ range .Site.Menus.code }}
+						<li>
+							<a target="_blank" class="social__item" href="{{ .URL }}">
+								<i class="{{ .Pre }}"></i>
+								<span class="visually-hidden">{{ .Name }}</span>
+							</a>
+						</li>
+					{{ end }}
+					</ul></li>
+				</ul>
 			</div>
 		</div>
 	</div>
