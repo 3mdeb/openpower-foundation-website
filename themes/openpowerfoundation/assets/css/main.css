@@ -5018,4 +5018,7 @@ textarea.form-control-lg {
 .person img {
 	float: center;
 	border-radius: 40%;
+	-webkit-border-radius: 40%;
+	-moz-border-radius: 40px;
+	-o-border-radius: 40px;
 }
