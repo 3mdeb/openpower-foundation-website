@@ -52,30 +52,30 @@
 					<li>Social Links<ul>
 					{{ range .Site.Menus.social }}
 						<li>
-							<a target="_blank" class="social__item" href="{{ .URL }}">
-								<i class="{{ .Pre }}"></i>
-								<span class="visually-hidden">{{ .Name }}</span>
-							</a>
+							<div class="tooltip-wrapper">
+								<a target="_blank" class="social__item" href="{{ .URL }}"><i class="{{ .Pre }}"></i></a>
+								<div class="tooltip-text">{{ .Name }}</div>
+							</div>
 						</li>
 					{{ end }}
 					</ul></li>
 					<li>Discussion Links<ul>
 					{{ range .Site.Menus.discuss }}
 						<li>
-							<a target="_blank" class="social__item" href="{{ .URL }}">
-								<i class="{{ .Pre }}"></i>
-								<span class="visually-hidden">{{ .Name }}</span>
-							</a>
+							<div class="tooltip-wrapper">
+								<a target="_blank" class="social__item" href="{{ .URL }}"><i class="{{ .Pre }}"></i></a>
+								<div class="tooltip-text">{{ .Name }}</div>
+							</div>
 						</li>
 					{{ end }}
 					</ul></li>
 					<li>Code Links<ul>
 					{{ range .Site.Menus.code }}
 						<li>
-							<a target="_blank" class="social__item" href="{{ .URL }}">
-								<i class="{{ .Pre }}"></i>
-								<span class="visually-hidden">{{ .Name }}</span>
-							</a>
+							<div class="tooltip-wrapper">
+								<a target="_blank" class="social__item" href="{{ .URL }}"><i class="{{ .Pre }}"></i></a>
+								<div class="tooltip-text">{{ .Name }}</div>
+							</div>
 						</li>
 					{{ end }}
 					</ul></li>
