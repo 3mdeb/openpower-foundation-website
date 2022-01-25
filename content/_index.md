@@ -6,7 +6,9 @@ promo:
     - Open Developer Community for the POWER Architecture
     - <i>“The Most Open and High-Performance Processor Architecture and Ecosystem in the Industry”</i>
     - Create the Future with POWER
-  calltoaction: Join us
+  calltoaction:
+    - title: Join us
+      link: /join/
   image: promobg.png
 articles:
   - header: Open Innovation
@@ -44,6 +46,9 @@ sections:
     - title: Systems
       image: systems.jpg
       link: /tags/systems
+  buttons:
+    - title: Working Groups
+      link: /groups/
 dark:
   - With its open ecosystem approach, active participation from its global membership base and powerful foundation of the POWER ISA, the OpenPOWER Foundation is the premiere organization to facilitate truly effective collaboration and drive meaningful, accessible innovation across the open hardware industry.
 subscribe:

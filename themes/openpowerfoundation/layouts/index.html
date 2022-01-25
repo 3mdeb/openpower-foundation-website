@@ -8,9 +8,13 @@
 <div class="promo__container container text-center">
 	<h1>{{ .Param "promo.header" }}</h1>
 	{{ range .Param "promo.p" }}
-		<p>{{ . }}</p>
+		<p>{{ . | safeHTML }}</p>
 	{{ end }}
-	<p><a class="btn btn-light btn-outline-primary" href="{{ "/join/" | relURL }}">{{ .Param "promo.calltoaction" }}</a></p>
+	<p>
+	{{ range .Param "promo.calltoaction" }}
+		<a class="btn btn-light btn-outline-primary" href="{{ .link | relURL }}">{{ .title }}</a>
+	{{ end }}
+	</p>
 </div>
 </section>
 <main id="main" class="main home" >
@@ -50,7 +54,11 @@
 			<a class="post__title" href="{{ .link }}">{{ .title }}</a>
 		</article>
 	{{ end }}
-	<p class="text-center mt-3 mt-lg-0"><a class="btn btn-outline-primary" href="{{ "/groups/" | relURL }}">Working Groups</a></p>
+	<p class="text-center mt-3 mt-lg-0">
+	{{ range .Param "sections.buttons" }}
+		<a class="btn btn-outline-primary" href="{{ .link | relURL }}">{{ .title }}</a>
+	{{ end }}
+	</p>
 </div>
 </section>
 <section class="teaser__section _dark">
