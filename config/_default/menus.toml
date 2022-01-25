@@ -1,5 +1,4 @@
 ### navbar
-
 [[navbar]]
 	name = "About"
 	identifier = "about"
@@ -34,31 +33,26 @@
 	identifier = "steeringcommittee"
 	url = "/steeringcommittee"
 	weight = -600
-
 [[navbar]]
 	name = "Events"
 	identifier = "events"
 	url = "/events/"
 	weight = -1900
-
 [[navbar]]
 	name = "Working Groups"
 	identifier = "groups"
 	url = "/groups/"
 	weight = -1800
-
 [[navbar]]
 	name = "Members"
 	identifier = "members"
 	url = "/members/"
 	weight = -1700
-
 [[navbar]]
 	name = "HUB"
 	identifier = "hub"
 	url = "/hub/"
 	weight = -1600
-
 [[navbar]]
 	name = "Technical"
 	identifier = "technical"
@@ -88,6 +82,10 @@
 	identifier = "resources"
 	url = "/resources/"
 	weight= -600
+[[navbar]]
+	name = "Contact Us"
+	url = "/contact/"
+	weight = -10
 
 ### policy
 [[policy]]
