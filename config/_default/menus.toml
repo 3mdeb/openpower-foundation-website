@@ -134,6 +134,34 @@
 	pre = "far fa-file-pdf"
 	weight = -1600
 
+###
+[[code]]
+	name = "Git"
+	pre = "fas fa-code-branch"
+	url = "https://git.openpower.foundation/"
+[[code]]
+	name = "GitHub"
+	pre = "fab fa-github"
+	url = "https://github.com/OpenPOWERFoundation"
+[[code]]
+	name = "GitLab"
+	pre = "fab fa-gitlab"
+	url = "https://gitlab.com/OpenPOWERFoundation"
+
+###
+[[discuss]]
+	name = "Discuss"
+	pre = "fas fa-comments"
+	url = "https://discuss.openpower.foundation/auth/oidc"
+[[discuss]]
+	name = "Chat"
+	pre = "fas fa-comment-dots"
+	url = "https://chat.openpower.foundation"
+[[discuss]]
+	name = "Slack"
+	pre = "fab fa-slack"
+	url = "https://openpowerfoundation.slack.com"
+
 ### social
 [[social]]
 	name = "Twitter"
