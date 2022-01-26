@@ -11,7 +11,9 @@
 	a {
 		color: white;
 		&:hover {
-			color: #2566f4;
+			color: white;
+			text-decoration: underline;
+			font-weight: bold;
 		}
 	}
 	.copyright-footer {
