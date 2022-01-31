@@ -12,6 +12,7 @@ pygmentsUseClasses = true
 enableGitInfo = true
 enableRobotsTXT = true
 disableHugoGeneratorInject = false
+enableInlineShortcodes = true
 enableEmoji = true
 
 [build]
@@ -20,20 +21,36 @@ enableEmoji = true
 	writeStats = true
 
 [outputs]
-	home = [ "HTML" , "JSON" , "RSS" ]
-	section = [ "HTML", "JSON", "RSS" ]
-	page = [ "HTML" , "JSON" ]
+	home = [ "HTML" , "RSS" ]
+	section = [ "HTML", "RSS" ]
+	page = [ "HTML" , "RSS" , "JSON" , "LDIF" ]
+	taxanomy = [ "HTML" , "JSON" , "RSS" ]
+#	term = [ "HTML" , "JSON" ]
 
 [outputFormats]
 [outputFormats.RSS]
 	mediatype = "application/rss"
 	baseName = "feed"
 	suffix = "xml"
+	isPlainText = false
+	notAlternative = false
 [outputFormats.JSON]
 	mediaType = "application/json"
 	baseName = "index"
-	isPlainText = true
+	suffix = "json"
+	isPlainText = false
 	notAlternative = true
+[outputFormats.LDIF]
+	name = "ldif"
+	mediaType = "text/ldif"
+	baseName = "index"
+	suffix = "ldif"
+	isPlainText = false
+	notAlternative = true
+
+[mediaTypes]
+[mediaTypes."text/ldif"]
+	suffixes = [ "ldif" ]
 
 [markup]
 [markup.goldmark]

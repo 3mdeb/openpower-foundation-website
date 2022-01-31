@@ -1,0 +1,9 @@
+dn: cn={{ .File.BaseFileName }},ou=members,dc=openpower,dc=foundation
+objectClass: groupOfNames
+cn: {{ .File.BaseFileName }}
+description: {{ .Title }}
+level: {{ .Param "level" }}
+{{ if .Param "owner" }}
+owner: uid={{ .Param "owner" }},ou=people,dc=openpower,dc=foundation
+{{- end -}}
+member: uid=everyone,ou=people,dc=openpower,dc=foundation
