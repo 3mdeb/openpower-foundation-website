@@ -47,7 +47,7 @@ The FPGA will consist of a POWER ISA core(s) that can run the OpenBMC stack (inc
 manage the interface between system-management software and platform hardware.
 The FPGA will also have all controls and interfaces required of a typical BMC.
 
-The LibreBMC adapter will conform be compatible with to the OCP DC-SCM specification.
+The LibreBMC adapter will conform to be compatible with the OCP DC-SCM specification.
 Any changes to the OCP DC-SCM specification is outside the scope of this workgroup and will be handled through OCP.
 
 The adapter should meet the requirements to manage a variety of server architectures,
