@@ -83,6 +83,10 @@
 	url = "/resources/"
 	weight= -600
 [[navbar]]
+	name = "Blog"
+	weight = -100
+	url = "/blog/"
+[[navbar]]
 	name = "Contact Us"
 	url = "/contact/"
 	weight = -10
