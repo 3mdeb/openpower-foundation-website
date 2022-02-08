@@ -8,7 +8,7 @@ versions:
     description: "Incorporate errata."
     download: "https://files.openpower.foundation/s/aybzqzEpN5AGfXG"
   - number: "2.1.2"
-    date: "2016-06-13"
+    date: "2016-06-12"
     description: "POWER8 errata"
   - number: "2.1.3"
     date: "2016-06-13"
