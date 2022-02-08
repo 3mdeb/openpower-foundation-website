@@ -44,7 +44,8 @@
 	{{ $changelog := resources.Get "css/changelog.scss" }}
 	{{ $forms := resources.Get "css/forms.scss" }}
 	{{ $tooltip := resources.Get "css/tooltip.scss" }}
-	{{ $scss := slice $variables $header $promo $home $groups $ready $bod $timeline $pages $footer $changelog $forms $tooltip | resources.Concat "css/custom.scss" }}
+	{{ $preloader := resources.Get "css/preloader.scss" }}
+	{{ $scss := slice $variables $header $promo $home $groups $ready $bod $timeline $pages $footer $changelog $forms $tooltip $preloader | resources.Concat "css/custom.scss" }}
 	{{ $css := $scss | toCSS (dict "targetPath" "css/custom.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 	{{ $minicss := $css | resources.Minify }}
 	<link rel="stylesheet" href="{{ $minicss.RelPermalink }}">
@@ -55,15 +56,3 @@
 	{{ end -}}
 </head>
 <body>
-
-<div id="preloader">
-	<div class="preloader">
-		<div class="sk-wave">
-			<div class="sk-rect sk-rect1"></div>
-			<div class="sk-rect sk-rect2"></div>
-			<div class="sk-rect sk-rect3"></div>
-			<div class="sk-rect sk-rect4"></div>
-			<div class="sk-rect sk-rect5"></div>
-		</div>
-	</div>
-</div>
