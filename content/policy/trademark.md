@@ -31,10 +31,9 @@ By approving your use of a Mark, OpenPOWER grants you a limited, non-exclusive, 
 3. **OpenPOWER Core Marks**
 - **List of Core Marks**. The following marks are referred to herein as the “**Core Marks**”:
     - The following word marks (the “Core Word Marks”): 
-OPENPOWER®
-OpenPOWER®
+    image: Coretrademarks.png
     - The following logo (the “Core Logo”):
-![alt text](image.jpg)
+    image: corelogos.png
 
 - **Permitted Uses of Core Marks**. The Core Marks listed above may be used for the following purposes:
     - Indicating your membership in the OpenPOWER Foundation if you are, in fact, a member in good standing of the Foundation; and
