@@ -22,12 +22,12 @@ become-member:
      text: Individual personal membership
      cta_url: 'https://enrollment.lfx.linuxfoundation.org/?individual&project=openpowerfoundation'
      cta_text: Join as an Individual Member
-     image: individual.jpg
+     image: individualmember.png
    - title: Corporate membership
      text: Corporate company membership
      cta_url: 'https://enrollment.lfx.linuxfoundation.org/?project=openpowerfoundation'
      cta_text: Join as a Corporate Member
-     image: corperate.jpg
+     image:  corporateboard.png
 date: 2022-01-03
 draft: false
 ---
