@@ -1,15 +1,11 @@
 {{ partial "header.html" . }}
-
 {{ partial "navbar.html" . }}
-
 <main id="main">
-
 <section id="hubproviders">
 <div id="hubproviders">
 	<div class="container">
 		<div class="section-header mb-4">
-			<h1 class="section-title text-center mb-4">{{ .Title }}</h1>
-			<span class="section-divider"></span>
+			<h1 class="section-title text-center">{{ .Title }}</h1>
 			<div class="row">
 				<div class="col-8 offset-2">
 					<span class="section-description">{{ .Content }}</span>
@@ -22,7 +18,7 @@
 			<div class="col-2"></div>
 			{{ range .Data.Pages }}
 			<div id="hubprovider" class="col-lg-2 text-center">
-			<a class="btn btn-outline-primary" href="{{ .Permalink }}">
+			<a href="{{ .Permalink }}">
 			{{ if .Param "member" }}
 				{{ $member := .Param "member" }}
 				{{ range where .Site.RegularPages "Section" "members" }}
@@ -46,11 +42,7 @@
 		</div>
 	</div>
 </div>
-
 {{ partial "hubform.html" . }}
-
 </section>
-
 </main>
-
 {{ partial "footer.html" . }}
