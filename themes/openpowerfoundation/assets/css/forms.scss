@@ -1,3 +1,78 @@
+#contact .form #sendmessage {
+	color: #ff8800;
+	border: 1px solid #1dc8cd;
+	display: none;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+#contact .form #errormessage {
+	color: red;
+	display: none;
+	border: 1px solid red;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+.contactee select {
+	background-color: #2566f4;
+	color: white;
+	padding: 12px;
+	width: 100%;
+	border: none;
+	font-size: 20px;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);   -webkit-appearance: button;   appearance: button;   outline: none;
+}
+
+#passport .form #sendmessage {
+	color: #2566f4;
+	border: 2px solid #008800;
+	display: none;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+#passport .form #errormessage {
+	color: #ff0000;
+	display: none;
+	border: 2px solid #880000;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+#passport .form #sendmessage.show,
+#passport .form #errormessage.show,
+#passport .form .show {
+	display: block;
+}
+#passport .form .validation {
+	color: #880000;
+	display: none;
+	margin: 0 0 20px;
+	font-weight: 400;
+	font-size: 13px;
+}
+#passport .form input, #contact .form textarea {
+	border-radius: 0;
+	box-shadow: none;
+	font-size: 14px;
+}
+#passport .form button[type="submit"] {
+	background: #2566f4;
+	border: 0;
+	border-radius: 2rem;
+	padding: 1rem 5rem 1rem 5rem;
+	color: #ffffff;
+}
+#passport .form button[type="submit"]:hover {
+	background: #000000;
+	cursor: pointer;
+}
+
 .member-value,
 .member-list {
 	width: 100%;

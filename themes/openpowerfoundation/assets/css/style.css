@@ -1245,7 +1245,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	font-size: 12px;
 }
 #contact .form #sendmessage {
-	color: #ff8800;
+	color: #2544f8;
 	border: 1px solid #1dc8cd;
 	display: none;
 	text-align: center;
@@ -1330,6 +1330,53 @@ body.mobile-nav-active #mobile-nav-toggle {
 	color: #fff;
 }
 #hub .form button[type="submit"]:hover {
+	background: #007ddd;
+	cursor: pointer;
+}
+
+#passport .form #sendmessage {
+	color: #007aad;
+	border: 1px solid #00ff00;
+	display: none;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+#passport .form #errormessage {
+	color: #ff0000;
+	display: none;
+	border: 1px solid #880000;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+#passport .form #sendmessage.show,
+#passport .form #errormessage.show,
+#passport .form .show {
+	display: block;
+}
+#passport .form .validation {
+	color: #ff0000;
+	display: none;
+	margin: 0 0 20px;
+	font-weight: 400;
+	font-size: 13px;
+}
+#passport .form input, #contact .form textarea {
+	border-radius: 0;
+	box-shadow: none;
+	font-size: 14px;
+}
+#passport .form button[type="submit"] {
+	background: #007aad;
+	border: 0;
+	border-radius: 20px;
+	padding: 8px 30px;
+	color: #fff;
+}
+#passport .form button[type="submit"]:hover {
 	background: #007ddd;
 	cursor: pointer;
 }
