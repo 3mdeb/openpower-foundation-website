@@ -8,7 +8,23 @@
 				<img src="{{ $imagefile.RelPermalink }}" width="297" height="49" alt="OpenPOWER">
 			</a>
 			<div class="header__menu-col col">
-				<div class="header__uppermenu">&nbsp;</div>
+				<div class="header__uppermenu d-flex flex-nowrap justify-content-center align-items-center">
+					<ul class="header__uppermenu d-lg-flex justify-content-end list-unstyled">
+					&nbsp;|&nbsp;
+					{{ range .Site.Menus.discuss }}
+						<li><a href="{{ .URL }}"><div class="tooltip-wrapper"><i class="{{ .Pre }}"></i><div class="tooltip-text">{{ .Name }}</div></div></a></li>
+					{{ end }}
+					&nbsp;|&nbsp;
+					{{ range .Site.Menus.code }}
+						<li><a href="{{ .URL }}"><div class="tooltip-wrapper"><i class="{{ .Pre }}"></i><div class="tooltip-text">{{ .Name }}</div></div></a></li>
+					{{ end }}
+					&nbsp;|&nbsp;
+					{{ range .Site.Menus.social }}
+						<li><a href="{{ .URL }}"><div class="tooltip-wrapper"><i class="{{ .Pre }}"></i><div class="tooltip-text">{{ .Name }}</div></div></a></li>
+					{{ end }}
+					&nbsp;|&nbsp;
+					</ul>
+				</div>
 				<div class="header__menu-col-row">
 					<nav class="navbar navbar-expand-lg header__menu-nav" id="nav-menu-container">
 					<ul class="nav-menu header__menu d-lg-flex justify-content-center list-unstyled">
@@ -73,23 +89,7 @@
 				</div>
 			</div>
 			<div class="header__contact-col">
-				<div class="header__contact-col-row col d-flex flex-nowrap justify-content-center align-items-center">
-					<ul class="header__uppermenu d-lg-flex justify-content-end list-unstyled">
-					&nbsp;|&nbsp;
-					{{ range .Site.Menus.discuss }}
-						<li><a href="{{ .URL }}"><div class="tooltip-wrapper"><i class="{{ .Pre }}"></i><div class="tooltip-text">{{ .Name }}</div></div></a></li>
-					{{ end }}
-					&nbsp;|&nbsp;
-					{{ range .Site.Menus.code }}
-						<li><a href="{{ .URL }}"><div class="tooltip-wrapper"><i class="{{ .Pre }}"></i><div class="tooltip-text">{{ .Name }}</div></div></a></li>
-					{{ end }}
-					&nbsp;|&nbsp;
-					{{ range .Site.Menus.social }}
-						<li><a href="{{ .URL }}"><div class="tooltip-wrapper"><i class="{{ .Pre }}"></i><div class="tooltip-text">{{ .Name }}</div></div></a></li>
-					{{ end }}
-					&nbsp;|&nbsp;
-					</ul>
-				</div>
+				<div class="header__contact-col-row col d-flex flex-nowrap justify-content-center align-items-center">&nbsp;</div>
 				<div class="header__contact-col-row col d-flex flex-nowrap justify-content-center align-items-center">
 					<div class="header__contact-btn join-us-button desktop-view">
 						<a class="d-block btn-outline-primary btn-sm btn" href="{{ "/join/" | relURL }}">Join</a>
