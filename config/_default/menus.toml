@@ -156,7 +156,7 @@
 [[discuss]]
 	name = "Discuss"
 	pre = "fas fa-comments"
-	url = "https://discuss.openpower.foundation/auth/oidc"
+	url = "https://discuss.openpower.foundation/categories"
 [[discuss]]
 	name = "Chat"
 	pre = "fas fa-comment-dots"
