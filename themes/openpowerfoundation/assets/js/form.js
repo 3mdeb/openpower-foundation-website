@@ -85,10 +85,15 @@ jQuery(document).ready(function($) {
 				complete: function() {
 					$("#sendmessage").addClass("show");
 					$("#errormessage").removeClass("show");
-					$('.contactForm').find("input, textarea").val("");
-					if(goal) {
+					$(formname)[0].reset();
+					$('input[type="text"],textarea').val('');
+					if(typeof goal !== 'undefined') {
 						_paq.push(['trackGoal', goal]);
 					}
+					$('#sendmessage').show();
+					setTimeout(function() {
+						$('#sendmessage').fadeOut();
+					}, 2500);
 				}
 			});
 			return false;
