@@ -187,3 +187,8 @@
 	pre = "fab fa-youtube"
 	url = "https://www.youtube.com/channel/UCNVcHm09eXVbvUzZkQs0_Sg"
 	weight = -1700
+[[social]]
+	name = "WeChat"
+	pre = "fab fa-weixin"
+	url = "http://weixin.qq.com/r/2DrD20PEWx4krQe492-K"
+	weight = -6000
