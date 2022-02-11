@@ -8,3 +8,5 @@
 	URI = "https://webscripts.vantosh.com/forms/hub/prod/opf"
 [forms.passport]
 	URI = "https://webscripts.vantosh.com/forms/passport/prod/opf"
+forms.mailmonk]
+	URI = "https://mailing.openpower.foundation/subscription/form"

@@ -5,3 +5,5 @@
 	URI = "http://localhost:8080/forms/hub/test/opf"
 [forms.passport]
 	URI = "http://localhost:8080/forms/passport/test/opf"
+[forms.mailmonk]
+	URI = "http://localhost:9000/subscription/form"
