@@ -1,18 +1,13 @@
 {{ partial "header.html" . }}
-
 {{ partial "navbar.html" . }}
-
 <main id="main">
-
 <section id="list" class="section-bg">
 	<div class="container-fluid">
-
 		<div class="section-header">
 			<h3 class="section-title">{{ .Title }}</h3>
 			<span class="section-divider"></span>
 			<p class="section-description"></p>
 		</div>
-
 		{{ if .Content }}
 		<div class="row">
 			<div class="col-lg-2">&nbsp;</div>
@@ -22,7 +17,6 @@
 			<div class="col-lg-2">&nbsp;</div>
 		</div>
 		{{ end }}
-
 		<div class="row">
 			<div class="col-lg-2">&nbsp;</div>
 			<div class="col-lg-8 text-lg-center content wow fadeInBottom">
@@ -40,7 +34,7 @@
 					{{ end }}
 				{{ end }}
 				{{ range .Data.Pages }}
-					<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+					<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 				{{ end }}
 				</ul>
 			</div>
@@ -48,11 +42,8 @@
 		</div>
 	</div>
 </section>
-
 </main>
-
 {{ if .Param "calltoaction" }}
 	{{ partial "calltoaction.html" . }}
 {{ end }}
-
 {{ partial "footer.html" . }}

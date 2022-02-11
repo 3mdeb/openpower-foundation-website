@@ -18,7 +18,7 @@
 			<div class="col-2"></div>
 			{{ range .Data.Pages }}
 			<div id="hubprovider" class="col-lg-2 text-center">
-			<a href="{{ .Permalink }}">
+			<a href="{{ .RelPermalink }}">
 			{{ if .Param "member" }}
 				{{ $member := .Param "member" }}
 				{{ range where .Site.RegularPages "Section" "members" }}

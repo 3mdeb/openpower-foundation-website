@@ -27,7 +27,7 @@
 				<img class="img-fluid" src="{{  $image.RelPermalink }}" width="50" height="50" alt="{{ .Title }}">
 			</div>
 			{{ end }}
-			<a class="post__title btn btn-outline-primary" href="{{ .Permalink }}">
+			<a class="post__title btn btn-outline-primary" href="{{ .RelPermalink }}">
 				{{ .Title }}
 				<br>
 				<i>Published on {{ .Date.Format "Monday 2 January 2006" }}</i>

@@ -16,7 +16,7 @@
 				<div class="timeline-item">
 					<div class="timeline-img"></div>
 					<div class="timeline-content js--fadeInLeft">
-						<h2><a href="{{ .Permalink }}"><span class="post-title">{{ .Title }}</span></a></h2>
+						<h2><a href="{{ .RelPermalink }}"><span class="post-title">{{ .Title }}</span></a></h2>
 						{{ $eventdate := .Param "eventdates.from" }}
 						<div class="date">
 							{{ dateFormat "2 January 2006" $eventdate }} - {{ .Param "eventplace" }}

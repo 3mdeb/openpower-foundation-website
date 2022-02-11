@@ -26,7 +26,7 @@
 					{{ with $.Site.GetPage $personfile }}
 						{{ $memberfile := printf "%s/%s" "members" (.Param "member") }}
 						{{ with $.Site.GetPage $memberfile }}
-							<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+							<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 						{{ end }}
 						<p>{{ .Content }}</p>
 					{{ end }}

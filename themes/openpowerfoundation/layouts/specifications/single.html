@@ -43,11 +43,11 @@
 	{{ if .Param "group" }}
 		{{ $group := printf "%s/%s" "groups" (.Param "group") }}
 		{{ with $.Site.GetPage $group }}
-			Owned by : <a href="{{ .Permalink }}">{{ .Title }}</a><br>
+			Owned by : <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
 		{{ end }}
 	{{ end }}
 	{{ with $.Site.GetPage $compliancefile }}
-		Compliance : <a href="{{ .Permalink }}">Test Suite &amp; Harness</a>
+		Compliance : <a href="{{ .RelPermalink }}">Test Suite &amp; Harness</a>
 	{{ end }}
 	{{ if $datafile.versions }}
 		<ul class="changelogtimeline">

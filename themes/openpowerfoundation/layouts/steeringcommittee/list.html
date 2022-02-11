@@ -26,7 +26,7 @@
 						{{ range where .Site.RegularPages "Section" "members" }}
 							{{ $membercompany := .File.BaseFileName }}
 							{{ if eq $member $membercompany }}
-								<a href="{{ .Permalink }}">
+								<a href="{{ .RelPermalink }}">
 								{{ if .Param "image" }}
 									{{ $imagename := .Param "image" }}
 									{{ $imagelocation := (printf "%s/%s" "/images/members/" $imagename) }}
@@ -81,7 +81,7 @@
 					{{ range where .Site.RegularPages "Section" "members" }}
 						{{ $membercompany := .File.BaseFileName }}
 						{{ if eq $member $membercompany }}
-							<a href="{{ .Permalink }}">
+							<a href="{{ .RelPermalink }}">
 							{{ if .Param "image" }}
 								{{ $imagename := .Param "image" }}
 								{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}

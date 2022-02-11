@@ -1,6 +1,6 @@
 {
 "title": "{{ .Title }}",
-"permalink": "{{ .Permalink }}",
+"permalink": "{{ .RelPermalink }}",
 "level": "{{ .Params.level }}",
 "joined": "{{ .Params.joined }}",
 "link": "{{ .Params.link }}",

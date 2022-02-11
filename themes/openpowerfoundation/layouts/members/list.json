@@ -14,7 +14,7 @@
 	{{- end -}}
 	{{- $.Scratch.Add "index" (dict
 		"title" .Title
-		"permalink" .Permalink
+		"permalink" .RelPermalink
 		"contents" .Plain
 		"level" .Params.level
 		"joined" .Params.joined

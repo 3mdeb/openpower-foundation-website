@@ -2,7 +2,7 @@
 <script type="text/javascript">
 DiscourseEmbed = {
 	discourseUrl: 'https://discuss.openpower.foundation/',
-	discourseEmbedUrl: "{{ .Permalink | absURL }}",
+	discourseEmbedUrl: "{{ .RelPermalink | relURL }}",
 	topicId: {{ .Param "discoursetopic" }},
 };
 (function() {

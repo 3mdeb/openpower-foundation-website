@@ -35,13 +35,13 @@
 								{{ range $.Site.Pages.ByTitle }}
 									{{ $group := .Param "wgtype" }}
 									{{ if eq $group "twg" }}
-										<li class="header__menu-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+										<li class="header__menu-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 									{{ end }}
 									{{ if eq $group "sig" }}
-										<li class="header__menu-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+										<li class="header__menu-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 									{{ end }}
 									{{ if eq $group "bof" }}
-										<li class="header__menu-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+										<li class="header__menu-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 									{{ end }}
 								{{ end }}
 								</ul>
