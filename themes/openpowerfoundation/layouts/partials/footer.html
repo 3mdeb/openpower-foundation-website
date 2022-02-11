@@ -19,7 +19,7 @@
 				<div class="footer__addr">
 					<ul>
 					{{ range .Site.Menus.policy }}
-						<li><a href="{{ .URL | absURL }}">
+						<li><a href="{{ .URL | relURL }}">
 							{{ if .Pre }}<i class="{{ .Pre }}"></i>&nbsp;{{ end }}
 							{{ .Name }}
 							{{ if .Post }}&nbsp;<i class="{{ .Post }}"></i>{{ end }}
@@ -35,7 +35,7 @@
 				<div class="footer__addr">
 					<ul>
 					{{ range .Site.Menus.governance }}
-						<li><a href="{{ .URL | absURL }}">
+						<li><a href="{{ .URL | relURL }}">
 							{{ if .Pre }}<i class="{{ .Pre }}"></i>&nbsp;{{ end }}
 							{{ .Name }}
 							{{ if .Post }}&nbsp;<i class="{{ .Post }}"></i>{{ end }}
@@ -109,17 +109,17 @@
 	</div>
 </div>
 </footer>
-<script src="{{ "lib/jquery/jquery.min.js" | absURL }}"></script>
-<script src="{{ "lib/jquery/jquery-migrate.min.js" | absURL }}"></script>
-<script src="{{ "lib/bootstrap/js/bootstrap.bundle.min.js" | absURL }}"></script>
-<script src="{{ "lib/easing/easing.min.js" | absURL }}"></script>
-<script src="{{ "lib/wow/wow.min.js" | absURL }}"></script>
-<script src="{{ "lib/superfish/hoverIntent.js" | absURL }}"></script>
-<script src="{{ "lib/superfish/superfish.min.js" | absURL }}"></script>
-<script src="{{ "lib/magnific-popup/magnific-popup.min.js" | absURL }}"></script>
-<script src="{{ "lib/slick/slick.min.js" | absURL }}"></script>
+<script src="{{ "lib/jquery/jquery.min.js" | relURL }}"></script>
+<script src="{{ "lib/jquery/jquery-migrate.min.js" | relURL }}"></script>
+<script src="{{ "lib/bootstrap/js/bootstrap.bundle.min.js" | relURL }}"></script>
+<script src="{{ "lib/easing/easing.min.js" | relURL }}"></script>
+<script src="{{ "lib/wow/wow.min.js" | relURL }}"></script>
+<script src="{{ "lib/superfish/hoverIntent.js" | relURL }}"></script>
+<script src="{{ "lib/superfish/superfish.min.js" | relURL }}"></script>
+<script src="{{ "lib/magnific-popup/magnific-popup.min.js" | relURL }}"></script>
+<script src="{{ "lib/slick/slick.min.js" | relURL }}"></script>
 <script src="https://registration.openpower.foundation/widget/v1.en.js" type="text/javascript" async></script>
-<script src="{{ "js/preload.js" | absURL }}"></script>
+<script src="{{ "js/preload.js" | relURL }}"></script>
 {{ $mainjavascript := resources.Get "js/main.js" }}
 {{ $jqueryformjavascript := resources.Get "js/jquery.form.js" }}
 {{ $formjavascript := resources.Get "js/form.js" }}
