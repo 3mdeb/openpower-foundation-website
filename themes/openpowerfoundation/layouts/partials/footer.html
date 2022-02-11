@@ -103,7 +103,7 @@
 	<div class="row">
 		<div class="col-lg-12 text-lg-center">
 			<div class="version-footer">
-				{{ if .GitInfo }}{{ .GitInfo.AbbreviatedHash }}{{ end }}
+				<git>{{ if .GitInfo }}{{ .GitInfo.AbbreviatedHash }}{{ end }}</git>
 			</div>
 		</div>
 	</div>
