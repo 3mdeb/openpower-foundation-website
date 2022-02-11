@@ -4940,12 +4940,8 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
-#main:not(.groups) {
-	padding-top: 9rem;
-}
 .main {
-	padding: 3.75rem 0;
-	padding-top: 4rem;
+	padding-top: 3.75rem;
 }
 
 .social__list {
