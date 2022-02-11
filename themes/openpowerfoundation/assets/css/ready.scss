@@ -1,15 +1,15 @@
-main {
-&.ready {
-	@media screen and (max-width: $lg) {
-		padding-top: 50px;
-		padding-bottom: 40px;
+.ready {
+	@media screen and (min-width: $xl) {
+		padding-top: 6.50rem;
+		padding-bottom: 50px;
 	}
 	@media screen and (min-width: $lg) and (max-width: $xl) {
 		padding-top: 70px;
 		padding-bottom: 40px;
 	}
-	@media screen and (min-width: $xl) {
-		padding-bottom: 50px;
+	@media screen and (max-width: $lg) {
+		padding-top: 50px;
+		padding-bottom: 40px;
 	}
 	.post__thumb {
 		width: 40px;
@@ -29,13 +29,15 @@ main {
 		text-align: left;
 		line-height: 1.2;
 	}
-}
-}
-.promo__section {
-	align-items: center;
-	&.ready {
-		h1 {
-			font-size: 2rem;
+	.promo__section {
+		align-items: center;
+		&.ready {
+			h1 {
+				font-size: 2rem;
+			}
 		}
 	}
+}
+.ready-single {
+	padding-top: 3.75rem;
 }
