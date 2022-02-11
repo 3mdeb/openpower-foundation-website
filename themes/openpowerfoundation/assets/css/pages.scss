@@ -1,65 +1,62 @@
-// Links disabled 
-
-.disabled {  
-color: black;
-  display: inline-block;
-  pointer-events: none;
-  text-decoration: none;
+.disabled {
+	color: black;
+	display: inline-block;
+	pointer-events: none;
+	text-decoration: none;
 }
-
-// Board of Directors
 
 .boardofdirectors {
-    article {
-        h3 {
-           text-transform: uppercase; 
-           a {
-             color: black;
-           }
-        }
-    } 
+	article {
+		h3 {
+			text-transform: uppercase;
+			a {
+				color: black;
+			}
+		}
+	}
+	.post__article {
+		&:nth-child(even), &.bg {
+			background-color: #f7f7f7;
+		}
+	}
 }
-
-// Governance 
 
 .governance {
-    .row {
-            --bs-gutter-x: 0;
-    }
+	.row {
+		--bs-gutter-x: 0;
+	}
 }
-
-// Members
 
 .members {
-  .membership-level {     
-    border-top: 1px solid#1b1c1f;
-    .box {
-      min-height: 110px;  
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      a {
-        text-decoration: none;
-        color:black;
-        align-self: center;
-      } 
-      img {
-        max-width: 210px;
-      }
-    } 
-  } 
+	.membership-level {
+		border-top: 1px solid#1b1c1f;
+		.box {
+			min-height: 110px;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			a {
+				text-decoration: none;
+				color: black;
+				align-self: center;
+			}
+			img {
+				max-width: 210px;
+			}
+		}
+	}
 }
-
-// Events
+#membersingle {
+	padding-top: 3.75rem;
+}
 
 .events {
-  .post__article:not(:last-child) {
-      margin-bottom: 1.75rem;
-  }
+	.post__article:not(:last-child) {
+		margin-bottom: 1.75rem;
+	}
 }
 
-// Join
 .join {
 	.membership-data {
 		table {
@@ -143,90 +140,80 @@ color: black;
 	}
 }
 
-// Board of Directors
-main.boardofdirectors {
-    .post__article {
-    &:nth-child(even),
-    &.bg {
-      background-color: #f7f7f7;
-    }
-  }
-}
-
-// Steering comittee
 section#steeringcomittee {
-  #person {
-    #person-header {
-      position: absolute;
-    }
-  #personmember
-    img {
-      width: 100%;
-      max-width: 100%;
-      position: relative;
-      top: 15px;
-    }
-  }
-  .post__article {
-    &:nth-child(even),
-    &.bg {
-      background-color: #f7f7f7;
-    }
-  }
+	#person {
+		#person-header {
+			position: absolute;
+		}
+		#personmember img {
+				width: 100%;
+				max-width: 100%;
+				position: relative;
+				top: 15px;
+		}
+	}
+	.post__article {
+		&:nth-child(even), &.bg {
+			background-color: #f7f7f7;
+		}
+	}
 }
-
-// hubproviders
 
 #hubproviders {
-  #hubprovider {
-    display: flex;
-    align-items: center;
-    min-height: 100px;
-    a {
-      white-space: normal;
-      line-height: 1.2;
-      font-size: 18px;
-      min-width: 100%;
-    }
-  }
-  form {
-    .form-control {
-      font-size: 14px;
-    }
-  }
+	padding-top: 3.75rem;
+	#hubprovider {
+		display: flex;
+		align-items: center;
+		min-height: 100px;
+		a {
+			white-space: normal;
+			line-height: 1.2;
+			font-size: 18px;
+			min-width: 100%;
+		}
+	}
+	form {
+		.form-control {
+			font-size: 14px;
+		}
+	}
 }
 
-  .details {
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    > ul {
-      list-style-type: none;
-      padding-left: 0;
-      > li {
-        margin-bottom: 6px;
-        background-color: #f7f7f7;
-        padding: 10px 6px;
-        > ul {
-          background-color: white;
-          padding: 10px 6px;
-          > li {
-            padding: 5px;
-            > ul {
-              display: flex;
-              flex-wrap: wrap;
-              border-left: 2px solid #f7f7f7;
-              > li {
-                flex: 1 0 50%;
-                padding: 5px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+.details {
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+	> ul {
+		list-style-type: none;
+		padding-left: 0;
+		> li {
+			margin-bottom: 6px;
+			background-color: #f7f7f7;
+			padding: 10px 6px;
+			> ul {
+				background-color: white;
+				padding: 10px 6px;
+				> li {
+					padding: 5px;
+					> ul {
+						display: flex;
+						flex-wrap: wrap;
+						border-left: 2px solid #f7f7f7;
+						> li {
+							flex: 1 0 50%;
+							padding: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-
-
+#specifications {
+	padding-top: 3.75rem;
+}
+#specifications-single {
+	padding-top: 6.500rem;
+}
