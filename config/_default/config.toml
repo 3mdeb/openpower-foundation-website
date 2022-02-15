@@ -110,7 +110,7 @@ enableEmoji = true
 	disableJSON = false
 	disableSVG = false
 	disableXML = false
-	minifyOutput = false
+	minifyOutput = true
 [minify.tdewolff]
 [minify.tdewolff.html]
 	keepComments = false
