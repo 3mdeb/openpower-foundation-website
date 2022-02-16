@@ -4,10 +4,6 @@ wgtype: bof
 image: thumb-6.jpg
 chair:
   - ganesannarayanasamy
-members:
-  - ibm
-  - universityoforegon
-  - newhorizoncollege-marathallicampus
 participation: 'Public'
 discussion: https://discuss.openpower.foundation/c/bof/academic/26
 meetingminutes: https://meetingminutes.openpower.foundation/academic/

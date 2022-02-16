@@ -1,5 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
+{{ $filename := .File.BaseFileName }}
+{{ $datafile := index $.Site.Data.groups.members $filename }}
 <main id="main">
 <section id="workgroupsingle">
 	<div id="workgroupsingle" class="container-fluid">
@@ -99,10 +101,10 @@
 							<li><a href="{{ .Param "kanban" }}"><i class="fas fa-tasks"></i> Kanban</a></li>
 						{{ end }}
 						</ul>
-					{{ if .Param "members" }}
+					{{ if $datafile.members }}
 						<li>Active Voting Work Group Members :
 						<ul><li><ul>
-						{{ range $member := .Param "members" }}
+						{{ range $member := $datafile.members }}
 							{{ $memberfile := printf "%s/%s" "members" $member }}
 							{{ with $.Site.GetPage $memberfile }}
 								<li>

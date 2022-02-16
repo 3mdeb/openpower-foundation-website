@@ -5,14 +5,6 @@ image: thumb-6.jpg
 chair:
   - toddrosedahl
   - karolgugala
-members:
-  - ibm
-  - google
-  - antmicro
-  - raptorcomputingsystems
-  - vantosh
-  - yadro
-  - oregonstateuniversity
 participation: 'Public'
 git: https://git.openpower.foundation/librebmc/
 discussion: https://discuss.openpower.foundation/c/sig/librebmc/

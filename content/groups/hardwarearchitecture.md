@@ -4,7 +4,6 @@ wgtype: twg
 image: thumb-6.jpg
 chair:
   - derekwilliams
-members:
 participation: 'Members'
 #git: https://git.openpower.foundation/librebmc/
 #discussion: https://discuss.openpower.foundation/c/sig/librebmc/
