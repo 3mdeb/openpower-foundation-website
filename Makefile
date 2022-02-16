@@ -5,7 +5,7 @@ HUGO=hugo-extended
 default all: build
 
 .PHONY: build
-build: clean
+build:
 	$(HUGO) --environment=production --minify --templateMetrics
 	@find public/ -name '*.html' ! -name '*.gz' -type f -exec sh -c "gzip -c -9 < {} > {}.gz" \;
 	@find public/ -name '*.css' ! -name '*.gz' -type f -exec sh -c "gzip -c -9 < {} > {}.gz" \;
