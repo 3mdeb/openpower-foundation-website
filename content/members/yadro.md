@@ -1,6 +1,6 @@
 ---
 title: "YADRO"
-image: "yadro.png"
+image: "yadro-black.png"
 level: platinum
 country: Russia
 joined: 2015
