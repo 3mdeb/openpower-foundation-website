@@ -178,6 +178,26 @@ section#steeringcomittee {
 		}
 	}
 }
+#hubprovider {
+	padding-top: 3.75rem;
+	#hubprovider {
+		display: flex;
+		align-items: center;
+		min-height: 100px;
+		a {
+			white-space: normal;
+			line-height: 1.2;
+			font-size: 18px;
+			min-width: 100%;
+		}
+	}
+	form {
+		.form-control {
+			font-size: 14px;
+		}
+	}
+}
+
 
 .details {
 	ul {
