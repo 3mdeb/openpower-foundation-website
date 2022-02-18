@@ -39,13 +39,13 @@ sections:
   section:
     - title: Software
       image: software.jpg
-      link: /tags/software
+#      link: /tags/software
     - title: Silicon
       image: silicon.jpg
-      link: /tags/silicon
+#      link: /tags/silicon
     - title: Systems
       image: systems.jpg
-      link: /tags/systems
+#      link: /tags/systems
   buttons:
     - title: Working Groups
       link: /groups/
