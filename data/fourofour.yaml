@@ -1,0 +1,9 @@
+alternatebuttons:
+  - title: Working Groups
+    link: /groups/
+  - title: Technical Specifications
+    link: /specifications/
+  - title: Compliance Specificiations
+    link: /compliance/
+  - title: Contact Us
+    link: /contact/
