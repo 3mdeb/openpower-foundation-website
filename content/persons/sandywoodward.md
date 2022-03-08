@@ -1,7 +1,7 @@
 ---
 title: "Sandy Woodward"
 member: ibm
-date: 2022-01-28
+date: 2022-03-08
 draft: false
 ---
 Sandy Woodward is the OpenPOWER Foundation Compliance Work Group Chair. Sandy has
