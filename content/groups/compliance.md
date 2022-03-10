@@ -4,7 +4,21 @@ wgtype: twg
 image: thumb-2.jpg
 chair:
   - sandywoodward
+<<<<<<< HEAD
 date: 2021-03-15
+||||||| parent of 8749573 (Update 'content/groups/compliance.md')
+members:
+  - ibm
+  - yadro
+  - vantosh
+date: 2022-01-25
+=======
+members:
+  - ibm
+  - yadro
+  - vantosh
+date: 2022-03-08
+>>>>>>> 8749573 (Update 'content/groups/compliance.md')
 draft: false
 ---
 
