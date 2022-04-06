@@ -1,6 +1,6 @@
 ---
 title: Cartesian Theatre
-#image: 
+#image: cartesiantheatre.png
 country: Canada
 #link:
 level: silver
