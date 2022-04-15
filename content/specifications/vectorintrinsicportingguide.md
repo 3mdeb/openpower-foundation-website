@@ -1,5 +1,7 @@
 ---
 title: Vector Intrinsics Porting Guide
+aliases:
+  - "/wp-content/uploads/resources/Vector-Intrinsics/content/sec_gcc_vector_extensions.html"
 group: systemsoftware
 publicreview: false
 tags:
