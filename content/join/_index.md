@@ -2,6 +2,8 @@
 title: Membership
 type: join
 layout: single
+aliases:
+  - "/membership/how-to-join/"
 intro:
   subtitle: Welcome to the era of Open Computing!
   intro:
