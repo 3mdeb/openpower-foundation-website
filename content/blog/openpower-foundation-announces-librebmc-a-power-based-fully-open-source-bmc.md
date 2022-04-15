@@ -1,9 +1,10 @@
 ---
 title: "OpenPOWER Foundation announces LibreBMC, a POWER-based, fully open-source BMC"
-date: "2021-05-10"
-categories: 
+categories:
   - "blogs"
-tags: 
+aliases:
+  - "/openpower-foundation-announces-librebmc-a-power-based-fully-open-source-bmc/"
+tags:
   - "openpower"
   - "openpower-foundation"
   - "antmicro"
@@ -13,6 +14,8 @@ tags:
   - "dc-scm"
   - "litex"
   - "openbmc"
+date: "2021-05-10"
+draft: false
 ---
 
 Baseboard management controllers (BMCs) are a mainstay in data centers. They enable remote monitoring and access to servers, and they’re responsible for the rise of “lights out management.” But from a hardware perspective, there has been little innovation in this space for years. BMC processors are built on legacy architectures that are proprietary and closed.

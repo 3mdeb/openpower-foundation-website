@@ -1,9 +1,10 @@
 ---
 title: "OpenPOWER Foundation Introduces IBM Hardware and Software Contributions at OpenPOWER Summit 2020"
-date: "2020-09-15"
-categories: 
+aliases:
+  - "/openpower-foundation-introduces-ibm-hardware-and-software-contributions-at-openpower-summit-2020/"
+categories:
   - "blogs"
-tags: 
+tags:
   - "ibm"
   - "openpower-summit"
   - "openpower-foundation"
@@ -21,6 +22,8 @@ tags:
   - "mendy-furmanek"
   - "allan-cantle"
   - "opencapi-consortium"
+date: "2020-09-15"
+draft: false
 ---
 
 Today at [OpenPOWER Summit 2020](https://events.linuxfoundation.org/openpower-summit-north-america/), OpenPOWER Foundation announced two key technologies contributed by IBM to the open source community.

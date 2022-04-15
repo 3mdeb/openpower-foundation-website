@@ -1,15 +1,18 @@
 ---
 title: "Final Draft of the Power ISA EULA Released"
-date: "2020-02-13"
-categories: 
+categories:
   - "blogs"
-tags: 
+aliases:
+  - "/final-draft-of-the-power-isa-eula-released/"
+tags:
   - "ibm"
   - "power-isa"
   - "microwatt"
   - "eula"
   - "chiselwatt"
   - "end-user-license-agreement"
+date: "2020-02-13"
+draft: false
 ---
 
 **By: Hugh Blemings**

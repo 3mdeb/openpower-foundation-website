@@ -1,9 +1,10 @@
 ---
 title: "The Next Step in the OpenPOWER Foundation Journey"
-date: "2019-08-20"
-categories: 
+categories:
   - "blogs"
-tags: 
+aliases:
+  - "/the-next-step-in-the-openpower-foundation-journey/"
+tags:
   - "openpower"
   - "ibm"
   - "google"
@@ -20,6 +21,8 @@ tags:
   - "molex"
   - "suse"
   - "rambus"
+date: "2019-08-20"
+draft: false
 ---
 
 [Hugh Blemings](https://www.linkedin.com/in/hugh-blemings/?originalSubdomain=au), Executive Director, OpenPOWER Foundation
