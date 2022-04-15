@@ -1,5 +1,7 @@
 ---
 title: Field Replaceable Unit Service Interface Specification
+aliases:
+  - "/wp-content/uploads/resources/OpenFSI-spec/content/ch03.html"
 group: hardwarearchitecture
 publicreview: false
 aliases:
