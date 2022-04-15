@@ -5,5 +5,8 @@ outputs:
   - html
   - json
   - rss
+aliases:
+  - "/technical/resource-catalog/"
+  - "/technical-resources/technical-specifications/"
 draft: false
 ---
