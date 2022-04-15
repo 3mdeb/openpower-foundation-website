@@ -1,5 +1,7 @@
 ---
 title: Advanced Accelerator Adapter Electro-Mechanical Specification
+aliases:
+  - "/wp-content/uploads/resources/25Gbps-spec/content/sec_attach_req.html"
 group: accelerator
 publicreview: false
 tags:
