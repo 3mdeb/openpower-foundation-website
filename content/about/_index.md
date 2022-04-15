@@ -1,6 +1,7 @@
 ---
 title: "About"
-navbar: about
+aliases:
+  - "/about-us/"
 date: 2021-03-03
 draft: false
 ---
