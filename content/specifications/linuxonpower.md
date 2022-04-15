@@ -1,5 +1,7 @@
 ---
 title: Linux on POWER Architecture Reference
+aliases:
+  - "/wp-content/uploads/2020/07/LoPAR-20200611.pdf"
 group: systemsoftware
 tags:
   - software
