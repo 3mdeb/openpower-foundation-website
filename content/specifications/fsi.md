@@ -2,12 +2,12 @@
 title: Field Replaceable Unit Service Interface Specification
 aliases:
   - "/wp-content/uploads/resources/OpenFSI-spec/content/ch03.html"
+  - "/openfsi/"
+  - "/openfieldserviceinterface/"
+  - "/fieldserviceinterface/"
+  - "/wp-content/uploads/resources/OpenFSI-spec-100/content/ch01s01.html"
 group: hardwarearchitecture
 publicreview: false
-aliases:
-  - "openfsi/"
-  - "openfieldserviceinterface/"
-  - "fieldserviceinterface/"
 tags:
   - specification
   - fsi
