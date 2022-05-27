@@ -10,6 +10,7 @@ aliases:
   - "powerisa30/"
   - "power207/"
   - "powerisa207/"
+  - "/wp-content/uploads/2016/05/PowerISAv3b1r01.pdf"
 tags:
   - instructionsetarchitecture
   - isa
