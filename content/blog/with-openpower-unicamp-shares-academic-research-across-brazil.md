@@ -1,10 +1,13 @@
 ---
 title: "With OpenPOWER, Unicamp Shares Academic Research Across Brazil"
-date: "2016-06-22"
-categories: 
+aliases:
+  - "/blogs/with-openpower-unicamp-shares-academic-research-across-brazil/"
+categories:
   - "blogs"
-tags: 
+tags:
   - "featured"
+date: 2016-06-22
+draft: false
 ---
 
 _By Juliana Rodrigues, Student, Unicamp_
