@@ -19,6 +19,6 @@ For a list of trademarks of the OpenPOWER Foundation, please see our Trademark a
 - assets : [Creative Commons CC-BY-4.0](assets/LICENSE) License
 - config : [Apache Version 2.0](config/LICENSE) License
 - content : [Creative Commons CC-BY-4.0](content/LICENSE) License
-- data : [Creative Commons CC-BY-4.0](data/LICENSE) License
+- data : [Creative Commons CC-BY-4.0](content/LICENSE) License
 - static : [Creative Commons CC-BY-4.0](static/LICENSE) License
 - themes : [Apache Version 2.0](theme/LICENSE) License
