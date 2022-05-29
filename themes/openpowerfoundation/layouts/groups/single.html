@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 {{ $filename := .File.BaseFileName }}
-{{ $datafile := index $.Site.Data.groups.members $filename }}
+{{ $groupdatafile := index $.Site.Data.groups $filename }}
 <main id="main">
 <section id="workgroupsingle">
 	<div id="workgroupsingle" class="container-fluid">
@@ -57,11 +57,61 @@
 									<i class="fa fa-universal-access" aria-hidden="true"></i>
 								{{ end }}
 								{{ if eq (.Param "participation") "Members" }}
-									<i class="users icon" aria-hidden="true"></i>
+									<i class="fa-solid fa-users" aria-hidden="true"></i>
 								{{ end }}
 								{{ if eq (.Param "participation") "Limited" }}
 									<i class="fas fa-user-lock" aria-hidden="true"></i>
 								{{ end }}
+							</li>
+						{{ end }}
+						</ul>
+						</li>
+						<li>Workgroup Involvment
+						<ul>
+						{{ if .Param "cadence" }}
+							<li>Workgroup Meeting Cadence :<br>{{ .Param "cadence" }}<br></li>
+{{ if $groupdatafile.nextmeeting }}
+{{ $today := int (now.Format "20060102") }}
+{{ $nextmeetingdate := $groupdatafile.nextmeeting.date }}
+{{ $nextmeetingday := int ((time $groupdatafile.nextmeeting.date).Format "20060102") }}
+{{ $nextmeetingtime := $groupdatafile.nextmeeting.time }}
+{{ $datediff := (sub $today $nextmeetingday) }}
+{{ if lt $datediff 0 }}
+							<li>Next meeting on :<br>
+<div class="tooltip-wrapper">
+<i class="fa-solid fa-calendar-clock"></i>&nbsp;
+{{ $datetime := time (printf "%sT%s:00.00+00:00" $nextmeetingdate $nextmeetingtime) }}
+{{ $datetime.Format "2" }}{{ if in (slice 1 21 31) $datetime.Day}}st{{ else if in (slice 2 22) $datetime.Day}}nd{{ else if in (slice 3 23) $datetime.Day}}rd{{ else }}th{{ end }} of {{ $datetime.Format "January 2006" }}
+@ {{ $nextmeetingtime }} UTC
+<div class="tooltip-text">
+<strong>
+<script>
+var date = new Date();
+var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+var localtime = new Date({{ $nextmeetingdate }}+"T"+{{ $nextmeetingtime }}+":00Z");
+var datesuffix = "";
+switch (localtime.getDate()) {
+	case 1:
+		datesuffix = "st";
+		break;
+	case 21:
+		datesuffix = "st";
+		break;
+	case 31:
+		datesuffix = "st";
+		break;
+	default:
+		datesuffix = "nd";
+}
+document.write(localtime.getDate()+datesuffix+" of "+localtime.toLocaleString('default', { month: 'long' })+" "+localtime.getFullYear());
+document.write("<br>");
+document.write(String(localtime.getHours()).padStart(2,"0")+":"+String(localtime.getMinutes()).padStart(2,"0"));
+document.write("&nbsp;"+timezone);
+</script>
+</strong>
+</div>
+{{ end }}
+{{ end }}
 							</li>
 						{{ end }}
 						</ul>
@@ -101,10 +151,10 @@
 							<li><a href="{{ .Param "kanban" }}"><i class="fas fa-tasks"></i> Kanban</a></li>
 						{{ end }}
 						</ul>
-					{{ if $datafile.members }}
+					{{ if $groupdatafile.members }}
 						<li>Active Voting Work Group Members :
 						<ul><li><ul>
-						{{ range $member := $datafile.members }}
+						{{ range $member := $groupdatafile.members }}
 							{{ $memberfile := printf "%s/%s" "members" $member }}
 							{{ with $.Site.GetPage $memberfile }}
 								<li>
