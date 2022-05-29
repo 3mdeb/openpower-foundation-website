@@ -9,6 +9,7 @@ participation: 'Public'
 git: https://git.openpower.foundation/librebmc/
 discussion: https://discuss.openpower.foundation/c/sig/librebmc/
 meetingminutes: https://meetingminutes.openpower.foundation/librebmc/
+cadence: Bi-weekly US/EU alternative TZ
 calendar:
   web: https://discuss.openpower.foundation/c/sig/librebmc/11/l/calendar
   ics: webcal://discuss.openpower.foundation/c/sig/librebmc/l/calendar.ics

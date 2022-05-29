@@ -8,6 +8,7 @@ participation: Member
 git: https://git.openpower.foundation/accelerator/
 discussion: https://discuss.openpower.foundation/c/twg/accelerator/
 meetingminutes: https://meetingminutes.openpower.foundation/accelerator/
+cadence: Bi-weekly
 calendar:
   web: https://discuss.openpower.foundation/c/twg/accelerator/31/l/calendar
   ics: webcal://discuss.openpower.foundation/c/twg/accelerator/l/calendar.ics
