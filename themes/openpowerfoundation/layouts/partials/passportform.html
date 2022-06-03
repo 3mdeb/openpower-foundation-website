@@ -9,8 +9,6 @@ var goal = "{{ .Site.Params.forms.passport.goal }}";
 <div class="container"><div class="row wow fadeInUp">
 	<div class="col-lg-8 offset-lg-2 col-md-12"><div class="form">
 	<form role="form" name="passportForm" class="passportForm" id="passportForm" action="" method="post">
-		<div id="sendmessage">Your request has been sent. Thank you!</div>
-		<div id="errormessage">Error</div>
 		<div class="form-row">
 			<div class="form-group col-lg-12">
 				<input type="text" name="uid" class="form-control" id="uid" placeholder="Your Unique OPF Passport User ID" data-rule="minlen:2" data-msg="Please enter at least 2 characters" />
@@ -59,6 +57,8 @@ var goal = "{{ .Site.Params.forms.passport.goal }}";
 		</div>
 		<div class="form-row">
 			<div class="form-group col-lg-12 text-center">
+				<div id="sendmessage">Your request has been sent. Thank you!</div>
+				<div id="errormessage">Error</div>
 				<button class="btn btn-outline-primary" type="submit" title="Send Message">Request your passport</button>
 			</div>
 		</div>
