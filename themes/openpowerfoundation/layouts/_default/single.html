@@ -14,7 +14,7 @@
 			{{ $imagelocation := printf "%s/%s" "images" $imagefilename }}
 			{{ $imageresource := resources.Get $imagelocation }}
 			{{ if $imageresource }}
-				{{ $imagefile := $imageresource.Fit "600x600" }}
+				{{ $imagefile := $imageresource.Fit "600x600 webp" }}
 				<figure class="figure d-flex pt-3">
 					<img src="{{ $imagefile.RelPermalink }}">
 				</figure>
