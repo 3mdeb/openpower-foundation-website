@@ -6,7 +6,7 @@ eventplace: "Virtual online"
 callforpresentations: https://cfp.openpower.foundation/openpowersummit2022/cfp
 sponsors:
   -
-date: 2022-07-7
+date: 2022-07-14
 draft: true
 ---
 
