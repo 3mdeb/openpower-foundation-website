@@ -1,6 +1,8 @@
 #!Makefile
 
 HUGO=hugo-extended
+BUILDNAME:=$(shell git rev-parse --abbrev-ref HEAD)
+BASEURL:=$(shell basename `pwd` | sed 's/_/./g')
 
 default all: build
 
@@ -10,6 +12,10 @@ build:
 	@find public/ -name '*.html' ! -name '*.gz' -type f -exec sh -c "gzip -c -9 < {} > {}.gz" \;
 	@find public/ -name '*.css' ! -name '*.gz' -type f -exec sh -c "gzip -c -9 < {} > {}.gz" \;
 	@find public/ -name '*.js' ! -name '*.gz' -type f -exec sh -c "gzip -c -9 < {} > {}.gz" \;
+
+.PHONY: build-staging
+build-staging:
+	$(HUGO) --environment=production --minify --templateMetrics --baseURL https://$(BASEURL)/$(BUILDNAME)/ --destination builds/$(BUILDNAME)
 
 .PHONY: test
 test: clean
@@ -34,4 +40,6 @@ servedraft:
 .PHONY: clean
 clean:
 	@rm -rf public/
+	@rm -rf builds/
 	@rm -rf resources/
+
