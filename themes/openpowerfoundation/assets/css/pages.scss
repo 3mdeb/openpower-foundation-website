@@ -29,7 +29,7 @@
 
 .members {
 	.membership-level {
-		border-top: 1px solid#1b1c1f;
+		border-top: 1px solid #1b1c1f;
 		.box {
 			min-height: 110px;
 			text-align: center;
@@ -54,6 +54,24 @@
 .events {
 	.post__article:not(:last-child) {
 		margin-bottom: 1.75rem;
+	}
+}
+
+.event {
+	.section-header {
+		margin-top: 3.75rem;
+		margin-bottom: 1.25rem;
+		border-bottom: 2px solid #1b1c1f;
+	}
+	h1 {
+		font-size: 3.75rem;
+		text-decoration: underline;
+	}
+	h2 {
+		font-size: 1.75rem;
+	}
+	h3 {
+		font-size: 3.25rem;
 	}
 }
 
