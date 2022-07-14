@@ -23,6 +23,7 @@ build-staging:
 		git checkout $${branch} ; \
 		$(HUGO) --environment=production --minify --templateMetrics --baseURL https://$(BASEURL)/$${branch}/ --destination builds/$${branch} ; \
 	done
+	@git checkout master
 
 .PHONY: test
 test: clean
