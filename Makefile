@@ -1,9 +1,10 @@
 #!Makefile
 
-SHELL:=bash
 HUGO=hugo-extended
 BUILDNAME:=$(shell git rev-parse --abbrev-ref HEAD)
 BASEURL:=$(shell basename `pwd` | sed 's/_/./g')
+BRANCHES:=$(shell git branch -r | sed 's/origin\///g' | sed 's/pr\//pr-/' | sed '/HEAD/d' | sed '/master/d' | sed '/main/d')
+BRANCHNAMES:=$(foreach branch,$(BRANCHES),$(branch))
 
 default all: build
 
@@ -16,16 +17,11 @@ build:
 
 .PHONY: build-staging
 build-staging:
-	@rm -rf public/
-	branches=$(git branch -r)
-	for branch in $(branches); do
-		if [ $(branch) != '->' ] && [ $(branch) != 'origin/HEAD' ] && [ $(branch) != 'origin/master' ] && [ $(branch) != 'origin/main' ]; then
-			echo $(branch)
-			branchname=$(basename $branch)
-			git checkout $(branchname)
-			
-			$(HUGO) --environment=production --minify --templateMetrics --baseURL https://$(BASEURL)/$(branchname)/ --destination builds/$(branchname)
-		fi
+	rm -rf builds/*
+	@for branch in $(BRANCHNAMES) ; do \
+		echo -e "Building branch \e[1;33m"$${branch}"\e[0m" ; \
+		git checkout $${branch} ; \
+		$(HUGO) --environment=production --minify --templateMetrics --baseURL https://$(BASEURL)/$${branch}/ --destination builds/$${branch} ; \
 	done
 
 .PHONY: test
