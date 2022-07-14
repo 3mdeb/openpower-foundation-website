@@ -1,0 +1,96 @@
+<script>
+var formname = "form.isarfcForm";
+var submiturl = "{{ .Site.Params.forms.isarfc.URI }}";
+{{ if .Site.Params.forms.isarfc.goal }}
+var goal = "{{ .Site.Params.forms.isarfc.goal }}";
+{{ end }}
+</script>
+<section id="isarfc">
+<div class="container"><div class="row wow fadeInUp">
+	<div class="col-lg-8 offset-lg-2 col-md-12"><div class="form">
+	<form role="form" name="isarfcForm" class="isarfcForm" id="isarfcForm" action="" method="post">
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				<input type="text" class="form-control" name="uid" id="uid" placeholder="Your First and Last Name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" />
+				<div class="validation"></div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				<input type="text" class="form-control" name="company" id="company" placeholder="Your Company" data-rule="minlen:4" data-msg="Please enter at least 4 characters" />
+				<div class="validation"></div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				<input type="email" class="form-control" name="email" id="email" placeholder="Your Email Address" data-rule="email" data-msg="Please enter a valid email address" />
+				<div class="validation"></div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				<input name="member" id="member" class="member-value" placeholder="Are you an OpenPOWER Foundation Member" value="">
+				<ul class="member-list">
+				{{ range sort (where .Site.RegularPages "Section" "members") "Title" }}
+						<li>{{ .Title }}</li>
+				{{ end }}
+				</ul>
+			</div>
+		</div>
+		<div class="form-row text-center">
+			<div class="form-group col-lg-4">
+				<input type="radio" class="mr-2" id="minorcorrection" name="minnorcorrection" value="Minor Correction">Minor Correction<br>
+				<span class="comment">For minor changes, please send a diff or a git am patch file.</span>
+			</div>
+			<div class="form-group col-lg-4">
+				<input type="radio" class="mr-2" id="formalproposal" name="formalproposal" value="Formal Proposal">Formal Proposal<br>
+				<span class="comment">Please send your proposal including a summary and some use cases.</span>
+			</div>
+			<div class="form-group col-lg-4">
+				<input type="radio" class="mr-2" id="rfc" name="rfc" value="RFC">RFC<br>
+				<span class="comment">Please send the patch/diff files and the change document, including a short presentation why this is relevant.</span>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				<input type="checkbox" class="mr-2" id="confidential" name="confidential" value="confidential">Confidential RFC<br>
+				<span class="comment">A "Confidential RFC" is only available for OpenPOWER Foundation Members,
+				please make sure to select your member company.
+				This Confidential RFC will only be made available to ISA TWG members and kept confidential in accordance
+				with Appendix C, section C.2, of the OPF IPR Policy.</span>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				RFC File upload : <input type="file" name="rfcfile" id="rfcfile" class="file" placeholder="Add your RFC file"><br>
+				<span class="comment">Acceptable file formats : text, PDF, LaTeX, patch, diff, tar, zip, xz, bz2, gz</span>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				<textarea class="form-control" name="message" rows="5" data-msg="Please write any additonal message to the ISA TWG" placeholder="Message"></textarea>
+				<div class="validation"></div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12">
+				By submitting this form, I acknowledge that my information and proposal are subject to the following :
+				<ul>
+					<li><a href="{{ "/policy/privacy" | relURL }}">OpenPOWER Foundation's IP Rights Policy</a></li>
+					<li><a href="{{ "/policy/privacy" | relURL }}">OpenPOWER Foundation's Bylaws</a></li>
+					<li><a href="{{ "/policy/privacy" | relURL }}">OpenPOWER Foundation's Anti TRust Guidelines</a></li>
+					<li><a href="{{ "/policy/privacy" | relURL }}">OpenPOWER Foundation's Privacy Policy</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-lg-12 text-center">
+				<div id="sendmessage">Your request has been sent. Thank you!</div>
+				<div id="errormessage">Error</div>
+				<button class="btn btn-outline-primary" type="submit" title="Send Message">Submit your RFC proposal</button>
+			</div>
+		</div>
+	</form></div>
+	</div></div>
+</div>
+</section>
