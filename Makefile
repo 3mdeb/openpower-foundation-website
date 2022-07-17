@@ -21,7 +21,7 @@ build-staging:
 	@for branch in $(BRANCHNAMES) ; do \
 		echo -e "Building branch \e[1;33m"$${branch}"\e[0m" ; \
 		git checkout $${branch} ; \
-		git fetch ; \
+		git pull ; \
 		$(HUGO) --environment=production --minify --templateMetrics --baseURL https://$(BASEURL)/$${branch}/ --destination builds/$${branch} ; \
 	done
 	@git checkout master
