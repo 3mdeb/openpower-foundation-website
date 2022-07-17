@@ -1,6 +1,8 @@
-OpenPOWER Getting Started Guide 
-
-# OpenPOWER Foundation
+---
+title: OpenPOWER Getting Started Guide
+date: 2022-07-15
+draft: false
+---
 
 The [OpenPOWER](https://openpowerfoundation.org) Foundation develops high-quality, open source hardware designs and open source hardware design tools relevant to silicon devices and FPGAs.
 
