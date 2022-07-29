@@ -1,6 +1,6 @@
 ---
 title: RED Semiconductor
-image: REDsemi.jpg
+image: redsemi.jpg
 country: United Kingdom
 link: https://www.redsemiconductor.com
 level: silver
