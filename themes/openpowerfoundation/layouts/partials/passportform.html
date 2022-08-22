@@ -50,7 +50,8 @@ var goal = "{{ .Site.Params.forms.passport.goal }}";
 		<div class="form-row">
 			{{ range where .Site.RegularPages "Section" "groups" }}
 				<div class="form-group col-lg-6">
-					<input type="checkbox" class="mr-2" id="workgroups" name="workgroups" value="{{ .Title }}" onChange="updateWorkingGroups()">{{ .Title }}<br>
+					<input type="checkbox" class="mr-2" id="workgroups" name="workgroups" value="{{ .Title }}" onChange="updateWorkingGroups()">
+					{{ .Title }} (<i>{{ .Param "Participation" }}</i>)<br>
 				</div>
 			{{ end }}
 			<input type=hidden id="workinggroups" name="workinggroups" value="">
