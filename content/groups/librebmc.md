@@ -5,7 +5,7 @@ image: thumb-6.jpg
 chair:
   - toddrosedahl
   - karolgugala
-participation: 'Public'
+participation: Public
 git: https://git.openpower.foundation/librebmc/
 discussion: https://discuss.openpower.foundation/c/sig/librebmc/
 meetingminutes: https://meetingminutes.openpower.foundation/librebmc/

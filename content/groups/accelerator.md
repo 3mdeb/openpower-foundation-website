@@ -4,7 +4,7 @@ wgtype: twg
 image: thumb-5.jpg
 chair:
   - curtwollbrink
-participation: Member
+participation: Members
 git: https://git.openpower.foundation/accelerator/
 discussion: https://discuss.openpower.foundation/c/twg/accelerator/
 meetingminutes: https://meetingminutes.openpower.foundation/accelerator/

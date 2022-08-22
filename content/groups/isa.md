@@ -4,7 +4,7 @@ wgtype: twg
 image: thumb-5.jpg
 chair:
   - paulmackerras
-participation: 'Members'
+participation: Members
 git: https://git.openpower.foundation/isa/
 discussion: https://discuss.openpower.foundation/c/twg/isa
 meetingminutes: https://meetingminutes.openpower.foundation/isa/

@@ -4,7 +4,7 @@ wgtype: sig
 image: thumb-6.jpg
 chair:
   - lancealbertson
-participation: 'Public'
+participation: Public
 git: https://git.openpower.foundation/hub/
 discussion: https://discuss.openpower.foundation/c/sig/hub/
 meetingminutes: https://meetingminutes.openpower.foundation/hub/

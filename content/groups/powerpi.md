@@ -4,6 +4,7 @@ wgtype: sig
 image: thumb-1.jpg
 chair:
   - alexeystepanov
+participation: Members
 members:
   - ibm
   - yadro
