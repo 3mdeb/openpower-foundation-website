@@ -1,0 +1,39 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<main id="guide" class="guide">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 pr-0 pl-0 text-center">
+			<h1 class="h2 section-header my-3 my-md-5 pb-2">{{ .Title }}</h1>
+		</div>
+	<div>
+	<div class="row">
+		<div class="col-md-12 pt-3 pt-lg-5 pl-0 pl-lg-3 pr-0">
+			<div class="content">{{ .Content }}</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 pt-3 pt-lg-5 pl-0 pl-lg-3 pr-0">
+			<div id="accordion">
+			{{ $i := 0 }}
+			{{ range .Data.Pages.ByWeight }}
+				<div class="card">
+					<div class="card-header" id="heading{{ $i }}">
+						<h5 class="mb-0">
+							<button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{ $i }}" aria-expanded="true" aria-controls="collapse{{ $i }}">
+								{{ .Title }}&nbsp;&nbsp;&nbsp;&#8628;
+							</button>
+						</h5>
+					</div>
+					<div id="collapse{{ $i }}" class="collapse" aria-labelledby="heading{{ $i }}" data-parent="#accordion">
+						<div class="card-body">{{ .Content }}</div>
+					</div>
+				</div>
+			{{ $i = add $i 1 }}
+			{{ end }}
+			</div>
+		</div>
+	</div>
+</div>
+</main>
+{{ partial "footer.html" . }}
