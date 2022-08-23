@@ -1,6 +1,5 @@
 ---
 title: "Contact the OpenPOWER Foundation"
-date: 2021-08-30
 contacts:
   - name: General
     queue: general
@@ -16,6 +15,11 @@ contacts:
     queue: boardofdirectors
   - name: Steering Committee
     queue: steeringcommittee
+alias:
+  - "/contactus/"
+  - "/contact-us/"
+  - "/contact_us/"
+date: 2022-08-23
 draft: false
 ---
 
