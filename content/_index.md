@@ -9,6 +9,8 @@ promo:
   calltoaction:
     - title: Join us
       link: /join/
+    - title: Getting Started
+      link: /guide/gettingstarted/
   image: promobg.png
 articles:
   - header: Open Innovation
