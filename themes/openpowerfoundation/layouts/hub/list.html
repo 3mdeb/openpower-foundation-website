@@ -2,47 +2,58 @@
 {{ partial "navbar.html" . }}
 <main id="main">
 <section id="hubproviders">
-<div id="hubproviders">
-	<div class="container">
-		<div class="section-header mb-4">
-			<h1 class="section-title text-center">{{ .Title }}</h1>
-			<div class="row">
-				<div class="col-8 offset-2">
-					<span class="section-description">{{ .Content }}</span>
-				</div>
+<div class="container">
+	<div class="section-header mb-4">
+		<h1 class="section-title text-center">{{ .Title }}</h1>
+		<div class="row">
+			<div class="col-8 offset-2">
+				<span class="section-description">{{ .Content }}</span>
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<div id="hubproviders" class="row">
-			<div class="col-2"></div>
-			{{ range .Data.Pages }}
-			<div id="hubprovider" class="col-lg-2 text-center">
-			<a href="{{ .RelPermalink }}">
-			{{ if .Param "member" }}
-				{{ $member := .Param "member" }}
-				{{ range where .Site.RegularPages "Section" "members" }}
-					{{ $membercompany := .File.BaseFileName }}
-					{{ if eq $member $membercompany }}
-						{{ if .Param "image" }}
-							{{ $imagename := .Param "image" }}
-							{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
-							{{ $imageresource := resources.Get $imagelocation }}
-							{{ $image := $imageresource.Fit "100x100 webp" }}
-							<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
+	<div class="row" id="list">
+	{{ range .Data.Pages.ByWeight }}
+		<div id="hubprovider" class="col-lg-6 btn">
+			<div class="col-lg-3">
+				<a href="{{ .RelPermalink }}">
+				{{ if .Param "member" }}
+					{{ $member := .Param "member" }}
+					{{ range where .Site.RegularPages "Section" "members" }}
+						{{ $membercompany := .File.BaseFileName }}
+						{{ if eq $member $membercompany }}
+							{{ if .Param "image" }}
+								{{ $imagename := .Param "image" }}
+								{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+								{{ $imageresource := resources.Get $imagelocation }}
+								{{ $image := $imageresource.Fit "100x100 webp" }}
+								<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
+							{{ end }}
 						{{ end }}
 					{{ end }}
 				{{ end }}
-			{{ end }}
-			<br>
-			{{ .Title }}
-			</a>
+				</a>
+				<br>
+				{{ $projects := .Param "projects" }}
+				<ul>
+				{{ range $projects }}
+					<li>{{ . }}</li>
+				{{ end }}
+				</ul>
 			</div>
-			{{ end }}
+			<div class="col-lg-9">
+				<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+				<br>
+				{{ $provides := .Param "provides" }}
+				<ul>
+				{{ range $provides }}
+					<li>{{ . }}</li>
+				{{ end }}
+				</ul>
+			</div>
 		</div>
+	{{ end }}
 	</div>
 </div>
-{{ partial "hubform.html" . }}
 </section>
 </main>
 {{ partial "footer.html" . }}

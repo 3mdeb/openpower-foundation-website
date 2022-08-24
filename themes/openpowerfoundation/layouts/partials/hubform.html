@@ -9,6 +9,7 @@ var goal = "{{ .Site.Params.forms.hub.goal }}";
 <section id="hub">
 <div class="container">	<div class="row wow fadeInUp">
 	<div class="col-lg-8 offset-lg-2 col-md-12 mt-5 mb-5"><div class="form">
+		<div class="col-lg-12 text-center"><h2>HUB Access Request Form</h2></div>
 		<div id="sendmessage" style="display:none">Your request has been sent. Thank you!</div>
 		<div id="errormessage" style="display:none">Error</div>
 		<form role="form" name="hubRequestForm" class="hubRequestForm" id="hubRequestForm" action="" method="post">
@@ -42,20 +43,58 @@ var goal = "{{ .Site.Params.forms.hub.goal }}";
 					<div class="validation"></div>
 				</div>
 			</div>
-			<div><h3>What OpenPOWER resources do you require?</h3></div>
-			<div class="form-row">
-				<div class="form-group col-lg-6">
-				{{ range $hubdata.accesstype }}
-					<input type="checkbox" class="mr-2" id="access" name="access" value="{{ .name }}" onChange="updateTypeOfAccess()">{{ .name }}<br>
-				{{ end }}
+			{{ $projects := .Param "projects" }}
+			{{ if $projects }}
+				<div><h3>What is your project?</h3></div>
+				<div class="form-row">
+					<div class="form-group col-lg-12">
+						<select id="project" name="project">
+						{{ range $projects }}
+							<option value="{{ . }}">{{ . }}</option>
+						{{ end }}
+						</select>
+					</div>
 				</div>
-				<div class="form-group col-lg-6">
-					{{ range $hubdata.additions }}
-						<input type="checkbox" class="mr-2" id="access" name="access" value="{{ .name }}" onChange="updateTypeOfAccess()">{{ .name }}<br>
-					{{ end }}
+			{{ end }}
+			{{ $systems := .Param "systems" }}
+			{{ if $systems }}
+				<div><h3>What POWER system would you like?</h3></div>
+				<div class="form-row">
+					<div class="form-group col-lg-6">
+						<select id="system" name="system">
+						{{ range $systems }}
+							<option value="{{ . }}">{{ . }}</option>
+						{{ end }}
+						</select>
+					</div>
 				</div>
-				<input type="hidden" id="typeofaccess" class="typeofaccess" value="">
-			</div>
+			{{ end }}
+			{{ $provides := .Param "provides" }}
+			{{ if $provides }}
+				<div><h3>What POWER resources do you require?</h3></div>
+				<div class="form-row">
+					<div class="form-group col-lg-6">
+						<select id="provides" name="provides">
+						{{ range $provides }}
+							<option value="{{ . }}">{{ . }}</option>
+						{{ end }}
+						</select>
+					</div>
+				</div>
+			{{ end }}
+			{{ $operatingsystems := .Param "operatingsystems" }}
+			{{ if $operatingsystems }}
+				<div><h3>What Operating System would you like on your POWER resource?</h3></div>
+				<div class="form-row">
+					<div class="form-group col-lg-6">
+						<select id="operatingsystem" name="operatingsystem">
+						{{ range $operatingsystems }}
+							<option value="{{ . }}">{{ . }}</option>
+						{{ end }}
+						</select>
+					</div>
+				</div>
+			{{ end }}
 			<div class="form-group">
 				<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write a short explanation about getting access. (Why, How, Whatfor, how long)" placeholder="Please write a short explanation about getting access. (Why, How, Whatfor, how long)"></textarea>
 				<div class="validation"></div>
@@ -65,12 +104,3 @@ var goal = "{{ .Site.Params.forms.hub.goal }}";
 	</div></div>
 </div></div>
 </section>
-<script>
-function updateTypeOfAccess() {
-	var typeofaccess = [];
-	$('input[id="access"]:checked').each(function() {
-		typeofaccess.push(this.value);
-	});
-	document.getElementById("typeofaccess").value = typeofaccess;
-};
-</script>

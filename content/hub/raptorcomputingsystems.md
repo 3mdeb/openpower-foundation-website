@@ -1,9 +1,20 @@
 ---
-title: "Raptor IntegriCloud"
+title: Raptor IntegriCloud
 member: raptorcomputingsystems
+projects:
+  - Open Source
+  - Closed Source
 provides:
-  - virtual
-  - container
-date: 2020-03-11
+  - Bare Metal Machines
+  - Virtual Machine
+  - Container
+  - FPGA
+systems:
+  - POWER9
+operatingsystems:
+  - Debian
+  - Fedora
+weight: -5000
+date: 2022-08-24
 draft: false
 ---

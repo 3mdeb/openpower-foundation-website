@@ -178,21 +178,30 @@ section#steeringcomittee {
 }
 
 #hubproviders {
-	padding-top: 3.75rem;
+	padding-top: 6.25rem;
+	padding-bottom: 2.75rem;
+	font-size: 18px;
 	#hubprovider {
 		display: flex;
-		align-items: center;
 		min-height: 100px;
 		a {
-			white-space: normal;
-			line-height: 1.2;
-			font-size: 18px;
-			min-width: 100%;
+			text-decoration: underline;
+			font-size: 16px;
+		}
+		ul {
+			list-style: none;
+			font-size: 12px;
+			color: #000;
 		}
 	}
-	form {
-		.form-control {
-			font-size: 14px;
+	#hubprovider:hover {
+		color: $white;
+		background-color: $primary;
+		a {
+			color: $white;
+		}
+		ul {
+			color: $white;
 		}
 	}
 }

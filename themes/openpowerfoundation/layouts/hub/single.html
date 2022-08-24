@@ -9,41 +9,74 @@
 			<span class="section-divider"></span>
 		</div>
 		<div class="row">
-			<div class="col-lg-4 offset-lg-2">
+			<div class="col-lg-4">
 				{{ if .Param "member" }}
-					Provider :
+					Provider :&nbsp;
 					{{ $member := .Param "member" }}
 					{{ range where .Site.RegularPages "Section" "members" }}
 						{{ $membercompany := .File.BaseFileName }}
 						{{ if eq $member $membercompany }}
+							{{ .Title }}
+							{{ if .Param "country" }}
+								&nbsp;({{ .Param "country" }})
+							{{ end }}
+							<br>
 							<a href="{{ .RelPermalink }}">
 							{{ if .Param "image" }}
 								{{ $imagename := .Param "image" }}
 								{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
 								{{ $imageresource := resources.Get $imagelocation }}
-								{{ $image := $imageresource.Fit "100x100" }}
+								{{ $image := $imageresource.Fit "200x200" }}
 								<img src="{{  $image.RelPermalink }}" alt="{{ .Title }}">
 							{{ else }}
 								{{ .Title }}
 							{{ end }}
 							</a>
-							{{ if .Param "country" }}
-								({{ .Param "country" }})
-							{{ end }}
 						{{ end }}
 					{{ end }}
 				{{ end }}
 			</div>
-			<div class="col-lg-4">
-				{{ if .Param "provides" }}
+			{{ if .Param "systems" }}
+				<div class="col-lg-4">
+					POWER Based systems :
+					<ul>
+					{{ range $s := .Param "systems" }}
+						<li>{{ $s }}</li>
+					{{ end }}
+					</ul>
+				</div>
+			{{ end }}
+			{{ if .Param "provides" }}
+				<div class="col-lg-4">
 					Provides following OPF HUB resources :
 					<ul>
 					{{ range $p := .Param "provides" }}
 						<li>{{ $p }}</li>
 					{{ end }}
 					</ul>
-				{{ end }}
-			</div>
+				</div>
+			{{ end }}
+			<div class="col-lg-4">&nbsp;</div>
+			{{ if .Param "operatingsystems" }}
+				<div class="col-lg-4">
+					Operating Systems :
+					<ul>
+					{{ range $s := .Param "operatingsystems" }}
+						<li>{{ $s }}</li>
+					{{ end }}
+					</ul>
+				</div>
+			{{ end }}
+			{{ if .Param "projects" }}
+				<div class="col-lg-4">
+					Project Types :
+					<ul>
+					{{ range $o := .Param "projects" }}
+						<li>{{ $o }}</li>
+					{{ end }}
+					</ul>
+				</div>
+			{{ end }}
 		</div>
 	</div>
 	{{ if .Content }}
