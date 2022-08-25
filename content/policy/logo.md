@@ -14,10 +14,12 @@ The OpenPOWER Marks and logos may only be used by OpenPOWER management and marke
 : {{< image src="policy/opf_usage_guidelines_3.png" >}}
 
 **OpenPOWER Colors**
+
 The OpenPOWER official colors are used for the OpenPOWER management and marketing committee in presentations, media and other external materials of the OpenPOWER Foundation.
 : {{< image src="policy/opf_usage_guidelines_4.png" >}}
 
 **OpenPOWER Visualizations**
+
 OpenPOWER official Visualizations usage of official colors, fonts and designs in presentations, media and other external materials of the OpenPOWER Foundation. 
 : {{< image src="policy/opf_usage_guidelines_5.png" >}}
 
