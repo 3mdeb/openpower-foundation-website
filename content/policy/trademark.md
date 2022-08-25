@@ -1,5 +1,5 @@
 ---
-title: OpenPOWER Ready Trademark
+title: OpenPOWER Trademark
 date: 2022-02-01
 draft: false
 ---
