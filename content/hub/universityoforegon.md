@@ -4,8 +4,12 @@ member: universityoforegon
 projects:
   - Open Source
 provides:
+  - Bare Metal Machine
   - Virtual Machine
   - Container
+  - FPGA
+addons:
+  - none
   - GPU
   - FPGA
 systems:

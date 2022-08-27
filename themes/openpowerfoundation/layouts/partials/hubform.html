@@ -7,8 +7,8 @@ var goal = "{{ .Site.Params.forms.hub.goal }}";
 {{ end }}
 </script>
 <section id="hub">
-<div class="container">	<div class="row wow fadeInUp">
-	<div class="col-lg-8 offset-lg-2 col-md-12 mt-5 mb-5"><div class="form">
+<div class="container"><div class="row wow fadeInUp">
+	<div class="col-lg-12 col-md-12 mt-5 mb-5"><div class="form">
 		<div class="col-lg-12 text-center"><h2>HUB Access Request Form</h2></div>
 		<div id="sendmessage" style="display:none">Your request has been sent. Thank you!</div>
 		<div id="errormessage" style="display:none">Error</div>
@@ -43,58 +43,63 @@ var goal = "{{ .Site.Params.forms.hub.goal }}";
 					<div class="validation"></div>
 				</div>
 			</div>
+			<div class="form-row">
 			{{ $projects := .Param "projects" }}
 			{{ if $projects }}
-				<div><h3>What is your project?</h3></div>
-				<div class="form-row">
-					<div class="form-group col-lg-12">
-						<select id="project" name="project">
-						{{ range $projects }}
-							<option value="{{ . }}">{{ . }}</option>
-						{{ end }}
-						</select>
-					</div>
+				<div class="form-group col-lg-6">
+					What is your project?
+					<select id="project" name="project">
+					{{ range $projects }}
+						<option value="{{ . }}">{{ . }}</option>
+					{{ end }}
+					</select>
 				</div>
 			{{ end }}
 			{{ $systems := .Param "systems" }}
 			{{ if $systems }}
-				<div><h3>What POWER system would you like?</h3></div>
-				<div class="form-row">
-					<div class="form-group col-lg-6">
-						<select id="system" name="system">
-						{{ range $systems }}
-							<option value="{{ . }}">{{ . }}</option>
-						{{ end }}
-						</select>
-					</div>
+				<div class="form-group col-lg-6">
+					What POWER system would you like?
+					<select id="system" name="system">
+					{{ range $systems }}
+						<option value="{{ . }}">{{ . }}</option>
+					{{ end }}
+					</select>
 				</div>
 			{{ end }}
 			{{ $provides := .Param "provides" }}
 			{{ if $provides }}
-				<div><h3>What POWER resources do you require?</h3></div>
-				<div class="form-row">
-					<div class="form-group col-lg-6">
-						<select id="provides" name="provides">
-						{{ range $provides }}
-							<option value="{{ . }}">{{ . }}</option>
-						{{ end }}
-						</select>
-					</div>
+				<div class="form-group col-lg-6">
+					What POWER resources do you require?
+					<select id="provides" name="provides">
+					{{ range $provides }}
+						<option value="{{ . }}">{{ . }}</option>
+					{{ end }}
+					</select>
+				</div>
+			{{ end }}
+			{{ $addons := .Param "addons" }}
+			{{ if $addons }}
+				<div class="form-group col-lg-6">
+					What POWER addons do you require?
+					<select id="addons" name="addons">
+					{{ range $addons }}
+						<option value="{{ . }}">{{ . }}</option>
+					{{ end }}
+					</select>
 				</div>
 			{{ end }}
 			{{ $operatingsystems := .Param "operatingsystems" }}
 			{{ if $operatingsystems }}
-				<div><h3>What Operating System would you like on your POWER resource?</h3></div>
-				<div class="form-row">
-					<div class="form-group col-lg-6">
-						<select id="operatingsystem" name="operatingsystem">
-						{{ range $operatingsystems }}
-							<option value="{{ . }}">{{ . }}</option>
-						{{ end }}
-						</select>
-					</div>
+				<div class="form-group col-lg-12">
+					What Operating System would you like on your POWER resource?
+					<select id="operatingsystem" name="operatingsystem">
+					{{ range $operatingsystems }}
+						<option value="{{ . }}">{{ . }}</option>
+					{{ end }}
+					</select>
 				</div>
 			{{ end }}
+			</div>
 			<div class="form-group">
 				<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write a short explanation about getting access. (Why, How, Whatfor, how long)" placeholder="Please write a short explanation about getting access. (Why, How, Whatfor, how long)"></textarea>
 				<div class="validation"></div>

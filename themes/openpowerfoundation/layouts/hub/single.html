@@ -57,12 +57,12 @@
 				</div>
 			{{ end }}
 			<div class="col-lg-4">&nbsp;</div>
-			{{ if .Param "operatingsystems" }}
+			{{ if .Param "addons" }}
 				<div class="col-lg-4">
-					Operating Systems :
+					Resource Addons :
 					<ul>
-					{{ range $s := .Param "operatingsystems" }}
-						<li>{{ $s }}</li>
+					{{ range $a := .Param "addons" }}
+						<li>{{ $a }}</li>
 					{{ end }}
 					</ul>
 				</div>
@@ -73,6 +73,17 @@
 					<ul>
 					{{ range $o := .Param "projects" }}
 						<li>{{ $o }}</li>
+					{{ end }}
+					</ul>
+				</div>
+			{{ end }}
+			<div class="col-lg-4">&nbsp;</div>
+			{{ if .Param "operatingsystems" }}
+				<div class="col-lg-8 operatingsystems">
+					Operating Systems :
+					<ul class="operatingsystems">
+					{{ range $s := .Param "operatingsystems" }}
+						<li class="operatingsystems">{{ $s }}</li>
 					{{ end }}
 					</ul>
 				</div>

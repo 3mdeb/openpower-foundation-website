@@ -9,6 +9,9 @@ provides:
   - Virtual Machine
   - Container
   - FPGA
+addons:
+  - none
+  - FPGA
 systems:
   - POWER9
 operatingsystems:

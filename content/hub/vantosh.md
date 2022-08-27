@@ -8,7 +8,11 @@ provides:
   - Virtual Machines
   - FPGA
   - Containers
-  - LibreBMC
+addons:
+  - none
+  - GPU (vm)
+  - FPGA (vm)
+  - LibreBMC (POWER9)
 systems:
   - POWER9
   - POWER8

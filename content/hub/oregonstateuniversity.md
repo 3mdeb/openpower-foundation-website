@@ -7,8 +7,10 @@ provides:
   - Bare Metal
   - Virtual Machine
   - Container
-  - GPU
-  - FPGA
+addons:
+  - none
+  - GPU (vm)
+  - FPGA (container)
 systems:
   - POWER9
   - POWER8
