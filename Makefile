@@ -49,4 +49,5 @@ servedraft:
 .PHONY: clean
 clean:
 	@rm -rf public/
+	@rm -rf builds/
 	@rm -rf resources/

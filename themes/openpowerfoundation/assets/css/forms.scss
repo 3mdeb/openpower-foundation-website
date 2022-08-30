@@ -26,6 +26,57 @@
 	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);   -webkit-appearance: button;   appearance: button;   outline: none;
 }
 
+#isarfc .form #sendmessage {
+	color: #2566f4;
+	border: 2px solid #008800;
+	display: none;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+#isarfc .form #errormessage {
+	color: #ff0000;
+	display: none;
+	border: 2px solid #880000;
+	text-align: center;
+	padding: 15px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+#isarfc .form #sendmessage.show,
+#isarfc .form #errormessage.show,
+#isarfc .form .show {
+	display: block;
+}
+#isarfc .form .validation {
+	color: #880000;
+	display: none;
+	margin: 0 0 20px;
+	font-weight: 400;
+	font-size: 13px;
+}
+#isarfc .form input, #contact .form textarea {
+	border-radius: 0;
+	box-shadow: none;
+	font-size: 14px;
+}
+#isarfc .form button[type="submit"] {
+	background: #2566f4;
+	border: 0;
+	border-radius: 2rem;
+	padding: 1rem 5rem 1rem 5rem;
+	color: #ffffff;
+}
+#isarfc .form button[type="submit"]:hover {
+	background: #000000;
+	cursor: pointer;
+}
+#isarfc .comment {
+	color: #666666;
+	font-style: italic;
+}
+
 #passport .form #sendmessage {
 	color: #2566f4;
 	border: 2px solid #008800;
@@ -72,6 +123,7 @@
 	background: #000000;
 	cursor: pointer;
 }
+
 
 .member-value,
 .member-list {
