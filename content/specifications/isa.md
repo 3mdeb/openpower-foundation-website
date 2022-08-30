@@ -2,6 +2,13 @@
 title: "Instruction Set Architecture"
 group: isa
 publicreview: false
+feedback:
+  - title: Request For Change Feedback for "non ISA TWG members"
+    description: "This feedback process uses the RFC method, which we divide in 3 types : _minor changes_, _formal proposal_, or _RFC_."
+    url: /isarfc/
+  - title: Request for Change Feedback for "ISA TWG members"
+    description: "Members can provide feedback using OPF Git directly, or the above form."
+    url: https://git.openpower.foundation/isa/PowerISA
 aliases:
   - "powerisa/"
   - "power31/"

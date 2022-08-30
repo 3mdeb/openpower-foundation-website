@@ -36,8 +36,16 @@
 {{ end }}
 <div class="row">
 	<div class="col-lg-3"></div>
-	<div class="col-lg-6 content wow fadeInTop">
-		<p>{{ .Content }}</p>
+	<div class="col-lg-6 content">
+		<div><p>{{ .Content }}</p></div>
+		{{ if .Param "feedback"}}
+			{{ range $feedback := (.Param "feedback") }}
+				<a href="{{ $feedback.url }}"><div class="feedback btn btn-outline-primary">
+					<h3>{{ $feedback.title }}</h3>
+					{{ $feedback.description | markdownify }}
+				</div></a><br><br>
+			{{ end }}
+		{{ end }}
 	</div>
 	<div class="col-lg-3">
 	{{ if .Param "group" }}
