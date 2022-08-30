@@ -23,8 +23,9 @@ date: 2021-08-30
 draft: false
 ---
 
-The Power Instruction Set Architecture (ISA) Version is a specification that describes the architecture used for the IBM POWER processor.  
-It defines the instructions the processors execute.  
+The Power Instruction Set Architecture (ISA) Version is a specification that describes the architecture used by POWER processors.  
+It defines the instructions the processor executes.  
+
 It is comprised of three books and a set of appendices.  
 - Book I
   - Power ISA User Instruction Set Architecture, covers the base instruction set and related facilities available to the application programmer.
