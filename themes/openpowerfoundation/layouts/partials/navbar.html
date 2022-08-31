@@ -104,4 +104,11 @@
 		</div>
 	</div>
 </div>
+{{ if .Site.Menus.headlines }}
+<div class="headline"><p>
+{{ range .Site.Menus.headlines }}
+	&nbsp;&nbsp;<a href="{{ .URL }}">{{ .Name }}</a>&nbsp;&nbsp;
+{{ end }}
+</p></div>
+{{ end }}
 </header>
