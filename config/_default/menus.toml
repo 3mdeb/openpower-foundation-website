@@ -192,9 +192,3 @@
 	pre = "fab fa-weixin"
 	url = "http://weixin.qq.com/r/2DrD20PEWx4krQe492-K"
 	weight = -1600
-
-
-### headlines
-[[headlines]]
-	name = "OpenPOWER Summit 2022 Call-for-Presentations"
-	url = "https://cfp.openpower.foundation/openpowersummit2022/cfp"
