@@ -6,12 +6,12 @@ var goal = "{{ .Site.Params.forms.isarfc.goal }}";
 {{ end }}
 </script>
 <section id="isarfc">
-<div class="container"><div class="row wow fadeInUp">
+<div class="container"><div class="row">
 	<div class="col-lg-8 offset-lg-2 col-md-12"><div class="form">
 	<form role="form" name="isarfcForm" class="isarfcForm" id="isarfcForm" action="" method="post">
 		<div class="form-row">
 			<div class="form-group col-lg-12">
-				<input type="text" class="form-control" name="uid" id="uid" placeholder="Your First and Last Name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" />
+				<input type="text" class="form-control" name="name" id="name" placeholder="Your First and Last Name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" />
 				<div class="validation"></div>
 			</div>
 		</div>
@@ -39,15 +39,15 @@ var goal = "{{ .Site.Params.forms.isarfc.goal }}";
 		</div>
 		<div class="form-row text-center">
 			<div class="form-group col-lg-4">
-				<input type="radio" class="mr-2" id="minorcorrection" name="minnorcorrection" value="Minor Correction">Minor Correction<br>
+				<input type="radio" class="mr-2" id="requesttype" name="requesttype" value="Minor Correction">Minor Correction<br>
 				<span class="comment">For minor changes, please send a diff or a git am patch file.</span>
 			</div>
 			<div class="form-group col-lg-4">
-				<input type="radio" class="mr-2" id="formalproposal" name="formalproposal" value="Formal Proposal">Formal Proposal<br>
+				<input type="radio" class="mr-2" id="requesttype" name="requesttype" value="Formal Proposal">Formal Proposal<br>
 				<span class="comment">Please send your proposal including a summary and some use cases.</span>
 			</div>
 			<div class="form-group col-lg-4">
-				<input type="radio" class="mr-2" id="rfc" name="rfc" value="RFC">RFC<br>
+				<input type="radio" class="mr-2" id="requestype" name="requesttype" value="Detailed RFC">Detailed RFC<br>
 				<span class="comment">Please send the patch/diff files and the change document, including a short presentation why this is relevant.</span>
 			</div>
 		</div>
@@ -62,7 +62,9 @@ var goal = "{{ .Site.Params.forms.isarfc.goal }}";
 		</div>
 		<div class="form-row">
 			<div class="form-group col-lg-12">
-				RFC File upload : <input type="file" name="rfcfile" id="rfcfile" class="file" placeholder="Add your RFC file"><br>
+				RFC File upload : <input type="file" name="rfcfile" id="rfcfile" class="file" placeholder="Add your RFC file" onChange="getFileContents()"><br>
+				<input type="hidden" name="rfcfilename" id="rfcfilename" value="RFC File">
+				<input type="hidden" name="rfcfilecontent" id="rfcfilecontent" value="">
 				<span class="comment">Acceptable file formats : text, PDF, LaTeX, patch, diff, tar, zip, xz, bz2, gz</span>
 			</div>
 		</div>
@@ -94,3 +96,13 @@ var goal = "{{ .Site.Params.forms.isarfc.goal }}";
 	</div></div>
 </div>
 </section>
+<script>
+function getFileContents() {
+	const reader = new FileReader()
+	reader.onload = handleFileLoad;
+	reader.readAsText(event.target.files[0])
+}
+function handleFileLoad(event) {
+	document.getElementById('rfcfilecontent').value = event.target.result;
+}
+</script>
