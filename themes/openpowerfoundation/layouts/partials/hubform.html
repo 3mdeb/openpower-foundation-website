@@ -7,12 +7,14 @@ var goal = "{{ .Site.Params.forms.hub.goal }}";
 {{ end }}
 </script>
 <section id="hub">
-<div class="container"><div class="row wow fadeInUp">
+<div class="container"><div class="row">
 	<div class="col-lg-12 col-md-12 mt-5 mb-5"><div class="form">
 		<div class="col-lg-12 text-center"><h2>HUB Access Request Form</h2></div>
 		<div id="sendmessage" style="display:none">Your request has been sent. Thank you!</div>
 		<div id="errormessage" style="display:none">Error</div>
 		<form role="form" name="hubRequestForm" class="hubRequestForm" id="hubRequestForm" action="" method="post">
+			<input type="hidden" name="providercode" id="providercode" value="{{ .File.BaseFileName }}">
+			<input type="hidden" name="providername" id="providername" value="{{ .Title }}">
 			<div class="form-row">
 				<div class="form-group col-lg-6">
 					<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" />
@@ -44,61 +46,66 @@ var goal = "{{ .Site.Params.forms.hub.goal }}";
 				</div>
 			</div>
 			<div class="form-row">
-			{{ $projects := .Param "projects" }}
-			{{ if $projects }}
+				{{ $projects := .Param "projects" }}
+				{{ if $projects }}
+					<div class="form-group col-lg-6">
+						What is your project?
+						<select id="projecttype" name="projecttype">
+						{{ range $projects }}
+							<option value="{{ . }}">{{ . }}</option>
+						{{ end }}
+						</select>
+					</div>
+				{{ end }}
+				{{ $systems := .Param "systems" }}
+				{{ if $systems }}
+					<div class="form-group col-lg-6">
+						What POWER system would you like?
+						<select id="system" name="system">
+						{{ range $systems }}
+							<option value="{{ . }}">{{ . }}</option>
+						{{ end }}
+						</select>
+					</div>
+				{{ end }}
+				{{ $provides := .Param "provides" }}
+				{{ if $provides }}
+					<div class="form-group col-lg-6">
+						What POWER resources do you require?
+						<select id="provides" name="provides">
+						{{ range $provides }}
+							<option value="{{ . }}">{{ . }}</option>
+						{{ end }}
+						</select>
+					</div>
+				{{ end }}
+				{{ $addons := .Param "addons" }}
+				{{ if $addons }}
+					<div class="form-group col-lg-6">
+						What POWER addons do you require?
+						<select id="addons" name="addons">
+						{{ range $addons }}
+							<option value="{{ . }}">{{ . }}</option>
+						{{ end }}
+						</select>
+					</div>
+				{{ end }}
+				{{ $operatingsystems := .Param "operatingsystems" }}
+				{{ if $operatingsystems }}
+					<div class="form-group col-lg-6">
+						What Operating System would you like on your POWER resource?
+						<select id="operatingsystem" name="operatingsystem">
+						{{ range $operatingsystems }}
+							<option value="{{ . }}">{{ . }}</option>
+						{{ end }}
+						</select>
+						</div>
+				{{ end }}
 				<div class="form-group col-lg-6">
-					What is your project?
-					<select id="project" name="project">
-					{{ range $projects }}
-						<option value="{{ . }}">{{ . }}</option>
-					{{ end }}
-					</select>
+					SSH Public Key File Upload : <input type="file" name="sshpubkeyupload" id="sshpubkeyupload" class="file" placeholder="Select your Public SSH Key File" onChange="getFileContents()" accept=".pub"><br>
+					<input type="hidden" name="sshpubkey" id="sshpubkey" value="">
+					<span class="comment">Please only add your public ssh key file (ending on <u>.pub</u>)</span>
 				</div>
-			{{ end }}
-			{{ $systems := .Param "systems" }}
-			{{ if $systems }}
-				<div class="form-group col-lg-6">
-					What POWER system would you like?
-					<select id="system" name="system">
-					{{ range $systems }}
-						<option value="{{ . }}">{{ . }}</option>
-					{{ end }}
-					</select>
-				</div>
-			{{ end }}
-			{{ $provides := .Param "provides" }}
-			{{ if $provides }}
-				<div class="form-group col-lg-6">
-					What POWER resources do you require?
-					<select id="provides" name="provides">
-					{{ range $provides }}
-						<option value="{{ . }}">{{ . }}</option>
-					{{ end }}
-					</select>
-				</div>
-			{{ end }}
-			{{ $addons := .Param "addons" }}
-			{{ if $addons }}
-				<div class="form-group col-lg-6">
-					What POWER addons do you require?
-					<select id="addons" name="addons">
-					{{ range $addons }}
-						<option value="{{ . }}">{{ . }}</option>
-					{{ end }}
-					</select>
-				</div>
-			{{ end }}
-			{{ $operatingsystems := .Param "operatingsystems" }}
-			{{ if $operatingsystems }}
-				<div class="form-group col-lg-12">
-					What Operating System would you like on your POWER resource?
-					<select id="operatingsystem" name="operatingsystem">
-					{{ range $operatingsystems }}
-						<option value="{{ . }}">{{ . }}</option>
-					{{ end }}
-					</select>
-				</div>
-			{{ end }}
 			</div>
 			<div class="form-group">
 				<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write a short explanation about getting access. (Why, How, Whatfor, how long)" placeholder="Please write a short explanation about getting access. (Why, How, Whatfor, how long)"></textarea>
@@ -109,3 +116,14 @@ var goal = "{{ .Site.Params.forms.hub.goal }}";
 	</div></div>
 </div></div>
 </section>
+<script>
+function getFileContents() {
+	const reader = new FileReader()
+	reader.onload = handleFileLoad;
+	reader.readAsText(event.target.files[0])
+}
+function handleFileLoad(event) {
+	document.getElementById('sshpubkey').value = event.target.result;
+}
+</script>
+
