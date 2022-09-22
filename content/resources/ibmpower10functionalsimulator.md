@@ -1,6 +1,6 @@
 ---
 title: IBM POWER10 Functional Simulator
-link: https://www14.software.ibm.com/webapp/set2/sas/f/pwrfs/pwr10/home.html
+link: https://www.ibm.com/support/pages/node/6491145
 tags:
   - power10
   - simulator

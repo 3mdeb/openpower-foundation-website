@@ -1,13 +1,13 @@
 ---
 title: IBM POWER9 Functional Simulator
-link: https://www14.software.ibm.com/webapp/set2/sas/f/pwrfs/pwr9/home.html
+link: https://www.ibm.com/support/pages/node/6491149
 tags:
   - power9
   - simulator
   - cpu
   - processor
   - isa
-date: 2022-01-09
+date: 2022-09-22
 draft: false
 ---
 

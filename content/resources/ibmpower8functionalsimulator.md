@@ -1,6 +1,6 @@
 ---
 title: IBM POWER8 Functional Simulator
-link: https://www14.software.ibm.com/webapp/set2/sas/f/pwrfs/home.html
+link: https://www.ibm.com/support/pages/node/6491151
 tags:
   - power8
   - simulator
