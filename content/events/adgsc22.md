@@ -1,5 +1,5 @@
 ---
-title: "Super Computing 22 OpenPOWER ADG Workshop"
+title: "OpenPOWER ADG Workshop"
 eventdates:
   from: 2022-11-12
 eventplace: "Dallas, Texas, USA"
@@ -9,7 +9,7 @@ register: https://registration.openpower.foundation/academic/ADGSC22/
 #recordings:
 #sponsors:
 #  -
-date: 2022-08-26
+date: 2022-10-09
 draft: false
 ---
 
