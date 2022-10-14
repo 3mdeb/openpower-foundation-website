@@ -1,5 +1,5 @@
 ---
-title: "OpenPOWER ADG Workshop"
+title: "OpenPOWER Academic BoF Workshop"
 eventdates:
   from: 2022-11-12
 eventplace: "Dallas, Texas, USA"
