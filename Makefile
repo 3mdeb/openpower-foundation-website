@@ -28,7 +28,7 @@ build-staging:
 
 .PHONY: test
 test: clean
-	$(HUGO) --environment=development --minify
+	$(HUGO) --environment=development --minify --templateMetrics --templateMetricsHints --memstats hug_mem_log
 
 .PHONY: draft
 draft:
@@ -40,11 +40,11 @@ debug:
 
 .PHONY: serve
 serve:
-	$(HUGO) server --environment=development --port 1314 --noHTTPCache --disableFastRender --watch
+	$(HUGO) server --environment=development --port 1314 --watch --noHTTPCache --disableFastRender
 
 .PHONY: servedraft
 servedraft:
-	$(HUGO) server --environment=development --buildFuture --buildExpired --noHTTPCache --disableFastRender --watch
+	$(HUGO) server --environment=development --port 1314 --watch --noHTTPCache --disableFastRender --buildDrafts --buildFuture --buildExpired
 
 .PHONY: clean
 clean:
