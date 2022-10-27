@@ -10,7 +10,7 @@ register: https://registration.openpower.foundation/summit/2022/
 #sponsors:
 #  -
 date: 2022-07-13
-draft: false
+draft: true
 ---
 
 The OpenPOWER Foundation will be holding the yearly Summit for 2022 on __Thursday 10 November 2022__.  
