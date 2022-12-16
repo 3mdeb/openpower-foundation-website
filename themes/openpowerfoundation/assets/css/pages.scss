@@ -284,3 +284,23 @@ section#steeringcomittee {
 	padding-top: 3.75rem;
 	padding-bottom: 1.75rem;
 }
+
+.blog-entry {
+	padding-top: 7.00rem;
+	padding-bottom: 1.75rem;
+	h1 {
+		font-size: 2rem;
+		font-style: bold;
+		text-decoration: underline;
+	}
+	h2 {
+		font-size: 1rem;
+		font-style: italic;
+	}
+	h3 {
+		font-size: 1rem;
+	}
+	.tags {
+		color: #888888;
+	}
+}

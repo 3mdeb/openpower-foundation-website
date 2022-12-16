@@ -1,13 +1,17 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
-<main class="main">
+<main class="blog-entry">
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 text-center">
-			<h1 class="h2 section-header my-3 my-md-5 pb-0">{{ .Title }}</h1>
+			<h1 class="h2 section-header pb-0">{{ .Title }}</h1>
+			{{ if .Params.author }}
+				<h2>Author : {{ .Params.author }}</h2>
+			{{ end }}
 			<h3>Published on {{ .Date.Format "Monday 2 January 2006" }}</h3>
 		</div>
 	</div>
+	<div class="row"><hr></div>
 	<div class="row">
 		<div class="col-md-2">&nbsp;</div>
 		<div class="col-md-8 text-left">
@@ -15,16 +19,17 @@
 		</div>
 		<div class="col-md-2">&nbsp;</div>
 	</div>
+	<div class="row"><hr></div>
 </div>
 {{ if .Params.tags }}
 {{ $tags := .Params.tags }}
 <div class="row">
 	<div class="col-lg-3"></div>
-	<div class="col-lg-6 text-center">
+	<div class="col-lg-6 text-center tags">
 	{{ if not (eq (len $.Site.Taxonomies.tags) 0) }}
 		{{ $fontUnit := "rem" }}
-		{{ $largestFontSize := 3.5 }}
-		{{ $smallestFontSize := 0.5 }}
+		{{ $largestFontSize := 2.25 }}
+		{{ $smallestFontSize := 0.25 }}
 		{{ $fontSpread := sub $largestFontSize $smallestFontSize }}
 		{{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
 		{{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
@@ -45,6 +50,7 @@
 	{{ end }}
 	</div>
 	<div class="col-lg-3"></div>
+</div>
 {{ end }}
 </main>
 {{ partial "footer.html" . }}

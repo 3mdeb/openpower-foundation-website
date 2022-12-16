@@ -30,6 +30,9 @@
 			<a class="post__title btn btn-outline-primary" href="{{ .RelPermalink }}">
 				{{ .Title }}
 				<br>
+				{{ if .Params.author }}
+					<i>Written by {{ .Params.author }}&nbsp;-&nbsp;</i>
+				{{ end }}
 				<i>Published on {{ .Date.Format "Monday 2 January 2006" }}</i>
 			</a>
 		</article>
