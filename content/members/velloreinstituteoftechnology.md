@@ -1,3 +1,4 @@
+---
 title: "Vellore Institute of Technology"
 image: "velloreinstituteoftechnology.jpg"
 link: https://vit.ac.in/
