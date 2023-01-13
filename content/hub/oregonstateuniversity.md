@@ -13,7 +13,6 @@ addons:
   - FPGA (container)
 systems:
   - POWER9
-  - POWER8
 operatingsystems:
   - CentOS
   - Ubuntu
