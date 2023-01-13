@@ -17,14 +17,16 @@ systems:
   - POWER9
   - POWER8
 operatingsystems:
-  - PowerEL
-  - FreeBSD
-  - AlmaLinux
-  - Rocky Linux
-  - CentOS
-  - Ubuntu
-  - Debian
-  - OpenBSD
+  - PowerEL 9
+  - PowerEL 7
+  - FreeBSD 13
+  - AlmaLinux 9
+  - Rocky Linux 9
+  - CentOS Stream 9
+  - CentOS Linux 7
+  - Ubuntu LTS
+  - Debian 11
+  - OpenBSD 7
 weight: -6000
 date: 2022-08-24
 draft: false
