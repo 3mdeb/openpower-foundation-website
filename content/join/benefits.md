@@ -1,7 +1,7 @@
 ---
 title: 'Membership Benefits'
 date: 2021-07-17
-draft: false
+draft: true
 ---
 
 Anyone may participate in OpenPOWER.

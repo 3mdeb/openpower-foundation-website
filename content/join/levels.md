@@ -11,18 +11,37 @@ The OpenPOWER Foundation is a 501c6 not-for-profit entity with a Board of Direct
   The Bylaws detail additional governance by the Board including maximum seats, terms, etc.
 - The Technical Steering Committee is formed from the Work Group Leads from the core projects and one representative designated by each Platinum member.
 
-OpenPOWER offers a tiered membership of Platinum, Gold, Silver, and Associate/Academic memberships
+OpenPOWER offers a tiered membership of Titanium, Platinum, Gold, Silver, Iron, Associate, Academic and Individual memberships
+The Academic level is only available to academic institutes.
+The Associate and Individual levels are not available to corporations.  
 
-- Annual fee and dedicated full-time equivalent (FTEs) – verification of committed number of FTEs on honor system
-- Contributors, committers, Work Group leads and project leads influence Technical Steering Committee
-- Associate/Academic level is not available to corporations
+Anyone may participate in OpenPOWER.
+Membership levels are designed for those who are investing in growing and enhancing the OpenPOWER community and its proliferation within the industry.  
 
+| OpenPOWER Foundation Membership Matrix                     | Individual | Associate  | Academic  | Tin     | Copper   | Bronze  | Silver   | Gold      | Platinum  | Titanium  |
+|------------------------------------------------------------|------------|------------|-----------|---------|----------|---------|----------|-----------|-----------|-----------|
+| Maximum Number of Employees Wordwide                       | -          | -          | {{<inf>}} | 10      | 25       | 50      | 250      | 500       | {{<inf>}} | {{<inf>}} |
+| Number of OPF Passports                                    | 1          | 10         | {{<inf>}} | 1       | 5        | 10      | 100      | 500       | {{<inf>}} | {{<inf>}} |
+| Public Working Group Participation                         | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| All Member Working Group Participation                     | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Premium Working Group Participation                        | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Marketing Committee Chair                                  | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<x>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Technical Steering Committee Chair                         | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Board of Directors Participation                           | {{<x>}}    | {{<v>}}    | 1 plnv    | {{<x>}} | {{<x>}}  | 1 plv   |  1 plv   |  2 plv    | 3 plv     | 1 pm      |
+| Access to Public Specifications                            | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Access to Draft Specifications                             | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Access to In Development Specifications                    | {{<x>}}    | {{<v>}}    | {{<v>}}   | {{<x>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| OpenPOWER Ready Trademark Usage                            | {{<x>}}    | {{<v>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Petition TSC to create a new workgroup or project          | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Member logo listed on the website                          | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Member logo featured on the website homepage               | {{<x>}}    | {{<x>}}    | {{<x>}}   | {{<x>}} | {{<x>}}  | {{<x>}} | {{<x>}}  | {{<x>}}   | {{<x>}}   | {{<v>}}   |
+|                                                            | free       | free       | free      | $500    | $2.5k    | $5k     | $25k     | $50k      | $75k      | $100k     |
 
-| Membership Level | Annual Fee | FTEs | Technical Steering Committee                  | Board/Voting Position                          |
-|------------------|------------|------|-----------------------------------------------|------------------------------------------------|
-| Platinum         | $100k      | 10 | One seat per member not otherwise represented | Includes Board position, includes TSC position |
-| Gold             | $60k       | 3  | May be on TSC if Work Group lead              | Gold members may elect up to one BOD member per three Gold members |
-| Silver           | $20k<br>$5k if <300 employees<br>$0 if < 300 employees and an Independent Software Vendor (ISV) or for Open Source Community Projects 										| 0    | May be on TSC if Work Group lead              | One board seat elected by all Silver members   |
-| Associate and Academic | $0  | 0 | May be on TSC if Work Group lead | May be elected to one community observer, non-voting Board seat |
-
-<span style="font-size: 10px;">Fee in US dollars</span>
+<span style="font-size: 10px;">
+PLNV : Per Level Non Voting
+PLV : Per Level Voting
+PM : Per Member
+Fee in US dollars.
+The information in this chart is subject to change by OpenPOWER Foundation without notice.
+The Bylaws of OpenPOWER Foundation set forth the terms of membership and shall take precedence over any other information regarding membership.  
+</span>
