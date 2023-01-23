@@ -35,13 +35,16 @@ Membership levels are designed for those who are investing in growing and enhanc
 | Petition TSC to create a new workgroup or project          | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Member logo listed on the website                          | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Member logo featured on the website homepage               | {{<x>}}    | {{<x>}}    | {{<x>}}   | {{<x>}} | {{<x>}}  | {{<x>}} | {{<x>}}  | {{<x>}}   | {{<x>}}   | {{<v>}}   |
-|                                                            | free       | free       | free      | $500    | $2.5k    | $5k     | $25k     | $50k      | $75k      | $100k     |
+|                                                            | free       | $500(*)    | $500(**)  | $500    | $2.5k    | $5k     | $25k     | $50k      | $75k      | $100k     |
 
-<span style="font-size: 10px;">
-PLNV : Per Level Non Voting
-PLV : Per Level Voting
-PM : Per Member
-Fee in US dollars.
-The information in this chart is subject to change by OpenPOWER Foundation without notice.
-The Bylaws of OpenPOWER Foundation set forth the terms of membership and shall take precedence over any other information regarding membership.  
+<span style="font-size: 10px; line-height: 10px;">
+* Associate : free for opem source foundation<br>
+* Associate : free for mutual foundations membership<br>
+** Academic : free for academic institutes providing POWER curriculum<br>
+PLNV : Per Level Non Voting<br>
+PLV : Per Level Voting<br>
+PM : Per Member<br>
+Fee in US dollars.<rb>
+The information in this chart is subject to change by OpenPOWER Foundation without notice.<br>
+The Bylaws of OpenPOWER Foundation set forth the terms of membership and shall take precedence over any other information regarding membership.<br>
 </span>
