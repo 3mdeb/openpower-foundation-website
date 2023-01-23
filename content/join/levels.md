@@ -26,8 +26,10 @@ Membership levels are designed for those who are investing in growing and enhanc
 | All Member Working Group Participation                     | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Premium Working Group Participation                        | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Marketing Committee Chair                                  | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<x>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Marketing Committee Participation                          | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Technical Steering Committee Chair                         | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
-| Board of Directors Participation                           | {{<x>}}    | {{<x>}}    | 1 plnv    | {{<x>}} | {{<x>}}  | 1 plv   |  1 plv   |  2 plv    | 3 plv     | 1 pm      |
+| Technical Steering Committee Participation                 | {{<x>}}    | {{<x>}}    | IWGLV     | IWGLNV  | IWGLV    | IWGLV   | IWGLV    | IWGLV     | 1 plvwg   | 1 pmvwg   |
+| Board of Directors Participation                           | {{<x>}}    | {{<x>}}    | 1 plnv    | {{<x>}} | {{<x>}}  | 1 plv   |  1 plv   |  2 plv    | 3 plv     | 1 pmv     |
 | Access to Public Specifications                            | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Access to Draft Specifications                             | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Access to In Development Specifications                    | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
@@ -42,6 +44,10 @@ Membership levels are designed for those who are investing in growing and enhanc
 * Associate : free for opem source foundation<br>
 * Associate : free for mutual foundations membership<br>
 ** Academic : free for academic institutes providing POWER curriculum<br>
+IWGLNV : If Working Group Lead with No Voting rights<br>
+IWGLV : If Working Group Lead with Voting rights<br>
+PLVWG : Per Level Voting, if not represented by Working Group Lead<br>
+PMVWG : Per Member Voting, if not represented by Working Group Lead<br>
 PLNV : Per Level Non Voting<br>
 PLV : Per Level Voting<br>
 PM : Per Member<br>
