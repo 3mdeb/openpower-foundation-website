@@ -27,14 +27,15 @@ Membership levels are designed for those who are investing in growing and enhanc
 | Premium Working Group Participation                        | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Marketing Committee Chair                                  | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<x>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Technical Steering Committee Chair                         | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
-| Board of Directors Participation                           | {{<x>}}    | {{<v>}}    | 1 plnv    | {{<x>}} | {{<x>}}  | 1 plv   |  1 plv   |  2 plv    | 3 plv     | 1 pm      |
+| Board of Directors Participation                           | {{<x>}}    | {{<x>}}    | 1 plnv    | {{<x>}} | {{<x>}}  | 1 plv   |  1 plv   |  2 plv    | 3 plv     | 1 pm      |
 | Access to Public Specifications                            | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Access to Draft Specifications                             | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
-| Access to In Development Specifications                    | {{<x>}}    | {{<v>}}    | {{<v>}}   | {{<x>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Access to In Development Specifications                    | {{<x>}}    | {{<x>}}    | {{<v>}}   | {{<x>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | OpenPOWER Ready Trademark Usage                            | {{<x>}}    | {{<v>}}    | {{<v>}}   | {{<x>}} | {{<x>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Petition TSC to create a new workgroup or project          | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
-| Member logo listed on the website                          | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
+| Member logo listed on the website member page              | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Member logo featured on the website homepage               | {{<x>}}    | {{<x>}}    | {{<x>}}   | {{<x>}} | {{<x>}}  | {{<x>}} | {{<x>}}  | {{<x>}}   | {{<x>}}   | {{<v>}}   |
+| Press releases with OpenPOWER Foundation                   | {{<x>}}    | {{<x>}}    | {{<x>}}   | {{<x>}} | {{<x>}}  | {{<x>}} | 1 py     |  2py      |  4py      | 8py       |
 |                                                            | free       | $500(*)    | $500(**)  | $500    | $2.5k    | $5k     | $25k     | $50k      | $75k      | $100k     |
 
 <span style="font-size: 10px; line-height: 10px;">
@@ -44,7 +45,8 @@ Membership levels are designed for those who are investing in growing and enhanc
 PLNV : Per Level Non Voting<br>
 PLV : Per Level Voting<br>
 PM : Per Member<br>
-Fee in US dollars.<rb>
+PY : Per Year<br>
+Fee in US dollars.<br>
 The information in this chart is subject to change by OpenPOWER Foundation without notice.<br>
 The Bylaws of OpenPOWER Foundation set forth the terms of membership and shall take precedence over any other information regarding membership.<br>
 </span>
