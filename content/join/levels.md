@@ -38,12 +38,9 @@ Membership levels are designed for those who are investing in growing and enhanc
 | Member logo listed on the website member page              | {{<v>}}    | {{<v>}}    | {{<v>}}   | {{<v>}} | {{<v>}}  | {{<v>}} | {{<v>}}  | {{<v>}}   | {{<v>}}   | {{<v>}}   |
 | Member logo featured on the website homepage               | {{<x>}}    | {{<x>}}    | {{<x>}}   | {{<x>}} | {{<x>}}  | {{<x>}} | {{<x>}}  | {{<x>}}   | {{<x>}}   | {{<v>}}   |
 | Press releases with OpenPOWER Foundation                   | {{<x>}}    | {{<x>}}    | {{<x>}}   | {{<x>}} | {{<x>}}  | {{<x>}} | 1 py     |  2py      |  4py      | 8py       |
-|                                                            | free       | $500(*)    | $500(**)  | $500    | $2.5k    | $5k     | $25k     | $50k      | $75k      | $100k     |
+|                                                            | free       | free       | free      | $500    | $2.5k    | $5k     | $25k     | $50k      | $75k      | $100k     |
 
 <span style="font-size: 10px; line-height: 10px;">
-* Associate : free for opem source foundation<br>
-* Associate : free for mutual foundations membership<br>
-** Academic : free for academic institutes providing POWER curriculum<br>
 IWGLNV : If Working Group Lead with No Voting rights<br>
 IWGLV : If Working Group Lead with Voting rights<br>
 PLVWG : Per Level Voting, if not represented by Working Group Lead<br>
