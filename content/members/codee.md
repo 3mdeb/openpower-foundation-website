@@ -1,6 +1,6 @@
 ---
 title: Codee
-image: appentrasolutions.jpg
+image: codee.png
 country: Spain
 link: https://www.codee.com/
 level: silver
