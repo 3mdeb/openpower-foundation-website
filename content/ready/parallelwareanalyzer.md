@@ -9,7 +9,7 @@ tags:
   - analyzer
   - programming
 date: 2017-10-26
-draft: false
+draft: true
 ---
 
 Parallelware Analyzer is a suite of command-line tools aimed at helping software developers to build better quality parallel software in less time.
