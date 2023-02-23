@@ -1,7 +1,7 @@
 ---
 title: Inspur Power Systems
 image: inspur-power-systems.png
-level: platinum
+level: silver
 country: China
 link: https://www.inspursystems.com
 joined: 2017
