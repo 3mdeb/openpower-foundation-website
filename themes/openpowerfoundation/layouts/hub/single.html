@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="col-lg-4">
 				{{ if .Param "member" }}
-					Provider :&nbsp;
+					<h3>Provider :&nbsp;
 					{{ $member := .Param "member" }}
 					{{ range where .Site.RegularPages "Section" "members" }}
 						{{ $membercompany := .File.BaseFileName }}
@@ -33,61 +33,49 @@
 							{{ end }}
 							</a>
 						{{ end }}
-					{{ end }}
+					{{ end }}</h3>
 				{{ end }}
 			</div>
-			{{ if .Param "systems" }}
-				<div class="col-lg-4">
-					POWER Based systems :
-					<ul>
-					{{ range $s := .Param "systems" }}
-						<li>{{ $s }}</li>
-					{{ end }}
-					</ul>
-				</div>
-			{{ end }}
-			{{ if .Param "provides" }}
-				<div class="col-lg-4">
-					Provides following OPF HUB resources :
-					<ul>
-					{{ range $p := .Param "provides" }}
-						<li>{{ $p }}</li>
-					{{ end }}
-					</ul>
-				</div>
-			{{ end }}
-			<div class="col-lg-4">&nbsp;</div>
-			{{ if .Param "addons" }}
-				<div class="col-lg-4">
-					Resource Addons :
-					<ul>
-					{{ range $a := .Param "addons" }}
-						<li>{{ $a }}</li>
-					{{ end }}
-					</ul>
-				</div>
-			{{ end }}
+			<div class="col-lg-4">
+				{{ if .Param "systems" }}
+				<h3>POWER Based systems :</h3>
+				<ul>
+				{{ range $s := .Param "systems" }}
+					<li>{{ $s }}</li>
+				{{ end }}
+				</ul>					
+				{{ end }}
+				{{ if .Param "provides" }}
+				<h3>Provides these OPF HUB resources :</h3>
+				<ul>
+				{{ range $p := .Param "provides" }}
+					<li>{{ $p }}</li>
+				{{ end }}
+				</ul>
+				{{ end }}
+			</div>
+			<div class="col-lg-4">
 			{{ if .Param "projects" }}
-				<div class="col-lg-4">
-					Project Types :
-					<ul>
-					{{ range $o := .Param "projects" }}
-						<li>{{ $o }}</li>
-					{{ end }}
-					</ul>
-				</div>
+				<h3>Project Types :</h3>
+				<ul>
+				{{ range $o := .Param "projects" }}
+					<li>{{ $o }}</li>
+				{{ end }}
+				</ul>
+			{{ else }}
+				&nbsp;
 			{{ end }}
-			<div class="col-lg-4">&nbsp;</div>
-			{{ if .Param "operatingsystems" }}
-				<div class="col-lg-8 operatingsystems">
-					Operating Systems :
-					<ul class="operatingsystems">
-					{{ range $s := .Param "operatingsystems" }}
-						<li class="operatingsystems">{{ $s }}</li>
-					{{ end }}
-					</ul>
-				</div>
+			{{ if .Param "addons" }}
+				<h3>Resource Addons :</h3>
+				<ul>
+				{{ range $a := .Param "addons" }}
+				{{ if ne $a "none" }}
+					<li>{{ $a }}</li>
+				{{ end }}
+				{{ end }}
+				</ul>
 			{{ end }}
+			</div>
 		</div>
 	</div>
 	{{ if .Content }}
