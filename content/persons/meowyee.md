@@ -1,6 +1,6 @@
 ---
 title: "Meow Yee"
-image: meowyee.jpg
+image: meowyee.png
 member: ibm
 date: 2023-03-15
 draft: false
