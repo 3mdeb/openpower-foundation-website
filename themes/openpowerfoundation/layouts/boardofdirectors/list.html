@@ -5,33 +5,37 @@
 	<div class="row">
 		<h1 class="section-header my-3 my-md-5 pb-2 pb-md-3 text-center">{{ .Title }}</h1>
 		{{ range .Data.Pages.ByWeight }}
-			{{ $personfilename := .File.BaseFileName }}
-			{{ $personfile := printf "%s/%s" "persons" $personfilename }}
-			<article class="post__article col-10 offset-1 row mb-4 pt-4">
-				<div class="col-md-2 mb-4 mb-md-0 pt-md-3 pl-4 pl-lg-0">
-				{{ with $.Site.GetPage $personfile }}
-					{{ if .Param "image" }}
-						{{ $imagename := .Param "image" }}
-						{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
-						{{ $imageresource := resources.Get $imagelocation }}
-						{{ $image := $imageresource.Fit "390x390 webp" }}
-						<img class="img-fluid"  src="{{ $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
-					{{ else }}
-						{{ .Title }}
-					{{ end }}
-				{{ end }}
-				</div>
-				<div class="col-md-10 pl-4 mb-4 mb-lg-6 person">
-					<h2>{{ .Title }}, {{ .Param "position" }}</h2>
+			{{ $start := time (.Param "start") }}
+			{{ $end := time (.Param "end") }}
+			{{ if and (le now $end) (ge now $start) }}
+				{{ $personfilename := .File.BaseFileName }}
+				{{ $personfile := printf "%s/%s" "persons" $personfilename }}
+				<article class="post__article col-10 offset-1 row mb-4 pt-4">
+					<div class="col-md-2 mb-4 mb-md-0 pt-md-3 pl-4 pl-lg-0">
 					{{ with $.Site.GetPage $personfile }}
-						{{ $memberfile := printf "%s/%s" "members" (.Param "member") }}
-						{{ with $.Site.GetPage $memberfile }}
-							<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+						{{ if .Param "image" }}
+							{{ $imagename := .Param "image" }}
+							{{ $imagelocation := (printf "%s/%s" "images/persons/" $imagename) }}
+							{{ $imageresource := resources.Get $imagelocation }}
+							{{ $image := $imageresource.Fit "390x390 webp" }}
+							<img class="img-fluid"  src="{{ $image.RelPermalink }}" alt="{{ .Title }}" title="{{ .Title }}">
+						{{ else }}
+							{{ .Title }}
 						{{ end }}
-						<p>{{ .Content }}</p>
 					{{ end }}
-				</div>
-			</article>
+					</div>
+					<div class="col-md-10 pl-4 mb-4 mb-lg-6 person">
+						<h2>{{ .Title }}, {{ .Param "position" }}</h2>
+						{{ with $.Site.GetPage $personfile }}
+							{{ $memberfile := printf "%s/%s" "members" (.Param "member") }}
+							{{ with $.Site.GetPage $memberfile }}
+								<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+							{{ end }}
+							<p>{{ .Content }}</p>
+						{{ end }}
+					</div>
+				</article>
+			{{ end }}
 		{{ end }}
 	</div>
 </div>
