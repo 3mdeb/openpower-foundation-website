@@ -1,5 +1,6 @@
 ---
-title: Lance Albertson
+title: "Lance Albertson"
+image: "lancealbertson.png"
 member: oregonstateuniversity
 nickname: ramereth
 date: 2022-06-03
