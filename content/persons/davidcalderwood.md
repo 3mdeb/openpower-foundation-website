@@ -1,6 +1,6 @@
 ---
-title: David Calderwood
-image: davidcalderwood.jpg
+title: "David Calderwood"
+image: "davidcalderwood.jpg"
 member: redsemiconductor
 date: 2023-03-15
 draft: false
