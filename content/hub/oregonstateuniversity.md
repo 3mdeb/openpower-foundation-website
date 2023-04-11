@@ -19,7 +19,7 @@ opnstkflavors:
       cpus: 1
       memory: 4
       gpus: "-"
-      disk: 20 
+      disk: 20
     - name: "oph.c2m8.d20"
       cpus: 2
       memory: 8
@@ -78,7 +78,7 @@ opnstkflavors:
       disk: 240
 operatingsystems:
   available:
-    standard: 
+    standard:
       - CentOS Stream 8
       - CentOS Stream 9
       - Debian 10
@@ -97,7 +97,7 @@ operatingsystems:
       - Alma Linux 8
       - Alma Linux 9
       - Rocky Linux 9
-    gpuenabled:  
+    gpuenabled:
       - Alma Linux 8
       - Alma Linux 9
       - Rocky Linux 9
