@@ -46,60 +46,80 @@ var goal = "{{ .Site.Params.forms.hub.goal }}";
 				</div>
 			</div>
 			<div class="form-row">
-				{{ $projects := .Param "projects" }}
-				{{ if $projects }}
+				{{ if .Param "projects" }}
 					<div class="form-group col-lg-6">
 						What is your project?
 						<select id="projecttype" name="projecttype">
-						{{ range $projects }}
+						{{ range .Param "projects" }}
 							<option value="{{ . }}">{{ . }}</option>
 						{{ end }}
 						</select>
 					</div>
 				{{ end }}
-				{{ $systems := .Param "systems" }}
-				{{ if $systems }}
+				{{ if .Param "systems" }}
 					<div class="form-group col-lg-6">
 						What POWER system would you like?
 						<select id="system" name="system">
-						{{ range $systems }}
+						{{ range .Param "systems" }}
 							<option value="{{ . }}">{{ . }}</option>
 						{{ end }}
 						</select>
 					</div>
 				{{ end }}
-				{{ $provides := .Param "provides" }}
-				{{ if $provides }}
+				{{ if .Param "provides" }}
 					<div class="form-group col-lg-6">
 						What POWER resources do you require?
 						<select id="provides" name="provides">
-						{{ range $provides }}
+						{{ range .Param "provides" }}
 							<option value="{{ . }}">{{ . }}</option>
 						{{ end }}
 						</select>
 					</div>
 				{{ end }}
-				{{ $addons := .Param "addons" }}
-				{{ if $addons }}
+				{{ if .Param "addons" }}
 					<div class="form-group col-lg-6">
 						What POWER addons do you require?
 						<select id="addons" name="addons">
-						{{ range $addons }}
+						{{ range .Param "addons" }}
 							<option value="{{ . }}">{{ . }}</option>
 						{{ end }}
 						</select>
 					</div>
 				{{ end }}
-				{{ $operatingsystems := .Param "operatingsystems" }}
-				{{ if $operatingsystems }}
+				{{ if .Param "operatingsystems" }}
 					<div class="form-group col-lg-6">
 						What Operating System would you like on your POWER resource?
 						<select id="operatingsystem" name="operatingsystem">
-						{{ range $operatingsystems }}
+						{{ if .Param "operatingsystems.available.standard" }}
+						{{ range .Param "operatingsystems.available.standard" }}
 							<option value="{{ . }}">{{ . }}</option>
 						{{ end }}
+						{{ end }}
+						{{ if .Param "operatingsystems.available.gpuenabled" }}
+						{{ range .Param "operatingsystems.available.gpuenabled" }}
+							<option value="{{ . }}">{{ . }} (GPU-enabled)</option>
+						{{ end }}
+						{{ end }}
 						</select>
-						</div>
+					</div>
+				{{ end }}
+
+				{{ if .Param "opnstkflavors" }}
+					<div class="form-group col-lg-6">
+						What instance flavor  would you like?
+						<select id="opnstkflavor" name="opnstkflavor">
+						{{ if .Param "opnstkflavors.standard" }}
+                                                {{ range .Param "opnstkflavors.standard" }}
+                                                        <option value="{{ .name }}">{{ .cpus }} CPUs,  {{ .memory }}GB RAM, {{ .disk }}GB Disk</option>
+                                                {{ end }}
+                                                {{ end }}
+                                                {{ if .Param "opnstkflavors.gpuenabled" }}
+                                                {{ range .Param "opnstkflavors.gpuenabled" }}
+                                                        <option value="{{ .name }}">{{ .cpus }} CPUs,  {{ .memory }}GB RAM,  {{ .gpus }} GPUs,  {{ .disk }}GB Disk</option>
+                                                {{ end }}
+                                                {{ end }}
+						</select>
+					</div>
 				{{ end }}
 				<div class="form-group col-lg-6">
 					SSH Public Key File Upload : <input type="file" name="sshpubkeyupload" id="sshpubkeyupload" class="file" placeholder="Select your Public SSH Key File" onChange="getFileContents()" accept=".pub"><br>
