@@ -3,6 +3,9 @@
 "permalink": "{{ .RelPermalink }}",
 "level": "{{ .Params.level }}",
 "joined": "{{ .Params.joined }}",
+{{ if isset .Params "cancelled" }}
+"cancelled": "{{  time (.Param "cancelled") | dateFormat "20060102" }}",
+{{ end }}
 "link": "{{ .Params.link }}",
 "content": "{{ .PlainWords }}"
 }

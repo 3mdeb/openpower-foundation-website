@@ -1,3 +1,14 @@
+{{ $now := now.Format "20060102" }}
+{{ $memberstatus := true }}
+{{ $cancelled := now.Format "20060102" }}
+{{ if isset .Params "cancelled" }}
+	{{ $cancelled = time (.Param "cancelled") | dateFormat "20060102" }}
+	{{ if lt $cancelled $now }}
+		{{ $memberstatus = false }}
+	{{ end }}
+{{ end }}
+{{ if eq $memberstatus true }}
+
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 <main id="main">
@@ -69,3 +80,5 @@
 </section>
 </main>
 {{ partial "footer.html" . }}
+
+{{ end }}
