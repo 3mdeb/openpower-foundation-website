@@ -4,8 +4,9 @@ image: "yadro-black.png"
 level: platinum
 country: Russia
 joined: 2015
+cancelled: 2023-04-01
 link: "https://www.yadro.com/"
-date: 2021-03-02
+date: 2023-04-13
 draft: false
 ---
 
