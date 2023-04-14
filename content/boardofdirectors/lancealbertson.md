@@ -1,5 +1,5 @@
 ---
-title: "Lance Director"
+title: "Lance Albertson"
 position: Director
 weight: 4000
 date: 2023-03-29
