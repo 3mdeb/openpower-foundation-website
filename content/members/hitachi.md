@@ -5,5 +5,6 @@ image: hitachi.png
 level: gold
 joined: 2014
 date: 2021-03-02
-draft: false
+end: 2023-05-01
+draft: true
 ---
