@@ -1,6 +1,6 @@
 ---
 title: Membership Levels
-date: 2022-01-03
+date: 2023-05-10
 draft: false
 ---
 
@@ -13,16 +13,15 @@ The OpenPOWER Foundation is a 501c6 not-for-profit entity with a Board of Direct
 
 OpenPOWER offers a tiered membership of Platinum, Gold, Silver, and Associate/Academic memberships
 
-- Annual fee and dedicated full-time equivalent (FTEs) – verification of committed number of FTEs on honor system
 - Contributors, committers, Work Group leads and project leads influence Technical Steering Committee
 - Associate/Academic level is not available to corporations
 
 
-| Membership Level | Annual Fee | FTEs | Technical Steering Committee                  | Board/Voting Position                          |
+| Membership Level | Annual Fee | Technical Steering Committee                  | Board/Voting Position                          |
 |------------------|------------|------|-----------------------------------------------|------------------------------------------------|
-| Platinum         | $100k      | 10 | One seat per member not otherwise represented | Includes Board position, includes TSC position |
-| Gold             | $60k       | 3  | May be on TSC if Work Group lead              | Gold members may elect up to one BOD member per three Gold members |
-| Silver           | $20k<br>$5k if <300 employees<br>$0 if < 300 employees and an Independent Software Vendor (ISV) or for Open Source Community Projects 										| 0    | May be on TSC if Work Group lead              | One board seat elected by all Silver members   |
-| Associate and Academic | $0  | 0 | May be on TSC if Work Group lead | May be elected to one community observer, non-voting Board seat |
+| Platinum         | $100k      | One seat per member not otherwise represented | Includes Board position, includes TSC position |
+| Gold             | $60k       | May be on TSC if Work Group lead              | Gold members may elect up to one BOD member per three Gold members |
+| Silver           | $20k,<br>$5k if <100 employees,<br> $1k if < 10 employees  	| May be on TSC if Work Group lead              | One board seat elected by all Silver members   |
+| Associate, Academic, Community | $0  | May be on TSC if Work Group lead | May be elected to one community observer, non-voting Board seat |
 
 <span style="font-size: 10px;">Fee in US dollars</span>
