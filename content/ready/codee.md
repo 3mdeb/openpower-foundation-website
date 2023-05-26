@@ -12,7 +12,7 @@ tags:
   - C++
   - Fortran
 date: 2023-02-24
-draft: true
+draft: false
 ---
 
 Codee is a software development tool that provides automated code inspection specifically designed to improve the performance of C/C++/Fortran applications.  
