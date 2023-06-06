@@ -4,6 +4,7 @@
 {{ $promobackgroundimagelocation := (printf "%s/%s" "images/home/" $promobackgroundimagename) }}
 {{ $promobackgroundimageresource := resources.Get $promobackgroundimagelocation }}
 {{ $promobackgroundimage := $promobackgroundimageresource.Resize "3840x2160 webp" }}
+{{ $now := now.Format "20060102" }}
 <section class="home promo__section d-flex flex-column justify-content-center" style="background-image:url({{ $promobackgroundimage.RelPermalink }})" >
 <div class="promo__container container text-center">
 	<h1>{{ .Param "promo.header" }}</h1>
@@ -75,14 +76,24 @@
 	{{ range where .Site.RegularPages "Section" "members" }}
 		{{ $level := .Param "level" }}
 		{{ if eq $level "platinum" }}
-			{{ if .Param "image" }}
-				{{ $imagename := .Param "image" }}
-				{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
-				{{ $imageresource := resources.Get $imagelocation }}
-				{{ $image := $imageresource.Fit "185x102 Center webp" }}
-				<div class="col-md-2 pb-3 pb-lg-0 text-valign-center">
-					<img class="img-fluid" src="{{  $image.RelPermalink }}" width="180" height="102" alt="{{ .Title }}">
-				</div>
+			{{ $memberstatus := true }}
+			{{ $cancelled := now.Format "20060102" }}
+			{{ if isset .Params "cancelled" }}
+				{{ $cancelled = time (.Param "cancelled") | dateFormat "20060102" }}
+				{{ if lt $cancelled $now }}
+					{{ $memberstatus = false }}
+				{{ end }}
+			{{ end }}
+			{{ if eq $memberstatus true }}
+				{{ if .Param "image" }}
+					{{ $imagename := .Param "image" }}
+					{{ $imagelocation := (printf "%s/%s" "images/members/" $imagename) }}
+					{{ $imageresource := resources.Get $imagelocation }}
+					{{ $image := $imageresource.Fit "185x102 Center webp" }}
+					<div class="col-md-2 pb-3 pb-lg-0 text-valign-center">
+						<img class="img-fluid" src="{{  $image.RelPermalink }}" width="180" height="102" alt="{{ .Title }}">
+					</div>
+				{{ end }}
 			{{ end }}
 		{{ end }}
 	{{ end }}
