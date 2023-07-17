@@ -1,6 +1,6 @@
 ---
 title: FreeBSD Foundation
-#image:
+image: freebsdlogo.jpg
 link: https://freebsd.org
 level: associate
 date: 2021-12-26
