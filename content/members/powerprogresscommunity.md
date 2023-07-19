@@ -1,6 +1,6 @@
 ---
 title: POWER Progress Community
-image: ppclogo.jpg
+image: powerprogresscommunitylogo.jpg
 link: https://www.powerpc-notebook.org/en/
 level: associate
 joined: 2020
