@@ -6,6 +6,6 @@ tags:
   - cpu
   - power10
   - usermanual
-date: 2021-09-13
+date: 2023-07-17
 draft: false
 ---
