@@ -20,8 +20,7 @@ On August 10, the 2023 Open Computing China Community Technology Summit (OCP Chi
 
 Five open communities gather, to break the boundaries through open innovation
 
-{{< image src="blog/OCP_China_Blog_image2.jpeg" >}}
-Meow Yee, President of the OpenPOWER Foundation
+{{< image src="blog/OCP_China_Blog_image2.jpeg" caption="Meow Yee, President of the OpenPOWER Foundation" >}}
 
 The deep integration of the digital economy and the real economy, as well as the digital world and the physical world, is driving data centers to accelerate innovation. However, increasingly complex technologies and new applications make it increasingly difficult for information technology service providers and enterprises to control the comprehensive innovation of data centers. Various open source and open communities with global collaboration as the core purpose have emerged as the times require, and have gradually become an important force for data center innovation.
 
@@ -39,18 +38,15 @@ In fact, more and more OCP community members and users are paying more and more 
 
 With the open source of POWER Instruction Set Architecture (ISA), POWER has become the only commercial architecture with a completely open system in the industry. Relying on POWER technology, IPS participates in OpenPOWER server design and development, OpenCAPI, and OMI design technology standards, to fully exploit POWER's leading enterprise-level computing capabilities. IPS has also designed and developed three generations of POWER products covering distributed storage, high-performance computing, high-density computing, big data computing and other fields. The Inspur K1 Power FP series servers accelerate the implementation of Power architecture innovations. 
 
-{{< image src="blog/OCP_China_Blog_image3.jpeg" >}}
-Yang Xu Deputy General Manager of Inspur Power Commercial Systems.
+{{< image src="blog/OCP_China_Blog_image3.jpeg" caption="Yang Xu Deputy General Manager of Inspur Power Commercial Systems" >}}
 
 The new-generation Inspur K1 Power FP5280G3 server, which adopts industry-leading dual-chip module technology and many other innovative technologies, also appeared in the OCP China Day exhibition area, which can flexibly respond to application requirements such as "general computing, large-capacity storage, hierarchical storage, and IO-intensive" , favored by the participants.
 
-{{< image src="blog/OCP_China_Blog_image4.jpeg" >}}
-The new generation of Inspur K1 Power FP5280G3 server attracts attention
+{{< image src="blog/OCP_China_Blog_image4.jpeg" caption="The new generation of Inspur K1 Power FP5280G3 server attracts attention" >}}
 
 As a member of the OpenPOWER Foundation, Hexin Technology Co., Ltd., has developed leading high-end server processor chips for both domestic and international markets, based on the fully open source POWER architecture, and integrating the latest innovation of POWER processor technologies. The HX-C series has a leading virtualization platform and heterogeneous expansion capabilities. Inspur Power Commercial Systems has joined hands with Hexin Technology to create Inspur K1 Power CP series nationally-produced servers based on HX-C domestic processors, which will further promote the high-quality development of China's ICT industry.
 
-{{< image src="blog/OCP_China_Blog_image6.jpeg" >}}
-Xu Yue Hexin Technology Co., Ltd. chip business leader
+{{< image src="blog/OCP_China_Blog_image6.jpeg" caption="Xu Yue Hexin Technology Co., Ltd. chip business leader" >}}
 
 Driven by the idea of collaborative development of software and hardware, the integration of open source software and open hardware is accelerating, and open source technology will profoundly change the division of labor and cooperation mode of the global IT industry. In the future, more and more cross-community cooperation will further break the boundaries of innovation, and endow infinite possibilities for business innovation with a more open data center.
 
