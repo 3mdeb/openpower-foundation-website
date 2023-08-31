@@ -6,9 +6,10 @@ tags:
   - OCP
   - opensource
   - conference
-date: 2023-25-08
+date: 2023-08-25
 draft: false
 ---
+
 This guest blog, from IPS, has been translated from the [original post](https://mp.weixin.qq.com/s/Vh291sS8XrIvyGFumM4qqA)
 
 OCP China Day 2023 |  Inspur Power Commercial Systems (IPS) joins hands with OPF to accelerate the implementation of POWER open source, open innovation
