@@ -12,4 +12,9 @@
 {{ $imageprocessing := (printf "%sx%s %s" $width $height "webp") }}
 {{ $image := $imageresource.Fit $imageprocessing }}
 <img src="{{ $image.RelPermalink }}">
+{{ with .Get "caption" }}
+<br>
+<i>{{ . }}</i>
+<br>
+{{ end }}
 
