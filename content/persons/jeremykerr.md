@@ -1,7 +1,7 @@
 ---
 title: "Jeremy Kerr"
 #image:
-member: code construct
+member: codeconstruct
 date: 2021-08-05
 draft: false
 ---
