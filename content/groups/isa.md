@@ -3,7 +3,7 @@ title: 'Instruction Set Architecture TWG'
 wgtype: twg
 image: thumb-5.jpg
 chair:
-  - paulmackerras
+  - bradfrey
 participation: Members
 git: https://git.openpower.foundation/isa/
 discussion: https://discuss.openpower.foundation/c/twg/isa
