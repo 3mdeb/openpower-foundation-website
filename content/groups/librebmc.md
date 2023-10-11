@@ -3,7 +3,7 @@ title: 'LibreBMC SIG'
 wgtype: sig
 image: thumb-6.jpg
 chair:
-  - toddrosedahl
+  - jaremykerr
   - karolgugala
 participation: Public
 git: https://git.openpower.foundation/librebmc/
