@@ -90,14 +90,9 @@ var goal = "{{ .Site.Params.forms.hub.goal }}";
 					<div class="form-group col-lg-6">
 						What Operating System would you like on your POWER resource?
 						<select id="operatingsystem" name="operatingsystem">
-						{{ if .Param "operatingsystems.available.standard" }}
-						{{ range .Param "operatingsystems.available.standard" }}
+						{{ if .Param "operatingsystems.available" }}
+						{{ range .Param "operatingsystems.available" }}
 							<option value="{{ . }}">{{ . }}</option>
-						{{ end }}
-						{{ end }}
-						{{ if .Param "operatingsystems.available.gpuenabled" }}
-						{{ range .Param "operatingsystems.available.gpuenabled" }}
-							<option value="{{ . }}">{{ . }} (GPU-enabled)</option>
 						{{ end }}
 						{{ end }}
 						</select>
