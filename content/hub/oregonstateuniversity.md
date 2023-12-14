@@ -13,6 +13,9 @@ addons:
   - OpenCAPI Alpha Data 9H3 FPGA (container)
 systems:
   - POWER9
+sponsors:
+  - mellanox
+  - oracle
 opnstkflavors:
   standard:
     - name: "oph.c1m4.d20"

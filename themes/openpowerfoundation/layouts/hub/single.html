@@ -77,6 +77,20 @@
 			{{ end }}
 			</div>
 		</div>
+		{{ if .Param "sponsors"}}
+		<div class="row">
+			<div class="col-lg-4">
+				<h5>Sponsors :</h5>
+				{{ range $s := .Param "sponsors" }}
+					{{ $imagename := (printf "%s.png" $s) }}
+					{{ $imagelocation := (printf "%s/%s" "images/sponsors/hub/" $imagename) }}
+					{{ $imageresource := resources.Get $imagelocation }}
+					{{ $image := $imageresource.Fit "150x150" }}
+					<img src="{{ $image.RelPermalink }}" alt="{{ $s }}">
+				{{ end }}
+			</div>
+		</div>
+		{{ end }}
 	</div>
 	{{ if .Content }}
 	<div class="row">
