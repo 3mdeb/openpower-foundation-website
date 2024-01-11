@@ -13,4 +13,4 @@ He is a serial entrepreneur with a background in enterprise technology and has w
 business development, product management, and engineering.
 Previously, James was co-founder and COO at Hyper.sh, an open source cloud-native virtualization startup acquired by Ant Financial.
 Prior to that, he led product management in Red Hat's OpenStack group, and was a product lead on AT&T's first OpenStack Cloud.
-James graduated from University of Virginia with a degree in Electrical Engineering and is based in New York.
+James graduated from University of Virginia with a degree in Electrical Engineering and is based in Washington D.C. area.
