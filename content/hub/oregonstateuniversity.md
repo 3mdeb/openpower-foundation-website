@@ -4,13 +4,13 @@ member: oregonstateuniversity
 projects:
   - Open Source
 provides:
-  - Bare Metal Machine (coming soon)
-  - Virtual Machine (via OpenStack; with GPU)
-  - Container (via OpenShift; with FPGA; coming soon)
+  - Bare Metal Machine
+  - Virtual Machine
 addons:
   - none
-  - Nvidia V100 GPU (VM)
-  - OpenCAPI Alpha Data 9H3 FPGA (container)
+  - Nvidia V100 GPU
+  - Nvidia T4 GPU
+  - OpenCAPI Alpha Data 9H3 FPGA
 systems:
   - POWER9
 sponsors:
@@ -81,29 +81,19 @@ opnstkflavors:
       disk: 240
 operatingsystems:
   available:
-    standard:
-      - CentOS Stream 8
-      - CentOS Stream 9
-      - Debian 10
-      - Debian 11
-      - Fedora [latest]
-      - Ubuntu 18.04
-      - Ubuntu 20.04
-      - Ubuntu 22.04
-    gpuenabled:
-      - CentOS Stream 8
-      - CentOS Stream 9
-      - Ubuntu 20.04
-      - Ubuntu 22.04
+    - Alma Linux 8
+    - Alma Linux 9
+    - Alpine
+    - CentOS Stream 8 (GPU)
+    - CentOS Stream 9 (GPU)
+    - Debian 10
+    - Debian 11
+    - Debian 12
+    - Fedora [latest]
+    - Ubuntu 18.04
+    - Ubuntu 20.04 (GPU)
+    - Ubuntu 22.04 (GPU)
   unavailable:
-    standard:
-      - Alma Linux 8
-      - Alma Linux 9
-      - Rocky Linux 9
-    gpuenabled:
-      - Alma Linux 8
-      - Alma Linux 9
-      - Rocky Linux 9
 weight: -9000
 date: 2022-08-24
 draft: false
