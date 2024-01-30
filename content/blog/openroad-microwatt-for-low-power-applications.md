@@ -7,7 +7,7 @@ tags:
   - academic
   - openroad
 date: 2024-01-25
-draft: true
+draft: false
 ---
 # OpenROAD and OpenPOWER - Microwatt core for low-power ASIC applications
 
