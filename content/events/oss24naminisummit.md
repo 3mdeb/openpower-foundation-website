@@ -32,6 +32,6 @@ Agenda:
 - An Introduction to RISC-V
 - Accelerating the RISC-V Software Development Ecosystem
 - Caliptra: open source Root of Trust
-- Getting “Ware” You Need to Go – Managing Open Hardware with Software (Part 1)
-- Getting “Ware” You Need to Go – AI Software on Open Hardware (Part 2)
+- Getting “Ware” You Need to Go – Managing OpenPOWER Hardware with Software (Part 1)
+- Getting “Ware” You Need to Go – AI Software on OpenPOWER Hardware (Part 2)
 
