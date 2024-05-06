@@ -12,7 +12,7 @@ draft: false
 The OCP Regional Summit in Europe serves as a platform where technical and business leaders from EMEA come together to tackle crucial issues related to data center sustainability, energy efficiency, and heat reuse. The focus is on exploring how innovations from hyperscale data center operators can contribute to solving these challenges. The Summit also highlights deployments of specific OCP-recognized data center equipment in the EMEA region.
 
 ```
-OPF FTS Talk 
+OPF FTS Talk - [Video Recording](https://www.youtube.com/watch?v=3UOMUHFFYvQ)
 Time: 3:55pm – 4:15pm
 Location: Lisbon Congress Centre
 ```
