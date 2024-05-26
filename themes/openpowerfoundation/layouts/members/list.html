@@ -24,16 +24,16 @@
 				{{ range $.Site.Pages.ByTitle }}
 					{{ $level := .Param "level" }}
 					{{ if eq $level $key }}
-						<div class="col-lg-{{ $col }} pt-5 pb-0 pb-lg-3">
-							{{ $memberstatus := true }}
-							{{ $cancelled := now.Format "20060102" }}
-							{{ if isset .Params "cancelled" }}
-								{{ $cancelled = time (.Param "cancelled") | dateFormat "20060102" }}
-								{{ if lt $cancelled $now }}
-									{{ $memberstatus = false }}
-								{{ end }}
+						{{ $memberstatus := true }}
+						{{ $cancelled := now.Format "20060102" }}
+						{{ if isset .Params "cancelled" }}
+							{{ $cancelled = time (.Param "cancelled") | dateFormat "20060102" }}
+							{{ if lt $cancelled $now }}
+								{{ $memberstatus = false }}
 							{{ end }}
-							{{ if eq $memberstatus true }}
+						{{ end }}
+						{{ if eq $memberstatus true }}
+							<div class="col-lg-{{ $col }} pt-2 pb-0 pb-lg-3">
 								<div class="box">
 									<a href="{{ .RelPermalink }}">
 									{{ if .Param "image" }}
@@ -48,8 +48,8 @@
 									{{ end }}
 									{{ $i = add $i 1 }}
 								</div>
-							{{ end }}
-						</div>
+							</div>
+						{{ end }}
 					{{ end }}
 				{{ end }}
 				</div>
