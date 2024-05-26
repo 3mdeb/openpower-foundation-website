@@ -2,10 +2,10 @@
 title = "OpenPOWER Foundation"
 baseURL = "https://openpower.foundation/"
 theme = "openpowerfoundation"
-languageCode = "opf"
-defaultContentLanguage = "opf"
-defaultContentLanguageInSubdir = true
-enableMissingTranslationPlaceholders = true
+#languageCode = "opf"
+#defaultContentLanguage = "opf"
+#defaultContentLanguageInSubdir = true
+#enableMissingTranslationPlaceholders = true
 dataDir = "data"
 assetDir = "assets"
 PaginatePath = ""
