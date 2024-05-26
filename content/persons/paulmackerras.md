@@ -1,7 +1,7 @@
 ---
 title: "Paul Mackerras"
 image:
-member: ibm
-date: 2021-03-06
+member: paulmackerras
+date: 2023-12-06
 draft: false
 ---
