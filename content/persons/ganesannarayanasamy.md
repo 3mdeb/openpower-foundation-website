@@ -1,6 +1,6 @@
 ---
 title: Ganesan Narayanasamy
-member: ibm
-date: 2022-02-04
+member: ganesannarayansamy
+date: 2023-12-04
 draft: false
 ---
