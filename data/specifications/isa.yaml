@@ -23,3 +23,7 @@ versions:
     date: "2021-09-14"
     download: "https://files.openpower.foundation/s/dAYSdGzTfW4j2r2"
     description: "Incorporate errata."
+  - number: "3.1c"
+    date: "2024-05-26"
+    download: "https://files.openpower.foundation/s/9izgC5Rogi5Ywmm"
+    description: "Data cleanup"
